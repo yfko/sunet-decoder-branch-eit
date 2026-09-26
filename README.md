@@ -39,7 +39,7 @@ Every training run writes the SHA-256 of the preregistration it ran under into `
 
 ## Licence
 
-[To be chosen by the authors before the first public release: MIT for code and CC BY 4.0 for data and figures are proposed.]
+Code (`tools/`) is released under the MIT License (`LICENSE`). Data, results, figures and written records are released under CC BY 4.0 (`LICENSE-DATA`). `tools/PlotNeuralNet/` retains its own MIT licence.
 
 ## Contact
 

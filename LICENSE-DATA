@@ -1,0 +1,9 @@
+The data, results, figures, tables and written records in this repository
+(everything outside tools/, including the results*/ directories, results/,
+figures/, refs/, review_record/, preds.npz and the Markdown records) are
+licensed under the Creative Commons Attribution 4.0 International License
+(CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
+
+You may share and adapt the material for any purpose, provided you give
+appropriate credit to the authors (Chen C-W, Wang T-C, Ko Y-F) and indicate
+if changes were made. tools/PlotNeuralNet/ retains its own MIT licence.
