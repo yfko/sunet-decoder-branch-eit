@@ -1,0 +1,12 @@
+{
+  "Kendall2018": {
+    "fields": {"authors": ["Kendall A", "Gal Y", "Cipolla R"]},
+    "source": "CVF Open Access page of the paper (openaccess.thecvf.com/content_cvpr_2018/html/Kendall_Multi-Task_Learning_Using_CVPR_2018_paper.html): byline 'Alex Kendall, Yarin Gal, Roberto Cipolla'; Crossref returns the reversed order for 10.1109/cvpr.2018.00781",
+    "verified": "2026-09-26"
+  },
+  "Vandenhende2021": {
+    "fields": {"year": "2022", "volume": "44", "issue": "7", "pages": "3614-3633"},
+    "source": "PubMed PMID 33497328 (IEEE Trans Pattern Anal Mach Intell 2022;44(7):3614-3633, doi:10.1109/TPAMI.2021.3054719); Crossref holds the 2021 early-access record with pages 1-1",
+    "verified": "2026-09-26"
+  }
+}

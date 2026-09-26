@@ -1,0 +1,14 @@
+\begin{table*}[t]
+\caption{The registered addendum contrast (D vs B\_wide trained and evaluated at 20~dB) beside the evaluation-only 20~dB contrast for 40~dB-trained models and the registered 40~dB primary. Heart channel, 58 seeds per arm.}
+\label{tab:retrained}
+\centering\small
+\begin{tabular}{lllllllllllll}
+\hline
+Trained & Evaluated & Contrast & B\_wide heart DSC (mean $\pm$ SD) & D heart DSC (mean $\pm$ SD) & D $-$ B\_wide, pts [95% CI, seeds] & [95% CI, geometries] & dz & Wilcoxon W & p & Floor (B\_wide seed SD), pts & Seeds D > B\_wide & Rule \\
+\hline
+40 dB & 40 dB & H1 (registered primary) & 0.9657 $\pm$ 0.0067 & 0.9679 $\pm$ 0.0043 & +0.223 [+0.020, +0.441] & [+0.183, +0.266] & +0.27 & 642 & 0.0983 & 0.670 & 32/58 & falsified \\
+40 dB & 20 dB & H3 low end (evaluation only) & 0.8775 $\pm$ 0.0108 & 0.8985 $\pm$ 0.0110 & +2.097 [+1.642, +2.543] & [+1.714, +2.508] & +1.19 & 97 & $<$0.0001 & 1.078 & 50/58 & — (no rule) \\
+20 dB & 20 dB & H5 (registered addendum) & 0.9574 $\pm$ 0.0038 & 0.9597 $\pm$ 0.0041 & +0.229 [+0.081, +0.373] & [+0.184, +0.276] & +0.40 & 427 & 0.0009 & 0.384 & 41/58 & falsified \\
+\hline
+\end{tabular}
+\end{table*}

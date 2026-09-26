@@ -1,0 +1,10 @@
+# Registered state — the hash of PREREGISTRATION_HEART.md as fixed on
+# 2026-08-29, before any arm of this study was trained. This is the value
+# train_arms.py records in runs/run_meta.json (field prereg_sha256).
+2f2e1a0b946f2748ca59fc2e3ffe3f1b539de8e0706f2bd5ec0e741f4880be91  PREREGISTRATION_HEART.md  (registered 2026-08-29)
+# Addendum state — the hash of PREREGISTRATION_HEART.md after section 9 (the
+# 2026-09-23 addendum registering H5 at 20 dB, the 35/25 dB evaluation levels
+# and the geometry-level bootstrap) was appended and BEFORE any run it names was
+# started. train_arms.py records this value in runs_20db/run_meta.json. The
+# original registered hash above is unchanged and still governs H1-H4.
+a252444b6703a6655dcb89e7dbc7180b08b031f1d80425996626d7a49a86df92  PREREGISTRATION_HEART.md  (addendum registered 2026-09-23)

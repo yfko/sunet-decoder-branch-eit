@@ -1,0 +1,12 @@
+{"machine": "macOS-15.6.1-arm64-arm-64bit", "chip": "Apple M4 (Mac mini)", "python": "3.9.6", "torch": "2.8.0", "numpy": "2.0.2", "scipy": "1.13.1", "device": "mps"}
+{
+  "data": "/Users/yfko/work/sunet_sweep/v2_full_snr20/dataset.mat",
+  "data_sha256": "476c87723d9eb113214ab4d1710f0b0c8a52fe78354ea4d32f7026ae310c471b",
+  "prereg_sha256": "a252444b6703a6655dcb89e7dbc7180b08b031f1d80425996626d7a49a86df92",
+  "norm": {
+    "mu": -4.265506267547607,
+    "sd": 8.903258323669434
+  },
+  "fov_px": 3228,
+  "device": "mps"
+}

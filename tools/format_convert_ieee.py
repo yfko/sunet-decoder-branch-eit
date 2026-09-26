@@ -1,0 +1,94 @@
+"""format-convert (academic-paper, Phase 7) for the core paper -> IEEE TMI submission set.
+
+Reads the working draft (markers intact), and emits, with every ARS marker stripped and the
+pipeline-internal block removed (MANUSCRIPT_RULES R10b):
+  manuscript/20_SUBMISSION_ieee.md     clean markdown, IEEE numbered citations [n] by first appearance
+  manuscript/20_SUBMISSION_ieee.docx   via pandoc
+  manuscript/20_SUBMISSION_ieee.tex    IEEEtran skeleton around a pandoc-converted body (not compiled here)
+IEEE reference strings are rendered from refs/prior_works.json (cite.py output), never typed (R12d).
+
+    python3 tools/format_convert_ieee.py manuscript/15_DRAFT_v2.md
+"""
+import json, re, subprocess, sys
+from pathlib import Path
+
+src = Path(sys.argv[1]); out_md = Path("manuscript/20_SUBMISSION_ieee.md")
+text = src.read_text().split("# PIPELINE INTERNAL")[0].rstrip() + "\n"
+text = re.sub(r"^<!--.*?-->\n", "", text, flags=re.S)          # leading header comment block(s)
+text = re.sub(r"<!--block:B\d+-->\n?", "", text)
+
+# ---- numbering by first appearance
+order: list[str] = []
+for slug in re.findall(r"<!--ref:([A-Za-z0-9_]+)-->", text):
+    if slug not in order: order.append(slug)
+num = {s: i + 1 for i, s in enumerate(order)}
+def n_of(slug): return f"[{num[slug]}]"
+# parenthetical: "(Author, 2017) <!--ref:slug--><!--anchor:...-->"
+text = re.sub(r"\(([A-Z][^()]*?, \d{4}[a-z]?)\) <!--ref:(\w+)--><!--anchor:[^>]*-->", lambda m: n_of(m.group(2)), text)
+# narrative: "Wang et al. (2024) <!--ref:slug--><!--anchor:...-->"
+text = re.sub(r"([A-Z][\w-]+(?: et al\.| and [A-Z][\w-]+)?) \((\d{4}[a-z]?)\) <!--ref:(\w+)--><!--anchor:[^>]*-->", lambda m: f"{m.group(1)} {n_of(m.group(3))}", text)
+assert "<!--ref:" not in text and "<!--anchor:" not in text, "unconverted citation marker"
+text = re.sub(r"<!--.*?-->", "", text, flags=re.S)
+
+# ---- IEEE reference strings from the registry
+reg = {e["key"]: e for e in json.load(open("refs/prior_works.json"))}
+def ieee_author(a):  # "Lionheart WRB" -> "W. R. B. Lionheart"
+    parts = a.rsplit(" ", 1)
+    if len(parts) == 1: return a
+    sur, ini = parts
+    return " ".join(f"{c}." for c in ini) + " " + sur
+def ieee(e, n):
+    au = [ieee_author(a) for a in e["authors"]]
+    if len(au) > 6: authors = au[0] + " et al."
+    elif len(au) == 1: authors = au[0]
+    elif len(au) == 2: authors = f"{au[0]} and {au[1]}"
+    else: authors = ", ".join(au[:-1]) + ", and " + au[-1]
+    s = f"[{n}] {authors}, \u201c{e['title']},\u201d *{e['journal']}*"
+    if e.get("volume"): s += f", vol. {e['volume']}"
+    if e.get("issue"): s += f", no. {e['issue']}"
+    if e.get("pages"):
+        p = e["pages"].replace("-", "\u2013")
+        s += (f", pp. {p}" if "\u2013" in p else f", Art. no. {p}")
+    s += f", {e['year']}, doi: {e['doi']}."
+    return s
+refs = "\n".join(ieee(reg[s], num[s]) for s in order)
+# replace the References block (note line + numbered Vancouver list) with the IEEE list
+text = re.sub(r"(## References\n\n)\[Rendered by[^\n]*\]\n\n(?:\d+\. [^\n]+\n)+", lambda m: m.group(1) + refs + "\n", text)
+assert refs.splitlines()[0] in text, "reference block not replaced"
+out_md.write_text(text)
+
+# ---- R10b leak scan on the deliverable
+leak = [w for w in ["Dimension Scores", "Failure Condition", "Writer Decision", "writer_decision", "Evaluator", "pre-commitment",
+                    "PRE-COMMITMENT", "scoring_plan", "acceptance_criteria", "PIPELINE INTERNAL", "<!--"] if w in text]
+print("R10b leak scan:", "clean" if not leak else f"HIT {leak}")
+print("headings:", [h for h in re.findall(r"^#+ .*$", text, flags=re.M)][:40])
+print("citations numbered:", len(order), "| in-text [n] occurrences:", len(re.findall(r"\[\d+\]", text.split('## References')[0])))
+
+# ---- DOCX and IEEEtran source via pandoc
+subprocess.run(["pandoc", str(out_md), "-o", "manuscript/20_SUBMISSION_ieee.docx", "--from", "markdown+smart"], check=True)
+body = subprocess.run(["pandoc", str(out_md), "-t", "latex", "--from", "markdown+smart", "--wrap=none", "--shift-heading-level-by=-1"], capture_output=True, text=True, check=True).stdout
+# IEEEtran numbers sections itself: drop the manual "1. " / "2.3 " prefixes and pandoc's labels
+body = re.sub(r"\\(section|subsection)\{\d+(?:\.\d+)*\.? ", r"\\\1{", body)
+body = re.sub(r"\\label\{[^}]*\}", "", body)
+title = re.search(r"^# (.+)$", text, flags=re.M).group(1)
+abstract = re.search(r"\*\*Abstract\*\* \u2014 (.*?)\n\n", text, flags=re.S).group(1)
+keywords = re.search(r"\*\*Keywords\*\* \u2014 (.*?)\n\n", text, flags=re.S).group(1)
+# drop title/abstract/keywords/author lines from the pandoc body (they go into the IEEEtran preamble)
+m = re.search(r"\\section\{[^}]*Introduction\}(\\label\{[^}]*\})?", body)
+assert m, body[:400]
+body = "\\section{Introduction}" + body[m.end():]
+tex = "\n".join([
+    "\\documentclass[journal]{IEEEtran}",
+    "\\usepackage[utf8]{inputenc}\\usepackage{amsmath,graphicx,booktabs,hyperref}",
+    "% Generated by tools/format_convert_ieee.py from manuscript/20_SUBMISSION_ieee.md; tables in results/tables/*.tex; figures in figures/",
+    "\\begin{document}",
+    f"\\title{{{title}}}",
+    "\\author{Chang-Wen Chen, Tang-Chuan Wang, and Yen-Fen Ko% <-this % stops a space",
+    "\\thanks{[Affiliations, corresponding e-mail, funding: PI to supply.]}}",
+    "\\maketitle",
+    f"\\begin{{abstract}}\n{abstract}\n\\end{{abstract}}",
+    f"\\begin{{IEEEkeywords}}\n{keywords}\n\\end{{IEEEkeywords}}",
+    body,
+    "\\end{document}", ""])
+Path("manuscript/20_SUBMISSION_ieee.tex").write_text(tex)
+print("written:", out_md, "20_SUBMISSION_ieee.docx", "20_SUBMISSION_ieee.tex")

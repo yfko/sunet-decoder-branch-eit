@@ -1,0 +1,122 @@
+{
+  "A": {
+    "params": 7762465,
+    "width_mult": 1.0,
+    "enc": [
+      32,
+      64,
+      128,
+      256
+    ],
+    "bottleneck": 512,
+    "dec": [
+      256,
+      128,
+      64,
+      32
+    ],
+    "heads": 1,
+    "split": null
+  },
+  "B": {
+    "params": 7762498,
+    "width_mult": 1.0,
+    "enc": [
+      32,
+      64,
+      128,
+      256
+    ],
+    "bottleneck": 512,
+    "dec": [
+      256,
+      128,
+      64,
+      32
+    ],
+    "heads": 2,
+    "split": null
+  },
+  "B_wide": {
+    "params": 10743738,
+    "width_mult": 1.5312,
+    "enc": [
+      32,
+      64,
+      128,
+      256
+    ],
+    "bottleneck": 512,
+    "dec": [
+      392,
+      192,
+      96,
+      48
+    ],
+    "heads": 2,
+    "split": null
+  },
+  "C": {
+    "params": 7798498,
+    "width_mult": 1.0,
+    "enc": [
+      32,
+      64,
+      128,
+      256
+    ],
+    "bottleneck": 512,
+    "trunk": [
+      256,
+      128,
+      64
+    ],
+    "tail": 32,
+    "heads": 2,
+    "split": "last decoder block"
+  },
+  "D": {
+    "params": 10811298,
+    "width_mult": 1.0,
+    "enc": [
+      32,
+      64,
+      128,
+      256
+    ],
+    "bottleneck": 512,
+    "dec_l": [
+      256,
+      128,
+      64,
+      32
+    ],
+    "dec_r": [
+      256,
+      128,
+      64,
+      32
+    ],
+    "heads": 2,
+    "split": "bottleneck"
+  },
+  "C_wide": {
+    "params": 10817706,
+    "width_mult": 1.5312,
+    "enc": [
+      32,
+      64,
+      128,
+      256
+    ],
+    "bottleneck": 512,
+    "trunk": [
+      392,
+      192,
+      96
+    ],
+    "tail": 48,
+    "heads": 2,
+    "split": "last decoder block"
+  }
+}

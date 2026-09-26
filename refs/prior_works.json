@@ -1,0 +1,534 @@
+[
+  {
+    "key": "Adler2006EIDORS",
+    "why": "C1 Methods 2.3：EIDORS 為正向 FEM 與逆向重建的工具。Crossref 標題搜尋首筆命中，2026-09-23。",
+    "doi": "10.1088/0967-3334/27/5/s03",
+    "authors": [
+      "Adler A",
+      "Lionheart WRB"
+    ],
+    "title": "Uses and abuses of EIDORS: an extensible software base for EIT",
+    "journal": "Physiol Meas",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Physiological Measurement",
+    "year": "2006",
+    "volume": "27",
+    "issue": "5",
+    "pages": "S25-S42",
+    "pmid": "16636416",
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Adler2009GREIT",
+    "why": "C2 Methods 2.3：GREIT 重建器；本篇唯一重建器，Limitations 第 1 條指向。Crossref 標題搜尋首筆命中。",
+    "doi": "10.1088/0967-3334/30/6/s03",
+    "authors": [
+      "Adler A",
+      "Arnold JH",
+      "Bayford R",
+      "Borsic A",
+      "Brown B",
+      "Dixon P",
+      "Faes TJC",
+      "Frerichs I",
+      "Gagnon H",
+      "Gärber Y",
+      "Grychtol B",
+      "Hahn G",
+      "Lionheart WRB",
+      "Malik A",
+      "Patterson RP",
+      "Stocks J",
+      "Tizzard A",
+      "Weiler N",
+      "Wolf GK"
+    ],
+    "title": "GREIT: a unified approach to 2D linear EIT reconstruction of lung images",
+    "journal": "Physiol Meas",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Physiological Measurement",
+    "year": "2009",
+    "volume": "30",
+    "issue": "6",
+    "pages": "S35-S55",
+    "pmid": "19491438",
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Caruana1997MTL",
+    "why": "C7 Methods 2.2：多任務學習作為歸納偏置／正則化——「第二個監督標的本身是已知的正則化」這句的依據（seminal，1997）。",
+    "doi": "10.1023/a:1007379606734",
+    "authors": [
+      "Caruana R"
+    ],
+    "title": "Multitask Learning",
+    "journal": "Machine Learning",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Machine Learning",
+    "year": "1997",
+    "volume": "28",
+    "issue": "1",
+    "pages": "41-75",
+    "pmid": null,
+    "publisher": "Springer Science and Business Media LLC",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Deibele2008",
+    "why": "R2 §1：時間域（頻率）分離肺與心臟阻抗變化，領域標準做法之一。PI 2026-09-23 選定。",
+    "doi": "10.1088/0967-3334/29/6/s01",
+    "authors": [
+      "Deibele JM",
+      "Luepschen H",
+      "Leonhardt S"
+    ],
+    "title": "Dynamic separation of pulmonary and cardiac changes in electrical impedance tomography",
+    "journal": "Physiol Meas",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Physiological Measurement",
+    "year": "2008",
+    "volume": "29",
+    "issue": "6",
+    "pages": "S1-S14",
+    "pmid": "18544813",
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Frerichs2009",
+    "why": "R2 §1：ECG 閘控評估肺灌流分布，時間域分離的另一標準做法。PI 選定。",
+    "doi": "10.1159/000193994",
+    "authors": [
+      "Frerichs I",
+      "Pulletz S",
+      "Elke G",
+      "Reifferscheid F",
+      "Schädler D",
+      "Scholz J",
+      "Weiler N"
+    ],
+    "title": "Assessment of Changes in Distribution of Lung Perfusion by Electrical Impedance Tomography",
+    "journal": "Respiration",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Respiration",
+    "year": "2009",
+    "volume": "77",
+    "issue": "3",
+    "pages": "282-291",
+    "pmid": "19147986",
+    "publisher": "S. Karger AG",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Frerichs2017TREND",
+    "why": "C10 Introduction 1.1：胸腔 EIT 臨床應用與術語的共識聲明（TREND），開場脈絡。",
+    "doi": "10.1136/thoraxjnl-2016-208357",
+    "authors": [
+      "Frerichs I",
+      "Amato MBP",
+      "van Kaam AH",
+      "Tingay DG",
+      "Zhao Z",
+      "Grychtol B",
+      "Bodenstein M",
+      "Gagnon H",
+      "Böhm SH",
+      "Teschner E",
+      "Stenqvist O",
+      "Mauri T",
+      "Torsani V",
+      "Camporota L",
+      "Schibler A",
+      "Wolf GK",
+      "Gommers D",
+      "Leonhardt S",
+      "Adler A",
+      "TREND study group"
+    ],
+    "title": "Chest electrical impedance tomography examination, data analysis, terminology, clinical use and recommendations: consensus statement of the TRanslational EIT developmeNt stuDy group",
+    "journal": "Thorax",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Thorax",
+    "year": "2017",
+    "volume": "72",
+    "issue": "1",
+    "pages": "83-93",
+    "pmid": "27596161",
+    "publisher": "BMJ",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Graf2017PLOSONE",
+    "why": "C5 Introduction 1.1：心臟相關阻抗變化振幅小且位置依賴——弱成分的生理依據；PREREGISTRATION_HEART.md §2 已引。literature/ 有 PDF。",
+    "doi": "10.1371/journal.pone.0188313",
+    "authors": [
+      "Graf M",
+      "Riedel T"
+    ],
+    "title": "Electrical impedance tomography: Amplitudes of cardiac related impedance changes in the lung are highly position dependent",
+    "journal": "PLoS One",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "PLOS ONE",
+    "year": "2017",
+    "volume": "12",
+    "issue": "11",
+    "pages": "e0188313",
+    "pmid": "29145478",
+    "publisher": "Public Library of Science (PLoS)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Grant2011",
+    "why": "R2 §1：通氣與心臟相關阻抗變化的量測。PI 選定。",
+    "doi": "10.1186/cc9985",
+    "authors": [
+      "Grant CA",
+      "Pham T",
+      "Hough J",
+      "Riedel T",
+      "Stocker C",
+      "Schibler A"
+    ],
+    "title": "Measurement of ventilation and cardiac related impedance changes with electrical impedance tomography",
+    "journal": "Crit Care",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Critical Care",
+    "year": "2011",
+    "volume": "15",
+    "issue": "1",
+    "pages": "R37",
+    "pmid": "21266025",
+    "publisher": "Springer Science and Business Media LLC",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Kendall2018",
+    "why": "R6 §1／4.3：多任務損失的不確定性加權——任務干擾與加權文獻定位；加權本身留給後續篇。PI 選定。",
+    "doi": "10.1109/cvpr.2018.00781",
+    "authors": [
+      "Kendall A",
+      "Gal Y",
+      "Cipolla R"
+    ],
+    "title": "Multi-task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics",
+    "journal": "2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+    "year": "2018",
+    "volume": null,
+    "issue": null,
+    "pages": "7482-7491",
+    "pmid": null,
+    "publisher": "IEEE",
+    "type": "proceedings-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "authors"
+      ],
+      "source": "CVF Open Access page of the paper (openaccess.thecvf.com/content_cvpr_2018/html/Kendall_Multi-Task_Learning_Using_CVPR_2018_paper.html): byline 'Alex Kendall, Yarin Gal, Roberto Cipolla'; Crossref returns the reversed order for 10.1109/cvpr.2018.00781",
+      "verified": "2026-09-26"
+    }
+  },
+  {
+    "key": "Ko2021PhysiolMeas",
+    "why": "本研究線的第一篇前作。U-Net 應用於 EIT 肺分割。核心論文的 Introduction 必須交代與它的增量差異。（與本篇的關係定位屬判斷類，待 Fable 決定，此處只記事實。）",
+    "doi": "10.1088/1361-6579/abe021",
+    "authors": [
+      "Ko YF",
+      "Cheng KS"
+    ],
+    "title": "U-Net-based approach for automatic lung segmentation in electrical impedance tomography",
+    "journal": "Physiol Meas",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Physiological Measurement",
+    "year": "2021",
+    "volume": "42",
+    "issue": "2",
+    "pages": "025002",
+    "pmid": "33498021",
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Ko2021PLOSONE",
+    "why": "★ semi-Siamese U-Net 的原著。標題為 'Semi-Siamese U-Net for separation of lung and heart bioimpedance images: A simulation study of thorax EIT'，即本研究所測架構的來源。通訊作者柯雁芬為其原作者，並於 2026-09-18 證言該設計是為心臟分割而作（見 PREREGISTRATION.md §8）。",
+    "doi": "10.1371/journal.pone.0246071",
+    "authors": [
+      "Ko YF",
+      "Cheng KS"
+    ],
+    "title": "Semi-Siamese U-Net for separation of lung and heart bioimpedance images: A simulation study of thorax EIT",
+    "journal": "PLoS One",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "PLOS ONE",
+    "year": "2021",
+    "volume": "16",
+    "issue": "2",
+    "pages": "e0246071",
+    "pmid": "33529234",
+    "publisher": "Public Library of Science (PLoS)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Ko2025CurrMedImaging",
+    "why": "第三篇前作。標題為 'Reconstruction of Heart-related Imaging from Lung Electrical Impedance Tomography Using Semi-Siamese U-Net'。已實作 W_heart/W_lung 多重加權損失並在 EIDORS 公開人體資料上測試，因此「加權 × 分支 2×2」那篇的新穎性須對照它重估。",
+    "doi": "10.2174/0115734056408077250610070821",
+    "authors": [
+      "Ko YF",
+      "Lin YD",
+      "Su PL"
+    ],
+    "title": "Reconstruction of Heart-related Imaging from Lung Electrical Impedance Tomography Using Semi-Siamese U-Net",
+    "journal": "Curr Med Imaging",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Current Medical Imaging Formerly Current Medical Imaging Reviews",
+    "year": "2025",
+    "volume": "21",
+    "issue": null,
+    "pages": "e15734056408077",
+    "pmid": "40611416",
+    "publisher": "Bentham Science Publishers Ltd.",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Lakens2013EffectSize",
+    "why": "C8b Methods 2.4：配對設計的 Cohen's dz 定義與報告。",
+    "doi": "10.3389/fpsyg.2013.00863",
+    "authors": [
+      "Lakens D"
+    ],
+    "title": "Calculating and reporting effect sizes to facilitate cumulative science: a practical primer for t-tests and ANOVAs",
+    "journal": "Front Psychol",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Frontiers in Psychology",
+    "year": "2013",
+    "volume": "4",
+    "issue": null,
+    "pages": "",
+    "pmid": "24324449",
+    "publisher": "Frontiers Media SA",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Nosek2018Prereg",
+    "why": "C9 Methods 2.1、2.6：預註冊的理由與 outcome switching。直接以 DOI 解析核對。",
+    "doi": "10.1073/pnas.1708274114",
+    "authors": [
+      "Nosek BA",
+      "Ebersole CR",
+      "DeHaven AC",
+      "Mellor DT"
+    ],
+    "title": "The preregistration revolution",
+    "journal": "Proc Natl Acad Sci U S A",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Proceedings of the National Academy of Sciences",
+    "year": "2018",
+    "volume": "115",
+    "issue": "11",
+    "pages": "2600-2606",
+    "pmid": "29531091",
+    "publisher": "National Academy of Sciences",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Pulletz2006ROI",
+    "why": "C6 Methods 2.4：肺通氣 EIT 的 ROI 定義比較，四分之一振幅閾值的臨床依據。literature/ 有 PDF。",
+    "doi": "10.1088/0967-3334/27/5/s10",
+    "authors": [
+      "Pulletz S",
+      "Genderingen HRv",
+      "Schmitz G",
+      "Zick G",
+      "Schädler D",
+      "Scholz J",
+      "Weiler N",
+      "Frerichs I"
+    ],
+    "title": "Comparison of different methods to define regions of interest for evaluation of regional lung ventilation by EIT",
+    "journal": "Physiol Meas",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Physiological Measurement",
+    "year": "2006",
+    "volume": "27",
+    "issue": "5",
+    "pages": "S115-S127",
+    "pmid": "16636403",
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Ronneberger2015UNet",
+    "why": "C3 Introduction 1.2、Methods 2.2：U-Net 骨幹（seminal，2015）。直接以 DOI 解析核對題名與作者。",
+    "doi": "10.1007/978-3-319-24574-4_28",
+    "authors": [
+      "Ronneberger O",
+      "Fischer P",
+      "Brox T"
+    ],
+    "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+    "journal": "Lecture Notes in Computer Science",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Lecture Notes in Computer Science",
+    "year": "2015",
+    "volume": null,
+    "issue": null,
+    "pages": "234-241",
+    "pmid": null,
+    "publisher": "Springer International Publishing",
+    "type": "book-chapter",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Vandenhende2021",
+    "why": "R6 §1／4.3：多任務學習綜述（硬參數共享、任務干擾）。PI 選定。",
+    "doi": "10.1109/tpami.2021.3054719",
+    "authors": [
+      "Vandenhende S",
+      "Georgoulis S",
+      "Van Gansbeke W",
+      "Proesmans M",
+      "Dai D",
+      "Van Gool L"
+    ],
+    "title": "Multi-Task Learning for Dense Prediction Tasks: A Survey",
+    "journal": "IEEE Trans Pattern Anal Mach Intell",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "year": "2022",
+    "volume": "44",
+    "issue": "7",
+    "pages": "3614-3633",
+    "pmid": "33497328",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "year",
+        "volume",
+        "issue",
+        "pages"
+      ],
+      "source": "PubMed PMID 33497328 (IEEE Trans Pattern Anal Mach Intell 2022;44(7):3614-3633, doi:10.1109/TPAMI.2021.3054719); Crossref holds the 2021 early-access record with pages 1-1",
+      "verified": "2026-09-26"
+    }
+  },
+  {
+    "key": "Wang2024TIM",
+    "why": "IEEE TIM 2024 的 EIT 'dual-branch U-Net'（DHU-Net）。全文已於 2026-09-22 經 CMU 代理讀過（literature/Wang2024_TIM_DHU-Net_fulltext_ieeexplore.txt）。事實：(1) 兩支在**編碼側**（DCN-SE 局部支 + CA-HyperConv 全域支），單一 fusion decoder，做電壓→影像重建；與本篇解碼側、每標的一支不同。(2) 參數量有**報告**（Fig. 9 Params/GFLOPs 對 RMSE/SSIM，11 個模型），但**未等參數對照**——各模型以原生大小比較；結論自承 'DHU-Net has a significant parametric increase'。(3) 64 筆參考文獻**無** Ko & Cheng 2021 任一篇，無 Siamese，無 heart。(4) 自建 16 電極系統、0.19 m 水槽實驗驗證。(5) 雜訊穩健性：訓練一次、測試集加 90→20 dB 高斯白雜訊評估——與本篇「訓練一次、只評估」的掃描設計同型。核心論文用途：Introduction 一句術語區分；Methods 可引為只評估的 SNR 掃描先例；cover letter 引為 TIM 收 EIT 雙分支網路先例。不宣稱它未控制參數量（界線條款不宣稱 6）。",
+    "doi": "10.1109/tim.2024.3369160",
+    "authors": [
+      "Wang Z",
+      "Li X",
+      "Sun Y",
+      "Wang Q"
+    ],
+    "title": "Electrical Impedance Tomography Deep Imaging With Dual-Branch U-Net Based on Deformable Convolution and Hyper-Convolution",
+    "journal": "IEEE Trans. Instrum. Meas.",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "IEEE Transactions on Instrumentation and Measurement",
+    "year": "2024",
+    "volume": "73",
+    "issue": null,
+    "pages": "1-16",
+    "pmid": null,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Wilcoxon1945",
+    "why": "C8a Methods 2.4：Wilcoxon signed-rank，註冊判定規則的檢定（seminal，1945）。",
+    "doi": "10.2307/3001968",
+    "authors": [
+      "Wilcoxon F"
+    ],
+    "title": "Individual Comparisons by Ranking Methods",
+    "journal": "Biometrics Bulletin",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Biometrics Bulletin",
+    "year": "1945",
+    "volume": "1",
+    "issue": "6",
+    "pages": "80",
+    "pmid": null,
+    "publisher": "JSTOR",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  }
+]

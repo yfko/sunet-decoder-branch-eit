@@ -1,0 +1,10 @@
+# Registered state — the hash of PREREGISTRATION.md as it stood when it was
+# fixed, before any arm was trained. This is the value recorded in
+# runs/run_meta.json (field prereg_sha256) and it is what a reader should
+# verify against.
+eebf21a26d90b7536e6077936c9da3051feea9aa69fa5f6bc484d6b9e7a15d14  PREREGISTRATION.md  (registered 2026-08-28)
+
+# Current file — differs from the above because Deviations have been appended
+# to section 8 after results existed, which is the sanctioned way to record a
+# change. The registered text above section 8 is unaltered.
+a456fbd205d14e4c38b0ed29ebe909f12a30dcc0b2b61c1084a5234ed6fdd946  PREREGISTRATION.md  (2026-08-29, +Deviation: endpoint mis-specification)

@@ -1,0 +1,97 @@
+[
+  {
+    "key": "Ko2021PhysiolMeas",
+    "doi": "10.1088/1361-6579/abe021",
+    "why": "本研究線的第一篇前作。U-Net 應用於 EIT 肺分割。核心論文的 Introduction 必須交代與它的增量差異。（與本篇的關係定位屬判斷類，待 Fable 決定，此處只記事實。）"
+  },
+  {
+    "key": "Ko2021PLOSONE",
+    "doi": "10.1371/journal.pone.0246071",
+    "why": "★ semi-Siamese U-Net 的原著。標題為 'Semi-Siamese U-Net for separation of lung and heart bioimpedance images: A simulation study of thorax EIT'，即本研究所測架構的來源。通訊作者柯雁芬為其原作者，並於 2026-09-18 證言該設計是為心臟分割而作（見 PREREGISTRATION.md §8）。"
+  },
+  {
+    "key": "Ko2025CurrMedImaging",
+    "doi": "10.2174/0115734056408077250610070821",
+    "why": "第三篇前作。標題為 'Reconstruction of Heart-related Imaging from Lung Electrical Impedance Tomography Using Semi-Siamese U-Net'。已實作 W_heart/W_lung 多重加權損失並在 EIDORS 公開人體資料上測試，因此「加權 × 分支 2×2」那篇的新穎性須對照它重估。"
+  },
+  {
+    "key": "Wang2024TIM",
+    "doi": "10.1109/tim.2024.3369160",
+    "why": "IEEE TIM 2024 的 EIT 'dual-branch U-Net'（DHU-Net）。全文已於 2026-09-22 經 CMU 代理讀過（literature/Wang2024_TIM_DHU-Net_fulltext_ieeexplore.txt）。事實：(1) 兩支在**編碼側**（DCN-SE 局部支 + CA-HyperConv 全域支），單一 fusion decoder，做電壓→影像重建；與本篇解碼側、每標的一支不同。(2) 參數量有**報告**（Fig. 9 Params/GFLOPs 對 RMSE/SSIM，11 個模型），但**未等參數對照**——各模型以原生大小比較；結論自承 'DHU-Net has a significant parametric increase'。(3) 64 筆參考文獻**無** Ko & Cheng 2021 任一篇，無 Siamese，無 heart。(4) 自建 16 電極系統、0.19 m 水槽實驗驗證。(5) 雜訊穩健性：訓練一次、測試集加 90→20 dB 高斯白雜訊評估——與本篇「訓練一次、只評估」的掃描設計同型。核心論文用途：Introduction 一句術語區分；Methods 可引為只評估的 SNR 掃描先例；cover letter 引為 TIM 收 EIT 雙分支網路先例。不宣稱它未控制參數量（界線條款不宣稱 6）。"
+  },
+  {
+    "key": "Adler2006EIDORS",
+    "doi": "10.1088/0967-3334/27/5/s03",
+    "why": "C1 Methods 2.3：EIDORS 為正向 FEM 與逆向重建的工具。Crossref 標題搜尋首筆命中，2026-09-23。"
+  },
+  {
+    "key": "Adler2009GREIT",
+    "doi": "10.1088/0967-3334/30/6/s03",
+    "why": "C2 Methods 2.3：GREIT 重建器；本篇唯一重建器，Limitations 第 1 條指向。Crossref 標題搜尋首筆命中。"
+  },
+  {
+    "key": "Ronneberger2015UNet",
+    "doi": "10.1007/978-3-319-24574-4_28",
+    "why": "C3 Introduction 1.2、Methods 2.2：U-Net 骨幹（seminal，2015）。直接以 DOI 解析核對題名與作者。"
+  },
+  {
+    "key": "Graf2017PLOSONE",
+    "doi": "10.1371/journal.pone.0188313",
+    "why": "C5 Introduction 1.1：心臟相關阻抗變化振幅小且位置依賴——弱成分的生理依據；PREREGISTRATION_HEART.md §2 已引。literature/ 有 PDF。"
+  },
+  {
+    "key": "Pulletz2006ROI",
+    "doi": "10.1088/0967-3334/27/5/s10",
+    "why": "C6 Methods 2.4：肺通氣 EIT 的 ROI 定義比較，四分之一振幅閾值的臨床依據。literature/ 有 PDF。"
+  },
+  {
+    "key": "Caruana1997MTL",
+    "doi": "10.1023/a:1007379606734",
+    "why": "C7 Methods 2.2：多任務學習作為歸納偏置／正則化——「第二個監督標的本身是已知的正則化」這句的依據（seminal，1997）。"
+  },
+  {
+    "key": "Wilcoxon1945",
+    "doi": "10.2307/3001968",
+    "why": "C8a Methods 2.4：Wilcoxon signed-rank，註冊判定規則的檢定（seminal，1945）。"
+  },
+  {
+    "key": "Lakens2013EffectSize",
+    "doi": "10.3389/fpsyg.2013.00863",
+    "why": "C8b Methods 2.4：配對設計的 Cohen's dz 定義與報告。"
+  },
+  {
+    "key": "Nosek2018Prereg",
+    "doi": "10.1073/pnas.1708274114",
+    "why": "C9 Methods 2.1、2.6：預註冊的理由與 outcome switching。直接以 DOI 解析核對。"
+  },
+  {
+    "key": "Frerichs2017TREND",
+    "doi": "10.1136/thoraxjnl-2016-208357",
+    "why": "C10 Introduction 1.1：胸腔 EIT 臨床應用與術語的共識聲明（TREND），開場脈絡。"
+  },
+  {
+    "key": "Deibele2008",
+    "doi": "10.1088/0967-3334/29/6/s01",
+    "why": "R2 §1：時間域（頻率）分離肺與心臟阻抗變化，領域標準做法之一。PI 2026-09-23 選定。"
+  },
+  {
+    "key": "Frerichs2009",
+    "doi": "10.1159/000193994",
+    "why": "R2 §1：ECG 閘控評估肺灌流分布，時間域分離的另一標準做法。PI 選定。"
+  },
+  {
+    "key": "Grant2011",
+    "doi": "10.1186/cc9985",
+    "why": "R2 §1：通氣與心臟相關阻抗變化的量測。PI 選定。"
+  },
+  {
+    "key": "Kendall2018",
+    "doi": "10.1109/cvpr.2018.00781",
+    "why": "R6 §1／4.3：多任務損失的不確定性加權——任務干擾與加權文獻定位；加權本身留給後續篇。PI 選定。"
+  },
+  {
+    "key": "Vandenhende2021",
+    "doi": "10.1109/tpami.2021.3054719",
+    "why": "R6 §1／4.3：多任務學習綜述（硬參數共享、任務干擾）。PI 選定。"
+  }
+]

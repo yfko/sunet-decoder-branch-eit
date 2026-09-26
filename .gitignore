@@ -1,0 +1,10 @@
+*.mat
+*.pt
+runs*/
+data/
+*.npz
+!preds.npz
+*.zip
+*.tar.gz
+.DS_Store
+__pycache__/
