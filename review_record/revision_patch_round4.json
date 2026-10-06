@@ -1,0 +1,135 @@
+{
+ "patch_format_version": "1.1",
+ "authorization_context": "review_roadmap",
+ "revision_round": 4,
+ "base_draft_hash": "67570787bd55",
+ "roadmap_sha256": "959765cb1799edee61af4687f2b5e71beb2ea70118c91a26e1a5b58d088fa2bc",
+ "author_adjudication_sha256": "add0902b8f6e62d670aa8853c2cb50456cb909dba6da0885bf1e0483456eee42",
+ "author_decision_digest": "042ef98f55aa00d81ed96d7c3efd4004e806eb10db0fe473f71b432069024f1d",
+ "claim_surface_manifest_sha256": "bd6af28c7e4753435c25d971f231dfd0be94d2b045e641b745bb715f52d9475a",
+ "ops": [
+  {
+   "op": "replace_block",
+   "block_id": "B0013",
+   "old_hash": "dd4abe0b5ad7",
+   "new_text": "The paper tests one statement. A decoder branch dedicated to a weak component yields a measurable benefit only when that component is actually under threat. We test this statement in GREIT-reconstructed lung EIT across seven noise levels. The same statement under other reconstructors and noise models, under the weighted loss the original design used, and on measured data is not tested here (Section 4.4). The question is therefore whether, at equal parameter count, equal supervision and 1:1 loss weights, the decoder branch improves separation of the cardiac component, and how that benefit changes with measurement noise. The contribution we claim is not a verdict on the architecture. It is a measurement of how sensitive a post-reconstruction stage is to the noise that the measurement chain lets through, and of what becomes of that sensitivity when the network is trained at the level at which it is evaluated. Two preregistrations were hashed before any arm was trained, and their decision rules were not altered afterwards. A registered addendum, hashed before it was run, added the one experiment that a structured pre-submission review of the first draft asked for. At the registered primary level the rules find no benefit. For a network trained at 40 dB and evaluated under heavier noise a benefit appears, with an onset rather than a slope. When the network is instead trained at the heavier level, that benefit disappears together with the loss it accompanied, and the statement under test receives no separate verdict in the matched condition, for a reason Section 4.1 sets out.",
+   "roadmap_item_ids": [
+    "REV-R4-6"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0028",
+   "old_hash": "e06deecd53f9",
+   "new_text": "The primary endpoint is heart-channel Dice on the quarter-amplitude set (EIDORS `calc_hm_set(img, 0.25)`), computed on the test split and averaged over seeds. Differences between arms are reported in Dice points, hundredths of the Dice coefficient. Secondary outcomes are mean absolute error (MAE), intersection over union (IoU), sensitivity, specificity, average symmetric surface distance (ASSD) and the 95th-percentile Hausdorff distance (HD95), the same set on the lung channel, and the sweep. Seeds are the unit of replication, and every contrast is paired within seed. Because every seed is scored on the same 360 test geometries, the seed-level bootstrap intervals reported throughout describe training-run variability, not variability over test geometries. A geometry-level interval for the three main contrasts is reported beside the seed-level one in Section 3.5 and Supplementary S8. The registered rules are as follows. H1 (primary): D exceeds B_wide on heart Dice if the mean paired difference exceeds B_wide's seed-to-seed standard deviation and the Wilcoxon signed-rank test (Wilcoxon, 1945) <!--ref:Wilcoxon1945--><!--anchor:none:--> over paired seeds gives p < 0.05. Otherwise H1 is falsified. The floor is there so that a difference smaller than the scatter between two training runs of the same architecture cannot be declared a success on a p-value alone. It states what size of effect would matter, and it was written before any effect was seen. The Wilcoxon test is two-sided and was computed with the asymptotic normal approximation without continuity correction, the default of the SciPy implementation above n = 50 and the procedure the scoring code applied. No paired difference was tied at zero, and W, the smaller signed-rank sum, is reported with p for every rule-bearing contrast. H2 (position): the same rule applied to D minus C_wide. H3 (noise): the paired difference D minus B_wide at the lowest SNR exceeds that at the highest, with a 95% percentile bootstrap interval on the difference-of-differences, resampling seeds, that excludes zero. H4 (lung): no difference is expected between arms, and the lung channel is reported, not tested. No multiplicity adjustment is applied: the four registered rules are separate pre-specified decisions, each with its own floor, H3 rests on one interval, and the per-level tests and intervals of the sweep are descriptive and reported with their unadjusted values. The onset in Section 3.2 is read from seven correlated levels; for reference, at the first level at which p falls below 0.05, 35 dB, p = 0.0011 is also below the Bonferroni threshold for seven tests, 0.05/7 = 0.0071. Effect sizes are reported as Cohen's dz for paired differences (Lakens, 2013) <!--ref:Lakens2013EffectSize--><!--anchor:none:-->, and all bootstrap intervals use 100,000 resamples of the 58 seeds.",
+   "roadmap_item_ids": [
+    "REV-R4-3"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0034",
+   "old_hash": "f46161cac8e6",
+   "new_text": "Three analyses in this paper were not registered and are reported as descriptive. The first is the seed-level correlation of the D minus B_wide difference between sweep levels. The second is, at every sweep level, each seed's gain as a fraction of the control arm's own remaining error, (D − B_wide)/(1 − B_wide), which removes the Dice ceiling. The third is the comparison of that quantity between the heart and lung channels. Also unregistered, and reported with unadjusted p-values or intervals as descriptive, are the contrasts of arms B, C and C_wide against B_wide and against each other at 40 dB and across the sweep (Section 3.1, Supplementary S9), the contrast of D against the unwidened arm B at 40 dB (Section 3.1), the per-seed slope of the D minus B_wide difference from 40 to 20 dB, the 50 dB anchor for the H3 statistic, the seed-removal sensitivity at 20 dB, and the geometry-level intervals of the addendum. The registered outcome grid also has no cell for two combinations that occurred: H1 falsified while H3 is confirmed, and a decision rule returning falsified while the effect estimate's interval excludes zero. No rule was invented afterwards to reconcile them. Both outcomes are reported as they fell. Code for generating the data, training, scoring and every figure and table is public (see Availability), and the results follow in the order the hypotheses were registered.",
+   "roadmap_item_ids": [
+    "REV-R4-3"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0037",
+   "old_hash": "96e013cf3601",
+   "new_text": "Table 1 gives the five arms at 40 dB. Arm D reached a heart Dice of 0.9679 ± 0.0043 (mean ± SD over 58 seeds) against 0.9657 ± 0.0067 for B_wide. The paired difference was +0.223 Dice points, 95% bootstrap CI +0.020 to +0.441, dz = 0.27, Wilcoxon p = 0.098. The registered H1 rule requires that difference to exceed B_wide's seed-to-seed SD of 0.670 points and that p be below 0.05. It meets neither, and the floor is the condition it misses by the wider margin (0.223 against 0.670). H1 is falsified. For H2, D minus C_wide was +0.159 points (CI −0.011 to +0.338), p = 0.140, against a floor of 0.606 points. H2 is falsified. The remaining arms were close to the control: B, C and C_wide differed from B_wide by +0.032, +0.106 and +0.064 points on the heart channel, with every interval containing zero and p between 0.74 and 0.99. Against the unwidened arm B, D gained +0.191 points (CI +0.027 to +0.361, p = 0.041), which is the contrast the capacity control was built to expose; it is descriptive, not a registered rule, and it grows by 0.03 points, to +0.223, when the 38% larger B_wide replaces B. On the lung channel no arm differed from B_wide by more than 0.005 points (Table 1), and the secondary heart-channel metrics (MAE, IoU, sensitivity, specificity, ASSD, HD95) ordered the arms the same way as Dice and are given in the per-seed result files.",
+   "roadmap_item_ids": [
+    "REV-R4-3",
+    "REV-R4-4"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0122",
+   "old_hash": "b9b80098c2b7",
+   "new_text": "The registered addendum (Section 2.7) retrained D and B_wide from scratch at 20 dB, 58 seeds each, 116 runs. Table 3 gives the result beside the two contrasts already reported. Trained and evaluated at 20 dB, B_wide reached a heart Dice of 0.9574 ± 0.0038 and D 0.9597 ± 0.0041. The paired difference Δ_20|20 was +0.229 points, 95% bootstrap CI +0.081 to +0.373, median +0.247, dz = 0.40, W = 427, p = 0.0009, with D ahead on 41 of 58 seeds. The registered H5 rule requires that difference to exceed B_wide's seed-to-seed SD under this condition, 0.384 points, and that p be below 0.05. The p-value condition holds and the floor condition does not (0.229 against 0.384). The floor is itself an estimate from 58 seeds, with a standard error of about 0.036 points, and the upper limit of the difference's interval lies within one such error of it, so this is the marginal case that a registered rule returns as falsified rather than adjudicates. H5 is falsified. The shrinkage reported next, Δ_20|20 against Δ_20|40, compares two estimates and does not depend on the floor. As with H1, the rule is not revised because the p-value is small. On the lung channel the two arms were identical to four decimals (0.9853 and 0.9853, Δ = −0.002 points, CI −0.040 to +0.036, p = 0.95), as the registered expectation carried over from H4 anticipated.",
+   "roadmap_item_ids": [
+    "REV-R4-3"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0127",
+   "old_hash": "bda2c07776f1",
+   "new_text": "The other three arms were scored at every level of the sweep, and Supplementary S9 reports all five (Table S9, computed from the registered per-seed files by `tools/make_table_s9.py`). Decoder width on its own does not reproduce the advantage: B_wide led B by between -0.12 and -0.01 points across the seven levels (-0.124 points at 20 dB, CI -0.510 to +0.240, 28 of 58 seeds), and C_wide led C by at most +0.03 points (+0.034 at 20 dB, CI -0.387 to +0.452, 28 of 58 seeds; the values at 35, 30 and 25 dB are in Table S9). The branch without the width control, D minus B, tracks the registered contrast level for level, reaching +1.973 points at 20 dB (CI +1.616 to +2.327, 54 of 58 seeds) against +2.097 for D minus B_wide, and the late split, C_wide minus B_wide, reached +0.425 points at 20 dB (CI +0.005 to +0.862). The evaluation-only advantage therefore belongs to the position of the split, not to decoder width; replacing B with the widened control B_wide adds between 0.01 and 0.12 points to it across the levels and removes none of it.",
+   "roadmap_item_ids": [
+    "REV-R4-2"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0051",
+   "old_hash": "e589fff1dc2e",
+   "new_text": "Three levels of evidence need to be kept apart, because the paper's claims rest on them differently, and the addendum moved one of them. What the registered rule confirmed is a prediction of the mechanism: if a second decoder specialises in the weak component, its advantage should grow as that component is threatened, and for networks trained at 40 dB and evaluated under heavier noise it did (H3). What the registered addendum then showed is that the condition of this prediction is absent once training and evaluation are matched, so the prediction is not tested there. Trained at the level at which it is evaluated, the branch's advantage is 0.229 points at 20 dB and 0.223 points at 40 dB, and it clears the registered floor at neither (H5, H1). What is consistent with the mechanism but was not tested is that the evaluation-only gain concentrated in the cardiac channel (Section 3.4). What is descriptive is the shape of the evaluation-only growth: no advantage from 60 to 40 dB, a detectable step by 35 dB, the floor crossed by 30 dB, and a full effect at 20 dB. The mechanism has not been confirmed. One of its predictions was, in a design that, as the pre-submission review pointed out, could not distinguish protection of a threatened component from tolerance of an unfamiliar input. The registered addendum changed the training condition, and with it two things at once: the network no longer met noise it had not seen, and the control arm no longer lost the component, its loss falling from 8.8 points to 0.8. The addendum therefore removed the mismatch and the threat together. Under the reading fixed before it was run, the evaluation-only result is attributable to distribution-shift tolerance in whole or in part, and the design cannot say which.",
+   "roadmap_item_ids": [
+    "REV-R4-1"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0056",
+   "old_hash": "8da82b9d1f76",
+   "new_text": "The practical lesson is for anyone comparing architectures rather than for anyone treating patients. For a network trained at 40 dB, the branch is worth 2.1 Dice points on the cardiac channel at 20 dB, with dz above one, and 0.2 points at 40 dB, where it fails a preregistered rule. For a network trained at 20 dB it is worth 0.2 points at 20 dB and fails the same rule. A study that ran only one of those conditions would have reported its number as the answer, and an uncontrolled comparison, in which capacity and supervision travel with the branch, would have had no way to tell which side of the onset it was on. The condition dependence is the finding, and it is visible only because the arms were matched, the sweep was registered, and the retrained contrast was registered before it was run. The same logic runs in the other direction. A study that matched the arms and registered its rule but sampled only the registered primary level would have concluded, correctly by its own rule, that the branch does nothing, and would have missed the regime in which it does. And a study that ran the sweep without the retrained contrast, as this one did before its addendum, would have attributed to the branch a benefit that did not survive training at the heavier level. The lesson has precedents on both sides of the measurement chain. On the instrument side, measurements on a resistive mesh phantom found that the SNR of an EIT system depends on frame rate, operating frequency, injected current and measurement strategy, and the authors concluded that performance figures should always be reported together with those parameters (Gagnon et al., 2010) <!--ref:Gagnon2010TBME--><!--anchor:none:-->. On the network side, benchmarks of segmentation models under controlled corruptions found that tolerance of corruptions differs between architectures and depends strongly on the corruption type (Kamann and Rother, 2021) <!--ref:Kamann2021IJCV--><!--anchor:none:-->, and that networks for MRI segmentation are highly sensitive to simulated distribution shifts, among them changes of SNR (Boone et al., 2023) <!--ref:Boone2023NeuroImage--><!--anchor:none:-->. An architectural comparison reported at one noise level and one training condition is, by those results and by this one, a comparison at one point of a surface.",
+   "roadmap_item_ids": [
+    "REV-R4-1"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0060",
+   "old_hash": "cfb42ce20759",
+   "new_text": "Three of the fifty-four references are to our own group. That ratio is structural rather than elective. The architecture under test is our own, and the study exists to evaluate it under controls its original description did not include.",
+   "roadmap_item_ids": [
+    "REV-R4-5"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0070",
+   "old_hash": "615b38089d3a",
+   "new_text": "The corresponding author is the original author of the semi-Siamese U-Net evaluated in this study. Three of the fifty-four cited works are from the authors' group. The ratio follows from the study's purpose, which is to evaluate the authors' own architecture under controls its original description did not include. The authors declare no other competing interests.",
+   "roadmap_item_ids": [
+    "REV-R4-5"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0072",
+   "old_hash": "12a5b0117730",
+   "new_text": "The preregistrations (`PREREGISTRATION.md`, `PREREGISTRATION_HEART.md` with its §9 addendum) with their registered SHA-256 hashes, the data-generation scripts (MATLAB/EIDORS), the training, scoring, sweep and figure code (Python), the per-seed result files for every arm, level and training condition, and the deviation log are available at [REPOSITORY URL AND TAG: to be frozen at submission]. The simulated datasets are regenerable from the scripts and seeds. The 406 model checkpoints (290 registered runs and 116 addendum runs, about 17 GB) are not deposited in a public archive because of their size and are available from the corresponding author on request. No human or animal data were used, and no ethics approval was required.",
+   "roadmap_item_ids": [
+    "REV-R4-7"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  }
+ ],
+ "emitted_by": "draft_writer_agent (academic-paper revision round 4, Fable 5.1, 2026-10-07)"
+}

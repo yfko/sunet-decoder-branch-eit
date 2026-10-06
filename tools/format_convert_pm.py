@@ -72,10 +72,47 @@ assert text.count("## Conflicts of Interest") == 0 and coi in text
 af = Path("manuscript/AUTHOR_FIELDS.json")
 if af.exists():
     for k, v in json.load(open(af)).items():
-        if k.startswith("[") and k in text:
+        if not k.startswith("_") and k in text:
             text = text.replace(k, v)
 remaining = sorted(set(re.findall(r"\[[^\]\n]*(?:to supply|to assign|to be|___|roles|email|URL)[^\]\n]*\]", text)))
 print("placeholders still open:", remaining or "none")
+# ---- title page: one paragraph per affiliation line (the draft separates them by single newlines only)
+for mark in ("²", "³", "\\*Corresponding author:"):
+    text = text.replace("\n" + mark, "\n\n" + mark, 1)
+assert re.search(r"(?m)^¹ .*\n\n² .*\n\n³ .*\n\n\\\*Corresponding author:", text), "title-page affiliations not split"
+
+# ---- complete document for review: embed Fig. 1-4 above their captions and Tables 1-3 in full
+FIGS = {"Fig. 1.": "fig1_arms_and_task", "Fig. 2.": "fig1_separability", "Fig. 3.": "fig_snr_sweep", "Fig. 4.": "fig_predictions"}
+def tex_caption(t):
+    c = re.search(r"\\caption\{(.*)\}", Path(f"results/tables/{t}.tex").read_text()).group(1)
+    for a, b in [("~", " "), ("\\_", "_"), ("$\\Delta$", "Δ"), ("$p$", "p"), ("$d_z$", "dz"), ("95\\%", "95%"),
+                 ("$(\\mathrm{D}-\\mathrm{B\\_wide})/(1-\\mathrm{B\\_wide})$", "(D − B_wide)/(1 − B_wide)"), ("i.e.\\ ", "i.e. "),
+                 ("DSC percentage points", "Dice points")]:
+        c = c.replace(a, b)
+    return c
+def table_block(n, t):
+    md = Path(f"results/tables/{t}.md").read_text().strip()
+    rows = [l for l in md.splitlines() if l.startswith("|")]
+    note = " ".join(l for l in md.splitlines() if l.strip() and not l.startswith("|"))
+    if len(rows[0].split("|")) - 2 > 10:   # too wide for a portrait page: transpose (conditions become columns); content unchanged
+        cells = [[c.strip() for c in r.strip("|").split("|")] for r in rows if not set(r.replace("|", "").strip()) <= set("-: ")]
+        head, body = cells[0], cells[1:]
+        tr = [[head[i]] + [b[i] for b in body] for i in range(len(head))]
+        cond = ["Condition"] + [f"{b[0]} trained, {b[1]} evaluated" for b in body]
+        tr = [cond] + [r for r in tr if r[0] not in ("Trained", "Evaluated")]
+        rows = ["| " + " | ".join(tr[0]) + " |", "|" + "---|" * len(tr[0])] + ["| " + " | ".join(r) + " |" for r in tr[1:]]
+    return f"**Table {n}.** {tex_caption(t)}\n\n" + "\n".join(rows) + f"\n\n*Note.* {note}\n"
+sec = re.search(r"## Figure and table captions\n\n(.*?)(\*\*Supplementary material\.\*\*)", text, flags=re.S)
+parts = re.split(r"\n\n(?=\*\*(?:Fig\. \d\.|Table 1\.))", sec.group(1).strip())
+figs_md = []
+for ptxt in parts:
+    key = next((k for k in FIGS if ptxt.startswith(f"**{k}**")), None)
+    if key:
+        img = Path("figures") / f"{FIGS[key]}.png"
+        figs_md.append(f"![]({img.resolve()}){{width=100%}}\n\n{ptxt}\n")
+tables_md = "\n\n".join(table_block(n, t) for n, t in ((1, "table1_arms_40db"), (2, "table2_snr_sweep"), (3, "table3_retrained_20db")))
+text = text[:sec.start()] + "## Figures\n\n" + "\n\n".join(figs_md) + "\n\n## Tables\n\n" + tables_md + "\n\n## Supplementary material\n\n" + sec.group(2) + text[sec.end():]
+assert text.count("![](") == 4 and "**Table 3.**" in text
 out_md.write_text(text)
 
 # ---- checks: R10b leak, CJK characters (PM: Roman only outside the author list), abstract words, body words
@@ -88,5 +125,5 @@ print("R10b leak scan:", "clean" if not leak else leak)
 print("CJK characters in deliverable:", cjk or "none")
 print("abstract words:", abstract_words, "| main text words (sections 1-5):", len(sec.split()))
 print("in-text citations:", len(re.findall(r"\((?:[A-Z][^()]*? )?\d{4}[a-z]?\)", body)))
-subprocess.run(["pandoc", str(out_md), "-o", "manuscript/24_SUBMISSION_pm.docx", "--from", "markdown+smart"], check=True)
+subprocess.run(["pandoc", str(out_md), "-o", "manuscript/24_SUBMISSION_pm.docx", "--from", "markdown+smart", "--reference-doc", "tools/reference_pm.docx"], check=True)
 print("written:", out_md, "manuscript/24_SUBMISSION_pm.docx")

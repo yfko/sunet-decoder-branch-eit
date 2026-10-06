@@ -1,0 +1,1112 @@
+{
+ "base_draft_sha256": "0a5114777ca6a78ce74ba6a32fa5d551d0cc2eff5fc5eb861508b548451082a6",
+ "block_manifest_sha256": "259df37d8649db4f6fa819ee1ac10ac195d1b4bf968eb283513743e1e47ede91",
+ "consensus_summary": "Round-2 five-seat panel on 32_SUBMISSION_scirep.md (2026-10-06): D3 block (DA, repairable), D1/D2/D4/D5 warn, D6 pass; F2 fired. SC-1 attribution corroborated by R1-W2 and DA-M1 (R3-W5 direction dispute arbitrated for R1/DA); SC-4 CONSENSUS-3; SC-5 corroborated; others single-seat. No DA CRITICAL. Letter sha256 68741c663ad5958d9d1c865b1a3077904734118e89ef375f802926fcc6ab3658.",
+ "dissenting_opinions": [
+  "REV-R3-1 / R3-W5: the shift-tolerance result is undersold to the robustness reader; arbitrated for R1/DA, to be served inside the registered wording without apportionment"
+ ],
+ "editorial_decision": "Major Revision",
+ "items": [
+  {
+   "competence_basis": "Scientific Reports Editorial Board Member, biomedical engineering / medical imaging (round-2 panel seat 1)",
+   "confidence": 5,
+   "consensus_level": "SINGLE-VERIFIER",
+   "consequence_if_unaddressed": {
+    "code": "editorial_conformance_unmet",
+    "target": {
+     "kind": "manuscript",
+     "locator": "format items"
+    }
+   },
+   "corroborating_sources": [],
+   "cost_scope": {
+    "kind": "sentence",
+    "locator": "§1 paragraphs 1 and 5; Table 2 caption; abstract; reference rendering at format-convert"
+   },
+   "description": "Venue-format departures: figure numbering by first citation; the 'companion studies are cited accordingly' sentence; reference rendering gaps; LaTeX in the Table 2 caption; abstract sentence three",
+   "evidence_anchor": {
+    "anchor_type": "text",
+    "locator": "§1",
+    "quote": "The companion studies test the same statement under the other conditions and are cited accordingly."
+   },
+   "id": "REV-R3-11",
+   "obligation_class": "should_fix",
+   "proposed_targets": [
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0005"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0009"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0013"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0082"
+    }
+   ],
+   "reviewer": "EIC",
+   "severity": "minor",
+   "source_refs": [
+    {
+     "channel": "finding",
+     "ordinal": 1,
+     "seat": "EIC",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 3,
+     "seat": "EIC",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 4,
+     "seat": "EIC",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 5,
+     "seat": "EIC",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 8,
+     "seat": "EIC",
+     "subclaim_ordinal": 0
+    }
+   ],
+   "sub_claim_ids": [
+    "SC-R3-11"
+   ],
+   "suggested_action": "Fix the five items in text; renumber figures at format-convert.",
+   "target_section": "§1, Abstract, captions",
+   "verification_criteria": "The sentence is corrected; captions carry no LaTeX; figures cited in order.",
+   "priority": "should_fix"
+  },
+  {
+   "competence_basis": "Scientific Reports Editorial Board Member, biomedical engineering / medical imaging (round-2 panel seat 1)",
+   "confidence": 4,
+   "consensus_level": "CONSENSUS-3",
+   "consequence_if_unaddressed": {
+    "code": "claim_scope_unsupported",
+    "target": {
+     "kind": "claim",
+     "locator": "§5 closing generalisation"
+    }
+   },
+   "corroborating_sources": [
+    {
+     "competence_basis": "Statistician-engineer in ML evaluation methodology (round-2 panel seat 2)",
+     "confidence": 4,
+     "evidence_anchor": {
+      "anchor_type": "text",
+      "locator": "Abstract",
+      "quote": "onset 35–30 dB, lung channel flat"
+     },
+     "reviewer": "R1",
+     "severity": "minor"
+    },
+    {
+     "competence_basis": "Scientific Reports Editorial Board Member, biomedical engineering / medical imaging (round-2 panel seat 1)",
+     "confidence": 4,
+     "evidence_anchor": {
+      "anchor_type": "text",
+      "locator": "§1",
+      "quote": "Three questions follow directly, and it is better to answer them here than to leave them to a reviewer."
+     },
+     "reviewer": "EIC",
+     "severity": "minor"
+    }
+   ],
+   "cost_scope": {
+    "kind": "sentence",
+    "locator": "§5 closing sentence; Abstract and §5 onset; §1 paragraph"
+   },
+   "description": "Stated implication outruns the tested cell: §5 closing sentence; Abstract/§5 onset without the descriptive label; the reviewer-facing Introduction paragraph",
+   "evidence_anchor": {
+    "anchor_type": "text",
+    "locator": "§5",
+    "quote": "the value of a dedicated branch is a property of that combination, not of the branch"
+   },
+   "id": "REV-R3-5",
+   "obligation_class": "should_fix",
+   "proposed_targets": [
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0005"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0012"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0064"
+    }
+   ],
+   "reviewer": "EIC",
+   "severity": "minor",
+   "source_refs": [
+    {
+     "channel": "finding",
+     "ordinal": 2,
+     "seat": "EIC",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 11,
+     "seat": "R1",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 4,
+     "seat": "R3",
+     "subclaim_ordinal": 0
+    }
+   ],
+   "sub_claim_ids": [
+    "SC-R3-5"
+   ],
+   "suggested_action": "Scope the closing sentence to the tested cell; label the onset descriptive; rewrite the three-questions paragraph for readers.",
+   "target_section": "Abstract, §1, §5",
+   "verification_criteria": "Closing sentence names its scope; onset carries 'descriptive'; no sentence addresses reviewers.",
+   "priority": "should_fix"
+  },
+  {
+   "competence_basis": "Scientific Reports Editorial Board Member, biomedical engineering / medical imaging (round-2 panel seat 1)",
+   "confidence": 4,
+   "consensus_level": "SINGLE-VERIFIER",
+   "consequence_if_unaddressed": {
+    "code": "method_reproducibility_unresolved",
+    "target": {
+     "kind": "section",
+     "locator": "Data Availability, §2.4"
+    }
+   },
+   "corroborating_sources": [
+    {
+     "competence_basis": "Statistician-engineer in ML evaluation methodology (round-2 panel seat 2)",
+     "confidence": 3,
+     "evidence_anchor": {
+      "anchor_type": "text",
+      "locator": "Data Availability",
+      "quote": "are available from the corresponding author on request"
+     },
+     "reviewer": "R1",
+     "severity": "minor"
+    }
+   ],
+   "cost_scope": {
+    "kind": "sentence",
+    "locator": "one sentence in §2.4 on determinism and compute; deposit decision is the PI's"
+   },
+   "description": "Checkpoints on request rather than deposited; MPS determinism; compute footprint beside parameter count",
+   "evidence_anchor": {
+    "anchor_type": "text",
+    "locator": "Data Availability",
+    "quote": "are available from the corresponding author on request, because their size exceeds what the repository host accepts"
+   },
+   "id": "REV-R3-13",
+   "obligation_class": "consider",
+   "proposed_targets": [
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0027"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0072"
+    }
+   ],
+   "reviewer": "EIC",
+   "severity": "minor",
+   "source_refs": [
+    {
+     "channel": "finding",
+     "ordinal": 6,
+     "seat": "EIC",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 9,
+     "seat": "R1",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 10,
+     "seat": "R1",
+     "subclaim_ordinal": 0
+    }
+   ],
+   "sub_claim_ids": [
+    "SC-R3-13"
+   ],
+   "suggested_action": "State determinism; deposit if the PI chooses.",
+   "target_section": "§2.4, Data Availability",
+   "verification_criteria": "§2.4 states the determinism behaviour; deposit decision recorded.",
+   "priority": "consider"
+  },
+  {
+   "competence_basis": "Scientific Reports Editorial Board Member, biomedical engineering / medical imaging (round-2 panel seat 1)",
+   "confidence": 3,
+   "consensus_level": "SINGLE-VERIFIER",
+   "consequence_if_unaddressed": {
+    "code": "reader_traceability_reduced",
+    "target": {
+     "kind": "section",
+     "locator": "§4 headings"
+    }
+   },
+   "corroborating_sources": [],
+   "cost_scope": {
+    "kind": "sentence",
+    "locator": "§4 subheadings"
+   },
+   "description": "Venue-suggested order and the 4,500-word recommendation are advisory; the Discussion's sentence-length subheadings",
+   "evidence_anchor": {
+    "anchor_type": "text",
+    "locator": "§4.1 heading",
+    "quote": "The advantage under heavier noise belongs mostly to the training-evaluation mismatch, and this study measured that before it could be attributed to the branch"
+   },
+   "id": "REV-R3-14",
+   "obligation_class": "consider",
+   "proposed_targets": [
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0050"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0054"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0057"
+    }
+   ],
+   "reviewer": "EIC",
+   "severity": "minor",
+   "source_refs": [
+    {
+     "channel": "finding",
+     "ordinal": 7,
+     "seat": "EIC",
+     "subclaim_ordinal": 0
+    }
+   ],
+   "sub_claim_ids": [
+    "SC-R3-14"
+   ],
+   "suggested_action": "Shorten the four §4 subheadings; keep IMRaD order (author decision).",
+   "target_section": "§4",
+   "verification_criteria": "§4 subheadings are short noun phrases.",
+   "priority": "consider"
+  },
+  {
+   "competence_basis": "Statistician-engineer in ML evaluation methodology (round-2 panel seat 2)",
+   "confidence": 4,
+   "consensus_level": "SINGLE-VERIFIER",
+   "consequence_if_unaddressed": {
+    "code": "reporting_requirement_unmet",
+    "target": {
+     "kind": "section",
+     "locator": "§2.4 sample size"
+    }
+   },
+   "corroborating_sources": [],
+   "cost_scope": {
+    "kind": "sentence",
+    "locator": "§2.1 Study 1 numbers, §2.4 sample-size paragraph, §4.2 one sentence"
+   },
+   "description": "Sample size covers only the p-condition; the floor demands a paired effect near one SD; the stated dz 0.376 and 29% figures are not reproducible from the post-correction Study 1 numbers",
+   "evidence_anchor": {
+    "anchor_type": "text",
+    "locator": "§2.4",
+    "quote": "Scaling Study 1's heart effect by that variance gave dz ≈ 0.376, and 80% power at that effect size requires 58 seeds."
+   },
+   "id": "REV-R3-2",
+   "obligation_class": "must_fix",
+   "proposed_targets": [
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0017"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0029"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0055"
+    }
+   ],
+   "reviewer": "R1",
+   "severity": "major",
+   "source_refs": [
+    {
+     "channel": "finding",
+     "ordinal": 1,
+     "seat": "R1",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 4,
+     "seat": "R1",
+     "subclaim_ordinal": 0
+    }
+   ],
+   "sub_claim_ids": [
+    "SC-R3-2"
+   ],
+   "suggested_action": "State the registered chain (pre-correction dz 0.500 → scaled 0.376 → 58 for the p-condition), the post-correction dz 0.34, and what the floor demands (about 0.8 SD of the paired difference); say the rule had little power to confirm at the anticipated effect.",
+   "target_section": "§2.1, §2.4, §4.2",
+   "verification_criteria": "§2.4 states which condition n was sized for, what the floor demands in standardised units, and the pre- and post-correction Study 1 effect sizes consistently.",
+   "priority": "must_fix"
+  },
+  {
+   "competence_basis": "Statistician-engineer in ML evaluation methodology (round-2 panel seat 2)",
+   "confidence": 4,
+   "consensus_level": "SINGLE-VERIFIER",
+   "consequence_if_unaddressed": {
+    "code": "claim_scope_unsupported",
+    "target": {
+     "kind": "claim",
+     "locator": "attribution of the 20 dB benefit to mismatch tolerance"
+    }
+   },
+   "corroborating_sources": [
+    {
+     "competence_basis": "Devil's Advocate, fixed seat (round-2 panel seat 5)",
+     "confidence": 4,
+     "evidence_anchor": {
+      "anchor_type": "text",
+      "locator": "§4.1",
+      "quote": "The design that can distinguish them found that most of the effect is the latter."
+     },
+     "reviewer": "DA",
+     "severity": "major"
+    }
+   ],
+   "cost_scope": {
+    "kind": "section",
+    "locator": "Abstract (31_ and B0005), §4.1 heading and first two paragraphs, §3.5 closing paragraph, §5"
+   },
+   "description": "The addendum removed the training-evaluation mismatch and, by the paper's own operational definition of 'under threat' (control-arm loss), the threat at the same time; 'most of the benefit is mismatch tolerance' apportions what the design cannot; the §1 thesis receives no verdict",
+   "evidence_anchor": {
+    "anchor_type": "text",
+    "locator": "§4.1",
+    "quote": "The design that can distinguish them found that most of the effect is the latter."
+   },
+   "id": "REV-R3-1",
+   "obligation_class": "must_fix",
+   "proposed_targets": [
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0005"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0013"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0050"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0051"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0052"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0064"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0125"
+    }
+   ],
+   "reviewer": "R1",
+   "severity": "major",
+   "source_refs": [
+    {
+     "channel": "finding",
+     "ordinal": 2,
+     "seat": "R1",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 1,
+     "seat": "DA",
+     "subclaim_ordinal": 0
+    }
+   ],
+   "sub_claim_ids": [
+    "SC-R3-1"
+   ],
+   "suggested_action": "Return to the registered reading (in whole or in part); state that the addendum removed mismatch and threat together and cannot apportion; give the §1 statement its verdict in the matched condition.",
+   "target_section": "Abstract, §3.5, §4.1, §5",
+   "verification_criteria": "No sentence apportions the benefit between mismatch tolerance and weak-component protection; the registered wording appears; the §1 statement's status under matched training is stated.",
+   "priority": "must_fix"
+  },
+  {
+   "competence_basis": "Statistician-engineer in ML evaluation methodology (round-2 panel seat 2)",
+   "confidence": 4,
+   "consensus_level": "SINGLE-VERIFIER",
+   "consequence_if_unaddressed": {
+    "code": "reporting_requirement_unmet",
+    "target": {
+     "kind": "section",
+     "locator": "§2.4"
+    }
+   },
+   "corroborating_sources": [],
+   "cost_scope": {
+    "kind": "sentence",
+    "locator": "§2.4 test description (tools/evaluate.py uses scipy.stats.wilcoxon defaults: no continuity correction, asymptotic above n = 50)"
+   },
+   "description": "Reported 40 dB p = 0.0983 corresponds to the normal approximation without the continuity correction the Methods state",
+   "evidence_anchor": {
+    "anchor_type": "table",
+    "locator": "Table 3, column 40 dB trained, 40 dB evaluated, rows Wilcoxon W (642) and p (0.0983)"
+   },
+   "id": "REV-R3-8",
+   "obligation_class": "should_fix",
+   "proposed_targets": [
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0028"
+    }
+   ],
+   "reviewer": "R1",
+   "severity": "minor",
+   "source_refs": [
+    {
+     "channel": "finding",
+     "ordinal": 3,
+     "seat": "R1",
+     "subclaim_ordinal": 0
+    }
+   ],
+   "sub_claim_ids": [
+    "SC-R3-8"
+   ],
+   "suggested_action": "State the procedure the code used.",
+   "target_section": "§2.4",
+   "verification_criteria": "§2.4 names the asymptotic method without continuity correction and the n > 50 switch.",
+   "priority": "should_fix"
+  },
+  {
+   "competence_basis": "Statistician-engineer in ML evaluation methodology (round-2 panel seat 2)",
+   "confidence": 4,
+   "consensus_level": "SINGLE-VERIFIER",
+   "consequence_if_unaddressed": {
+    "code": "reporting_requirement_unmet",
+    "target": {
+     "kind": "section",
+     "locator": "§2.4, §2.6"
+    }
+   },
+   "corroborating_sources": [],
+   "cost_scope": {
+    "kind": "sentence",
+    "locator": "§2.4, §2.6, §3.2, §3.5"
+   },
+   "description": "Statistical reporting gaps: multiplicity across seven levels and four rules; unregistered contrasts with p-values not listed in §2.6; the floor's own sampling uncertainty at H5; relative error reduction is a mean of per-seed ratios",
+   "evidence_anchor": {
+    "absence_scope": "a statement of whether and how the seven per-level tests, the seven intervals and the four registered rules are adjusted for multiplicity",
+    "anchor_type": "absence",
+    "check_performed": "checked §2.4, §2.6, §3.2, §3.5",
+    "locator": "§2.4 and §3.2"
+   },
+   "id": "REV-R3-9",
+   "obligation_class": "should_fix",
+   "proposed_targets": [
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0028"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0034"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0042"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0122"
+    }
+   ],
+   "reviewer": "R1",
+   "severity": "minor",
+   "source_refs": [
+    {
+     "channel": "finding",
+     "ordinal": 5,
+     "seat": "R1",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 6,
+     "seat": "R1",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 7,
+     "seat": "R1",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 8,
+     "seat": "R1",
+     "subclaim_ordinal": 0
+    }
+   ],
+   "sub_claim_ids": [
+    "SC-R3-9"
+   ],
+   "suggested_action": "Add the multiplicity statement; list the unregistered contrasts; report the floor's SE beside the H5 verdict; define the REL statistic and its divergence from the ratio of means.",
+   "target_section": "§2.4, §2.6, §3.2, §3.5",
+   "verification_criteria": "The four statements are present.",
+   "priority": "should_fix"
+  },
+  {
+   "competence_basis": "Thoracic EIT physiologist/engineer (round-2 panel seat 3)",
+   "confidence": 4,
+   "consensus_level": "SINGLE-VERIFIER",
+   "consequence_if_unaddressed": {
+    "code": "interpretive_ambiguity_remains",
+    "target": {
+     "kind": "section",
+     "locator": "§2.3 and Limitations: what difficulty the phantom reproduces"
+    }
+   },
+   "corroborating_sources": [],
+   "cost_scope": {
+    "kind": "sentence",
+    "locator": "§1 paragraph 1, §2.3 phantom paragraph, §4.4 limitation 3"
+   },
+   "description": "The phantom's cardiac component is spatially disjoint from the lung inclusions while the Introduction motivates the problem with cardiac-related changes inside the lung field and spatial overlap",
+   "evidence_anchor": {
+    "anchor_type": "text",
+    "locator": "§2.3",
+    "quote": "two lung inclusions at 0.5 S/m and one heart inclusion at 2.0 S/m"
+   },
+   "id": "REV-R3-3",
+   "obligation_class": "must_fix",
+   "proposed_targets": [
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0009"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0023"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0062"
+    }
+   ],
+   "reviewer": "R2",
+   "severity": "major",
+   "source_refs": [
+    {
+     "channel": "finding",
+     "ordinal": 1,
+     "seat": "R2",
+     "subclaim_ordinal": 0
+    }
+   ],
+   "sub_claim_ids": [
+    "SC-R3-3"
+   ],
+   "suggested_action": "State that the heart inclusion is spatially separate from the lung inclusions, so the overlap difficulty is absent by construction and the weak-component difficulty here is amplitude and reconstruction blur.",
+   "target_section": "§1, §2.3, §4.4",
+   "verification_criteria": "§2.3 and Limitation 3 state the spatial disjointness and what it excludes.",
+   "priority": "must_fix"
+  },
+  {
+   "competence_basis": "Thoracic EIT physiologist/engineer (round-2 panel seat 3)",
+   "confidence": 4,
+   "consensus_level": "SINGLE-VERIFIER",
+   "consequence_if_unaddressed": {
+    "code": "evidence_gap_remains",
+    "target": {
+     "kind": "claim",
+     "locator": "four citation sentences"
+    }
+   },
+   "corroborating_sources": [],
+   "cost_scope": {
+    "kind": "sentence",
+    "locator": "§1 paragraph 1, §2.4, §4.4; one new verified reference (Frerichs 2002 TMI) via cite.py"
+   },
+   "description": "Citation sentences: Graf 2017 is body posture; the quarter-amplitude set is GREIT's figure-of-merit convention, not the ROI paper's threshold; Murphy 2019 is a bioimpedance cardiac-output study; the bolus method is cited second-hand",
+   "evidence_anchor": {
+    "anchor_type": "text",
+    "locator": "§1",
+    "quote": "its amplitude depends strongly on position in the thorax"
+   },
+   "id": "REV-R3-10",
+   "obligation_class": "should_fix",
+   "proposed_targets": [
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0009"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0027"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0062"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0074"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0075"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0079"
+    }
+   ],
+   "reviewer": "R2",
+   "severity": "minor",
+   "source_refs": [
+    {
+     "channel": "finding",
+     "ordinal": 2,
+     "seat": "R2",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 3,
+     "seat": "R2",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 4,
+     "seat": "R2",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 5,
+     "seat": "R2",
+     "subclaim_ordinal": 0
+    }
+   ],
+   "sub_claim_ids": [
+    "SC-R3-10"
+   ],
+   "suggested_action": "Correct the four sentences; add Frerichs 2002 as the bolus primary source.",
+   "target_section": "§1, §2.4, §4.4, References",
+   "verification_criteria": "The four sentences are corrected and the 54-entry list includes Frerichs 2002.",
+   "priority": "should_fix"
+  },
+  {
+   "competence_basis": "Multi-task learning / medical image analysis researcher (round-2 panel seat 4)",
+   "confidence": 5,
+   "consensus_level": "SINGLE-VERIFIER",
+   "consequence_if_unaddressed": {
+    "code": "reader_traceability_reduced",
+    "target": {
+     "kind": "section",
+     "locator": "Abstract, §1"
+    }
+   },
+   "corroborating_sources": [],
+   "cost_scope": {
+    "kind": "sentence",
+    "locator": "Abstract or §2.4 first use; §1 paragraph 5"
+   },
+   "description": "'Dice points' never defined; the locus of the hypothesised interference not stated for a design that shares the encoder",
+   "evidence_anchor": {
+    "anchor_type": "text",
+    "locator": "Abstract",
+    "quote": "led its capacity-matched control by 0.223 Dice points (95% CI 0.020–0.441), below the 0.670 floor"
+   },
+   "id": "REV-R3-12",
+   "obligation_class": "should_fix",
+   "proposed_targets": [
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0005"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0011"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0028"
+    }
+   ],
+   "reviewer": "R3",
+   "severity": "minor",
+   "source_refs": [
+    {
+     "channel": "finding",
+     "ordinal": 1,
+     "seat": "R3",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 2,
+     "seat": "R3",
+     "subclaim_ordinal": 0
+    }
+   ],
+   "sub_claim_ids": [
+    "SC-R3-12"
+   ],
+   "suggested_action": "Define Dice points at first use; state where interference acts.",
+   "target_section": "Abstract, §1, §2.4",
+   "verification_criteria": "Both definitions present.",
+   "priority": "should_fix"
+  },
+  {
+   "competence_basis": "Multi-task learning / medical image analysis researcher (round-2 panel seat 4)",
+   "confidence": 3,
+   "consensus_level": "SINGLE-VERIFIER",
+   "consequence_if_unaddressed": {
+    "code": "reader_traceability_reduced",
+    "target": {
+     "kind": "section",
+     "locator": "§1 framing"
+    }
+   },
+   "corroborating_sources": [],
+   "cost_scope": {
+    "kind": "sentence",
+    "locator": "§1 paragraph 5 or §4.3"
+   },
+   "description": "Why interference is the frame for complementary targets; the shift-tolerance result for the robustness reader",
+   "evidence_anchor": {
+    "anchor_type": "text",
+    "locator": "§2.3",
+    "quote": "the network's input is the mixed reconstruction and its two targets are the single-organ reconstructions"
+   },
+   "id": "REV-R3-15",
+   "obligation_class": "consider",
+   "proposed_targets": [
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0011"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0058"
+    }
+   ],
+   "reviewer": "R3",
+   "severity": "minor",
+   "source_refs": [
+    {
+     "channel": "finding",
+     "ordinal": 3,
+     "seat": "R3",
+     "subclaim_ordinal": 0
+    },
+    {
+     "channel": "finding",
+     "ordinal": 5,
+     "seat": "R3",
+     "subclaim_ordinal": 0
+    }
+   ],
+   "sub_claim_ids": [
+    "SC-R3-15"
+   ],
+   "suggested_action": "One sentence on complementary targets and interference.",
+   "target_section": "§1, §4.3",
+   "verification_criteria": "The sentence is present.",
+   "priority": "consider"
+  },
+  {
+   "competence_basis": "Devil's Advocate, fixed seat (round-2 panel seat 5)",
+   "confidence": 4,
+   "consensus_level": "SINGLE-VERIFIER",
+   "consequence_if_unaddressed": {
+    "code": "interpretive_ambiguity_remains",
+    "target": {
+     "kind": "claim",
+     "locator": "attribution of the sweep advantage to the branch rather than to width"
+    }
+   },
+   "corroborating_sources": [],
+   "cost_scope": {
+    "kind": "re_analysis",
+    "locator": "results_v2_snr*_heart_fix/per_seed.csv → Table S9; one paragraph in §3.2; Supplementary list"
+   },
+   "description": "Width is an unexcluded rival for the evaluation-only 20 dB advantage; the sweep reports no B, C or C_wide rows although all arms were scored",
+   "evidence_anchor": {
+    "absence_scope": "sweep rows for arms B, C and C_wide at 35 to 20 dB",
+    "anchor_type": "absence",
+    "check_performed": "checked Table 2, §3.2, §3.3, Supplementary list",
+    "locator": "Table 2 and §3.2"
+   },
+   "id": "REV-R3-6",
+   "obligation_class": "should_fix",
+   "proposed_targets": [
+    {
+     "allowed_operations": [
+      "insert_after"
+     ],
+     "block_id": "B0043"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0083"
+    }
+   ],
+   "reviewer": "DA",
+   "severity": "major",
+   "source_refs": [
+    {
+     "channel": "finding",
+     "ordinal": 2,
+     "seat": "DA",
+     "subclaim_ordinal": 0
+    }
+   ],
+   "sub_claim_ids": [
+    "SC-R3-6"
+   ],
+   "suggested_action": "Report all five arms across the sweep from the existing per-seed files; state the width-only contrasts.",
+   "target_section": "§3.2, Supplementary",
+   "verification_criteria": "§3.2 reports B_wide − B and C_wide − C across the sweep and states what they show; Table S9 listed.",
+   "priority": "should_fix"
+  },
+  {
+   "competence_basis": "Devil's Advocate, fixed seat (round-2 panel seat 5)",
+   "confidence": 4,
+   "consensus_level": "SINGLE-VERIFIER",
+   "consequence_if_unaddressed": {
+    "code": "interpretive_ambiguity_remains",
+    "target": {
+     "kind": "section",
+     "locator": "§3.1 versus §3.5"
+    }
+   },
+   "corroborating_sources": [],
+   "cost_scope": {
+    "kind": "sentence",
+    "locator": "§3.1 last paragraph"
+   },
+   "description": "§3.1 calls the 0.22-point primary contrast a near-zero residual whose sign happened to be positive, while §3.5 and §5 treat it as a reproducible quantity with a geometry-level interval excluding zero",
+   "evidence_anchor": {
+    "anchor_type": "text",
+    "locator": "§3.1",
+    "quote": "It is a near-zero residual whose sign happened to be positive."
+   },
+   "id": "REV-R3-4",
+   "obligation_class": "must_fix",
+   "proposed_targets": [
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0038"
+    }
+   ],
+   "reviewer": "DA",
+   "severity": "major",
+   "source_refs": [
+    {
+     "channel": "finding",
+     "ordinal": 3,
+     "seat": "DA",
+     "subclaim_ordinal": 0
+    }
+   ],
+   "sub_claim_ids": [
+    "SC-R3-4"
+   ],
+   "suggested_action": "Reconcile the two descriptions: the 40 dB contrast is small, its seed-level and geometry-level intervals exclude zero, it is unrelated at the seed level to the 20 dB effect, and it is below the registered floor; remove the sign-happened-to-be-positive wording.",
+   "target_section": "§3.1",
+   "verification_criteria": "§3.1 and §3.5 describe the 0.22-point contrast consistently.",
+   "priority": "must_fix"
+  },
+  {
+   "competence_basis": "Devil's Advocate, fixed seat (round-2 panel seat 5)",
+   "confidence": 3,
+   "consensus_level": "SINGLE-VERIFIER",
+   "consequence_if_unaddressed": {
+    "code": "reader_traceability_reduced",
+    "target": {
+     "kind": "section",
+     "locator": "Abstract and §5 emphasis"
+    }
+   },
+   "corroborating_sources": [],
+   "cost_scope": {
+    "kind": "sentence",
+    "locator": "Abstract closing sentences; §5 first sentences"
+   },
+   "description": "The abstract and §5 lead with the positive clause of a regime (fixed-level training, evaluation under unseen heavier noise) whose significance is not argued",
+   "evidence_anchor": {
+    "anchor_type": "text",
+    "locator": "Abstract",
+    "quote": "The branch therefore pays off for a network trained at 40 dB and evaluated under heavier noise"
+   },
+   "id": "REV-R3-7",
+   "obligation_class": "should_fix",
+   "proposed_targets": [
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0005"
+    },
+    {
+     "allowed_operations": [
+      "replace_block"
+     ],
+     "block_id": "B0064"
+    }
+   ],
+   "reviewer": "DA",
+   "severity": "major",
+   "source_refs": [
+    {
+     "channel": "finding",
+     "ordinal": 4,
+     "seat": "DA",
+     "subclaim_ordinal": 0
+    }
+   ],
+   "sub_claim_ids": [
+    "SC-R3-7"
+   ],
+   "suggested_action": "Lead the conclusion with the matched-training result; keep the mismatch regime as the second clause with its scope.",
+   "target_section": "Abstract, §5",
+   "verification_criteria": "Abstract and §5 conclusions open with the matched-training result.",
+   "priority": "should_fix"
+  }
+ ],
+ "obligation_counts": {
+  "consider": 3,
+  "must_fix": 4,
+  "should_fix": 8
+ },
+ "revision_round": 3,
+ "schema_version": "revision-roadmap/1.0",
+ "total_items": 15,
+ "_legacy_note": "Derived 2026-10-06 for scripts/legacy/check_re_review_synthesis_v1_0.py: each item gains priority = obligation_class; no other change. Source: revision-authority-round3/roadmap.json sha256 a3b4e7a058984844069ddc89744036c3b1fa6f74e371bec352845a9f0135187f"
+}

@@ -1,0 +1,77 @@
+{
+ "round_id": "sunet-core-rereview-round2-scirep-20261006",
+ "cross_model_active": false,
+ "artifacts": {
+  "original_manuscript": {
+   "present": true,
+   "path_or_passport_ref": "path:29_DRAFT_v3.md",
+   "sha256": "0a5114777ca6a78ce74ba6a32fa5d551d0cc2eff5fc5eb861508b548451082a6",
+   "version_label": "v3 (round-2 revision, pre-round-3)",
+   "origin_date": "2026-10-06T21:40"
+  },
+  "revised_manuscript": {
+   "present": true,
+   "path_or_passport_ref": "path:34_DRAFT_v4.md",
+   "sha256": "67570787bd55c825e8fa000a5d83a513a50480599f12a5c10d7ba895bdf484b3",
+   "version_label": "v4 (round-3 revision)",
+   "origin_date": "2026-10-06T23:30"
+  },
+  "revision_roadmap": {
+   "present": true,
+   "path_or_passport_ref": "path:phase_rereview_round2_scirep/roadmap_legacy_v1_0.json",
+   "sha256": "706e7e67880c23296ce2b3a39a235e76f6ad83457dc85185548bb912454834ec",
+   "version_label": "revision-roadmap/1.0 round 3, legacy priority field added",
+   "origin_date": "2026-10-06T23:27"
+  },
+  "editorial_decision_letter": {
+   "present": true,
+   "path_or_passport_ref": "path:phase_review_round2_scirep/letter.md",
+   "sha256": "b6805aa4b80c2a265e641f3075ab08ef30074e888137e6950d2e8cfdd53206b7",
+   "version_label": "round-2 letter",
+   "origin_date": "2026-10-06T23:14"
+  },
+  "response_to_reviewers": {
+   "present": true,
+   "path_or_passport_ref": "path:37_RESPONSE_TO_PANEL_round2.md",
+   "sha256": "4fec78dccb8582e793b646a6ab2dd1d52942fbe669aefdba18a05c12f31c0cdc",
+   "version_label": "round-3 response",
+   "origin_date": "2026-10-06"
+  },
+  "revision_patches": {
+   "present": true,
+   "items": [
+    {
+     "path_or_passport_ref": "path:phase6_revision/revision_patch_round3.json",
+     "sha256": "7fed3136db6832dc521477a690f02b802ccfa174aa05d37778358a0f93e9ac94",
+     "version_label": "patch 1.1 round 3",
+     "origin_date": "2026-10-06T23:29"
+    }
+   ]
+  },
+  "apply_reports": {
+   "present": true,
+   "items": [
+    {
+     "path_or_passport_ref": "path:34_DRAFT_v4.md.apply-report.json",
+     "sha256": "a4d6a78049ae661c0dc3d36bb625f0c3ce33c770fcaf609162e6a2910dc78c68",
+     "version_label": "apply report 1.3 round 3",
+     "origin_date": "2026-10-06T23:30"
+    }
+   ]
+  },
+  "round1_findings": {
+   "present": true,
+   "path_or_passport_ref": "path:33_REVIEWER_PANEL_round2_scirep.md",
+   "sha256": "68741c663ad5958d9d1c865b1a3077904734118e89ef375f802926fcc6ab3658",
+   "version_label": "round-2 panel (five cards + synthesis + letter)",
+   "origin_date": "2026-10-06T23:14"
+  },
+  "round1_config_cards": {
+   "present": true,
+   "path_or_passport_ref": "path:phase_rereview_round2_scirep/round2_config_cards.md",
+   "sha256": "8ce36ccc9e8b91ccea00e90ae5ed303a1cbbe32b54193bdacf752594da557658",
+   "version_label": "round-2 Phase 1 cards, concatenated",
+   "origin_date": "2026-10-06T23:04"
+  }
+ }
+}

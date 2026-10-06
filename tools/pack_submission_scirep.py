@@ -1,48 +1,55 @@
-"""Assemble the Physiological Measurement submission package for the core paper.
+"""Assemble the Scientific Reports submission package for the core paper (derived from pack_submission_pm.py, 2026-10-07).
 
-    python3 tools/pack_submission_pm.py
+    python3 tools/pack_submission_scirep.py [manuscript/43_SUBMISSION_scirep_v5]
 
-Writes submission_PM_<date>/ with the manuscript (from manuscript/24_SUBMISSION_pm.*),
-cover letter, figures, tables, the supplementary document S1-S8 assembled from the
+Writes submission_SciRep_<date>/ with the manuscript (from the given stem, default manuscript/43_SUBMISSION_scirep_v5.*),
+cover letter, figures, tables, the related-material copy of the 2025 manuscript, the supplementary document S1-S9 assembled from the
 project's own records (numbers recomputed from result files, R10c), the two
 preregistrations with their hashes, a checklist of author-supplied fields still
 open, and a MANIFEST with SHA-256 of every file.
 """
-import json, re, shutil, hashlib, subprocess, datetime, csv
+import json, re, shutil, hashlib, subprocess, datetime, csv, sys
 from pathlib import Path
 import numpy as np
 from scipy.stats import spearmanr
 
 ROOT = Path(".")
 DATE = datetime.date.today().strftime("%Y%m%d")
-OUT = ROOT / f"submission_PM_{DATE}"
+STEM = sys.argv[1] if len(sys.argv) > 1 else "manuscript/43_SUBMISSION_scirep_v5"
+OUT = ROOT / f"submission_SciRep_{DATE}"
+SOFFICE = "/Applications/LibreOffice.app/Contents/MacOS/soffice"
+def to_pdf(path):
+    subprocess.run([SOFFICE, "--headless", "--convert-to", "pdf", "--outdir", str(Path(path).parent), str(path)], check=True, capture_output=True)
 if OUT.exists(): shutil.rmtree(OUT)
-for d in ("01_Manuscript", "02_Cover_letter", "03_Figures", "04_Tables", "05_Supplementary", "06_Preregistrations"):
+for d in ("01_Manuscript", "02_Cover_letter", "03_Figures", "04_Tables", "05_Supplementary", "06_Preregistrations", "08_Related_material"):
     (OUT / d).mkdir(parents=True)
 
 # ---- 01 manuscript, 02 cover letter
-for ext in ("pdf", "docx", "md"):
-    shutil.copy(f"manuscript/24_SUBMISSION_pm.{ext}", OUT / "01_Manuscript" / f"Manuscript_PM.{ext}")
-cl = Path("manuscript/23_COVER_LETTER_PM.md").read_text()
+for ext in ("docx", "md"):
+    shutil.copy(f"{STEM}.{ext}", OUT / "01_Manuscript" / f"Manuscript_SciRep.{ext}")
+to_pdf(OUT / "01_Manuscript" / "Manuscript_SciRep.docx")
+cl = Path("manuscript/40_COVER_LETTER_SCIREP.md").read_text()
 letter = cl.split("---\n", 1)[1].split("\n---\n")[0].strip() + "\n"   # strip the internal notes
-(OUT / "02_Cover_letter" / "Cover_letter_PM.md").write_text(letter)
-subprocess.run(["pandoc", str(OUT / "02_Cover_letter" / "Cover_letter_PM.md"), "-o", str(OUT / "02_Cover_letter" / "Cover_letter_PM.docx")], check=True)
+(OUT / "02_Cover_letter" / "Cover_letter_SciRep.md").write_text(letter)
+subprocess.run(["pandoc", str(OUT / "02_Cover_letter" / "Cover_letter_SciRep.md"), "-o", str(OUT / "02_Cover_letter" / "Cover_letter_SciRep.docx")], check=True)
+# related material required by the journal's submission policy (earlier manuscript, results withdrawn)
+shutil.copy("Nov142025/Manuscript.docx", OUT / "08_Related_material" / "Related_material_2025_manuscript_withdrawn_results.docx")
 
 # ---- 03 figures (manuscript numbering per FIGURES.md 2026-09-22/23), 04 tables
-figs = {"Fig1": "fig1_arms_and_task", "Fig2": "fig1_separability", "Fig3": "fig_snr_sweep", "Fig4": "fig_predictions"}
+figs = {"Fig1": "fig1_separability", "Fig2": "fig1_arms_and_task", "Fig3": "fig_snr_sweep", "Fig4": "fig_predictions"}   # Sci Rep deliverable order (by first citation; format_convert_scirep.py swaps 1 and 2)
 for k, v in figs.items():
     for ext in ("pdf", "png"):
         shutil.copy(f"figures/{v}.{ext}", OUT / "03_Figures" / f"{k}_{v}.{ext}")
-for t in ("table1_arms_40db", "table2_snr_sweep", "table3_retrained_20db"):
+for t in ("table1_arms_40db", "table2_snr_sweep", "table3_retrained_20db", "table_s9_sweep_all_arms"):
     for ext in ("md", "tex"):
-        shutil.copy(f"results/tables/{t}.{ext}", OUT / "04_Tables" / f"{t}.{ext}")
+        if Path(f"results/tables/{t}.{ext}").exists(): shutil.copy(f"results/tables/{t}.{ext}", OUT / "04_Tables" / f"{t}.{ext}")
 
 # ---- 05 supplementary S1-S8
 def h5_seed(d, arm, ch):
     rows = list(csv.DictReader(open(f"{d}/per_seed.csv")))
     return np.array([float(r["dsc"]) for r in sorted((r for r in rows if r["arm"] == arm and r["channel"] == ch), key=lambda r: int(r["seed"]))])
 S = []
-S.append("# Supplementary material\n\nA decoder branch for the cardiac component of lung EIT pays off for a network trained at 40 dB and evaluated under heavier noise, and not when training matches evaluation: a preregistered, parameter-matched evaluation. Chen, Wang and Ko.\n\nEvery number below is regenerated from the per-seed result files by `tools/pack_submission_pm.py`; the preregistrations in the companion folder carry the registered SHA-256 hashes.\n")
+S.append("# Supplementary material\n\nA decoder branch for the cardiac component of lung EIT: a preregistered, parameter-matched evaluation across measurement-noise levels. Chen, Wang and Ko.\n\nEvery number below is regenerated from the per-seed result files by `tools/pack_submission_scirep.py` (S9 by `tools/make_table_s9.py`); the preregistrations in the companion folder carry the registered SHA-256 hashes.\n")
 # S1
 S.append("## S1 Per-arm architecture diagrams\n\nFiles `S1_arm_A.pdf` … `S1_arm_D.pdf` (PlotNeuralNet renderings; Fig. 1a of the main text shows the five arms side by side). Arm A (single output, lung only) belongs to Study 1 and has no heart head.\n")
 for a in ("A", "B", "B_wide", "C", "C_wide", "D"):
@@ -106,22 +113,26 @@ S.append(f"## S8 Geometry-level bootstrap intervals beside the seed-level interv
 for k, v in g["results"].items():
     S.append(f"| {names[k]} | {v['diff_pts']:+.3f} | [{v['geometry_ci'][0]:+.3f}, {v['geometry_ci'][1]:+.3f}] | [{v['seed_ci'][0]:+.3f}, {v['seed_ci'][1]:+.3f}] |")
 S.append("\nFor the two small contrasts the geometry-level interval is the narrower one: their uncertainty is dominated by training randomness, and the seed-level interval on which the rules are defined is the more conservative. No decision changes under either interval.\n")
-sup = OUT / "05_Supplementary" / "Supplementary_S1-S8.md"
+# S9 all five arms across the sweep (tools/make_table_s9.py)
+s9 = Path("results/tables/table_s9_sweep_all_arms.md").read_text().replace("**Table S9.**", "").strip()
+S.append("## S9 The evaluation-only sweep for all five arms\n\n" + s9 + "\n")
+sup = OUT / "05_Supplementary" / "Supplementary_S1-S9.md"
 sup.write_text("\n".join(S))
 subprocess.run(["pandoc", str(sup), "-o", str(sup.with_suffix(".docx")), "--from", "markdown+smart"], check=True)
+to_pdf(sup.with_suffix(".docx"))
 
 # ---- 06 preregistrations with hashes
 for f in ("PREREGISTRATION.md", "PREREGISTRATION.sha256", "PREREGISTRATION_HEART.md", "PREREGISTRATION_HEART.sha256"):
     shutil.copy(f, OUT / "06_Preregistrations" / f)
 
 # ---- 07 open fields + checklist
-open_fields = [f"Manuscript placeholder still to fill: `{x}`" for x in sorted(set(re.findall(r"\[[^\]\n]*(?:to supply|to assign|to be|___|roles|URL)[^\]\n]*\]", Path("manuscript/24_SUBMISSION_pm.md").read_text())))] + [
+open_fields = [f"Manuscript placeholder still to fill: `{x}`" for x in sorted(set(re.findall(r"\[[^\]\n]*(?:to supply|to assign|to be|___|roles|URL)[^\]\n]*\]", Path(f"{STEM}.md").read_text())))] + [
     "Acknowledgements: grant numbers (three NSTC) must match the submission system word for word",
 ]
-(OUT / "07_OPEN_FIELDS_AND_CHECKLIST.md").write_text("# Before uploading\n\nStill to be supplied by the corresponding author (search the manuscript for `[` to find each placeholder):\n\n" + "\n".join(f"- [ ] {x}" for x in open_fields) + "\n\nPM compliance checklist: see `manuscript/25_SUBMISSION_CHECKLIST_PM.md` in the project (abstract 246 words with the four headings; main text 7,767 words; Harvard alphabetical references with titles; no CJK characters; AI disclosure and competing interests in Acknowledgements; data availability statement present).\n")
+(OUT / "07_OPEN_FIELDS_AND_CHECKLIST.md").write_text("# Before uploading\n\nStill to be supplied by the corresponding author (search the manuscript for `[` to find each placeholder):\n\n" + "\n".join(f"- [ ] {x}" for x in open_fields) + "\n\nSci Rep checklist: see `manuscript/39_SUBMISSION_CHECKLIST_SCIREP.md` (official checklist items 1-13, advisory limits, author-side items). Upload: 01 manuscript (.docx, single file), 02 cover letter, 03 figures, 05 Supplementary_S1-S9.pdf (single file), 08 related material (earlier manuscript, results withdrawn) as required by the submission policy. Title, abstract and author data in the submission system must match the manuscript word for word.")
 
 # ---- manifest
-lines = ["# MANIFEST", "", f"Package built {datetime.datetime.now():%Y-%m-%d %H:%M} by tools/pack_submission_pm.py from manuscript/15_DRAFT_v2.md (apply report f5448863b24a) via tools/format_convert_pm.py.", "", "| File | SHA-256 | bytes |", "|---|---|---|"]
+lines = ["# MANIFEST", "", f"Package built {datetime.datetime.now():%Y-%m-%d %H:%M} by tools/pack_submission_scirep.py from manuscript/41_DRAFT_v5.md (apply report 3c0451dfbfd5) via tools/format_convert_scirep.py.", "", "| File | SHA-256 | bytes |", "|---|---|---|"]
 for p in sorted(OUT.rglob("*")):
     if p.is_file() and p.name != "MANIFEST.md":
         lines.append(f"| {p.relative_to(OUT)} | {hashlib.sha256(p.read_bytes()).hexdigest()[:16]}… | {p.stat().st_size:,} |")

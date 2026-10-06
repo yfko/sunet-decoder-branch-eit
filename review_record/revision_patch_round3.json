@@ -1,0 +1,335 @@
+{
+ "patch_format_version": "1.1",
+ "authorization_context": "review_roadmap",
+ "revision_round": 3,
+ "base_draft_hash": "0a5114777ca6",
+ "roadmap_sha256": "a3b4e7a058984844069ddc89744036c3b1fa6f74e371bec352845a9f0135187f",
+ "author_adjudication_sha256": "ac94e797a98b6a22440d4798f20eb6b333ff045d2511c0012e0fc3c736f0ec8d",
+ "author_decision_digest": "7f8fe94ad11033e46d4575a41d8f6b97200ffd5daf139ddb467ed379e6f73568",
+ "claim_surface_manifest_sha256": "0827a66788607d6e319ddd8cdc5d4040d6c77a7e650e9fd83f5bf30294a55434",
+ "ops": [
+  {
+   "op": "replace_block",
+   "block_id": "B0005",
+   "old_hash": "e6202538215f",
+   "new_text": "**Abstract** — In lung electrical impedance tomography (EIT) the cardiac component is small and lung-dominated. We asked whether the semi-Siamese U-Net's dedicated cardiac decoder branch alone improves cardiac separation at matched parameter count and supervision with 1:1 loss weights, and how measurement noise changes the answer. The second of two preregistered simulation studies (EIDORS, GREIT) registered heart-channel Dice as primary endpoint, five arms of 58 seeds, a primary signal-to-noise ratio of 40 dB and an evaluation-only sweep from 60 to 20 dB. Trained and evaluated at one level, the branch added 0.223 Dice points (hundredths of Dice) at 40 dB (95% CI 0.020–0.441, p = 0.098) and, after a registered retraining, 0.229 at 20 dB (CI 0.081–0.373), below the registered floors of 0.670 and 0.384. For networks trained at 40 dB and evaluated under heavier noise the advantage grew by 1.937 points from 60 to 20 dB (CI 1.400–2.465), confirming the registered noise hypothesis, with a descriptive onset at 35–30 dB, a flat lung channel and 2.097 points at 20 dB, 9.2-fold the matched-training value. Retraining removed the training–evaluation mismatch and the control arm's loss together, so the evaluation-only benefit is attributed to mismatch tolerance in whole or in part, unapportioned.",
+   "roadmap_item_ids": [
+    "REV-R3-1",
+    "REV-R3-5",
+    "REV-R3-7",
+    "REV-R3-11",
+    "REV-R3-12"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0009",
+   "old_hash": "d48d8502c225",
+   "new_text": "Chest EIT reconstructs conductivity change over the thorax from boundary voltages, and its clinical use, from regional ventilation monitoring to titration of ventilator settings, rests on the ventilation signal (Frerichs et al., 2017) <!--ref:Frerichs2017TREND--><!--anchor:none:-->. The cardiac-related signal in the same frames carries information of its own. Regional perfusion measured by EIT, and in particular its mismatch with ventilation, was an independent predictor of mortality in a prospective cohort of patients with acute respiratory distress syndrome (Spinelli et al., 2021) <!--ref:Spinelli2021CritCare--><!--anchor:none:-->, and perfusion EIT has been reviewed as a route to detecting pulmonary embolism (Nguyen et al., 2012) <!--ref:Nguyen2012PhysiolMeas--><!--anchor:none:-->. That signal is small. In normal human lungs tidal breathing changed resistivity by about 9%, while the change over the cardiac cycle was between 0.9% and 2.6% and varied by region (Leathard et al., 1994) <!--ref:Leathard1994PhysiolMeas--><!--anchor:none:-->, and its amplitude depends strongly on body position (Graf and Riedel, 2017) <!--ref:Graf2017PLOSONE--><!--anchor:quote:highly%20position%20dependent-->. It is also not perfusion itself. Regional perfusion is measured in EIT from the first pass of a hypertonic saline bolus, a method compared against electron-beam CT in its original form (Frerichs et al., 2002) <!--ref:Frerichs2002TMI--><!--anchor:none:-->, and in a piglet model the bolus estimate agreed with single-photon emission tomography and was superior to the estimate from impedance pulsatility (Borges et al., 2012) <!--ref:Borges2012JAP--><!--anchor:none:-->, so what any frame-wise method recovers is the cardiac-related component of the image, not a measurement of regional blood flow. On the simulated phantom used throughout this paper, in which the heart inclusion lies beside the lung inclusions rather than within the lung field (Section 2.3), the point about size can be made with one measurement rather than an assertion. Applying a quarter-amplitude threshold, the figure-of-merit convention of GREIT (Adler et al., 2009) <!--ref:Adler2009GREIT--><!--anchor:none:--> that lies within the 20 to 35% range clinical region-of-interest methods use (Pulletz et al., 2006) <!--ref:Pulletz2006ROI--><!--anchor:none:-->, to the mixed lung-plus-heart reconstruction recovers the lung at a mean Dice coefficient of 0.951 against its own reconstruction over 3,600 frames. The same threshold recovers the heart at a mean of 0.099 and a median of 0.000 (Fig. 2 shows the frame at that median). The cardiac component is not merely faint in these images. On more than half of the frames, the threshold finds nothing at all. Throughout, we use *segmentation* for the task of producing a mask and scoring it with Dice, and *separation*, *weak component* and *dominant component* for the mechanism of extracting the cardiac signal from the mixture.",
+   "roadmap_item_ids": [
+    "REV-R3-3",
+    "REV-R3-10",
+    "REV-R3-11"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0011",
+   "old_hash": "29d4b9859e8d",
+   "new_text": "What none of the three prior studies did is isolate that branch. A second decoder adds parameters, and a second supervised target is a well-known regulariser in its own right (Caruana, 1997) <!--ref:Caruana1997MTL--><!--anchor:none:-->. The original comparison bundled both with the weighted loss. In the multi-task learning literature the arrangement used here, one shared encoder feeding task-specific decoders, is the standard encoder-focused design for dense prediction, and its known failure mode is task interference, in which the gradients of one task degrade the shared features that another task needs (Vandenhende et al., 2022) <!--ref:Vandenhende2021--><!--anchor:none:-->. In the arms compared here every network shares the encoder and the bottleneck, so any interference acts on the shared features and on the gradients that reach them, and a decoder branch can relieve it only by giving each target its own path after the bottleneck. The two targets are complementary parts of one input, which a multi-task reader would call maximally related tasks. Whether even related targets compete for shared features when one of them is small is the empirical question, and the registered design asks it rather than assuming either answer. Where the branches should separate has no general answer, which was the starting point of cross-stitch networks (Misra et al., 2016) <!--ref:Misra2016CrossStitch--><!--anchor:none:-->, and the one study we found that compares branching structures under a fixed budget of learnable parameters built its branches from task affinity, sharing the shallow layers and separating the deeper ones (Vandenhende et al., 2020) <!--ref:Vandenhende2020Branched--><!--anchor:none:-->. It is the nearest methodological precedent for the parameter-matched contrast used here. The usual remedy for interference is to weight the task losses, by hand, by a learned per-task uncertainty (Kendall et al., 2018) <!--ref:Kendall2018--><!--anchor:none:-->, or by a dynamic average that follows each task's rate of loss change (Liu et al., 2019) <!--ref:Liu2019MTAN--><!--anchor:none:-->. Weighting and branching are therefore two answers to one problem, and the original semi-Siamese study used both at once. This study fixes the weights at 1:1 and varies only the branch. Equal fixed weights are not a naive default: two independent studies reported at the same conference found that minimising the plain sum of the task losses, with the regularisation used in single-task training, matches or beats specialised multi-task optimisers (Kurin et al., 2022) <!--ref:Kurin2022Unitary--><!--anchor:none:-->, and that current multi-task optimisation methods did not outperform a tuned weighted average across language and vision tasks (Xin et al., 2022) <!--ref:Xin2022MTOHelp--><!--anchor:none:-->. Whether weighting can substitute for branching is the subject of a companion study and is not tested here. Any uncontrolled comparison between a branched and an unbranched network mixes capacity and supervision into the branch itself. The point is not specific to EIT: a re-examination of three-dimensional medical image segmentation found that claims of new architectures outperforming a U-Net often rested on inadequate baselines and did not survive rigorous validation (Isensee et al., 2024) <!--ref:Isensee2024nnUNetRevisited--><!--anchor:none:-->. Comparisons of multi-decoder architectures are also commonly made at a single noise condition, which leaves open whether the result would survive a different one. Benchmarks of segmentation networks under systematic corruptions found that tolerance of corruptions differs between architectures and depends strongly on the corruption type (Kamann and Rother, 2021) <!--ref:Kamann2021IJCV--><!--anchor:none:-->, and that current networks for MRI segmentation are highly sensitive to simulated distribution shifts, including changes of signal-to-noise ratio (Boone et al., 2023) <!--ref:Boone2023NeuroImage--><!--anchor:none:-->. The term *dual-branch* also carries a different meaning in the EIT reconstruction literature. In the dual-branch U-Net of Wang et al. (2024) <!--ref:Wang2024TIM--><!--anchor:quote:the%20encoder%20involves%20two%20branches%20for%20shape%20modeling-->, the two branches sit on the encoder side and feed one fusion decoder that reconstructs conductivity from voltages, and the multi-branch network of Yu et al. (2024) <!--ref:Yu2024CMPB--><!--anchor:none:--> likewise fuses a segmentation branch with a reconstruction branch to recover conductivity, whereas the branch examined here sits on the decoder side and serves one output each. Within the scope of our search, which covered the three prior studies, Crossref title queries of 2026-09-23, and title-and-abstract queries in OpenAlex, Crossref, PubMed and Semantic Scholar on 2026-10-06 for EIT deep learning, cardiac-component separation, multi-task decoders and noise tolerance under distribution shift (search strings in the project repository), we are not aware of a comparison in which the decoder branch is evaluated at matched parameter count and matched supervision across several measurement-noise levels, nor of a study that takes the multi-decoder versus single-decoder contrast at matched capacity as its subject. The nearest adjacent work in EIT is the original semi-Siamese study itself, and the nearest in multi-task learning is the fixed-budget branching study above.",
+   "roadmap_item_ids": [
+    "REV-R3-12",
+    "REV-R3-15"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0012",
+   "old_hash": "33ff96bac60a",
+   "new_text": "Three distinctions follow. The 2025 study optimised the weighting. This one removes it and asks about the branch alone. A dual-branch EIT network has been reported, with a different mechanism, on the other side of the bottleneck. Fixing the loss weights at 1:1 deliberately sets aside half of the original design: the original proposed the branch and the weighting together, and this study tests one of the two under controls the original did not include.",
+   "roadmap_item_ids": [
+    "REV-R3-5"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0013",
+   "old_hash": "15f8ca23fece",
+   "new_text": "The paper tests one statement. A decoder branch dedicated to a weak component yields a measurable benefit only when that component is actually under threat. We test this statement in GREIT-reconstructed lung EIT across seven noise levels. The companion conditions named in Section 4.4 are not tested here. The question is therefore whether, at equal parameter count, equal supervision and 1:1 loss weights, the decoder branch improves separation of the cardiac component, and how that benefit changes with measurement noise. The contribution we claim is not a verdict on the architecture. It is a measurement of how sensitive a post-reconstruction stage is to the noise that the measurement chain lets through, and of what becomes of that sensitivity when the network is trained at the level at which it is evaluated. Two preregistrations were hashed before any arm was trained, and their decision rules were not altered afterwards. A registered addendum, hashed before it was run, added the one experiment that a structured pre-submission review of the first draft asked for. At the registered primary level the rules find no benefit. For a network trained at 40 dB and evaluated under heavier noise a benefit appears, with an onset rather than a slope. When the network is instead trained at the heavier level, that benefit disappears together with the loss it accompanied, and the statement under test receives no separate verdict in the matched condition, for a reason Section 4.1 sets out.",
+   "roadmap_item_ids": [
+    "REV-R3-1",
+    "REV-R3-11"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0017",
+   "old_hash": "acce6a4a7ade",
+   "new_text": "Study 1 (registered 2026-08-28, SHA-256 `eebf21a2…`) used a homogeneous-conductivity phantom without measurement noise, ten seeds per arm, and lung-channel Dice as its primary endpoint. All of its hypotheses were falsified, but the endpoint was at ceiling. Every arm, including a plain single-output U-Net, reached a lung Dice near 0.996, and the heart-channel contrast, reported as a secondary outcome, was underpowered (D minus B_wide 0.46 points, p = 0.32, dz = 0.34 after the scoring correction of Section 2.5; the preregistration's sample-size calculation used the pre-correction estimate, Section 2.4). The corresponding author, who designed the semi-Siamese U-Net, attests that the architecture was created for cardiac segmentation, on the grounds that the lung is already comparatively easy to reconstruct and to learn. Study 1 therefore tested the easy half of the task. Its full results are reported in Supplementary S2.",
+   "roadmap_item_ids": [
+    "REV-R3-2"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0023",
+   "old_hash": "072bcd911eae",
+   "new_text": "All images were generated in EIDORS (Adler and Lionheart, 2006) <!--ref:Adler2006EIDORS--><!--anchor:none:--> and reconstructed with GREIT (Adler et al., 2009) <!--ref:Adler2009GREIT--><!--anchor:none:-->. No image in this paper was produced by any other means. The phantom is a 16-electrode cylinder with background conductivity 1.0 S/m, two lung inclusions at 0.5 S/m and one heart inclusion at 2.0 S/m. These are the registered contrasts, chosen as round-number ratios (lung at half and heart at twice the background) rather than calibrated to measured tissue conductivities. The results depend on them only through the sign and relative size of each organ's perturbation of the image, and Fig. 2 measures that consequence directly on the reconstructions. Lung radius was drawn from U(0.30, 0.60) and heart radius from U(0.15, 0.30) in model units, independently, with centre jitter of ±0.05 about lung centres at (±1.0, 0.1) and a heart centre at (0, 0.1). The heart inclusion therefore lies between the lung inclusions and never overlaps them: the largest radii sum to 0.90 model units and the centres are never closer than that. The in-vivo situation in which the cardiac-related signal is distributed within the ventilated lung (Section 1) is absent from this phantom by construction. The difficulty it reproduces is amplitude, together with the blurring by which the reconstruction spreads each inclusion into its neighbour's region. Organ conductivity was heterogeneous: σ(x) = σ₀(1 + 0.25 f(x)) with f a sum of eight random sinusoids at correlation length 0.60, giving a realised coefficient of variation of about 0.18 in the lung and 0.14 in the heart. Forward solves used a mesh with maximum element size 0.10. GREIT reconstruction to a 64 × 64 grid used a separate model with maximum element size 0.20. For each of N = 3,600 geometries, three forward and three inverse solves were run (mixed, lung only, heart only), so that the network's input is the mixed reconstruction and its two targets are the single-organ reconstructions (Fig. 1b to 1e). Geometries were split 80/10/10 into 2,880 training, 360 validation and 360 test frames.",
+   "roadmap_item_ids": [
+    "REV-R3-3"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0027",
+   "old_hash": "e4d81dc004af",
+   "new_text": "Training settings were fixed before registration and not tuned per arm: Adam at 1 × 10⁻³ with cosine decay to 1 × 10⁻⁵, batch size 16, at most 200 epochs with early stopping on validation loss (patience 20, best weights restored), L1 loss on the float target with no output activation, loss weights 1.0/1.0, no augmentation, and one dataset-wide normalisation affine estimated from the training split (full settings and software environment in Supplementary S7). No noise augmentation was used: every training frame carried the registered 40 dB level, so that the evaluation-only sweep measures the response to levels the network had not seen. Drawing measurement degradation at random during training is the other established choice, used with simulated measurement noise and model error for EIT shape reconstruction (Ren et al., 2020) <!--ref:Ren2020TIM--><!--anchor:none:-->, with poorly contacting electrodes, unspecified in advance, for cardiac-output estimation from thoracic EIT data (Murphy et al., 2019) <!--ref:Murphy2019PhysiolMeas--><!--anchor:none:-->, and with electrode displacement for wearable thoracic EIT (Jeschke et al., 2025) <!--ref:Jeschke2025Sensors--><!--anchor:none:-->. Section 2.7 describes the one condition in which the training level was changed. The backbone is a U-Net (Ronneberger et al., 2015) <!--ref:Ronneberger2015UNet--><!--anchor:none:-->. All 290 runs (five arms by 58 seeds) executed on one machine (Mac mini M4, Apple MPS backend), because splitting across machines would place hardware differences inside the paired contrasts. Each run seeds the data order and the initialisation and requests deterministic algorithms, but the MPS backend does not guarantee bit-identical results on re-execution, so a seed defines a replicate rather than an exactly reproducible run. Parameter counts are matched, while compute and activation footprint, which differ between a widened and a split decoder, were not measured.",
+   "roadmap_item_ids": [
+    "REV-R3-10",
+    "REV-R3-13"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0028",
+   "old_hash": "a57c1d1e893e",
+   "new_text": "The primary endpoint is heart-channel Dice on the quarter-amplitude set (EIDORS `calc_hm_set(img, 0.25)`), computed on the test split and averaged over seeds. Differences between arms are reported in Dice points, hundredths of the Dice coefficient. Secondary outcomes are mean absolute error (MAE), intersection over union (IoU), sensitivity, specificity, average symmetric surface distance (ASSD) and the 95th-percentile Hausdorff distance (HD95), the same set on the lung channel, and the sweep. Seeds are the unit of replication, and every contrast is paired within seed. Because every seed is scored on the same 360 test geometries, the seed-level bootstrap intervals reported throughout describe training-run variability, not variability over test geometries. A geometry-level interval for the three main contrasts is reported beside the seed-level one in Section 3.5 and Supplementary S8. The registered rules are as follows. H1 (primary): D exceeds B_wide on heart Dice if the mean paired difference exceeds B_wide's seed-to-seed standard deviation and the Wilcoxon signed-rank test (Wilcoxon, 1945) <!--ref:Wilcoxon1945--><!--anchor:none:--> over paired seeds gives p < 0.05. Otherwise H1 is falsified. The floor is there so that a difference smaller than the scatter between two training runs of the same architecture cannot be declared a success on a p-value alone. It states what size of effect would matter, and it was written before any effect was seen. The Wilcoxon test is two-sided and was computed with the asymptotic normal approximation without continuity correction, the default of the SciPy implementation above n = 50 and the procedure the scoring code applied. No paired difference was tied at zero, and W, the smaller signed-rank sum, is reported with p for every rule-bearing contrast. H2 (position): the same rule applied to D minus C_wide. H3 (noise): the paired difference D minus B_wide at the lowest SNR exceeds that at the highest, with a 95% percentile bootstrap interval on the difference-of-differences, resampling seeds, that excludes zero. H4 (lung): no difference is expected between arms, and the lung channel is reported, not tested. No multiplicity adjustment is applied: the four registered rules are separate pre-specified decisions, each with its own floor, H3 rests on one interval, and the per-level tests and intervals of the sweep are descriptive and reported with their unadjusted values. Effect sizes are reported as Cohen's dz for paired differences (Lakens, 2013) <!--ref:Lakens2013EffectSize--><!--anchor:none:-->, and all bootstrap intervals use 100,000 resamples of the 58 seeds.",
+   "roadmap_item_ids": [
+    "REV-R3-8",
+    "REV-R3-9",
+    "REV-R3-12"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0029",
+   "old_hash": "5035a3406c5b",
+   "new_text": "The sample size was set from a pilot that trained arm B only, for three seeds, and computed no contrast between arms. It measured a seed-to-seed SD of 0.0077 on heart Dice, 33% larger than in Study 1. The registered calculation started from Study 1's heart contrast as it stood before the scoring correction of Section 2.5, dz = 0.500 (about 29% power at n = 10), scaled it by the pilot's larger variance to dz ≈ 0.376, and required 58 seeds for 80% power on the Wilcoxon condition at p < 0.05. After the correction, Study 1's contrast is dz = 0.34. The value n = 58 was fixed before any arm contrast existed and was not revised. That calculation covered the p-condition only. The floor condition asks for a paired difference larger than the control arm's seed-to-seed SD, which at 40 dB was 0.670 points against a paired-difference SD of 0.83 points, a standardised effect of about 0.8. The registered rule as a whole therefore had little power to confirm at the anticipated effect: it was sized to detect that effect, and it would confirm only an effect roughly twice as large. This is a property of the rule as registered, stated here rather than revised.",
+   "roadmap_item_ids": [
+    "REV-R3-2"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0034",
+   "old_hash": "0b67d7188b13",
+   "new_text": "Three analyses in this paper were not registered and are reported as descriptive. The first is the seed-level correlation of the D minus B_wide difference between sweep levels. The second is, at every sweep level, each seed's gain as a fraction of the control arm's own remaining error, (D − B_wide)/(1 − B_wide), which removes the Dice ceiling. The third is the comparison of that quantity between the heart and lung channels. Also unregistered, and reported with unadjusted p-values or intervals as descriptive, are the contrasts of arms B, C and C_wide against B_wide and against each other at 40 dB and across the sweep (Section 3.1, Supplementary S9), the 50 dB anchor for the H3 statistic, the seed-removal sensitivity at 20 dB, and the geometry-level intervals of the addendum. The registered outcome grid also has no cell for two combinations that occurred: H1 falsified while H3 is confirmed, and a decision rule returning falsified while the effect estimate's interval excludes zero. No rule was invented afterwards to reconcile them. Both outcomes are reported as they fell. Code for generating the data, training, scoring and every figure and table is public (see Availability), and the results follow in the order the hypotheses were registered.",
+   "roadmap_item_ids": [
+    "REV-R3-9"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0038",
+   "old_hash": "e71d3320a7ac",
+   "new_text": "The 40 dB interval for D minus B_wide excludes zero, and this combination, a registered rule that returns falsified while the interval estimate excludes zero, was not pre-specified. The interval is reported as a secondary descriptive statistic. The median paired difference was +0.138 points, D exceeded B_wide on 32 of 58 seeds, and the seeds on which D led at 40 dB were unrelated to the seeds on which it led at 20 dB (Spearman ρ = −0.10, p = 0.47; Section 2.6). The positive mean at 40 dB is therefore not a small version of the low-SNR effect reported next. It is a small difference that the data resolve: its seed-level and geometry-level intervals both exclude zero (Section 3.5), it is unrelated at the seed level to the 20 dB effect, and it is one third of the registered floor.",
+   "roadmap_item_ids": [
+    "REV-R3-4"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0042",
+   "old_hash": "b7d9c6242adf",
+   "new_text": "The registered rule tests monotone growth and says nothing about shape, so the following is descriptive, and the 35 and 25 dB levels carry no decision rule. The three high-SNR levels are effectively one measurement: the seed-level differences at 60, 50 and 40 dB correlate at ρ ≥ 0.99 (Supplementary S4), and their means differ by 0.06 points. The advantage then appears in two steps. Between 40 and 35 dB it becomes detectable. At 35 dB the Wilcoxon p first falls below 0.05 (W = 433, p = 0.0011) and the ceiling-free measure introduced below has an interval that excludes zero, but the difference of 0.342 points is still below the seed-to-seed SD of 0.602. Between 35 and 30 dB it crosses the effect-size floor. At 30 dB the difference of 0.619 points exceeds the SD of 0.500 with p < 0.0001, the highest-SNR level at which both conditions of the H1-form rule hold. That rule was registered at 40 dB only, and its form is applied to the other levels as a descriptive scale, not as a test. From 30 to 20 dB the raw advantage continues to grow, to 1.132 and 2.097 points, on a per-seed slope from 40 to 20 dB that is positive for 47 of 58 seeds. Because Dice is bounded and both arms sit near 0.967 at high SNR, a flat top could be ceiling compression rather than an onset. Dividing each seed's gain by the control arm's own remaining error at that level, and averaging the ratios over seeds (Fig. 3b and Table 2, relative error reduction), gives +1.1%, +1.4%, +3.5%, +7.0%, +12.1%, +15.3% and +16.2% over the seven levels. Because the numerator and denominator of each ratio covary, this mean of ratios differs from the ratio of the mean gain to the mean error, by several-fold at the high-SNR levels where both are close to zero, and the intervals refer to the mean of ratios. The intervals at 60, 50 and 40 dB contain zero (the 40 dB interval runs from −1.9% to +8.8%), and those from 35 dB down do not (+2.8 to +11.3% at 35 dB, +9.2 to +14.9% at 30 dB, +12.5 to +19.7% at 20 dB). With the ceiling removed the initial step is at least as sharp as in raw points, and the measure saturates below 30 dB at about one sixth of the control arm's error. One feature of the low-SNR end should not be over-read. The standardised effect size peaks at 25 dB (dz = 1.46) and falls back to 1.19 at 20 dB, because the seed-to-seed scatter at 20 dB (1.078 points) is twice that at 25 dB (0.523 points), so a statement that the benefit grows as the noise grows therefore rests on the raw points or on relative error reduction, not on dz. The number of seeds on which D led tells the same story in integers: 31, 32, 32, 40, 47, 52 and 50 of 58 across the seven levels.",
+   "roadmap_item_ids": [
+    "REV-R3-9"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "insert_after",
+   "block_id": "B0043",
+   "old_hash": "d1de02db47b6",
+   "new_text": "The other three arms were scored at every level of the sweep, and Supplementary S9 reports all five. Decoder width on its own does not reproduce the advantage: B_wide led B by between −0.12 and −0.01 points across the seven levels (−0.124 points at 20 dB, CI −0.499 to +0.238, 28 of 58 seeds), and C_wide led C by at most +0.03 points. The branch without the width control, D minus B, tracks the registered contrast level for level, reaching +1.973 points at 20 dB (CI +1.621 to +2.328, 54 of 58 seeds) against +2.097 for D minus B_wide, and the late split, C_wide minus B_wide, reached +0.425 points at 20 dB (CI +0.003 to +0.851). The evaluation-only advantage therefore belongs to the position of the split, not to decoder width, and the capacity control removes 0.12 points of it at most.",
+   "roadmap_item_ids": [
+    "REV-R3-6"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0122",
+   "old_hash": "393b72ef1e32",
+   "new_text": "The registered addendum (Section 2.7) retrained D and B_wide from scratch at 20 dB, 58 seeds each, 116 runs. Table 3 gives the result beside the two contrasts already reported. Trained and evaluated at 20 dB, B_wide reached a heart Dice of 0.9574 ± 0.0038 and D 0.9597 ± 0.0041. The paired difference Δ_20|20 was +0.229 points, 95% bootstrap CI +0.081 to +0.373, median +0.247, dz = 0.40, W = 427, p = 0.0009, with D ahead on 41 of 58 seeds. The registered H5 rule requires that difference to exceed B_wide's seed-to-seed SD under this condition, 0.384 points, and that p be below 0.05. The p-value condition holds and the floor condition does not (0.229 against 0.384). The floor is itself an estimate from 58 seeds, with a standard error of about 0.036 points, and the upper limit of the difference's interval lies within one such error of it, so this is the marginal case that a registered rule returns as falsified rather than adjudicates. H5 is falsified. As with H1, the rule is not revised because the p-value is small. On the lung channel the two arms were identical to four decimals (0.9853 and 0.9853, Δ = −0.002 points, CI −0.040 to +0.036, p = 0.95), as the registered expectation carried over from H4 anticipated.",
+   "roadmap_item_ids": [
+    "REV-R3-9"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0125",
+   "old_hash": "329b2ea577cc",
+   "new_text": "Under the reading fixed in the addendum before it was run, a falsified H5 means that the evaluation-only H3 result is attributable in whole or in part to distribution-shift tolerance, and the headline of this paper is narrowed accordingly: the benefit is for a network trained at 40 dB and evaluated under heavier noise. Retraining at 20 dB removed the training-evaluation mismatch and the control arm's loss of the cardiac component together (8.8 points lost at 20|40 against 0.8 at 20|20), so the addendum does not say how much of the evaluation-only benefit belongs to each reading, and this paper does not apportion it. H3 itself remains confirmed as registered.",
+   "roadmap_item_ids": [
+    "REV-R3-1"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0050",
+   "old_hash": "b4fc39abc24f",
+   "new_text": "### 4.1 What the addendum does and does not attribute",
+   "roadmap_item_ids": [
+    "REV-R3-1",
+    "REV-R3-14"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0051",
+   "old_hash": "949a3571bbfa",
+   "new_text": "Three levels of evidence need to be kept apart, because the paper's claims rest on them differently, and the addendum moved one of them. What the registered rule confirmed is a prediction of the mechanism: if a second decoder specialises in the weak component, its advantage should grow as that component is threatened, and for networks trained at 40 dB and evaluated under heavier noise it did (H3). What the registered addendum then showed is that this prediction does not hold once training and evaluation are matched. Trained at the level at which it is evaluated, the branch's advantage is 0.229 points at 20 dB and 0.223 points at 40 dB, and it clears the registered floor at neither (H5, H1). What is consistent with the mechanism but was not tested is that the evaluation-only gain concentrated in the cardiac channel (Section 3.4). What is descriptive is the shape of the evaluation-only growth: no advantage from 60 to 40 dB, a detectable step by 35 dB, the floor crossed by 30 dB, and a full effect at 20 dB. The mechanism has not been confirmed. One of its predictions was, in a design that, as the pre-submission review pointed out, could not distinguish protection of a threatened component from tolerance of an unfamiliar input. The registered addendum changed the training condition, and with it two things at once: the network no longer met noise it had not seen, and the control arm no longer lost the component, its loss falling from 8.8 points to 0.8. The addendum therefore removed the mismatch and the threat together. Under the reading fixed before it was run, the evaluation-only result is attributable to distribution-shift tolerance in whole or in part, and the design cannot say which.",
+   "roadmap_item_ids": [
+    "REV-R3-1"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0052",
+   "old_hash": "8ad547fc967d",
+   "new_text": "Within those limits the evaluation-only shape is still informative about the measurement chain. The obvious alternative, that the flat top is the Dice ceiling compressing a real but small effect, does not hold: with each seed's gain expressed as a fraction of the control arm's own remaining error, the high-SNR intervals contain zero and the intervals from 35 dB down exclude it. The seed-level structure points the same way, since the seeds that benefit most at 40 dB are not those that benefit most at 20 dB (ρ = −0.10). The registered primary level therefore lies above the onset on this phantom, and \"under threat\" can be given an operational reading from the same numbers: at 40 dB the control arm still recovers the cardiac component at a Dice of 0.966, and at 20 dB it has lost 8.8 points on that component and 2.0 on the lung. What the addendum adds is that the threat, so defined, did not survive training at the heavier level: trained on it, the control arm recovers 8.0 of the 8.8 points on its own, and the branch is left with the same 0.2 points it was worth at 40 dB. The counter-argument raised in the pre-submission review, that distribution shift and weak-component threat make the same prediction in an evaluation-only sweep, was correct, and the retrained condition does not separate them either, because on this phantom the threat arose only through the mismatch. What the addendum establishes is narrower and sufficient for practice: the benefit does not survive matched training, whichever reading of its cause is preferred. In the vocabulary of Castro et al. (2020) <!--ref:Castro2020NatCommun--><!--anchor:none:-->, the evaluation-only sweep is an acquisition shift between the data the network was developed on and the condition it was tested in. That the training noise sets the tolerance of such a shift is known elsewhere: discriminative image denoisers were typically trained for one noise level each and lacked flexibility across levels, the limitation that FFDNet removed by taking a noise-level map as an input (K. Zhang et al., 2018) <!--ref:Zhang2018FFDNet--><!--anchor:none:-->, and appropriately tuned Gaussian noise during training improved generalisation to unseen corruptions in image classification (Rusak et al., 2020) <!--ref:Rusak2020ECCV--><!--anchor:none:-->. We regard this as the most useful result in the paper, because it is the one that a study without the addendum would have reported the other way round.",
+   "roadmap_item_ids": [
+    "REV-R3-1"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0054",
+   "old_hash": "14afef2d0fd7",
+   "new_text": "### 4.2 When a registered rule and an interval estimate disagree",
+   "roadmap_item_ids": [
+    "REV-R3-14"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0055",
+   "old_hash": "066ebce3c55c",
+   "new_text": "The 40 dB result is the least comfortable in the paper and the one we consider most worth reporting exactly as it fell. The registered H1 rule contains an effect-size floor, stated with its rationale in Section 2.4: the difference must exceed the control arm's seed-to-seed SD. The observed difference is one third of that floor, D led on 32 of 58 seeds, and the median difference is 0.14 points. The bootstrap interval excludes zero because 58 paired seeds resolve a mean of 0.2 points. It does not make that mean large. Reporting both, and not revising the rule after seeing the interval, is the point of having registered the rule. Had the rule been written on the p-value alone, the same data would have returned falsified for a different reason (p = 0.098), and had it been written on the interval alone, it would have returned confirmed for an effect one third the size of the seed-to-seed scatter. The floor also explains why the rule was unlikely to confirm at the effect the study anticipated: it asks for a difference of about 0.8 standard deviations of the paired difference, while the sample was sized for an effect of 0.376 on the p-condition (Section 2.4), so the study was powered to detect the anticipated effect, not to confirm the rule at it. The retrained contrast of Section 3.5 has the same form, a small mean whose interval excludes zero and a p-value below 0.05 with the floor unmet, and it is reported the same way.",
+   "roadmap_item_ids": [
+    "REV-R3-2"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0057",
+   "old_hash": "e0a982d15349",
+   "new_text": "### 4.3 Relation to the original architecture",
+   "roadmap_item_ids": [
+    "REV-R3-14"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0062",
+   "old_hash": "a039ce537344",
+   "new_text": "Seven limitations bound the claims. First, one reconstructor and one noise model: every input was produced by GREIT, whose regularisation removed most of the measurement noise before image space, and reconstructors with different regularisation would present the network with a different perturbation at the same nominal SNR. The noise was additive and Gaussian on the voltage frame, whereas electrode-area and contact-impedance errors produce ringing, field-wide artefacts and structural distortion rather than noise of that kind (Boyle and Adler, 2011) <!--ref:Boyle2011PhysiolMeas--><!--anchor:none:-->, so the sweep says nothing about those error sources. Second, fixed loss weights: the original architecture and the 2025 study used weighted losses, and this study did not compare the branch against weighting or test whether one can substitute for the other. Third, one phantom and no measured data. The study is simulation-only by design, because the registered rules need a ground-truth cardiac image for every frame and a noise level that can be set exactly and re-set across a sweep, and a measured recording provides neither. The cost is that the position of any real measurement chain relative to the onset is unmeasured, and a single cylinder with simply parameterised organs is not a thorax: in particular the heart inclusion never overlaps the lung inclusions (Section 2.3), so the spatial overlap of the cardiac-related signal with the ventilated lung that in-vivo separation must contend with was not part of the task, and the weak-component difficulty tested here is one of amplitude and reconstruction blur only. Fourth, one modality, and one target: what the branch separates is the cardiac-related component of the image, which is not a measurement of perfusion (Borges et al., 2012) <!--ref:Borges2012JAP--><!--anchor:none:-->. Fifth, the addendum retrained only the two primary arms and only at 20 dB, so the matched-training result is known at two levels, 40 and 20 dB, and the shape of the advantage under matched training between them is not measured. Sixth, the onset shape and the channel specificity were not registered tests, and reproducing either as a finding requires a pre-specified decision rule. Seventh, a second decoder may act as a regulariser of the shared encoder rather than as a specialist for its target, the role an added reconstruction branch played in a brain-tumour segmentation network trained on limited data (Myronenko, 2019) <!--ref:Myronenko2019AEReg--><!--anchor:none:-->. The present design cannot separate the two readings, and shows only that, whichever it is, the effect is small when training matches evaluation. The statement under test is a conditional. Each of its conditions is separately falsifiable, and this study tested one cell of that grid. The companion conditions remain to be tested.",
+   "roadmap_item_ids": [
+    "REV-R3-3"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0064",
+   "old_hash": "52096823bb3f",
+   "new_text": "In GREIT-reconstructed simulated lung EIT, a decoder branch dedicated to the cardiac component is worth 0.22 to 0.23 Dice points to a network trained at the level at which it is evaluated, at 40 dB and at 20 dB alike, and it clears the registered floor at neither level. For a network trained at 40 dB and evaluated under heavier noise the branch has a measurable benefit, beginning, descriptively, between 35 and 30 dB and reaching 2.1 Dice points at 20 dB. That benefit shrinks 9.2-fold when the network is trained at the heavier level, a change that removes the training-evaluation mismatch and the control arm's loss together, so the design attributes the evaluation-only benefit to tolerance of unseen noise in whole or in part and does not apportion it. The question the original architecture raised, whether the branch helps, is replaced by the question this study can answer, under what conditions it helps. The answer is a condition on the measurement chain and on the training condition together: the branch is worth little to a network trained on the noise it will see, and what it was worth in the evaluation-only sweep did not survive training on that noise. The branch, the phantom, the seeds and the training schedule were the same at every level of the sweep. What changed was how much of the measurement noise the reconstructor let through, and whether the network had been trained on it. On this phantom, with this reconstructor and this noise model, an architectural comparison without its measurement-chain and training-condition context would have returned a different answer at every level, and the value of this branch was a property of that combination rather than of the branch.",
+   "roadmap_item_ids": [
+    "REV-R3-1",
+    "REV-R3-5",
+    "REV-R3-7"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0074",
+   "old_hash": "0675d6ce3015",
+   "new_text": "[Rendered by `tools/cite.py` from Crossref/PubMed metadata with `refs/overrides.json` applied; journal numbering to be applied by format-convert. Alphabetical Vancouver strings from `refs/prior_works_strings.md`, 2026-10-06, 54 entries.]",
+   "roadmap_item_ids": [
+    "REV-R3-10"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0075",
+   "old_hash": "01cd296d0ab5",
+   "new_text": "1. Adler A, Guardo R. Electrical impedance tomography: regularized imaging and contrast detection. IEEE Trans Med Imaging. 1996;15:170-179. doi:10.1109/42.491418\n2. Adler A, Lionheart WRB. Uses and abuses of EIDORS: an extensible software base for EIT. Physiol Meas. 2006;27:S25-S42. doi:10.1088/0967-3334/27/5/s03\n3. Adler A, Arnold JH, Bayford R, Borsic A, Brown B, Dixon P, et al. GREIT: a unified approach to 2D linear EIT reconstruction of lung images. Physiol Meas. 2009;30:S35-S55. doi:10.1088/0967-3334/30/6/s03\n4. Boone L, Biparva M, Mojiri Forooshani P, Ramirez J, Masellis M, Bartha R, et al. ROOD-MRI: Benchmarking the robustness of deep learning segmentation models to out-of-distribution and corrupted data in MRI. Neuroimage. 2023;278:120289. doi:10.1016/j.neuroimage.2023.120289\n5. Borges JB, Suarez-Sipmann F, Bohm SH, Tusman G, Melo A, Maripuu E, et al. Regional lung perfusion estimated by electrical impedance tomography in a piglet model of lung collapse. J Appl Physiol (1985). 2012;112:225-236. doi:10.1152/japplphysiol.01090.2010\n6. Boyle A, Adler A. The impact of electrode area, contact impedance and boundary shape on EIT images. Physiol Meas. 2011;32:745-754. doi:10.1088/0967-3334/32/7/s02\n7. Capps M, Mueller JL. Reconstruction of Organ Boundaries With Deep Learning in the D-Bar Method for Electrical Impedance Tomography. IEEE Trans Biomed Eng. 2021;68:826-833. doi:10.1109/tbme.2020.3006175\n8. Caruana R. Multitask Learning. Machine Learning. 1997;28:41-75. doi:10.1023/a:1007379606734\n9. Castro DC, Walker I, Glocker B. Causality matters in medical imaging. Nat Commun. 2020;11:3673. doi:10.1038/s41467-020-17478-w\n10. Deibele JM, Luepschen H, Leonhardt S. Dynamic separation of pulmonary and cardiac changes in electrical impedance tomography. Physiol Meas. 2008;29:S1-S14. doi:10.1088/0967-3334/29/6/s01\n11. Eyuboglu BM, Brown BH. Methods of cardiac gating applied potential tomography. Clin Phys Physiol Meas. 1988;9:43-48. doi:10.1088/0143-0815/9/4a/008\n12. Frerichs I, Hinz J, Herrmann P, Weisser G, Hahn G, Quintel M, et al. Regional lung perfusion as determined by electrical impedance tomography in comparison with electron beam CT imaging. IEEE Trans Med Imaging. 2002;21:646-652. doi:10.1109/tmi.2002.800585\n13. Frerichs I, Pulletz S, Elke G, Reifferscheid F, Schädler D, Scholz J, et al. Assessment of Changes in Distribution of Lung Perfusion by Electrical Impedance Tomography. Respiration. 2009;77:282-291. doi:10.1159/000193994\n14. Frerichs I, Amato MBP, van Kaam AH, Tingay DG, Zhao Z, Grychtol B, et al. Chest electrical impedance tomography examination, data analysis, terminology, clinical use and recommendations: consensus statement of the TRanslational EIT developmeNt stuDy group. Thorax. 2017;72:83-93. doi:10.1136/thoraxjnl-2016-208357\n15. Gagnon H, Cousineau M, Adler A, Hartinger AE. A Resistive Mesh Phantom for Assessing the Performance of EIT Systems. IEEE Trans Biomed Eng. 2010;57:2257-2266. doi:10.1109/tbme.2010.2052618\n16. Graf M, Riedel T. Electrical impedance tomography: Amplitudes of cardiac related impedance changes in the lung are highly position dependent. PLoS One. 2017;12:e0188313. doi:10.1371/journal.pone.0188313\n17. Graham S, Vu QD, Raza SEA, Azam A, Tsang YW, Kwak JT, et al. Hover-Net: Simultaneous segmentation and classification of nuclei in multi-tissue histology images. Med Image Anal. 2019;58:101563. doi:10.1016/j.media.2019.101563\n18. Grant CA, Pham T, Hough J, Riedel T, Stocker C, Schibler A. Measurement of ventilation and cardiac related impedance changes with electrical impedance tomography. Crit Care. 2011;15:R37. doi:10.1186/cc9985\n19. Hamilton SJ, Hauptmann A. Deep D-Bar: Real-Time Electrical Impedance Tomography Imaging With Deep Neural Networks. IEEE Trans Med Imaging. 2018;37:2367-2377. doi:10.1109/tmi.2018.2828303\n20. Herzberg W, Hauptmann A, Hamilton SJ. Domain independent post-processing with graph U-nets: applications to electrical impedance tomographic imaging⋆. Physiol Meas. 2023;44:125008. doi:10.1088/1361-6579/ad0b3d\n21. Isensee F, Wald T, Ulrich C, Baumgartner M, Roy S, Maier-Hein K, et al. nnU-Net Revisited: A Call for Rigorous Validation in 3D Medical Image Segmentation. Lecture Notes in Computer Science. 2024;15009:488-498. doi:10.1007/978-3-031-72114-4_47\n22. Jeschke J, Ivanenko M, Smolik WT, Wanta D, Midura M, Wróblewski P. Machine Learning-Based Image Reconstruction in Wearable CC-EIT of the Thorax: Robustness to Electrode Displacement. Sensors (Basel). 2025;25:6543. doi:10.3390/s25216543\n23. Kamann C, Rother C. Benchmarking the Robustness of Semantic Segmentation Models with Respect to Common Corruptions. Int J Comput Vis. 2021;129:462-483. doi:10.1007/s11263-020-01383-2\n24. Kendall A, Gal Y, Cipolla R. Multi-task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics. 2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2018:7482-7491. doi:10.1109/cvpr.2018.00781\n25. Ko YF, Cheng KS. U-Net-based approach for automatic lung segmentation in electrical impedance tomography. Physiol Meas. 2021;42:025002. doi:10.1088/1361-6579/abe021\n26. Ko YF, Cheng KS. Semi-Siamese U-Net for separation of lung and heart bioimpedance images: A simulation study of thorax EIT. PLoS One. 2021;16:e0246071. doi:10.1371/journal.pone.0246071\n27. Ko YF, Lin YD, Su PL. Reconstruction of Heart-related Imaging from Lung Electrical Impedance Tomography Using Semi-Siamese U-Net. Curr Med Imaging. 2025;21:e15734056408077. doi:10.2174/0115734056408077250610070821\n28. Kurin V, De Palma A, Kostrikov I, Whiteson S, Mudigonda PK. In Defense of the Unitary Scalarization for Deep Multi-Task Learning. Advances in Neural Information Processing Systems 35. 2022:12169-12183. doi:10.52202/068431-0884\n29. Lakens D. Calculating and reporting effect sizes to facilitate cumulative science: a practical primer for t-tests and ANOVAs. Front Psychol. 2013;4. doi:10.3389/fpsyg.2013.00863\n30. Leathard AD, Brown BH, Campbell J, Zhang F, Morice AH, Tayler D. A comparison of ventilatory and cardiac related changes in EIT images of normal human lungs and of lungs with pulmonary emboli. Physiol Meas. 1994;15:A137-A146. doi:10.1088/0967-3334/15/2a/018\n31. Liu S, Johns E, Davison AJ. End-To-End Multi-Task Learning With Attention. 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR). 2019:1871-1880. doi:10.1109/cvpr.2019.00197\n32. Misra I, Shrivastava A, Gupta A, Hebert M. Cross-Stitch Networks for Multi-task Learning. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). 2016:3994-4003. doi:10.1109/cvpr.2016.433\n33. Murphy EK, Amoh J, Arshad SH, Halter RJ, Odame K. Noise-robust bioimpedance approach for cardiac output measurement. Physiol Meas. 2019;40:074004. doi:10.1088/1361-6579/ab0d45\n34. Myronenko A. 3D MRI Brain Tumor Segmentation Using Autoencoder Regularization. Lecture Notes in Computer Science. 2019;11384:311-320. doi:10.1007/978-3-030-11726-9_28\n35. Nguyen DT, Jin C, Thiagalingam A, McEwan AL. A review on electrical impedance tomography for pulmonary perfusion imaging. Physiol Meas. 2012;33:695-706. doi:10.1088/0967-3334/33/5/695\n36. Nosek BA, Ebersole CR, DeHaven AC, Mellor DT. The preregistration revolution. Proc Natl Acad Sci U S A. 2018;115:2600-2606. doi:10.1073/pnas.1708274114\n37. Pulletz S, Genderingen HRv, Schmitz G, Zick G, Schädler D, Scholz J, et al. Comparison of different methods to define regions of interest for evaluation of regional lung ventilation by EIT. Physiol Meas. 2006;27:S115-S127. doi:10.1088/0967-3334/27/5/s10\n38. Ren S, Sun K, Tan C, Dong F. A Two-Stage Deep Learning Method for Robust Shape Reconstruction With Electrical Impedance Tomography. IEEE Trans. Instrum. Meas.. 2020;69:4887-4897. doi:10.1109/tim.2019.2954722\n39. Ronneberger O, Fischer P, Brox T. U-Net: Convolutional Networks for Biomedical Image Segmentation. Lecture Notes in Computer Science. 2015:234-241. doi:10.1007/978-3-319-24574-4_28\n40. Rusak E, Schott L, Zimmermann RS, Bitterwolf J, Bringmann O, Bethge M, et al. A Simple Way to Make Neural Networks Robust Against Diverse Image Corruptions. Lecture Notes in Computer Science. 2020;12348:53-69. doi:10.1007/978-3-030-58580-8_4\n41. Silva DF, Muders T, Reinartz S, Putensen C, Leonhardt S. Adaptive Cardiorespiratory Separation With Harmonic Models and Filters: The Case of Electrical Impedance Tomography. IEEE Trans Biomed Eng. 2025;72:3288-3299. doi:10.1109/tbme.2025.3566608\n42. Spinelli E, Kircher M, Stender B, Ottaviani I, Basile MC, Marongiu I, et al. Unmatched ventilation and perfusion measured by electrical impedance tomography predicts the outcome of ARDS. Crit Care. 2021;25:192. doi:10.1186/s13054-021-03615-4\n43. Stowe S, Boyle A, Sage M, See W, Praud JP, Fortin-Pellerin É, et al. Comparison of bolus- and filtering-based EIT measures of lung perfusion in an animal model. Physiol Meas. 2019;40:054002. doi:10.1088/1361-6579/ab1794\n44. Vandenhende S, Georgoulis S, Van Gool L, De Brabandere B. Branched Multi-Task Networks: Deciding what layers to share. Proceedings of the British Machine Vision Conference 2020. 2020:59. doi:10.5244/c.34.59\n45. Vandenhende S, Georgoulis S, Van Gansbeke W, Proesmans M, Dai D, Van Gool L. Multi-Task Learning for Dense Prediction Tasks: A Survey. IEEE Trans Pattern Anal Mach Intell. 2022;44:3614-3633. doi:10.1109/tpami.2021.3054719\n46. Wang Z, Li X, Sun Y, Wang Q. Electrical Impedance Tomography Deep Imaging With Dual-Branch U-Net Based on Deformable Convolution and Hyper-Convolution. IEEE Trans. Instrum. Meas.. 2024;73:1-16. doi:10.1109/tim.2024.3369160\n47. Wilcoxon F. Individual Comparisons by Ranking Methods. Biometrics Bulletin. 1945;1:80. doi:10.2307/3001968\n48. Xin D, Ghorbani B, Gilmer J, Garg A, Firat O. Do Current Multi-Task Optimization Methods in Deep Learning Even Help?. Advances in Neural Information Processing Systems 35. 2022:13597-13609. doi:10.52202/068431-0988\n49. Yu H, Liu H, Liu Z, Wang Z, Jia J. High-resolution conductivity reconstruction by electrical impedance tomography using structure-aware hybrid-fusion learning. Comput Methods Programs Biomed. 2024;243:107861. doi:10.1016/j.cmpb.2023.107861\n50. Zadehkoochak M, Blott BH, Hames TK, George RF. Pulmonary perfusion and ventricular ejection imaging by frequency domain filtering of EIT images. Clin Phys Physiol Meas. 1992;13:191-196. doi:10.1088/0143-0815/13/a/037\n51. Zhang K, Zuo W, Zhang L. FFDNet: Toward a Fast and Flexible Solution for CNN-Based Image Denoising. IEEE Trans Image Process. 2018;27:4608-4622. doi:10.1109/tip.2018.2839891\n52. Zhang K, Guo R, Li M, Yang F, Xu S, Abubakar A. Supervised Descent Learning for Thoracic Electrical Impedance Tomography. IEEE Trans Biomed Eng. 2021;68:1360-1369. doi:10.1109/tbme.2020.3027827\n53. Zhang K, Li M, Liang H, Wang J, Yang F, Xu S, et al. Deep feature-domain matching for cardiac-related component separation from a chest electrical impedance tomography image series: proof-of-concept study. Physiol Meas. 2022;43:125005. doi:10.1088/1361-6579/ac9c44\n54. Zhang T, Tian X, Liu X, Ye J, Fu F, Shi X, et al. Advances of deep learning in electrical impedance tomography image reconstruction. Front Bioeng Biotechnol. 2022;10:1019531. doi:10.3389/fbioe.2022.1019531",
+   "roadmap_item_ids": [
+    "REV-R3-10"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0079",
+   "old_hash": "26b7d950eb17",
+   "new_text": "**Fig. 2.** The premise, measured. A quarter-amplitude threshold, the GREIT figure-of-merit convention, is applied to the mixed reconstruction (a) and scored against each organ's own reconstruction: (b) the lung is recovered, (c) the heart is not, (d) what is actually there. The frame shown is the one whose heart score sits at the median of the 3,600-frame set, and its printed values (lung 0.948, heart 0.000) are for this frame. Over the whole set the mean Dice is 0.951 for the lung and 0.099 for the heart, with a heart median of 0.000: on more than half of the frames the threshold recovers no cardiac component at all.",
+   "roadmap_item_ids": [
+    "REV-R3-10"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0083",
+   "old_hash": "18c99131095d",
+   "new_text": "**Supplementary material.** S1 per-arm architecture diagrams. S2 Study 1 full results and decisions. S3 effect sizes of the three branching contrasts with the registered floor drawn (`fig_s3_effect_sizes`). S4 seed-level correlation of D − B_wide between sweep levels. S5 preregistration deviation log in full, including the §9 addendum and its hash. S6 the scoring defect record. S7 training hyperparameters and software environment, including the 20 dB training split's normalisation affine. S8 geometry-level bootstrap intervals beside the seed-level intervals for the 40|40, 20|40 and 20|20 contrasts (`results/geom_bootstrap.json`). S9 the evaluation-only sweep for all five arms with the width-only and branch-only contrasts (`results/tables/table_s9_sweep_all_arms.md`, from the registered per-seed files).",
+   "roadmap_item_ids": [
+    "REV-R3-6"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  }
+ ],
+ "emitted_by": "draft_writer_agent (academic-paper revision round 3, Fable 5.1, 2026-10-06)"
+}

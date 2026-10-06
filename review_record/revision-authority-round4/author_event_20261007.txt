@@ -1,0 +1,6 @@
+PI message in session, 2026-10-07 (after reading manuscript/38_REVIEWER_PANEL_rereview_round2_scirep.md, Residual Issues 1–10):
+「殘留項 1–9 全部 will_address，Zenodo 不存，直接跑 round-4 patch」
+「不要附2025的審查意見，目前狀態應該算重啟研究，已經跟原本那篇不同」
+「AI聲明修改」
+Scope: every round-4 roadmap item (REV-R4-1 … REV-R4-7, transcribed from 38_ §Residual Issues 1–9 and the four new issues NEW-1…NEW-4) is will_address; targets are the v4 block ids named there.
+Decisions recorded outside the patch: no Zenodo deposit (REV-R4-7 states in Data Availability that the checkpoints are not deposited because of their size and are available on request); the AI-use statement's access period is updated at format-convert through AUTHOR_FIELDS.json ("accessed September and October 2026"); the 2025 reviewer-comment mapping table is NOT attached to the cover letter (the cover letter still discloses the earlier submissions, as the journal's policy requires).

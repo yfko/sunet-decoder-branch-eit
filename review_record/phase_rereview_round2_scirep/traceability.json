@@ -1,0 +1,407 @@
+{
+ "round_id": "sunet-core-rereview-round2-scirep-20261006",
+ "revision": 1,
+ "verdict_record_hash": "e84adf941474d80107aac3fc43d5e47451877063d53499d55e9ba03957f0d642",
+ "rows": [
+  {
+   "item_id": "REV-R3-11",
+   "concern_id": "S1",
+   "priority": "SHOULD_FIX",
+   "original_comment": "Venue-format departures: figure numbering by first citation; the 'companion studies are cited accordingly' sentence; reference rendering gaps; LaTeX in the Table 2 caption; abstract sentence three",
+   "authors_claim": "Companion-studies sentence replaced by 'The companion conditions named in Section 4.4 are not tested here'; abstract sentence three rewritten (199 words); figures swapped at format-convert; Table 2 caption LaTeX replaced in the deliverable. Conceded not yet fixed: four reference-rendering gaps in 36_ (Lakens 863, Ronneberger LNCS volume, Herzberg '⋆', Xin title ending), to be fixed in refs/overrides.json before packing.",
+   "revision_location": "§1 B0013; Abstract B0005; 36_SUBMISSION_scirep_v4.md captions and figure order",
+   "verified": "YES",
+   "status": "FULLY_ADDRESSED",
+   "quality_assessment": "The three committed checks pass; the four reference-rendering gaps the letter concedes are outside the committed pattern ('noted, not scored'), so no scope_correction is admissible; they are recorded as a post-letter observation and in Residual Issues because the deliverable carries them. No adjustment.",
+   "final_verdict": "FULLY_ADDRESSED",
+   "phase2a_verdict": "FULLY_ADDRESSED",
+   "verified_by": "EIC"
+  },
+  {
+   "item_id": "REV-R3-5",
+   "concern_id": "S2",
+   "priority": "SHOULD_FIX",
+   "original_comment": "Stated implication outruns the tested cell: §5 closing sentence; Abstract/§5 onset without the descriptive label; the reviewer-facing Introduction paragraph",
+   "authors_claim": "§5 closing sentence scoped to this phantom, reconstructor and noise model; 'descriptive'/'descriptively' attached to the onset in the Abstract and §5; the reviewer-facing paragraph recast as 'Three distinctions follow.'",
+   "revision_location": "Abstract B0005; §1 B0012; §5 B0064",
+   "verified": "YES",
+   "status": "FULLY_ADDRESSED",
+   "quality_assessment": "All three checks pass on the manuscript text; the letter's claims are verbatim matches. No adjustment.",
+   "final_verdict": "FULLY_ADDRESSED",
+   "phase2a_verdict": "FULLY_ADDRESSED",
+   "verified_by": "EIC"
+  },
+  {
+   "item_id": "REV-R3-13",
+   "concern_id": "N1",
+   "priority": "CONSIDER",
+   "original_comment": "Checkpoints on request rather than deposited; MPS determinism; compute footprint beside parameter count",
+   "authors_claim": "§2.4 states the MPS non-determinism (a seed defines a replicate) and that compute and activation footprint were not measured; the Zenodo deposit is a pending PI decision and Data Availability is unchanged.",
+   "revision_location": "§2.4 B0027; Availability B0072 (unchanged)",
+   "verified": "PARTIAL",
+   "status": "PARTIALLY_ADDRESSED",
+   "quality_assessment": "Determinism and footprint are stated; the letter confirms the deposit decision is still pending and Data Availability is unchanged, so the roadmap's 'deposit decision recorded' half remains open. Decision-inert. No adjustment.",
+   "final_verdict": "PARTIALLY_ADDRESSED",
+   "phase2a_verdict": "PARTIALLY_ADDRESSED",
+   "verified_by": "EIC"
+  },
+  {
+   "item_id": "REV-R3-14",
+   "concern_id": "N2",
+   "priority": "CONSIDER",
+   "original_comment": "Venue-suggested order and the 4,500-word recommendation are advisory; the Discussion's sentence-length subheadings",
+   "authors_claim": "§4.1–4.3 headings shortened to phrases; §4.4 already 'Limitations'; IMRaD order kept; main text 7,271 words against the 4,500-word recommendation, PI decided not to cut.",
+   "revision_location": "§4 headings B0050, B0054, B0057",
+   "verified": "YES",
+   "status": "FULLY_ADDRESSED",
+   "quality_assessment": "Headings shortened as asked; the letter's disclosure of 7,271 words against the advisory 4,500 is recorded as a post-letter observation, not scored. No adjustment.",
+   "final_verdict": "FULLY_ADDRESSED",
+   "phase2a_verdict": "FULLY_ADDRESSED",
+   "verified_by": "EIC"
+  },
+  {
+   "item_id": "REV-R3-2",
+   "concern_id": "R1",
+   "priority": "MUST_FIX",
+   "original_comment": "Sample size covers only the p-condition; the floor demands a paired effect near one SD; the stated dz 0.376 and 29% figures are not reproducible from the post-correction Study 1 numbers",
+   "authors_claim": "§2.4 now states the registered chain (pre-correction dz 0.500, 29% at n = 10, scaled to 0.376, 58 seeds for 80% on the p-condition), the post-correction dz 0.34, the floor as about 0.8 SD of the paired difference, and that the rule had little power to confirm at the anticipated effect; §2.1 labels its dz; §4.2 carries the consequence sentence. Disclosure, not redesign.",
+   "revision_location": "§2.1 B0017; §2.4 B0029; §4.2 B0055",
+   "verified": "YES",
+   "status": "FULLY_ADDRESSED",
+   "quality_assessment": "The chain, the floor in standardised units and the §4.2 consequence are all in the manuscript and recompute; the letter's claims match 2A's reading. No adjustment.",
+   "final_verdict": "FULLY_ADDRESSED",
+   "phase2a_verdict": "FULLY_ADDRESSED",
+   "verified_by": "R1",
+   "cross_model_status": "not_configured"
+  },
+  {
+   "item_id": "REV-R3-1",
+   "concern_id": "R2",
+   "priority": "MUST_FIX",
+   "original_comment": "The addendum removed the training-evaluation mismatch and, by the paper's own operational definition of 'under threat' (control-arm loss), the threat at the same time; 'most of the benefit is mismatch tolerance' apportions what the design cannot; the §1 thesis receives no verdict",
+   "authors_claim": "Every apportioning sentence in the Abstract, §1, §3.5, §4.1 (heading and two paragraphs) and §5 was returned to the registered 'in whole or in part' reading with the co-variation statement; §1 now says the statement under test receives no separate verdict in the matched condition. One 'most' sentence was knowingly left in §3.5 (B0123) as a measured quantity.",
+   "revision_location": "Abstract B0005; §1 B0013; §3.5 B0125; §4.1 B0050, B0051, B0052; §5 B0064 (residual: §4.2 B0056 unchanged; §4.1 B0051 one clause)",
+   "verified": "PARTIAL",
+   "status": "PARTIALLY_ADDRESSED",
+   "quality_assessment": "The seven listed surfaces are clean and tests (b) and (c) pass, but the letter points to nothing that changes 2A's residual: B0056 in §4.2 ('what belongs mostly to the training condition') was not in the patch's op list and the letter does not mention it, and the §4.1 'does not hold once ... matched' clause is one the letter itself cites as its replacement wording. No adjustment; PARTIALLY_ADDRESSED stands with a should_fix residual.",
+   "final_verdict": "PARTIALLY_ADDRESSED",
+   "phase2a_verdict": "PARTIALLY_ADDRESSED",
+   "verified_by": "R1",
+   "cross_model_status": "not_configured"
+  },
+  {
+   "item_id": "REV-R3-8",
+   "concern_id": "S3",
+   "priority": "SHOULD_FIX",
+   "original_comment": "Reported 40 dB p = 0.0983 corresponds to the normal approximation without the continuity correction the Methods state",
+   "authors_claim": "§2.4 now states the asymptotic normal approximation without continuity correction, the SciPy default above n = 50, as the procedure the scoring code applied; Table 3 unchanged because it already held those values.",
+   "revision_location": "§2.4 B0028",
+   "verified": "YES",
+   "status": "FULLY_ADDRESSED",
+   "quality_assessment": "Methods sentence now matches the code and Table 3; the letter's account of tools/evaluate.py agrees with 2A's. No adjustment.",
+   "final_verdict": "FULLY_ADDRESSED",
+   "phase2a_verdict": "FULLY_ADDRESSED",
+   "verified_by": "R1"
+  },
+  {
+   "item_id": "REV-R3-9",
+   "concern_id": "S4",
+   "priority": "SHOULD_FIX",
+   "original_comment": "Statistical reporting gaps: multiplicity across seven levels and four rules; unregistered contrasts with p-values not listed in §2.6; the floor's own sampling uncertainty at H5; relative error reduction is a mean of per-seed ratios",
+   "authors_claim": "Four statements added: no-multiplicity sentence in §2.4; §2.6 list extended (B, C, C_wide contrasts, 50 dB anchor, seed removal, geometry-level intervals); floor SE ≈ 0.036 and within-one-SE position in §3.5; mean-of-ratios definition and several-fold divergence at high SNR in §3.2.",
+   "revision_location": "§2.4 B0028; §2.6 B0034; §3.2 B0042; §3.5 B0122 (residual: §3.1 B0037 unchanged)",
+   "verified": "PARTIAL",
+   "status": "PARTIALLY_ADDRESSED",
+   "quality_assessment": "The letter lists the same four statements 2A found and does not point to a Bonferroni statement, to D − B in the §2.6 list or to a 'descriptive' marker in §3.1, so the three remaining clauses of 2A's residual stand. No adjustment.",
+   "final_verdict": "PARTIALLY_ADDRESSED",
+   "phase2a_verdict": "PARTIALLY_ADDRESSED",
+   "verified_by": "R1"
+  },
+  {
+   "item_id": "REV-R3-3",
+   "concern_id": "R3",
+   "priority": "MUST_FIX",
+   "original_comment": "The phantom's cardiac component is spatially disjoint from the lung inclusions while the Introduction motivates the problem with cardiac-related changes inside the lung field and spatial overlap",
+   "authors_claim": "§2.3 gives the inclusion centres and jitter and states the heart inclusion never overlaps the lungs, that the in-vivo within-lung situation is absent by construction, and that the remaining difficulty is amplitude and reconstruction blur; Limitation 3 repeats this naming spatial overlap; §1 fences the motivation with a pointer to §2.3.",
+   "revision_location": "§1 B0009; §2.3 B0023; §4.4 B0062",
+   "verified": "YES",
+   "status": "FULLY_ADDRESSED",
+   "quality_assessment": "Disjointness and its exclusion are stated in §2.3 and Limitation 3 with the geometric reason, and §1 is fenced; the letter adds only that the generator's overlap column is zero, which 2A had noted it could not read. No adjustment.",
+   "final_verdict": "FULLY_ADDRESSED",
+   "phase2a_verdict": "FULLY_ADDRESSED",
+   "verified_by": "R2",
+   "cross_model_status": "not_configured"
+  },
+  {
+   "item_id": "REV-R3-10",
+   "concern_id": "S5",
+   "priority": "SHOULD_FIX",
+   "original_comment": "Citation sentences: Graf 2017 is body posture; the quarter-amplitude set is GREIT's figure-of-merit convention, not the ROI paper's threshold; Murphy 2019 is a bioimpedance cardiac-output study; the bolus method is cited second-hand",
+   "authors_claim": "Graf 2017 now supports body position; the quarter-amplitude set is attributed to GREIT with Pulletz kept for the 20–35% range; Frerichs 2002 (IEEE TMI) added as the bolus primary source, list 53 → 54. R2-W4 not accepted: the PubMed abstract says the network was trained on EIT data, so Murphy 2019 stays as an EIT example and the clause is reworded to what the abstract supports; recorded in 35_CITATION_AUDIT_v4.md.",
+   "revision_location": "§1 B0009; §2.4 B0027; Fig. 2 legend B0079; References B0074, B0075 (entry 12 Frerichs 2002)",
+   "verified": "YES",
+   "status": "FULLY_ADDRESSED",
+   "quality_assessment": "Upgraded by ADJ-1 (valid_rebuttal): the PubMed abstract of Murphy et al. 2019 confirms both halves of the v4 clause (trained on EIT data; poorly contacting electrodes, which ones unknown), so the premise of sub-check (3) that the study is not EIT was wrong and the citation is correctly filed. Sub-checks (1), (2) and (4) (under DIS-1's corrected descriptor) were already met.",
+   "final_verdict": "FULLY_ADDRESSED",
+   "phase2a_verdict": "PARTIALLY_ADDRESSED",
+   "verified_by": "R2",
+   "adjustment_id": "ADJ-1",
+   "addressed_by_rebuttal": true
+  },
+  {
+   "item_id": "REV-R3-12",
+   "concern_id": "S6",
+   "priority": "SHOULD_FIX",
+   "original_comment": "'Dice points' never defined; the locus of the hypothesised interference not stated for a design that shares the encoder",
+   "authors_claim": "'Dice points (hundredths of Dice)' defined in the Abstract and §2.4; §1 adds a sentence that every arm shares the encoder and bottleneck so interference acts on shared features and a decoder branch can relieve it only after the bottleneck.",
+   "revision_location": "Abstract B0005; §1 B0011; §2.4 B0028",
+   "verified": "YES",
+   "status": "FULLY_ADDRESSED",
+   "quality_assessment": "Both definitions are in the manuscript text where the committed criterion places them. No adjustment.",
+   "final_verdict": "FULLY_ADDRESSED",
+   "phase2a_verdict": "FULLY_ADDRESSED",
+   "verified_by": "R3"
+  },
+  {
+   "item_id": "REV-R3-15",
+   "concern_id": "N3",
+   "priority": "CONSIDER",
+   "original_comment": "Why interference is the frame for complementary targets; the shift-tolerance result for the robustness reader",
+   "authors_claim": "§1 adds two sentences on complementary targets as maximally related tasks and why interference is still the empirical question; the shift-tolerance reading stays inside the registered 'in whole or in part' wording (REV-R3-1), no separate robustness framing.",
+   "revision_location": "§1 B0011; §4.1 B0051 and §5 B0064 via REV-R3-1",
+   "verified": "YES",
+   "status": "FULLY_ADDRESSED",
+   "quality_assessment": "The sentence is present in §1 and the robustness reader is served inside the registered wording, as the roadmap's dissent note required. No adjustment.",
+   "final_verdict": "FULLY_ADDRESSED",
+   "phase2a_verdict": "FULLY_ADDRESSED",
+   "verified_by": "EIC"
+  },
+  {
+   "item_id": "REV-R3-6",
+   "concern_id": "S7",
+   "priority": "SHOULD_FIX",
+   "original_comment": "Width is an unexcluded rival for the evaluation-only 20 dB advantage; the sweep reports no B, C or C_wide rows although all arms were scored",
+   "authors_claim": "Table S9 reports all five arms from the registered per-seed files; new §3.2 paragraph B0127 gives B_wide − B as a range over seven levels with the 20 dB interval, C_wide − C 'at most +0.03 points', D − B and C_wide − B_wide at 20 dB with intervals, and concludes the advantage belongs to the split position; S9 listed in B0083; §2.6 lists the contrasts as unregistered.",
+   "revision_location": "§3.2 B0127 (new, after B0043); Supplementary list B0083; ../results/tables/table_s9_sweep_all_arms.md",
+   "verified": "PARTIAL",
+   "status": "PARTIALLY_ADDRESSED",
+   "quality_assessment": "The letter restates the same numbers 2A read in B0127 and locates no interval for C_wide − C in the text and no 35–25 dB values outside Table S9, so the committed 'same statistic type' pattern is still only partly met. No adjustment; the interpretation the item asked for is present.",
+   "final_verdict": "PARTIALLY_ADDRESSED",
+   "phase2a_verdict": "PARTIALLY_ADDRESSED",
+   "verified_by": "EIC"
+  },
+  {
+   "item_id": "REV-R3-4",
+   "concern_id": "R4",
+   "priority": "MUST_FIX",
+   "original_comment": "§3.1 calls the 0.22-point primary contrast a near-zero residual whose sign happened to be positive, while §3.5 and §5 treat it as a reproducible quantity with a geometry-level interval excluding zero",
+   "authors_claim": "The 'sign happened to be positive' sentence in §3.1 is replaced by 'It is a small difference that the data resolve: its seed-level and geometry-level intervals both exclude zero (Section 3.5), it is unrelated at the seed level to the 20 dB effect, and it is one third of the registered floor.' §3.5 and §5 unchanged.",
+   "revision_location": "§3.1 B0038 (comparison surface §3.5 B0124 unchanged)",
+   "verified": "YES",
+   "status": "FULLY_ADDRESSED",
+   "quality_assessment": "The chance-sign sentence is gone and §3.1 now says what the two intervals establish; §3.5 unchanged. Letter and manuscript agree. No adjustment.",
+   "final_verdict": "FULLY_ADDRESSED",
+   "phase2a_verdict": "FULLY_ADDRESSED",
+   "verified_by": "EIC",
+   "cross_model_status": "not_configured"
+  },
+  {
+   "item_id": "REV-R3-7",
+   "concern_id": "S8",
+   "priority": "SHOULD_FIX",
+   "original_comment": "The abstract and §5 lead with the positive clause of a regime (fixed-level training, evaluation under unseen heavier noise) whose significance is not argued",
+   "authors_claim": "The Abstract's results and §5's first sentence now open with the matched-training result (0.22–0.23 points at 40 and 20 dB, below both floors); the evaluation-only regime follows with its scope. The regime's significance is not argued separately.",
+   "revision_location": "Abstract B0005; §5 B0064",
+   "verified": "YES",
+   "status": "FULLY_ADDRESSED",
+   "quality_assessment": "Order test passes in both places; the letter confirms the second permitted option (regime reported without being called the payoff). No adjustment.",
+   "final_verdict": "FULLY_ADDRESSED",
+   "phase2a_verdict": "FULLY_ADDRESSED",
+   "verified_by": "EIC"
+  }
+ ],
+ "adjustments": [
+  {
+   "adjustment_id": "ADJ-1",
+   "item_id": "REV-R3-10",
+   "from_verdict": "PARTIALLY_ADDRESSED",
+   "to_verdict": "FULLY_ADDRESSED",
+   "basis": "valid_rebuttal",
+   "evidence_anchor": [
+    {
+     "anchor": "text: §2.4 \"with poorly contacting electrodes, unspecified in advance, for cardiac-output estimation from thoracic EIT data (Murphy et al., 2019)\"",
+     "anchor_artifact": "manuscript"
+    },
+    {
+     "anchor": "text: letter REV-R3-10 \"R2-W4 not accepted. The PubMed abstract states that the network was trained on EIT data for cardiac-output estimation, so the citation stays as an EIT example\"",
+     "anchor_artifact": "letter"
+    }
+   ],
+   "rationale": "The round-2 finding R2-W4 rested on the paper's title ('by its own title, a bioimpedance approach ... to my knowledge it is not an EIT ... study; I also cannot confirm from memory that the degradation it drew was unspecified poor electrode contact'), and the committed sub-check (3) inherited that premise ('Murphy et al. (bioimpedance cardiac-output)'). The letter's rebuttal was not taken on its say-so: this seat retrieved the PubMed record on 2026-10-07 (PMID 30840932, doi 10.1088/1361-6579/ab0d45). Its abstract reads 'Machine learning (ML) algorithms trained on electrical-impedance tomography (EIT) data are presented for portable cardiac monitoring. The approach was validated on a simulated thorax and a measured tank experiment ... The ML algorithms were trained using databases that assumed the presence of poorly contacting electrodes without any assumptions of knowing which electrodes would be bad in the experiment.' That supports both halves of the v4 clause (thoracic EIT data; poorly contacting electrodes, unspecified in advance), matches the wording 35_CITATION_AUDIT_v4.md records, and shows that filing Murphy 2019 as an EIT precedent is correct, so the premise of the original finding is false and the rebuttal is valid on the merits. Sub-checks (1) Graf, (2) GREIT/Pulletz with the matching Fig. 2 legend, and (4) Frerichs 2002 as entry 12 under the DIS-1 corrected descriptor (IEEE Trans Med Imaging 21:646–652) were already verified by 2A; the 54-entry list is present. No residual."
+  }
+ ],
+ "new_issues": [
+  {
+   "new_issue_id": "NEW-1",
+   "description": "The new §3.2 paragraph closes with 'the capacity control removes 0.12 points of it at most', but the direction is reversed: Table S9 gives B_wide − B ≤ 0 at every level (−0.037 to −0.124), so the capacity-controlled contrast D − B_wide exceeds the uncontrolled D − B at every level, by 0.124 points at 20 dB (2.097 against 1.973). Replacing B with the widened control adds up to 0.12 points to the advantage; it removes none. The paragraph's conclusion that width does not explain the advantage still holds, but an adversarial reader will note that the control is conservative in the opposite direction from the one stated.",
+   "location_anchor": "text: §3.2 \"The evaluation-only advantage therefore belongs to the position of the split, not to decoder width, and the capacity control removes 0.12 points of it at most.\"",
+   "severity": "minor",
+   "found_by": "R1",
+   "confidence": 5,
+   "competence_basis": "Statistician-engineer in ML evaluation methodology (round-2 panel seat 2); checked against ../results/tables/table_s9_sweep_all_arms.md",
+   "attribution": "regression",
+   "attribution_evidence": "Block B0127 is the single fresh block of the patch (insert_after B0043, roadmap_item_ids REV-R3-6); the sentence has no counterpart in 29_DRAFT_v3.md.",
+   "nearest_roadmap_item": "REV-R3-6",
+   "non_match_rationale": "REV-R3-6's criterion asks that the width-only contrasts be reported and interpreted; it does not cover the sign of the statement about what the capacity control does to the registered contrast."
+  },
+  {
+   "new_issue_id": "NEW-2",
+   "description": "§3.1 says D − B (+0.191) 'shrinks by only 0.03 points when the 38% larger B_wide replaces B', but D − B_wide is +0.223 (results/manuscript_numbers.json: 0.1909 and 0.2234), so the contrast grows by 0.03 when the control is substituted; the same sign error as NEW-1, pre-existing. The widening is also '+39% params' in the Table S9 header against '38%' here.",
+   "location_anchor": "text: §3.1 \"and it shrinks by only 0.03 points when the 38% larger B_wide replaces B\"",
+   "severity": "minor",
+   "found_by": "R1",
+   "confidence": 5,
+   "competence_basis": "Statistician-engineer in ML evaluation methodology (round-2 panel seat 2); numbers from results/manuscript_numbers.json and Table S9",
+   "attribution": "previously_missed",
+   "attribution_evidence": "B0037 is byte-identical between 29_DRAFT_v3.md and 34_DRAFT_v4.md and is not in ops_applied.",
+   "nearest_roadmap_item": "REV-R3-6",
+   "non_match_rationale": "The item concerns the missing sweep rows for B, C and C_wide, not the 40 dB sentence comparing D − B with D − B_wide."
+  },
+  {
+   "new_issue_id": "NEW-3",
+   "description": "§4.3 still says 'Three of the fifty-three cited works are from the authors' group' while the reference list now has 54 entries (B0074 updated to 54; Frerichs 2002 added as entry 12). The same sentence is in 36_SUBMISSION_scirep_v4.md line 300. A one-word count fix.",
+   "location_anchor": "text: §4.3 \"Three of the fifty-three cited works are from the authors' group\"",
+   "severity": "minor",
+   "found_by": "EIC",
+   "confidence": 5,
+   "competence_basis": "Scientific Reports Editorial Board Member, biomedical engineering / medical imaging (round-2 panel seat 1); D5 internal consistency",
+   "attribution": "regression",
+   "attribution_evidence": "The count became wrong when REV-R3-10's op on B0074/B0075 grew the list from 53 to 54; B0060 was not touched (not in ops_applied, byte-identical to v3, where fifty-three was correct).",
+   "nearest_roadmap_item": "REV-R3-10",
+   "non_match_rationale": "REV-R3-10's criterion covers the four citation sentences and the 54-entry list, not the self-citation count sentence in §4.3."
+  },
+  {
+   "new_issue_id": "NEW-4",
+   "description": "The replacement sentence in §1, 'The companion conditions named in Section 4.4 are not tested here', points to a section that does not name them: §4.4 (B0062) ends 'Each of its conditions is separately falsifiable, and this study tested one cell of that grid. The companion conditions remain to be tested', without listing the conditions. Either name them in §4.4 (other reconstructors, other noise models, loss weighting, measured data) or drop 'named in Section 4.4'.",
+   "location_anchor": "text: §1 \"The companion conditions named in Section 4.4 are not tested here.\"",
+   "severity": "minor",
+   "found_by": "EIC",
+   "confidence": 4,
+   "competence_basis": "Scientific Reports Editorial Board Member, biomedical engineering / medical imaging (round-2 panel seat 1); D5 cross-reference integrity",
+   "attribution": "regression",
+   "attribution_evidence": "The sentence is new in B0013 (op_index 4, roadmap_item_ids REV-R3-1 and REV-R3-11); v3 read 'The companion studies test the same statement under the other conditions and are cited accordingly.'",
+   "nearest_roadmap_item": "REV-R3-11",
+   "non_match_rationale": "REV-R3-11(a) asked that the promise of citation be deleted, made conditional or made true; it was deleted, which satisfies the check, but the replacement introduces a dangling cross-reference the criterion did not anticipate."
+  }
+ ],
+ "post_letter_observations": [
+  "REV-R3-11 / reference rendering: the letter concedes four rendering gaps remain in 36_SUBMISSION_scirep_v4.md and they are there (line 270 Lakens 2013 'Front. Psychol. 4 (2013)' without article number 863; line 266 Ronneberger 2015 'Lecture Notes in Computer Science 234–241' without volume 9351; line 226 Herzberg 2023 title ending '⋆'; line 246 Xin 2022 title ending 'Help?'). 2A had noted only the Lakens gap. The committed pattern names rendering as 'noted, not scored', so this is not a scope_correction; it is a packing blocker for the deliverable, to be fixed in refs/overrides.json and re-rendered, and it is listed under Residual Issues on that footing.",
+  "REV-R3-1 / B0056: the letter discloses and defends the surviving 'most' sentence in §3.5 (B0123) but says nothing about §4.2 B0056 ('would have attributed to the branch what belongs mostly to the training condition'), and B0056 is absent from the 28 ops in 34_DRAFT_v4.md.apply-report.json. The authors were evidently unaware of it; the residual is a one-sentence fix, and the §4.1 'does not hold once training and evaluation are matched' clause is one the letter itself presents as its replacement wording, so it too needs a deliberate change.",
+  "REV-R3-6 / NEW-1: the letter repeats 'the capacity control removes 0.12 points of it at most' verbatim as the paragraph's conclusion, so the reversed direction is in the authors' reading of Table S9 (B_wide − B is negative at every level, so substituting B_wide for B adds up to 0.124 points to the advantage rather than removing any) and not a transcription slip. NEW-1 stands as filed.",
+  "NEW-3 corroborated by the letter: its own header reports 'self-citation 3/54' while B0060 and B0070 in 34_DRAFT_v4.md (lines 224, 254) and 36_SUBMISSION_scirep_v4.md (lines 164, 300) still read 'fifty-three'.",
+  "NEW-4: the letter calls the replacement sentence 'true of the reference list' but does not address the dangling cross-reference; §4.4 (B0062) still ends 'The companion conditions remain to be tested' without naming them.",
+  "REV-R3-10: the round-2 R2-W4 finding was a title-only reading ('by its own title ... to my knowledge ... cannot confirm from memory'), and the Phase-1 operationalization inherited its premise as fact. ADJ-1 corrects this on the PubMed record retrieved by this seat (PMID 30840932, doi 10.1088/1361-6579/ab0d45), not on the letter's or the citation audit's say-so. The 'thoracic' qualifier is supported by the abstract's 'validated on a simulated thorax'.",
+  "REV-R3-14: the letter discloses a main-text count of 7,271 words (Sci Rep count, excluding Methods) against the venue's 4,500-word recommendation and a PI decision not to cut. The roadmap item marks the recommendation advisory and the committed criterion did not score it; the editor at the venue may raise it.",
+  "Letter item 4 lists author-side items outside the roadmap that are still open in v4: B0072 '[REPOSITORY URL AND TAG: to be frozen at submission]', B0066 'accessed September 2026' (to become October), the Vandenhende 2020 author order, and the Zenodo decision (REV-R3-13). None affects a verdict here; all are submission-pack blockers.",
+  "REV-R3-2: the letter's note that 'about 0.8' is the floor over the paired-difference SD while the panel's 'dz near 1' is the same floor read against one arm's seed SD is consistent with the committed band ('about 0.8 to 1 SD of the paired difference'); no action.",
+  "NEW-2 (previously missed, B0037 '38% larger B_wide' and 'shrinks by only 0.03 points'): the letter does not mention it, and Table S9's header says '+39% params'; the 10,743,738/7,762,498 ratio is 1.384, so '38%' is the rounding the text should keep and S9's header is the one to align, or state 38.4% in both."
+ ],
+ "dissent_adjudications": [],
+ "resolution_intents": [],
+ "cross_model_resolutions": [],
+ "rebuttal_adjudications": [],
+ "g2d_acceptances": [],
+ "pending_rebuttal_upgrades": [],
+ "escalation_approvals": [],
+ "reapplications": [],
+ "decision_inputs": {
+  "per_item": [
+   {
+    "item_id": "REV-R3-2",
+    "final_verdict": "FULLY_ADDRESSED",
+    "driving_severity": "major"
+   },
+   {
+    "item_id": "REV-R3-1",
+    "final_verdict": "PARTIALLY_ADDRESSED",
+    "driving_severity": "major",
+    "residual_magnitude": "should_fix"
+   },
+   {
+    "item_id": "REV-R3-3",
+    "final_verdict": "FULLY_ADDRESSED",
+    "driving_severity": "major"
+   },
+   {
+    "item_id": "REV-R3-4",
+    "final_verdict": "FULLY_ADDRESSED",
+    "driving_severity": "major"
+   }
+  ],
+  "verdict_counts": {
+   "must_fix": {
+    "FULLY_ADDRESSED": 3,
+    "PARTIALLY_ADDRESSED": 1,
+    "NOT_ADDRESSED": 0,
+    "MADE_WORSE": 0,
+    "CANNOT_VERIFY": 0
+   },
+   "should_fix": {
+    "FULLY_ADDRESSED": 6,
+    "PARTIALLY_ADDRESSED": 2,
+    "NOT_ADDRESSED": 0,
+    "MADE_WORSE": 0,
+    "CANNOT_VERIFY": 0
+   },
+   "consider": {
+    "FULLY_ADDRESSED": 2,
+    "PARTIALLY_ADDRESSED": 1,
+    "NOT_ADDRESSED": 0,
+    "MADE_WORSE": 0,
+    "CANNOT_VERIFY": 0
+   }
+  },
+  "residual_magnitude_counts": {
+   "must_fix": {
+    "must_fix": 0,
+    "should_fix": 1,
+    "consider": 0
+   },
+   "should_fix": {
+    "must_fix": 0,
+    "should_fix": 2,
+    "consider": 0
+   },
+   "consider": {
+    "must_fix": 0,
+    "should_fix": 0,
+    "consider": 1
+   }
+  },
+  "p2_addressed_rate": {
+   "numerator": 8,
+   "denominator": 8
+  },
+  "regressions": [
+   {
+    "new_issue_id": "NEW-1",
+    "severity": "minor"
+   },
+   {
+    "new_issue_id": "NEW-3",
+    "severity": "minor"
+   },
+   {
+    "new_issue_id": "NEW-4",
+    "severity": "minor"
+   }
+  ],
+  "non_regression_new_issue_ids": [
+   "NEW-2"
+  ],
+  "escalations": [],
+  "reject_recommended": false,
+  "apply_chain_witness": "pass"
+ },
+ "decision_state": "Minor Revision"
+}

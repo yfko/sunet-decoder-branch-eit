@@ -1,0 +1,25 @@
+## Contract Paraphrase
+
+D1 (methodology_rigor, mandatory, owner methodology). From where I sit — multi-task learning and medical-image-analysis validation practice — this dimension asks whether the study design, data handling, statistics and reproducibility affordances would survive a referee in the paper's own field. I do not score it. My only interest in it is indirect: if the design choices that make a result credible to a methodologist (matched baselines, preregistration, seeds, released code) are also the choices that make it legible to an outsider, then D1 and D4 reinforce each other, and I will note that in prose rather than score it.
+
+D2 (domain_accuracy, mandatory, owner domain). This asks whether the paper represents its own field's prior work and terminology correctly. It belongs to the domain seat. My lens touches it only where the manuscript makes claims about the adjacent field I represent — multi-task learning, shared-encoder/multi-decoder architectures, loss weighting, capacity-matched baselines, robustness under distribution shift. If those are misrepresented, that is a cross-disciplinary substantiation failure and I will report it under D4, not D2.
+
+D3 (argumentative_coherence, mandatory, owners da and methodology). This asks whether the thesis is internally consistent and the evidence actually supports the claims. It is the Devil's Advocate's and the methodologist's territory; I will not hunt for fallacies or internal contradictions. Where a coherence problem shows up only when the paper's claim is read through the vocabulary of an adjacent field (for example, a multi-task framing that the adjacent field would reject), I will report the framing mismatch under D4 and leave the logic to D3's owners.
+
+D4 (cross_disciplinary_relevance, high priority, owner perspective — my dimension). This asks three things of the manuscript as read by someone outside its home field: (i) can a reader from medical image analysis or multi-task learning follow the framing and definitions without the home field's tacit knowledge; (ii) when the paper borrows a concept from an adjacent field — branching, shared representations, capacity matching, robustness benchmarks, train/test mismatch — is the borrowed concept used in the sense the adjacent field would recognise, and is any claim about it backed by evidence or citation rather than assertion; (iii) is the practical implication stated at the scope the evidence licenses, neither over-generalised to the adjacent field nor hidden inside home-field jargon. This is high priority, not mandatory, so it cannot by itself produce a fatal block; a block here routes to major revision via F4, a warn to minor revision via F5.
+
+D5 (writing_and_structure, normal, owner eic). This asks whether the manuscript is organised, clearly written, well-figured and venue-conformant. The editor-in-chief seat owns it. Accessibility to adjacent readers overlaps with clarity, but I will keep accessibility (D4) separate from general prose quality (D5): a paragraph can be beautifully written and still opaque to an outsider, or clumsy and still perfectly legible across fields.
+
+D6 (venue_fit_and_contribution, mandatory, owner eic). This asks whether the paper fits the configured venue and makes an original, significant contribution for that readership. The editor seat owns it. Because the venue has a broad, multidisciplinary readership, the editor's fit judgement and my accessibility judgement will be correlated, but they are distinct questions: D6 asks whether the contribution matters to that readership; D4 asks whether that readership can understand and correctly transfer it.
+
+## Scoring Plan
+
+### D4: cross_disciplinary_relevance
+dimension_id: D4
+what_to_look_for: Whether the multi-task / branching framing matches how the adjacent field uses those terms; whether a medical-image-analysis or MTL reader can extract the design, the baseline-matching logic, and the noise-shift evaluation without EIT-specific tacit knowledge; whether claims about adjacent-field concepts (shared encoders, decoder branching, capacity matching, loss weighting, robustness under SNR shift, train/test mismatch) are substantiated by evidence or citation; and whether the stated practical implication is scoped to what the evidence shows rather than generalised to other modalities or tasks.
+what_triggers_block: The central framing borrows an adjacent-field concept in a way that field would reject as a misreading, or the headline implication is generalised to adjacent-field settings that the evidence does not test, such that an adjacent reader would take away a conclusion the data cannot support.
+what_triggers_warn: Adjacent-field concepts are used correctly but key definitions or the baseline-matching logic require home-field knowledge to follow, or one or more interdisciplinary claims are asserted without evidence or citation, or the practical implication is stated at a scope slightly wider or narrower than the evidence, in a way that would mislead but not invert an adjacent reader's takeaway.
+
+criteria_binding_unavailable
+
+[CONTRACT-ACKNOWLEDGED]

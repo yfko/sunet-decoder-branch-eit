@@ -1,0 +1,184 @@
+{
+ "contract_version": "1.0",
+ "round_id": "sunet-core-rereview-round2-scirep-20261006",
+ "input_manifest_hash": "4c9f60d53ac969e0973f00e585225a50d1f5e775263676af144f7b124bea0b59",
+ "items": [
+  {
+   "item_id": "REV-R3-1",
+   "priority": "must_fix",
+   "inherited_criterion": {
+    "roadmap_text": "No sentence apportions the benefit between mismatch tolerance and weak-component protection; the registered wording appears; the §1 statement's status under matched training is stated."
+   },
+   "operationalization": {
+    "fully_addressed": "Read as the methodology seat (R1). Three textual tests, all must pass. (a) Absence test: no sentence in the Abstract, §3.5 closing paragraph, §4.1 heading or body, or §5 quantifies how much of the evaluation-only 20 dB advantage belongs to distribution-shift tolerance versus weak-component protection; in particular the forms 'most of that benefit is mismatch tolerance', 'the larger part of the evaluation-only advantage is distribution-shift tolerance', 'most of the effect is the latter', 'most of what it was worth ... was tolerance of noise the network had not seen', and any synonym ('mainly', 'largely', 'predominantly', 'the bulk') applied to the two readings, are gone from every one of those places, and no new place introduces one. (b) Presence test: the registered reading of a falsified H5 appears in the manuscript in its registered form or an equivalent that keeps the disjunction open, i.e. the benefit is 'attributable in whole or in part to distribution-shift tolerance' (or wording to the same effect), together with an explicit statement that retraining at 20 dB removed the training-evaluation mismatch and, under the paper's own operational definition of threat as control-arm loss, the threat at the same time, so the addendum cannot say how much belongs to each. (c) Verdict test: a sentence states the status of the §1 thesis (the branch helps when the weak component is under threat) in the matched-training condition, and that status is 'untested' or 'not dissociated' (not refuted, not confirmed), with the reason that at 20|20 the control arm has recovered the component and the component is no longer under threat by the paper's definition. R3-W5's shift-tolerance framing may appear only inside that wording ('at least in part a shift-tolerance finding'), without apportionment.",
+    "partially_addressed": "The apportioning wording is removed from some but not all of the Abstract, §3.5, §4.1 and §5 (one surviving 'most'/'mainly'/'the larger part' sentence anywhere fails test (a)); or the registered 'in whole or in part' wording appears but the co-variation statement (mismatch and threat removed together, so no apportionment is possible) is missing or only implied; or the co-variation statement appears but the §1 thesis is still left without an explicit matched-condition verdict (the Discussion saying one cell of the grid was tested does not count as a verdict on the thesis); or the §4.1 heading still asserts the apportionment while the body retracts it.",
+    "made_worse_discriminator": "The revision replaces the apportionment with its mirror image: a sentence asserts that the benefit is mainly or wholly weak-component protection, or that the matched-training null confirms or refutes the §1 thesis, which the co-varied design licenses no more than the original claim did; or the registered reading is paraphrased in a way that drops 'in part' and asserts 'wholly' shift tolerance; or the Abstract now contradicts §4.1 or §5 on which reading holds (one section apportions, another says apportionment is impossible), which is a new D3 internal inconsistency on the headline."
+   },
+   "expected_change_surface": "Abstract (B0005), §1 paragraph that states the thesis (B0013), §4.1 heading (B0050) and first two paragraphs (B0051, B0052), §3.5 closing paragraph (B0125), §5 conclusion (B0064); roadmap target_section 'Abstract, §3.5, §4.1, §5'.",
+   "equivalence_policy": "allowed",
+   "source_reviewer": "R1",
+   "source_reviewer_labels": ["R1"]
+  },
+  {
+   "item_id": "REV-R3-2",
+   "priority": "must_fix",
+   "inherited_criterion": {
+    "roadmap_text": "§2.4 states which condition n was sized for, what the floor demands in standardised units, and the pre- and post-correction Study 1 effect sizes consistently."
+   },
+   "operationalization": {
+    "fully_addressed": "Read as the methodology seat (R1). The §2.4 sample-size paragraph must contain, in whatever order: (i) an explicit statement that n = 58 (80% power) was sized for the p-condition of the registered rule only (the two-sided paired test at the anticipated dz), not for the two-condition rule as a whole; (ii) a statement of what the effect-size floor demands in standardised units, namely a mean paired difference of about one control-arm seed-SD, which is a dz near 1 (any value in the band 'about 0.8 to 1 SD of the paired difference' satisfies this), and the consequence that the registered rule had little power to return 'confirmed' at the anticipated effect; (iii) the Study 1 heart effect given consistently in both its pre-correction form (the value the preregistration scaled, dz 0.500 → scaled 0.376 → 58 seeds, or whatever chain the preregistration actually used, stated as a chain) and its post-correction form (dz = 0.34 in §2.1), with the derivation stated so that 0.376 and the 29% figure either recompute from the stated inputs and sidedness or are replaced by figures that do. §2.1 and §2.4 must not report two different Study 1 effect sizes without saying which is pre- and which post-correction. One sentence in §4.2 carries the consequence that 'the registered rules found no benefit' means no benefit of at least about one seed-SD.",
+    "partially_addressed": "§2.4 says n was sized for the p-condition but does not state the floor's demand in standardised units (or states it only in Dice points without the dz or SD-of-paired-difference equivalent); or the floor's demand is stated but the pre- and post-correction effect sizes are still not reconciled (0.376 and 0.34 both appear with no chain explaining the derivation and no sidedness stated); or the 29% Study 1 power figure is left as is without the calculation that produces it; or the §4.2 consequence sentence is absent while §2.4 is complete.",
+    "made_worse_discriminator": "The revision alters the registered rule, the floor, or n after the fact to make the power statement look adequate (e.g. redefining the floor so that dz 0.376 passes it, or describing the floor as a secondary criterion the rule did not actually require); or it introduces a new power figure for the full rule that is itself not reproducible from stated inputs; or §2.4 now contradicts §2.1 or Supplementary S2/S7 on the Study 1 effect size, so that the chain is less consistent than before."
+   },
+   "expected_change_surface": "§2.1 Study 1 numbers (B0017), §2.4 sample-size paragraph (B0029), §4.2 one sentence (B0055); roadmap target_section '§2.1, §2.4, §4.2'.",
+   "equivalence_policy": "allowed",
+   "source_reviewer": "R1",
+   "source_reviewer_labels": ["R1"]
+  },
+  {
+   "item_id": "REV-R3-3",
+   "priority": "must_fix",
+   "inherited_criterion": {
+    "roadmap_text": "§2.3 and Limitation 3 state the spatial disjointness and what it excludes."
+   },
+   "operationalization": {
+    "fully_addressed": "Read as the domain seat (R2, thoracic EIT). Two places must each carry the statement. In §2.3, the phantom paragraph that gives the inclusions (two lung inclusions at 0.5 S/m, one heart inclusion at 2.0 S/m) must say in so many words that the heart inclusion is spatially separate (disjoint, non-overlapping) from the lung inclusions, and that the simulated cardiac component is therefore the heart-region contrast, not the pulsatile change inside the lung regions. In §4.4 Limitation 3, the same disjointness must be stated together with what it excludes: that the spatial-overlap difficulty of the in-vivo separation problem (the co-location of cardiac-related and ventilation signal within the lung field, which the Introduction cites as the named limitation of existing methods) is absent from this phantom by construction, so the frame-wise task here is easier in that respect, and that the weak-component difficulty that remains is amplitude and reconstruction blur. The §1 motivation sentence should no longer imply that the simulated problem contains the overlap difficulty (either reworded or followed by a pointer that the phantom does not reproduce it).",
+    "partially_addressed": "The disjointness is stated in §2.3 or in Limitation 3 but not both; or it is stated in both without saying what it excludes (the words 'spatially separate' appear but the reader is not told that the in-vivo spatial-overlap difficulty is absent and that the remaining difficulty is amplitude and blur); or the exclusion is stated only in generic form already present before ('the cylinder is not a thorax', 'the component is not perfusion') without naming spatial overlap specifically.",
+    "made_worse_discriminator": "The revision claims the phantom does reproduce spatial overlap, or that the disjointness is immaterial to the in-vivo problem, or alters the §1 motivation so that it no longer cites the lung-field cardiac-related signal at all (removing the motivation instead of fencing it); or it introduces a new domain misstatement in the process (e.g. describing the heart-region signal as the perfusion-relevant component, or describing the 2.0 S/m heart inclusion as a within-lung-field change)."
+   },
+   "expected_change_surface": "§1 paragraph 1 motivation sentence (B0009), §2.3 phantom paragraph (B0023), §4.4 Limitation 3 (B0062); roadmap target_section '§1, §2.3, §4.4'.",
+   "equivalence_policy": "allowed",
+   "source_reviewer": "R2",
+   "source_reviewer_labels": ["R2"]
+  },
+  {
+   "item_id": "REV-R3-4",
+   "priority": "must_fix",
+   "inherited_criterion": {
+    "roadmap_text": "§3.1 and §3.5 describe the 0.22-point contrast consistently."
+   },
+   "operationalization": {
+    "fully_addressed": "Read as the Journal-Fit seat (EIC), routed from the DA-only source; the test is the D5/D6 question of whether two sections say the same thing about the primary result. The sentence 'It is a near-zero residual whose sign happened to be positive.' (§3.1 last paragraph) is absent, and no replacement sentence in §3.1 characterises the 40|40 D − B_wide contrast as chance, noise, or a sign accident. In its place §3.1 describes the 0.223-point contrast in terms that §3.5 and §5 also use: it is small; its seed-level interval (0.020–0.441) and its geometry-level interval (0.183–0.266) both exclude zero; it is below the registered floor of 0.670, so H1 is falsified by the rule; and §3.1 says what the two intervals do and do not establish (reproducibility of a small effect, not practical significance). §3.5's statement that the two matched-training conditions give the same answer (0.223 and 0.229 points) must then read as consistent with §3.1, with no section calling the quantity a residual of chance sign. The two descriptions may use different words but must not differ in whether the contrast is reproducible.",
+    "partially_addressed": "The 'sign happened to be positive' sentence is removed but §3.1 still describes the contrast as a near-zero residual without stating that its intervals exclude zero, so the reader of §3.1 still gets a different picture from the reader of §3.5; or §3.1 is reconciled but §3.5 or §5 is altered toward the chance reading instead, leaving the pair consistent only by weakening §3.5; or the reconciliation sentence is present but does not say what the intervals establish and do not establish.",
+    "made_worse_discriminator": "The reconciliation upgrades the 0.22-point contrast into a confirmation of H1 or of the branch's value (stating or implying that the rule-falsified effect is practically meaningful because its interval excludes zero), which reverses the registered verdict; or the revision deletes the seed-level or geometry-level interval from §3.1 so that the inconsistency is hidden rather than resolved; or §3.1 and §3.5 now disagree on the numbers themselves."
+   },
+   "expected_change_surface": "§3.1 last paragraph (B0038); roadmap target_section '§3.1'. §3.5 is the comparison surface, not an expected change site.",
+   "equivalence_policy": "allowed",
+   "source_reviewer": "DA",
+   "source_reviewer_labels": ["DA"]
+  },
+  {
+   "item_id": "REV-R3-5",
+   "priority": "should_fix",
+   "inherited_criterion": {
+    "roadmap_text": "Closing sentence names its scope; onset carries 'descriptive'; no sentence addresses reviewers."
+   },
+   "operationalization": {
+    "fully_addressed": "Read as the Journal-Fit seat (EIC). Three independent checks. (a) The §5 closing sentence no longer states 'the value of a dedicated branch is a property of that combination, not of the branch' as a general principle; it either names its scope (this phantom, GREIT, this noise model, this pair of targets) in the sentence itself or is recast as a recommendation about reporting measurement-chain and training-condition context, with no sentence in §5 generalising to 'a dedicated branch' or 'an architectural comparison' without a scope fence. (b) Wherever the Abstract and §5 report the sweep onset ('onset 35–30 dB', 'beginning between 35 and 30 dB'), the word 'descriptive' or 'descriptively' (or an equivalent qualifier such as 'not a registered test') is attached in that same sentence or clause; the onset may not appear in the Abstract or §5 without the label. (c) The §1 paragraph beginning 'Three questions follow directly, and it is better to answer them here than to leave them to a reviewer' is removed or rewritten so that no sentence in the manuscript refers to reviewers, referees, or anticipated objections as its addressee; the three answers may be kept if they are stated for the reader as part of the study rationale."
+   },
+   "expected_change_surface": "Abstract (B0005), §1 three-questions paragraph (B0012), §5 closing sentence and onset (B0064); roadmap target_section 'Abstract, §1, §5'.",
+   "equivalence_policy": "allowed",
+   "source_reviewer": "EIC",
+   "source_reviewer_labels": ["EIC"]
+  },
+  {
+   "item_id": "REV-R3-6",
+   "priority": "should_fix",
+   "inherited_criterion": {
+    "roadmap_text": "§3.2 reports B_wide − B and C_wide − C across the sweep and states what they show; Table S9 listed."
+   },
+   "operationalization": {
+    "fully_addressed": "Read as the Journal-Fit seat (EIC), routed from the DA-only source; the check is whether the width-only contrasts are reported and interpreted, not whether the rival is settled. §3.2 contains a paragraph (new, after the existing sweep paragraph) that reports the evaluation-only sweep results for the arms the round-2 panel found missing (B, C, C_wide, from the existing per-seed files), and in it the two width-only contrasts B_wide − B and C_wide − C are given numerically across the sweep levels (at minimum at the levels where the D − B_wide advantage appears, 35 to 20 dB), with the same statistic type used for D − B_wide (paired difference with an interval), and one or two sentences state what they show about width as a rival explanation for the 20|40 advantage (whether a widened decoder tolerates unseen noise differently from a narrow one, and whether the last-block split C_wide already yields the advantage). The Supplementary list names a Table S9 holding the five-arm sweep rows, and §3.2 cites it. If the per-seed files for some arm do not exist, §3.2 says so explicitly and reports the contrasts that can be computed."
+   },
+   "expected_change_surface": "§3.2 sweep paragraph, new paragraph inserted after B0043; Supplementary list (B0083) gaining Table S9; roadmap target_section '§3.2, Supplementary'.",
+   "equivalence_policy": "allowed",
+   "source_reviewer": "DA",
+   "source_reviewer_labels": ["DA"]
+  },
+  {
+   "item_id": "REV-R3-7",
+   "priority": "should_fix",
+   "inherited_criterion": {
+    "roadmap_text": "Abstract and §5 conclusions open with the matched-training result."
+   },
+   "operationalization": {
+    "fully_addressed": "Read as the Journal-Fit seat (EIC), routed from the DA-only source. In the Abstract, the first conclusion-bearing sentence (the sentence that begins the 'therefore'/'pays off' clause, previously 'The branch therefore pays off for a network trained at 40 dB and evaluated under heavier noise') now states the matched-training result first: that a network trained at its operating noise level gains about 0.22–0.23 Dice points from the branch at both 40 and 20 dB, below the registered floor; the mismatch regime (trained at 40 dB, evaluated under heavier noise) follows as a second clause with its scope stated (fixed-level training, unseen heavier noise). In §5, the first sentence(s) of the Conclusion likewise lead with the matched-training result and give the mismatch regime second. The order test is positional: the matched-training clause precedes the mismatch clause in both places. Either the significance of the fixed-level-training regime is argued in one sentence (why a reader would be in that regime given that noise augmentation is the other established choice) or the regime is reported without being called the paper's payoff."
+   },
+   "expected_change_surface": "Abstract closing sentences (B0005), §5 first sentences (B0064); roadmap target_section 'Abstract, §5'.",
+   "equivalence_policy": "allowed",
+   "source_reviewer": "DA",
+   "source_reviewer_labels": ["DA"]
+  },
+  {
+   "item_id": "REV-R3-8",
+   "priority": "should_fix",
+   "inherited_criterion": {
+    "roadmap_text": "§2.4 names the asymptotic method without continuity correction and the n > 50 switch."
+   },
+   "operationalization": {
+    "fully_addressed": "Read as the methodology seat (R1). The §2.4 test-description sentence no longer says the Wilcoxon p-values were 'computed with the normal approximation and continuity correction'; it states the procedure the scoring code actually ran, i.e. the asymptotic (normal-approximation) method without continuity correction, and names the switch rule (exact distribution at n ≤ 50, asymptotic above n = 50, the scipy.stats.wilcoxon default), ideally with the software and version. With that statement, Table 3's p = 0.0983 at 40|40 (W = 642, n = 58) is the value the stated procedure produces (AR1: uncorrected z = −1.653), so the Methods sentence and the table agree. The sentence that n = 58 'exceeds the limit of the exact method' is either removed or reworded as a software default rather than a mathematical limit. The alternative satisfying pattern is that the p-values are recomputed with the correction (0.0991 at 40|40) and the Methods sentence is left as it was; either way text and number agree."
+   },
+   "expected_change_surface": "§2.4 test-description sentence (B0028); Table 3 40|40 p-value is the comparison surface; roadmap target_section '§2.4'.",
+   "equivalence_policy": "allowed",
+   "source_reviewer": "R1",
+   "source_reviewer_labels": ["R1"]
+  },
+  {
+   "item_id": "REV-R3-9",
+   "priority": "should_fix",
+   "inherited_criterion": {
+    "roadmap_text": "The four statements are present."
+   },
+   "operationalization": {
+    "fully_addressed": "Read as the methodology seat (R1). The four statements the roadmap's suggested_action names, each located and each saying what round-2 W5–W8 asked for: (1) multiplicity, in §2.4 or §3.2: one sentence stating whether any adjustment was applied across the seven per-level Wilcoxon tests and seven relative-error-reduction intervals of the sweep and the four registered rules; if none was applied, saying so, noting that the onset is selected from seven correlated levels, and stating whether the 35 dB p = 0.0011 survives a Bonferroni-corrected threshold (0.05/7); (2) unregistered contrasts, in §2.6: the list of non-pre-specified analyses extended to name every unregistered quantity that carries a p-value or interval (at least D − B with p = 0.041, the B/C/C_wide contrasts against B_wide, the 50 dB anchor sensitivity for H3, the three-largest-seeds removal at 20 dB, the 47-of-58 per-seed slope), with D − B marked as descriptive where it appears in §3.1 and the Table 1 note; (3) floor uncertainty, in §3.5 beside the H5 verdict: the floor's own sampling SE at n = 58 (about ±0.036 points on 0.384, roughly 9% relative) and the statement that the 20|20 comparison (upper interval bound 0.373 against floor 0.384) is within one floor-SE of flipping, while the 9.2-fold shrinkage does not depend on it; (4) estimator definition, in §3.2 or the Table 2 note: that the relative error reduction is a mean of per-seed ratios (D − B_wide)/(1 − B_wide), and that it diverges from the ratio of arm means at high SNR (60–40 dB, roughly 1–3.5% versus 5–6.4%), with either the ratio of means reported beside it or the divergence noted. A statement counts only if it is in the manuscript text or table notes, not in the response letter."
+   },
+   "expected_change_surface": "§2.4 (B0028), §2.6 non-registered-analyses list (B0034), §3.2 / Table 2 note (B0042), §3.5 H5 verdict paragraph (B0122); roadmap target_section '§2.4, §2.6, §3.2, §3.5'.",
+   "equivalence_policy": "allowed",
+   "source_reviewer": "R1",
+   "source_reviewer_labels": ["R1"]
+  },
+  {
+   "item_id": "REV-R3-10",
+   "priority": "should_fix",
+   "inherited_criterion": {
+    "roadmap_text": "The four sentences are corrected and the 54-entry list includes Frerichs 2002."
+   },
+   "operationalization": {
+    "fully_addressed": "Read as the domain seat (R2, thoracic EIT). Four citation sentences, each checked against what the cited work actually contains: (1) the §1 sentence citing Graf and Riedel no longer says the cardiac-related amplitude 'depends strongly on position in the thorax'; it says the amplitude depends on body position (posture: supine, prone, lateral), or the claim is moved to a source that supports regional variation; (2) the §1 sentence (and the matching Fig. 2 legend wording) no longer attributes the quarter-amplitude (0.25) threshold to clinical region-of-interest methods via the Pulletz ROI paper; the quarter-amplitude set is attributed to the GREIT figures of merit, and if the ROI paper is kept it is cited for clinical thresholds 'of the same order (20–35%)', not for 0.25; (3) the §2.4 sentence listing precedents for random measurement degradation during training no longer files Murphy et al. (bioimpedance cardiac-output) under 'in EIT'; either the lead-in is widened to impedance measurement, or ref 41 is dropped and the two EIT precedents remain; (4) the saline-bolus perfusion method, where introduced in §1 and §4.4, cites Frerichs et al. 2002 (J. Appl. Physiol., electron-beam CT comparison) as the primary source alongside or instead of the second-hand citations. The reference list has 54 entries (53 + Frerichs 2002), with the new entry's bibliographic fields present (authors, year, journal, volume, pages or article number, DOI)."
+   },
+   "expected_change_surface": "§1 paragraph 1 citation sentences (B0009), §2.4 degradation-precedent sentence (B0027), §4.4 bolus/perfusion sentence (B0062), reference list entries (B0074, B0075, B0079); roadmap target_section '§1, §2.4, §4.4, References'.",
+   "equivalence_policy": "allowed",
+   "source_reviewer": "R2",
+   "source_reviewer_labels": ["R2"]
+  },
+  {
+   "item_id": "REV-R3-11",
+   "priority": "should_fix",
+   "inherited_criterion": {
+    "roadmap_text": "The sentence is corrected; captions carry no LaTeX; figures cited in order."
+   },
+   "operationalization": {
+    "fully_addressed": "Read as the Journal-Fit seat (EIC). Three checks against the venue format. (a) The §1 sentence 'The companion studies test the same statement under the other conditions and are cited accordingly.' is either deleted, or reworded to say the companion conditions are planned or registered and not yet published, or made true by an actual citation (a preregistration record counts) that appears in the reference list; a promise of citation with no reference behind it fails. (b) No figure or table caption contains LaTeX markup (no backslash macros, no \\mathrm, no underscore-subscript constructions); the Table 2 caption's relative-error-reduction expression is written in words or with a plain subscript. (c) Figures are numbered in order of first citation in the text: the first figure cited (previously Fig. 2 in §1 paragraph 1, before Fig. 1 in §2.2) carries the number 1, and every subsequent first mention is in ascending order; alternatively the arms figure is cited before the separability figure so the existing numbering becomes ordered. The abstract's third sentence and the reference-rendering gaps are part of the same item's description but the inherited criterion names only the three checks above; their state is noted, not scored."
+   },
+   "expected_change_surface": "Abstract sentence 3 (B0005), §1 paragraph 1 figure citation (B0009), §1 paragraph 5 companion-studies sentence (B0013), Table 2 caption (B0082); figure renumbering at format-convert; roadmap target_section '§1, Abstract, captions'.",
+   "equivalence_policy": "allowed",
+   "source_reviewer": "EIC",
+   "source_reviewer_labels": ["EIC"]
+  },
+  {
+   "item_id": "REV-R3-12",
+   "priority": "should_fix",
+   "inherited_criterion": {
+    "roadmap_text": "Both definitions present."
+   },
+   "operationalization": {
+    "fully_addressed": "Read as the perspective seat (R3, multi-task learning / medical image analysis). Two definitions, each at the place an adjacent reader first needs it. (1) 'Dice points' is defined at first use as hundredths of Dice (one point = 0.01 on the [0, 1] Dice scale): the definition appears in the Abstract at or before the first occurrence of '0.223 Dice points' (a parenthetical clause suffices) and again at first use in the body (§2.4 metrics paragraph), and the unit is used in one form thereafter ('Dice points' or 'pts', not both undefined). (2) The locus of the hypothesised interference is stated for a design in which every arm shares the encoder: a sentence in §1 (where task interference is introduced as the failure mode) or §2.2/§2.4 says that the D − B_wide contrast isolates decoder-level sharing and leaves encoder-level sharing fixed, so the test bears on decoder sharing only and a null does not speak to encoder-level interference. Both must be in the manuscript text, not only in a figure legend or the response."
+   },
+   "expected_change_surface": "Abstract first use of Dice points (B0005), §1 paragraph 5 interference sentence (B0011), §2.4 metrics/first-use paragraph (B0028); roadmap target_section 'Abstract, §1, §2.4'.",
+   "equivalence_policy": "allowed",
+   "source_reviewer": "R3",
+   "source_reviewer_labels": ["R3"]
+  }
+ ],
+ "new_standards": []
+}

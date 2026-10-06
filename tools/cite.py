@@ -109,7 +109,7 @@ def render_harvard(e: dict) -> str:
            f"{a[0]} and {a[1]}" if len(a) == 2 else
            f"{a[0]} et al" if len(a) > 6 else
            ", ".join(a[:-1]) + f" and {a[-1]}")
-    bits = [f"{who} {e['year']}", e["title"], f"*{e['journal']}*"]
+    bits = [f"{who} {e['year']}", e["title"].replace("\xa0", " "), f"*{e['journal']}*"]
     tail = " ".join(x for x in [e.get("volume"), pagesep(e)] if x)
     s = " ".join(bits) + (f" **{e['volume']}** {pagesep(e)}" if e.get("volume") else "")
     return f"{s} (doi:{e['doi']})".replace("  ", " ")
@@ -124,8 +124,65 @@ def render_vancouver(e: dict, n: int) -> str:
     who = ", ".join(a[:6]) + (", et al" if len(a) > 6 else "")
     v = e.get("volume") or ""
     p = e.get("pages") or ""
-    return (f"{n}. {who}. {e['title']}. {e['journal']}. {e['year']}"
+    return (f"{n}. {who}. {e['title'].replace(chr(160), ' ')}. {e['journal']}. {e['year']}"
             f"{';' + v if v else ''}{':' + p if p else ''}. doi:{e['doi']}")
+
+
+# ---- Nature style (Scientific Reports), added 2026-10-06 ----------------
+# Journal abbreviation tokens that are whole words and take no full stop. Every other
+# token of the NLM abbreviation is an abbreviation and takes one (Nature house style).
+NATURE_FULL_WORDS = {"IEEE", "Imaging", "Neuroimage", "Machine", "Learning", "Respiration",
+                     "Thorax", "PLoS", "One", "Image", "Care", "Sensors", "Pattern",
+                     "Biometrics", "Bulletin", "Methods", "Programs", "USA", "(1985)",
+                     "(Basel)", "Vision", "Conference", "on", "Computer", "and", "Recognition",
+                     "Advances", "in", "Neural", "Information", "Processing", "Systems",
+                     "Lecture", "Notes", "Science", "Proceedings", "of", "the", "British",
+                     "2016", "2018", "2019", "2020", "35", "(CVPR)", "IEEE/CVF"}
+NATURE_JOURNAL_SPECIAL = {"Proc Natl Acad Sci U S A": "Proc. Natl Acad. Sci. USA"}
+
+
+def nature_journal(j: str) -> str:
+    if j in NATURE_JOURNAL_SPECIAL:
+        return NATURE_JOURNAL_SPECIAL[j]
+    out = []
+    for tok in j.split():
+        if tok in NATURE_FULL_WORDS or tok.endswith("."):
+            out.append(tok)
+        else:
+            out.append(tok + ".")
+    return " ".join(out)
+
+
+def nature_author(a: str) -> str:
+    """'Hamilton SJ' -> 'Hamilton, S. J.'; 'De Palma A' -> 'De Palma, A.'."""
+    parts = a.split()
+    if len(parts) < 2:
+        return a
+    fam, ini = " ".join(parts[:-1]), parts[-1]
+    return f"{fam}, " + " ".join(f"{c}." for c in ini)
+
+
+def render_nature(e: dict, n: int) -> str:
+    """Nature referencing style as the Scientific Reports guidelines state it
+    (2026-10-06): numbered; all authors unless six or more, then first author et al.;
+    'Surname, I. N.' with '&' before the last; article title roman, as in the work;
+    journal abbreviated with full stops, italic; volume bold; pages; year in brackets;
+    online-only items carry the DOI after the article number."""
+    a = [nature_author(x) for x in e["authors"]]
+    who = f"{a[0]} et al." if len(a) >= 6 else (a[0] if len(a) == 1 else ", ".join(a[:-1]) + f" & {a[-1]}")
+    title = e["title"].replace("\xa0", " ").rstrip(".")
+    end = "" if title.endswith("?") else "."
+    pages = (e.get("pages") or "").replace("-", "\u2013")
+    vol = e.get("volume") or ""
+    if e.get("type") in ("proceedings-article", "book-chapter"):
+        cont = e.get("container_full") or e["journal"]
+        volpart = f" **{vol}**," if vol else ""
+        return f"{n}. {who} {title}{end} In *{cont}*{volpart} {pages} ({e['year']}).".replace("  ", " ")
+    j = nature_journal(e["journal"])
+    online_only = bool(pages) and "\u2013" not in pages
+    tail = f"{pages}; {e['doi']}" if online_only else pages
+    volpart = f" **{vol}**," if vol else ""
+    return f"{n}. {who} {title}{end} *{j}*{volpart} {tail} ({e['year']}).".replace("  ", " ").replace(", (", " (")
 
 
 def main() -> None:
@@ -206,6 +263,9 @@ def main() -> None:
     s.append("\n## Vancouver（編號制）— 若投稿期刊改變\n")
     for i, e in enumerate(entries, 1):
         s.append(f"{render_vancouver(e, i)}")
+    s.append("\n## Nature（編號制，Scientific Reports）\n")
+    for i, e in enumerate(entries, 1):
+        s.append(f"{render_nature(e, i)}")
     s.append(f"""
 ---
 

@@ -108,7 +108,7 @@ dod = (h20 - h60) * 100; dlo, dhi = boot_ci(dod)
 md2 = ["| Channel | SNR (dB) | B_wide DSC | D DSC | D − B_wide, pts [95% CI] | dz | Wilcoxon p | Relative error reduction, % [95% CI] | Seeds D > B_wide |",
        "|---|---|---|---|---|---|---|---|---|"]
 tex2 = [r"\begin{table*}[t]", r"\centering",
-        r"\caption{The registered SNR sweep: models trained once at 40~dB and evaluated at five measurement-noise levels (58 seeds). Relative error reduction is each seed's $(\mathrm{D}-\mathrm{B\_wide})/(1-\mathrm{B\_wide})$, i.e.\ the gain as a fraction of the control arm's own remaining error, which removes the DSC ceiling; it was not pre-specified and is descriptive.}",
+        r"\caption{The registered SNR sweep: models trained once at 40~dB and evaluated at seven measurement-noise levels (58 seeds); 35 and 25~dB were added by the registered addendum and are descriptive. Relative error reduction is each seed's $(\mathrm{D}-\mathrm{B\_wide})/(1-\mathrm{B\_wide})$, i.e.\ the gain as a fraction of the control arm's own remaining error, which removes the DSC ceiling; it was not pre-specified and is descriptive.}",
         r"\label{tab:sweep}", r"\begin{tabular}{llcccccccc}", r"\toprule",
         r"Channel & SNR (dB) & B\_wide DSC & D DSC & D $-$ B\_wide, pts [95\% CI] & $d_z$ & $p$ & Rel.\ error reduction, \% [95\% CI] & Seeds D $>$ B\_wide \\", r"\midrule"]
 for r in rows2:

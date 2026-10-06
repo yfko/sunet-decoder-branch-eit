@@ -1,12 +1,90 @@
 {
-  "Kendall2018": {
-    "fields": {"authors": ["Kendall A", "Gal Y", "Cipolla R"]},
-    "source": "CVF Open Access page of the paper (openaccess.thecvf.com/content_cvpr_2018/html/Kendall_Multi-Task_Learning_Using_CVPR_2018_paper.html): byline 'Alex Kendall, Yarin Gal, Roberto Cipolla'; Crossref returns the reversed order for 10.1109/cvpr.2018.00781",
-    "verified": "2026-09-26"
+ "Kendall2018": {
+  "fields": {
+   "authors": [
+    "Kendall A",
+    "Gal Y",
+    "Cipolla R"
+   ]
   },
-  "Vandenhende2021": {
-    "fields": {"year": "2022", "volume": "44", "issue": "7", "pages": "3614-3633"},
-    "source": "PubMed PMID 33497328 (IEEE Trans Pattern Anal Mach Intell 2022;44(7):3614-3633, doi:10.1109/TPAMI.2021.3054719); Crossref holds the 2021 early-access record with pages 1-1",
-    "verified": "2026-09-26"
-  }
+  "source": "CVF Open Access page of the paper (openaccess.thecvf.com/content_cvpr_2018/html/Kendall_Multi-Task_Learning_Using_CVPR_2018_paper.html): byline 'Alex Kendall, Yarin Gal, Roberto Cipolla'; Crossref returns the reversed order for 10.1109/cvpr.2018.00781",
+  "verified": "2026-09-26"
+ },
+ "Vandenhende2021": {
+  "fields": {
+   "year": "2022",
+   "volume": "44",
+   "issue": "7",
+   "pages": "3614-3633"
+  },
+  "source": "PubMed PMID 33497328 (IEEE Trans Pattern Anal Mach Intell 2022;44(7):3614-3633, doi:10.1109/TPAMI.2021.3054719); Crossref holds the 2021 early-access record with pages 1-1",
+  "verified": "2026-09-26"
+ },
+ "Kurin2022Unitary": {
+  "fields": {
+   "authors": [
+    "Kurin V",
+    "De Palma A",
+    "Kostrikov I",
+    "Whiteson S",
+    "Mudigonda PK"
+   ]
+  },
+  "source": "NeurIPS 2022 proceedings page (proceedings.neurips.cc, hash 4f301ae934f396086bfefd1139039dbd): byline 'Vitaly Kurin, Alessandro De Palma, Ilya Kostrikov, Shimon Whiteson, Pawan K Mudigonda'; Crossref splits the particle as 'Palma AD'",
+  "verified": "2026-10-06"
+ },
+ "Isensee2024nnUNetRevisited": {
+  "fields": {
+   "volume": "15009"
+  },
+  "source": "link.springer.com chapter page 10.1007/978-3-031-72114-4_47: 'LNCS, volume 15009' (MICCAI 2024); Crossref gives no volume",
+  "verified": "2026-10-06"
+ },
+ "Myronenko2019AEReg": {
+  "fields": {
+   "volume": "11384"
+  },
+  "source": "link.springer.com chapter page 10.1007/978-3-030-11726-9_28: 'LNIP, volume 11384' (LNCS subseries; BrainLes 2018); Crossref gives no volume",
+  "verified": "2026-10-06"
+ },
+ "Rusak2020ECCV": {
+  "fields": {
+   "volume": "12348"
+  },
+  "source": "link.springer.com chapter page 10.1007/978-3-030-58580-8_4: 'LNIP, volume 12348' (LNCS subseries; ECCV 2020); Crossref gives no volume",
+  "verified": "2026-10-06"
+ },
+ "Vandenhende2020Branched": {
+  "fields": {
+   "authors": [
+    "Vandenhende S",
+    "Georgoulis S",
+    "Van Gool L",
+    "De Brabandere B"
+   ]
+  },
+  "source": "Order per the BMVC 2020 official accepted-papers list (bmva-archive.org.uk/bmvc/2020/programme/accepted-papers, paper 79: 'Simon Vandenhende, Stamatios Georgoulis, Luc Van Gool, Bert De Brabandere'), the publisher deposit (Crossref 10.5244/c.34.59) and Semantic Scholar, all 'Vandenhende, Georgoulis, Van Gool, De Brabandere'; only the Flemish particles are corrected ('Gool LV'/'Brabandere BD' -> 'Van Gool L'/'De Brabandere B'). arXiv 1904.02920 lists De Brabandere before Van Gool; the published conference record is followed. The proceedings PDF itself returns 404 on the conference site (2026-10-06 and 2026-10-07).",
+  "verified": "2026-10-07 (BMVC accepted-papers list + Crossref + S2; arXiv order noted)"
+ },
+ "Lakens2013EffectSize": {
+  "fields": {
+   "pages": "863"
+  },
+  "source": "PubMed PMID 24324449 (Front Psychol 2013;4:863, doi:10.3389/fpsyg.2013.00863); Crossref carries no page/article number",
+  "verified": "2026-10-07"
+ },
+ "Ronneberger2015UNet": {
+  "fields": {
+   "volume": "9351"
+  },
+  "source": "link.springer.com chapter page 10.1007/978-3-319-24574-4_28: 'LNCS, volume 9351' (MICCAI 2015, pp. 234-241); Crossref gives no volume",
+  "verified": "2026-10-07"
+ },
+ "Herzberg2023PhysiolMeas": {
+  "fields": {
+   "title": "Domain independent post-processing with graph U-nets: applications to electrical impedance tomographic imaging"
+  },
+  "source": "The trailing '⋆' in the Crossref/IOP HTML title is the publisher's footnote marker (open-access/funding note), not part of the title; removed for rendering",
+  "verified": "2026-10-07"
+ }
 }

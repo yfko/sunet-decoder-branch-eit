@@ -1,0 +1,283 @@
+{
+ "round_id": "sunet-core-rereview-round2-scirep-20261006",
+ "precommitment_hash": "545519210cf3d73b370b11bc1c24017689633c5eb8eb75b9b512399ea43182c1",
+ "items": [
+  {
+   "item_id": "REV-R3-1",
+   "verdict": "PARTIALLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: Abstract \"the evaluation-only benefit is attributed to mismatch tolerance in whole or in part, unapportioned\"",
+    "text: §3.5 \"so the addendum does not say how much of the evaluation-only benefit belongs to each reading, and this paper does not apportion it\"",
+    "text: §4.1 \"The addendum therefore removed the mismatch and the threat together.\"",
+    "text: §1 \"the statement under test receives no separate verdict in the matched condition, for a reason Section 4.1 sets out\"",
+    "text: §4.2 \"would have attributed to the branch what belongs mostly to the training condition\"",
+    "text: §4.1 \"this prediction does not hold once training and evaluation are matched\""
+   ],
+   "change_summary": "B0005, B0013, B0050, B0051, B0052, B0064 and B0125 were rewritten: every apportioning form the panel quoted ('most of that benefit is mismatch tolerance', 'the larger part ... is distribution-shift tolerance', 'most of the effect is the latter', 'most of what it was worth ... was tolerance', the §4.1 heading) is gone from the Abstract, §3.5 closing paragraph, §4.1 and §5; the registered 'in whole or in part' wording now appears in the Abstract, §3.5, §4.1 and §5 together with the co-variation statement (mismatch and control-arm loss removed together, 8.8 to 0.8 points), and §1 states that the thesis receives no separate matched-condition verdict.",
+   "residual_gap": {
+    "text": "Test (a) is failed by one surviving sentence outside the listed surfaces: §4.2 (B0056, byte-identical to v3) still says a sweep without the retrained contrast 'would have attributed to the branch what belongs mostly to the training condition', which apportions the evaluation-only benefit to mismatch tolerance with 'mostly' and now contradicts §3.5's 'this paper does not apportion it'. Secondarily, §4.1's carried-over clause 'this prediction does not hold once training and evaluation are matched' reads as a matched-condition refutation of the mechanism's prediction, which sits against the same paragraph's 'the design cannot say which' and §1's 'no separate verdict'; 'was not tested' or 'has no antecedent' is what the paper's own definition licenses. §3.5's 'Most of the gap that the branch closed ... is closed by training at the operating level alone' (B0123) describes the control arm's recovery rather than a reading and is not counted, but a reader may take it the same way. The headline surfaces are clean, so what remains is a one-sentence and one-clause consistency fix.",
+    "residual_magnitude": "should_fix"
+   },
+   "verified_by": "R1",
+   "applied_criterion": "precommitted"
+  },
+  {
+   "item_id": "REV-R3-2",
+   "verdict": "FULLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §2.4 \"The registered calculation started from Study 1's heart contrast as it stood before the scoring correction of Section 2.5, dz = 0.500 (about 29% power at n = 10), scaled it by the pilot's larger variance to dz ≈ 0.376, and required 58 seeds for 80% power on the Wilcoxon condition at p < 0.05. After the correction, Study 1's contrast is dz = 0.34.\"",
+    "text: §2.4 \"That calculation covered the p-condition only. The floor condition asks for a paired difference larger than the control arm's seed-to-seed SD, which at 40 dB was 0.670 points against a paired-difference SD of 0.83 points, a standardised effect of about 0.8.\"",
+    "text: §2.1 \"dz = 0.34 after the scoring correction of Section 2.5; the preregistration's sample-size calculation used the pre-correction estimate, Section 2.4\"",
+    "text: §4.2 \"it asks for a difference of about 0.8 standard deviations of the paired difference, while the sample was sized for an effect of 0.376 on the p-condition (Section 2.4), so the study was powered to detect the anticipated effect, not to confirm the rule at it\""
+   ],
+   "change_summary": "B0029 now states the registered chain (pre-correction dz 0.500 at n = 10, 29% power; scaled by the 33% larger pilot SD to 0.376; 58 seeds for 80% on the p-condition), the post-correction dz 0.34, the floor in standardised units (0.670/0.83 ≈ 0.8 SD of the paired difference) and the consequence that the rule confirms only an effect roughly twice the anticipated one; B0017 labels its 0.34 as post-correction and points to §2.4; B0055 carries the §4.2 consequence sentence. Every figure recomputes from the stated inputs: two-sided paired power at dz 0.500, n = 10 is 0.293; 0.500/1.33 = 0.376; 80% at dz 0.376 is first reached at n = 58 (0.804; 0.797 at 57), matching PREREGISTRATION_HEART.md's table; results/manuscript_numbers.json gives dz = 0.270 at 40|40, so the paired SD is 0.223/0.270 = 0.83 and the floor 0.670/0.83 = 0.81. §2.1 and §2.4 no longer report two unlabelled effect sizes. The one imprecision, that the 80% figure is a t-based calculation applied to the Wilcoxon condition, is the preregistration's own framing and the committed criterion treats the two as the same p-condition.",
+   "verified_by": "R1",
+   "applied_criterion": "precommitted"
+  },
+  {
+   "item_id": "REV-R3-3",
+   "verdict": "FULLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §2.3 \"The heart inclusion therefore lies between the lung inclusions and never overlaps them: the largest radii sum to 0.90 model units and the centres are never closer than that. The in-vivo situation in which the cardiac-related signal is distributed within the ventilated lung (Section 1) is absent from this phantom by construction. The difficulty it reproduces is amplitude, together with the blurring by which the reconstruction spreads each inclusion into its neighbour's region.\"",
+    "text: §4.4 \"the heart inclusion never overlaps the lung inclusions (Section 2.3), so the spatial overlap of the cardiac-related signal with the ventilated lung that in-vivo separation must contend with was not part of the task, and the weak-component difficulty tested here is one of amplitude and reconstruction blur only\"",
+    "text: §1 \"in which the heart inclusion lies beside the lung inclusions rather than within the lung field (Section 2.3)\""
+   ],
+   "change_summary": "B0023 adds the inclusion centres (lungs at (±1.0, 0.1), heart at (0, 0.1), jitter ±0.05), states the disjointness with its geometric reason, names the in-vivo within-lung-field situation as absent by construction and names amplitude plus reconstruction blur as the difficulty that remains; B0062 Limitation 3 repeats the disjointness and what it excludes, naming spatial overlap specifically; B0009 fences the §1 motivation with a pointer to §2.3 while keeping the Leathard and Graf citations of the within-lung cardiac signal. tools/gen_dataset.m confirms circular in-plane inclusions (ell(c,r)), r_lung U(0.30, 0.60), r_heart U(0.15, 0.30) and ctr_jitter 0.05, which with the stated centres gives a minimum centre separation of 0.90 equal to the maximum radius sum, so the inclusions can at most touch; the centre coordinates themselves come from p2_config, which was outside the permitted files, and the code's own g.overlap element counter would let the authors state the realised overlap (0) directly. No new domain misstatement: the heart-region contrast is not called perfusion-relevant, and the 2.0 S/m inclusion is not described as a within-lung-field change.",
+   "verified_by": "R2",
+   "applied_criterion": "precommitted"
+  },
+  {
+   "item_id": "REV-R3-4",
+   "verdict": "FULLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §3.1 \"It is a small difference that the data resolve: its seed-level and geometry-level intervals both exclude zero (Section 3.5), it is unrelated at the seed level to the 20 dB effect, and it is one third of the registered floor.\"",
+    "absence: §3.1 no longer contains \"a near-zero residual whose sign happened to be positive\" and no replacement calls the 40|40 contrast chance, noise or a sign accident",
+    "text: §3.5 \"At 40 dB the branch was worth +0.223 points against a floor of 0.670, and at 20 dB +0.229 points against a floor of 0.384. Both fail the registered rule on the floor condition, and both intervals exclude zero.\""
+   ],
+   "change_summary": "Only B0038's final sentence changed: the chance-sign characterisation is replaced by a statement that the 0.223-point contrast is small, resolved by both the seed-level and geometry-level intervals, unrelated at the seed level to the 20 dB effect, and one third of the floor; §3.1's opening paragraph (B0037, unchanged) still carries 0.223, CI 0.020–0.441, the 0.670 floor and 'H1 is falsified', and §3.5 (B0124, unchanged) gives the same numbers with the 0.183–0.266 geometry-level interval, so the two sections now agree that the quantity is reproducible and small; neither section was weakened toward the chance reading and nothing upgrades the contrast into support for H1.",
+   "verified_by": "EIC",
+   "applied_criterion": "precommitted"
+  },
+  {
+   "item_id": "REV-R3-5",
+   "verdict": "FULLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §5 \"On this phantom, with this reconstructor and this noise model, an architectural comparison without its measurement-chain and training-condition context would have returned a different answer at every level, and the value of this branch was a property of that combination rather than of the branch.\"",
+    "text: Abstract \"with a descriptive onset at 35–30 dB\"",
+    "text: §5 \"beginning, descriptively, between 35 and 30 dB\"",
+    "text: §1 \"Three distinctions follow. The 2025 study optimised the weighting.\"",
+    "absence: no occurrence of 'reviewer' or 'referee' anywhere in 34_DRAFT_v4.md; the remaining mentions of the 'pre-submission review' (§1, §2.7, §4.1) name it as a past event, not an addressee"
+   ],
+   "change_summary": "B0064's closing sentence now carries the scope fence (this phantom, this reconstructor, this noise model) and speaks of 'this branch' in the past tense; both the Abstract (B0005) and §5 attach 'descriptive'/'descriptively' to the onset in the same clause; B0012's reviewer-facing paragraph is recast as 'Three distinctions follow' with the three answers kept for the reader.",
+   "verified_by": "EIC",
+   "applied_criterion": "precommitted"
+  },
+  {
+   "item_id": "REV-R3-6",
+   "verdict": "PARTIALLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §3.2 \"B_wide led B by between −0.12 and −0.01 points across the seven levels (−0.124 points at 20 dB, CI −0.499 to +0.238, 28 of 58 seeds), and C_wide led C by at most +0.03 points\"",
+    "text: §3.2 \"the late split, C_wide minus B_wide, reached +0.425 points at 20 dB (CI +0.003 to +0.851)\"",
+    "text: Supplementary \"S9 the evaluation-only sweep for all five arms with the width-only and branch-only contrasts (`results/tables/table_s9_sweep_all_arms.md`, from the registered per-seed files)\"",
+    "table: Table S9 rows 60–20 dB give B_wide − B, C_wide − C, D − B, C_wide − B_wide and D − B_wide with 95% intervals and seed counts"
+   ],
+   "change_summary": "A new paragraph B0127 was inserted after B0043 reporting the three previously missing arms from the per-seed files, with B_wide − B as a range over all seven levels and a full interval at 20 dB, C_wide − C as a maximum, D − B and C_wide − B_wide at 20 dB with intervals, and an interpretation that width alone does not reproduce the advantage and that the late split yields only part of it; B0083 lists Table S9 and §3.2 cites it. All quoted numbers match ../results/tables/table_s9_sweep_all_arms.md (B_wide − B from −0.037 to −0.124; C_wide − C maximum +0.034; D − B +1.973 [1.621, 2.328], 54/58; C_wide − B_wide +0.425 [0.003, 0.851]).",
+   "residual_gap": {
+    "text": "The committed pattern asks for both width-only contrasts at least at 35–20 dB with the same statistic type as D − B_wide (paired difference with an interval). §3.2 gives B_wide − B with an interval at 20 dB only and C_wide − C as a bare maximum with no interval anywhere in the text; the per-level values at 35, 30 and 25 dB appear only in Table S9. One clause giving the C_wide − C interval at 20 dB (+0.034, CI −0.385 to +0.445) and the 35–25 dB values, or an explicit statement that those are in Table S9, closes it. The interpretation the item asked for is present.",
+    "residual_magnitude": "should_fix"
+   },
+   "verified_by": "EIC",
+   "applied_criterion": "precommitted"
+  },
+  {
+   "item_id": "REV-R3-7",
+   "verdict": "FULLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: Abstract \"Trained and evaluated at one level, the branch added 0.223 Dice points (hundredths of Dice) at 40 dB (95% CI 0.020–0.441, p = 0.098) and, after a registered retraining, 0.229 at 20 dB (CI 0.081–0.373), below the registered floors of 0.670 and 0.384. For networks trained at 40 dB and evaluated under heavier noise the advantage grew by 1.937 points\"",
+    "text: §5 \"a decoder branch dedicated to the cardiac component is worth 0.22 to 0.23 Dice points to a network trained at the level at which it is evaluated, at 40 dB and at 20 dB alike, and it clears the registered floor at neither level. For a network trained at 40 dB and evaluated under heavier noise the branch has a measurable benefit\""
+   ],
+   "change_summary": "In both B0005 and B0064 the matched-training result (0.22–0.23 points at 40 and 20 dB, below the floors) now precedes the mismatch regime, which follows as a second clause with its scope stated (trained at 40 dB, evaluated under heavier noise); the former 'The branch therefore pays off' sentence is gone and the regime is reported without being called the paper's payoff, which is the second of the two permitted options.",
+   "verified_by": "EIC",
+   "applied_criterion": "precommitted"
+  },
+  {
+   "item_id": "REV-R3-8",
+   "verdict": "FULLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §2.4 \"The Wilcoxon test is two-sided and was computed with the asymptotic normal approximation without continuity correction, the default of the SciPy implementation above n = 50 and the procedure the scoring code applied.\"",
+    "absence: the sentence that n = 58 'exceeds the limit of the exact method' is gone from §2.4"
+   ],
+   "change_summary": "B0028's test sentence now names the asymptotic method without continuity correction and the n > 50 switch as the SciPy default actually run; tools/evaluate.py calls scipy.stats.wilcoxon(a, b) with defaults (correction=False, method 'auto'), so Table 3's p = 0.0983 at W = 642, n = 58 is the value the stated procedure produces and text and table agree. The software version is not stated in the sentence ('ideally' in the criterion, so not scored); the committed criterion and the text both rely on the ≤ 50 exact threshold of current SciPy, and S7 is where the version belongs.",
+   "verified_by": "R1",
+   "applied_criterion": "precommitted"
+  },
+  {
+   "item_id": "REV-R3-9",
+   "verdict": "PARTIALLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §2.4 \"No multiplicity adjustment is applied: the four registered rules are separate pre-specified decisions, each with its own floor, H3 rests on one interval, and the per-level tests and intervals of the sweep are descriptive and reported with their unadjusted values.\"",
+    "text: §2.6 \"Also unregistered, and reported with unadjusted p-values or intervals as descriptive, are the contrasts of arms B, C and C_wide against B_wide and against each other at 40 dB and across the sweep (Section 3.1, Supplementary S9), the 50 dB anchor for the H3 statistic, the seed-removal sensitivity at 20 dB, and the geometry-level intervals of the addendum.\"",
+    "text: §3.5 \"The floor is itself an estimate from 58 seeds, with a standard error of about 0.036 points, and the upper limit of the difference's interval lies within one such error of it\"",
+    "text: §3.2 \"this mean of ratios differs from the ratio of the mean gain to the mean error, by several-fold at the high-SNR levels where both are close to zero, and the intervals refer to the mean of ratios\"",
+    "absence: no statement in §2.4 or §3.2 that the onset is selected from seven correlated levels or whether the 35 dB p = 0.0011 survives 0.05/7; no 'descriptive' marking on D − B (p = 0.041) in §3.1 and D − B is not named in the §2.6 list"
+   ],
+   "change_summary": "All four statements were added in some form: B0028 gains a multiplicity sentence, B0034 extends the unregistered-analyses list, B0122 reports the floor's sampling SE (0.384/sqrt(2·57) = 0.036, which recomputes) and the within-one-SE position of the 20|20 upper bound, and B0042 defines the relative error reduction as a mean of per-seed ratios and notes its several-fold divergence from the ratio of means at high SNR.",
+   "residual_gap": {
+    "text": "Statement (1) says no adjustment was applied but does not note that the onset is selected from seven correlated levels or state whether the 35 dB p = 0.0011 survives the Bonferroni threshold 0.05/7 = 0.0071 (it does). Statement (2) lists the B, C and C_wide contrasts but not D − B (p = 0.041, §3.1) or the 47-of-58 per-seed slope, and D − B is not marked descriptive where it appears in §3.1 (B0037 unchanged). Statement (3) omits the clause that the 9.2-fold shrinkage does not depend on the floor. Statement (4) is complete. Each remaining piece is a clause.",
+    "residual_magnitude": "should_fix"
+   },
+   "verified_by": "R1",
+   "applied_criterion": "precommitted"
+  },
+  {
+   "item_id": "REV-R3-10",
+   "verdict": "PARTIALLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §1 \"its amplitude depends strongly on body position (Graf and Riedel, 2017)\"",
+    "text: §1 \"Applying a quarter-amplitude threshold, the figure-of-merit convention of GREIT (Adler et al., 2009) that lies within the 20 to 35% range clinical region-of-interest methods use (Pulletz et al., 2006)\"",
+    "text: Fig. 2 legend \"A quarter-amplitude threshold, the GREIT figure-of-merit convention, is applied to the mixed reconstruction\"",
+    "text: §1 \"Regional perfusion is measured in EIT from the first pass of a hypertonic saline bolus, a method compared against electron-beam CT in its original form (Frerichs et al., 2002)\"",
+    "text: References \"12. Frerichs I, Hinz J, Herrmann P, Weisser G, Hahn G, Quintel M, et al. Regional lung perfusion as determined by electrical impedance tomography in comparison with electron beam CT imaging. IEEE Trans Med Imaging. 2002;21:646-652. doi:10.1109/tmi.2002.800585\"",
+    "text: §2.4 \"with poorly contacting electrodes, unspecified in advance, for cardiac-output estimation from thoracic EIT data (Murphy et al., 2019)\""
+   ],
+   "change_summary": "Of the four sentences, three are corrected as the panel asked: Graf and Riedel now supports body position; the quarter-amplitude set is attributed to the GREIT figures of merit with Pulletz kept for the 20–35% clinical range (legend B0079 matching); Frerichs et al. 2002 (IEEE TMI, electron-beam CT comparison) is added as the bolus primary source in §1 and as entry 12 with authors, year, journal, volume, pages and DOI, bringing the list to 54 (B0074 updated). The §2.4 lead-in was widened from 'in EIT' to 'the other established choice', but the Murphy clause itself was rewritten to say 'from thoracic EIT data'.",
+   "residual_gap": {
+    "text": "Sub-check (3) is not met as committed: the criterion asked that Murphy et al. 2019 no longer be filed under EIT, either by widening the lead-in to impedance measurement or by dropping the reference. v4 widens the lead-in but then attributes the study explicitly to 'thoracic EIT data', which files it under EIT more directly than v3's implicit lead-in did, and it keeps the 'poorly contacting electrodes, unspecified in advance' description that the round-2 domain seat could not confirm from the paper. If the authors verified both against the full text, the manuscript gives no sign of it; otherwise the clause should read 'impedance measurement' and drop the detail, or the reference should go. Sub-check (4) in §4.4: the fourth limitation cites Borges for 'not a measurement of perfusion' and does not introduce the bolus method, so no Frerichs 2002 citation is needed there. Confidence 3 on the Murphy content, as in round 2.",
+    "residual_magnitude": "should_fix"
+   },
+   "verified_by": "R2",
+   "applied_criterion": "dissented:DIS-1"
+  },
+  {
+   "item_id": "REV-R3-11",
+   "verdict": "FULLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §1 \"The companion conditions named in Section 4.4 are not tested here.\"",
+    "absence: no backslash macro, \\mathrm or underscore-subscript construction in any figure or table caption of 36_SUBMISSION_scirep_v4.md (lines 300–345); Table 2 caption reads \"Relative error reduction is each seed's (D − B_wide)/(1 − B_wide), i.e. the gain as a fraction of the control arm's own remaining error\"",
+    "figure: 36_SUBMISSION_scirep_v4.md first mentions run Fig. 1 (line 28), Fig. 2a (54), Fig. 3a (114), Fig. 4 (130); the premise figure is now Fig. 1 and the arms figure Fig. 2"
+   ],
+   "change_summary": "B0013's promise of citation is replaced by a statement that the companion conditions are not tested here; the Table 2 caption in the formatted deliverable is in words with plain subscripts; figures were renumbered at format-convert so that first citations are ascending. Noted, not scored: the abstract's third sentence was rewritten ('The second of two preregistered simulation studies (EIDORS, GREIT) registered ...') and the abstract is 199 words; one reference-rendering gap remains in both files (Lakens 2013, 'Front. Psychol. 4 (2013)' / 'Front Psychol. 2013;4.' without article number 863).",
+   "verified_by": "EIC",
+   "applied_criterion": "precommitted"
+  },
+  {
+   "item_id": "REV-R3-12",
+   "verdict": "FULLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: Abstract \"the branch added 0.223 Dice points (hundredths of Dice) at 40 dB\"",
+    "text: §2.4 \"Differences between arms are reported in Dice points, hundredths of the Dice coefficient.\"",
+    "text: §1 \"In the arms compared here every network shares the encoder and the bottleneck, so any interference acts on the shared features and on the gradients that reach them, and a decoder branch can relieve it only by giving each target its own path after the bottleneck.\"",
+    "absence: no 'pts' form anywhere in 34_DRAFT_v4.md; the unit is 'Dice points' or 'points' throughout"
+   ],
+   "change_summary": "B0005 defines Dice points parenthetically at the first occurrence and B0028 defines it at first use in the body; B0011 adds a sentence placing the hypothesised interference on the shared encoder and bottleneck, which every arm holds fixed, and the branch's lever after the bottleneck, so an adjacent reader sees that the D − B_wide contrast bears on decoder-level sharing. The explicit consequence that a null does not speak to encoder-level interference is not spelled out, but it follows directly from the sentence as written, and the criterion's equivalence policy covers it.",
+   "verified_by": "R3",
+   "applied_criterion": "precommitted"
+  },
+  {
+   "item_id": "REV-R3-13",
+   "verdict": "PARTIALLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §2.4 \"Each run seeds the data order and the initialisation and requests deterministic algorithms, but the MPS backend does not guarantee bit-identical results on re-execution, so a seed defines a replicate rather than an exactly reproducible run. Parameter counts are matched, while compute and activation footprint, which differ between a widened and a split decoder, were not measured.\"",
+    "text: Availability \"The 406 model checkpoints (290 registered runs and 116 addendum runs, about 17 GB) are available on request.\""
+   ],
+   "change_summary": "B0027 now states the MPS determinism behaviour and that compute and activation footprint were not measured; B0072 (Data Availability) is byte-identical to v3, so the checkpoints remain on request and no deposit decision is recorded in the manuscript.",
+   "residual_gap": {
+    "text": "The roadmap criterion's second half, 'deposit decision recorded', has no trace in v4: the Availability statement is unchanged. Decision-inert.",
+    "residual_magnitude": "consider"
+   },
+   "verified_by": "EIC",
+   "applied_criterion": "not_precommitted"
+  },
+  {
+   "item_id": "REV-R3-14",
+   "verdict": "FULLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §4.1 heading \"What the addendum does and does not attribute\"",
+    "text: §4.2 heading \"When a registered rule and an interval estimate disagree\"",
+    "text: §4.3 heading \"Relation to the original architecture\"",
+    "text: §4.4 heading \"Limitations\""
+   ],
+   "change_summary": "B0050, B0054 and B0057 replace the three sentence-length Discussion subheadings with short phrases; §4.4 was already 'Limitations'; IMRaD order is kept, as the roadmap left to the authors. The §3 subheadings remain sentence-length, which the item did not cover.",
+   "verified_by": "EIC",
+   "applied_criterion": "not_precommitted"
+  },
+  {
+   "item_id": "REV-R3-15",
+   "verdict": "FULLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §1 \"The two targets are complementary parts of one input, which a multi-task reader would call maximally related tasks. Whether even related targets compete for shared features when one of them is small is the empirical question, and the registered design asks it rather than assuming either answer.\"",
+    "text: §4.1 \"Under the reading fixed before it was run, the evaluation-only result is attributable to distribution-shift tolerance in whole or in part, and the design cannot say which.\""
+   ],
+   "change_summary": "B0011 adds the sentence on why interference is the frame for complementary targets; the shift-tolerance result reaches the robustness reader inside the registered 'in whole or in part' wording in §4.1 and §5, as the roadmap's dissent note required, without apportionment. B0058 (§4.3) is unchanged, which the criterion did not require.",
+   "verified_by": "EIC",
+   "applied_criterion": "not_precommitted"
+  }
+ ],
+ "new_issues": [
+  {
+   "new_issue_id": "NEW-1",
+   "description": "The new §3.2 paragraph closes with 'the capacity control removes 0.12 points of it at most', but the direction is reversed: Table S9 gives B_wide − B ≤ 0 at every level (−0.037 to −0.124), so the capacity-controlled contrast D − B_wide exceeds the uncontrolled D − B at every level, by 0.124 points at 20 dB (2.097 against 1.973). Replacing B with the widened control adds up to 0.12 points to the advantage; it removes none. The paragraph's conclusion that width does not explain the advantage still holds, but an adversarial reader will note that the control is conservative in the opposite direction from the one stated.",
+   "location_anchor": "text: §3.2 \"The evaluation-only advantage therefore belongs to the position of the split, not to decoder width, and the capacity control removes 0.12 points of it at most.\"",
+   "severity": "minor",
+   "found_by": "R1",
+   "confidence": 5,
+   "competence_basis": "Statistician-engineer in ML evaluation methodology (round-2 panel seat 2); checked against ../results/tables/table_s9_sweep_all_arms.md",
+   "attribution": "regression",
+   "attribution_evidence": "Block B0127 is the single fresh block of the patch (insert_after B0043, roadmap_item_ids REV-R3-6); the sentence has no counterpart in 29_DRAFT_v3.md.",
+   "nearest_roadmap_item": "REV-R3-6",
+   "non_match_rationale": "REV-R3-6's criterion asks that the width-only contrasts be reported and interpreted; it does not cover the sign of the statement about what the capacity control does to the registered contrast."
+  },
+  {
+   "new_issue_id": "NEW-2",
+   "description": "§3.1 says D − B (+0.191) 'shrinks by only 0.03 points when the 38% larger B_wide replaces B', but D − B_wide is +0.223 (results/manuscript_numbers.json: 0.1909 and 0.2234), so the contrast grows by 0.03 when the control is substituted; the same sign error as NEW-1, pre-existing. The widening is also '+39% params' in the Table S9 header against '38%' here.",
+   "location_anchor": "text: §3.1 \"and it shrinks by only 0.03 points when the 38% larger B_wide replaces B\"",
+   "severity": "minor",
+   "found_by": "R1",
+   "confidence": 5,
+   "competence_basis": "Statistician-engineer in ML evaluation methodology (round-2 panel seat 2); numbers from results/manuscript_numbers.json and Table S9",
+   "attribution": "previously_missed",
+   "attribution_evidence": "B0037 is byte-identical between 29_DRAFT_v3.md and 34_DRAFT_v4.md and is not in ops_applied.",
+   "nearest_roadmap_item": "REV-R3-6",
+   "non_match_rationale": "The item concerns the missing sweep rows for B, C and C_wide, not the 40 dB sentence comparing D − B with D − B_wide."
+  },
+  {
+   "new_issue_id": "NEW-3",
+   "description": "§4.3 still says 'Three of the fifty-three cited works are from the authors' group' while the reference list now has 54 entries (B0074 updated to 54; Frerichs 2002 added as entry 12). The same sentence is in 36_SUBMISSION_scirep_v4.md line 300. A one-word count fix.",
+   "location_anchor": "text: §4.3 \"Three of the fifty-three cited works are from the authors' group\"",
+   "severity": "minor",
+   "found_by": "EIC",
+   "confidence": 5,
+   "competence_basis": "Scientific Reports Editorial Board Member, biomedical engineering / medical imaging (round-2 panel seat 1); D5 internal consistency",
+   "attribution": "regression",
+   "attribution_evidence": "The count became wrong when REV-R3-10's op on B0074/B0075 grew the list from 53 to 54; B0060 was not touched (not in ops_applied, byte-identical to v3, where fifty-three was correct).",
+   "nearest_roadmap_item": "REV-R3-10",
+   "non_match_rationale": "REV-R3-10's criterion covers the four citation sentences and the 54-entry list, not the self-citation count sentence in §4.3."
+  },
+  {
+   "new_issue_id": "NEW-4",
+   "description": "The replacement sentence in §1, 'The companion conditions named in Section 4.4 are not tested here', points to a section that does not name them: §4.4 (B0062) ends 'Each of its conditions is separately falsifiable, and this study tested one cell of that grid. The companion conditions remain to be tested', without listing the conditions. Either name them in §4.4 (other reconstructors, other noise models, loss weighting, measured data) or drop 'named in Section 4.4'.",
+   "location_anchor": "text: §1 \"The companion conditions named in Section 4.4 are not tested here.\"",
+   "severity": "minor",
+   "found_by": "EIC",
+   "confidence": 4,
+   "competence_basis": "Scientific Reports Editorial Board Member, biomedical engineering / medical imaging (round-2 panel seat 1); D5 cross-reference integrity",
+   "attribution": "regression",
+   "attribution_evidence": "The sentence is new in B0013 (op_index 4, roadmap_item_ids REV-R3-1 and REV-R3-11); v3 read 'The companion studies test the same statement under the other conditions and are cited accordingly.'",
+   "nearest_roadmap_item": "REV-R3-11",
+   "non_match_rationale": "REV-R3-11(a) asked that the promise of citation be deleted, made conditional or made true; it was deleted, which satisfies the check, but the replacement introduces a dangling cross-reference the criterion did not anticipate."
+  }
+ ],
+ "dissents": [
+  {
+   "dissent_id": "DIS-1",
+   "item_id": "REV-R3-10",
+   "criterion_hash": "5b18627629a90318a2efbc79d41e8a4e6af1ffb228f9b42656e6b3eb527869ff",
+   "reason_code": "criterion_error",
+   "original_operationalization": "(4) the saline-bolus perfusion method, where introduced in §1 and §4.4, cites Frerichs et al. 2002 (J. Appl. Physiol., electron-beam CT comparison) as the primary source alongside or instead of the second-hand citations.",
+   "replacement_operationalization": "(4) the saline-bolus perfusion method, where introduced, cites Frerichs et al. 2002 (IEEE Trans Med Imaging 21:646–652, doi 10.1109/tmi.2002.800585, the electron-beam CT comparison) as the primary source alongside or instead of the second-hand citations.",
+   "evidence": "The 2002 electron-beam CT comparison by Frerichs, Hinz, Herrmann, Weisser, Hahn, Quintel et al. was published in IEEE Transactions on Medical Imaging, as the immutable roadmap's own cost_scope states ('Frerichs 2002 TMI') and as entry 12 of 34_DRAFT_v4.md gives it; no J. Appl. Physiol. paper of that description exists, so the parenthetical as written cannot be satisfied by any correct citation.",
+   "decision_impact_note": "None. Sub-check (4) passes under the corrected descriptor; the item's PARTIALLY_ADDRESSED verdict is driven by sub-check (3) (Murphy) and would be the same under either wording."
+  }
+ ],
+ "escalation_exceptions": []
+}

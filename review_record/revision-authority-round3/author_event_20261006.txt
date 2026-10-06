@@ -1,0 +1,3 @@
+PI message in session, 2026-10-06 (late evening), after reading manuscript/33_REVIEWER_PANEL_round2_scirep.md:
+「全部 will_address，開始 revision round 3」
+Scope: every roadmap item REV-1 … REV-15 of the round-2 Editorial Decision Letter is will_address; targets are the v3 block ids named in the letter's roadmap tables; the Abstract is revised in 31_ABSTRACT_SCIREP_bilingual.md and mirrored into B0005.
