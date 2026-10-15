@@ -1,0 +1,162 @@
+{
+  "addendum_for_round": "sunet-core-rereview-round4-scirep-20261008",
+  "revision_round": 5,
+  "scope": "scoped seat-verifier call (Phase 2B' shape): verification of roadmap items REV-R5-1..3 only; previously-missed issues out of scope by instruction",
+  "judged_original_path": "41_DRAFT_v5.md",
+  "judged_original_sha256": "3c0451dfbfd5dce97ae9dac88a0273d9c39943752f5c6f05adfe0b6be50d6b9d",
+  "judged_revised_path": "49_DRAFT_v6.md",
+  "judged_revised_sha256": "88e888906638e42218070ad45a9acc7617f5538024cd4a3e80736ffa42fc1ea2",
+  "patch_path": "phase6_revision/revision_patch_round5.json",
+  "patch_sha256": "8c8951fc8a1b977f0b7d0ec8575c7a36ee37d90dbd9eedb847e69509b2c13a07",
+  "apply_report_path": "49_DRAFT_v6.md.apply-report.json",
+  "apply_report_sha256": "005044f0c8b486ed65197c869f636e72fc74a86c7585538d89a13f84f6434f28",
+  "roadmap_path": "revision-authority-round5/roadmap.json",
+  "roadmap_sha256": "cf7f218e85c82a0928c19e0ee07d31de807746a607a0b68b0e03fdc8d75122b6",
+  "context_sha256": {
+    "47_REVIEWER_PANEL_rereview_round4_scirep.md": "d22da5586c53f2386986ba287fa43846db01e8ca2c6fd4b436c9c679825e9e2e",
+    "48_DISCLOSURE_scirep.md": "0b3701ae4819e0f1d70e070b3d2ebab94f6ac9d20771747969123309ac0bba88"
+  },
+  "apply_report_check": {
+    "base_draft_hash_matches": true,
+    "output_draft_hash_matches": true,
+    "patch_digest_matches": true,
+    "ops_count": 3,
+    "patch_new_text_equals_v6_block": {
+      "B0127": true,
+      "B0028": true,
+      "B0066": true
+    },
+    "preamble_identical": true,
+    "block_order_identical": true,
+    "blocks_total": 127
+  },
+  "blocks_changed": [
+    "B0028",
+    "B0066",
+    "B0127"
+  ],
+  "blocks_byte_identical": 124,
+  "items": [
+    {
+      "item_id": "REV-R5-1",
+      "verdict": "FULLY_ADDRESSED",
+      "verified_by": "EIC",
+      "obligation_class": "should_fix",
+      "evidence_anchor": [
+        {
+          "anchor_type": "text",
+          "locator": "§3.2 B0127",
+          "quote": "B_wide led B by between −0.12 and −0.01 points across the seven levels (−0.124 points at 20 dB, CI −0.510 to +0.240, 28 of 58 seeds)"
+        },
+        {
+          "anchor_type": "text",
+          "locator": "§3.2 B0127",
+          "quote": "+0.034 at 20 dB, CI −0.387 to +0.452, 28 of 58 seeds"
+        },
+        {
+          "anchor_type": "computation",
+          "locator": "B0127 v5 vs v6",
+          "quote": "difflib opcodes: exactly five replace ops '-'→'−'; regex -\\d matches in v6 B0127: 0; U+2212 count: 5 (v5: 0); digit string of B0127 identical between v5 and v6"
+        }
+      ],
+      "change_summary": "The five ASCII hyphen-minus glyphs before digits in B0127 were replaced by U+2212 and nothing else in the block changed; the five values −0.12, −0.01, −0.124, −0.510, −0.387 are unchanged and match Table S9 row 20 dB."
+    },
+    {
+      "item_id": "REV-R5-2",
+      "verdict": "FULLY_ADDRESSED",
+      "verified_by": "R1",
+      "obligation_class": "consider",
+      "evidence_anchor": [
+        {
+          "anchor_type": "text",
+          "locator": "§2.4 B0028",
+          "quote": "the bootstrap intervals use 100,000 resamples of the 58 seeds, except those of Table S9 and of the width contrasts in Section 3.2 drawn from it, which use 20,000 (`tools/make_table_s9.py`)"
+        },
+        {
+          "anchor_type": "file",
+          "locator": "../tools/make_table_s9.py line 20",
+          "quote": "N_BOOT, SEED = 20000, 0"
+        },
+        {
+          "anchor_type": "file",
+          "locator": "../results/tables/table_s9_sweep_all_arms.md caption",
+          "quote": "95% percentile bootstrap intervals over seeds (20,000 resamples)"
+        },
+        {
+          "anchor_type": "computation",
+          "locator": "grep resampl|100,000|20,000 over 49_DRAFT_v6.md",
+          "quote": "four sentences mention resampling: B0028 H3 rule (no count), B0028 amended clause (100,000 / 20,000), §3.5 geometry-level interval (100,000, unchanged from v5), §3.5 Δ_20|20 − Δ_20|40 (seeds resampled in pairs, no count); no contradiction"
+        }
+      ],
+      "change_summary": "The §2.4 clause now says 100,000 resamples apply to the bootstrap intervals except those of Table S9 and the §3.2 width contrasts drawn from it, which use 20,000, naming the script; the four S9-derived intervals quoted in B0127 (−0.124 [−0.510, +0.240], +0.034 [−0.387, +0.452], +1.973 [+1.616, +2.327], +0.425 [+0.005, +0.862]) match the 20,000-resample table and the registered D − B_wide interval in §3.5 (+1.642 to +2.543) remains the 100,000-resample value, so no other number changed."
+    },
+    {
+      "item_id": "REV-R5-3",
+      "verdict": "FULLY_ADDRESSED",
+      "verified_by": "EIC",
+      "obligation_class": "should_fix",
+      "evidence_anchor": [
+        {
+          "anchor_type": "text",
+          "locator": "§2.9 (Acknowledgements) B0066",
+          "quote": "The authors used Claude (Anthropic; Fable 5.1, Opus 5 and Opus 5.5, accessed August to October 2026) throughout this work."
+        },
+        {
+          "anchor_type": "computation",
+          "locator": "B0066 v5 vs v6",
+          "quote": "difflib opcodes confined to the parenthetical: insert ', Opus 5', insert '5.', 'Sep'→'Augus', 'em'→' to Octo'; the remaining four sentences byte-identical"
+        },
+        {
+          "anchor_type": "file",
+          "locator": "../NOTES_2026-09-22.txt L611, L914",
+          "quote": "2026-10-03 RECON 計分 (Opus 5.5); 2026-10-07 投稿日 (Opus 5.5)"
+        },
+        {
+          "anchor_type": "file",
+          "locator": "../NOTES_2026-09-01.txt L60; ../NOTES_2026-09-18.txt L11, L14",
+          "quote": "Nov142025/ARS_Review_2026-08-27/; PREREGISTRATION.md (2026-08-28); PREREGISTRATION_HEART.md (2026-08-29)"
+        },
+        {
+          "anchor_type": "file",
+          "locator": "48_DISCLOSURE_scirep.md §5(b) option (i)",
+          "quote": "Fable 5.1, Opus 5 and Opus 5.5, accessed August to October 2026"
+        }
+      ],
+      "change_summary": "The parenthetical now reads exactly the option-(i) string chosen by the PI; Opus 5.5 is attested by two NOTES session headers (10-03, 10-07) and the August start by the 08-27 predecessor review and the 08-28/29 preregistrations, and the rest of B0066 is unchanged from v5.",
+      "note": "The 'Opus 5' label rests on the PI's attestation under option (i): NOTES record 'Opus 5' only in a planning line (L76) and a hand-off header (L262), not as a post-hoc session record. 48_ §5(b) flagged this; the roadmap criterion asks for the chosen labels, which are present. Not a residual gap of this item."
+    }
+  ],
+  "new_issues": [],
+  "observations": [
+    {
+      "kind": "wording",
+      "locator": "§2.4 B0028",
+      "text": "The amended clause calls all four S9-derived §3.2 intervals 'width contrasts'; two of them (D − B, C_wide − B_wide) are the branch and late-split contrasts of the same width paragraph. This follows the roadmap's and 47_ NEW-2's own wording and the paragraph's framing; the statement of which intervals use 20,000 is accurate. Decision-inert; not recorded as a new issue."
+    },
+    {
+      "kind": "consistency",
+      "locator": "§3.5 vs Table S9",
+      "text": "The registered D − B_wide interval at 20 dB is quoted in §3.5 as +1.642 to +2.543 (100,000 resamples) while Table S9 prints +1.639 to +2.539 (20,000). B0127 quotes only the point estimate +2.097 from S9, so the amended §2.4 clause describes both correctly and no contradiction is introduced."
+    }
+  ],
+  "decision_state": "Accept",
+  "rule_fired": "Accept rule: every roadmap item FULLY_ADDRESSED and no regression-attributed new issue (47_ §Residual Issues: closing NEW-1 alone moves the decision to Accept under B6); Minor Revision (B5) not triggered",
+  "verdict_counts": {
+    "FULLY_ADDRESSED": 3,
+    "PARTIALLY_ADDRESSED": 0,
+    "NOT_ADDRESSED": 0,
+    "MADE_WORSE": 0,
+    "CANNOT_VERIFY": 0
+  },
+  "judge": "Claude Fable 5.1, scoped seat-verifier call, fresh context, 2026-10-08",
+  "disclosure": "same model family as the revision; not an independent error process",
+  "disclosure_long": "This verification round ran on the same model family that drove the revisions; over-optimization to this judge's latent biases is possible (Ren et al. 2026, arXiv:2607.13104 §8.1.2).",
+  "files_not_read": [
+    "52_*",
+    "50_*",
+    "51_*",
+    "45_*",
+    "46_*",
+    "NEXT_SESSION_PROMPT_*"
+  ]
+}

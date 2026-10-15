@@ -1,0 +1,3 @@
+NOTE: editorial decision letter present but no Required Item Details blocks parsed — the level-2 criteria layer is empty (template drift or a genuinely block-less letter)
+ADVISORY: regression NEW-1 names nearest_roadmap_item REV-R4-2 — review for roadmap-item overlap (§8)
+re-review synthesis ok: round 'sunet-core-rereview-round4-scirep-20261008', revision 1, decision_state 'Minor Revision', apply_chain_witness 'pass'

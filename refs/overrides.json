@@ -86,5 +86,22 @@
   },
   "source": "The trailing '⋆' in the Crossref/IOP HTML title is the publisher's footnote marker (open-access/funding note), not part of the title; removed for rendering",
   "verified": "2026-10-07"
+ },
+ "Zhou2023TPAMI": {
+  "fields": {
+   "year": "2023",
+   "volume": "45",
+   "issue": "4",
+   "pages": "4396-4415"
+  },
+  "source": "NCBI E-utilities esummary PMID 35914036 (IEEE Trans Pattern Anal Mach Intell 2023 Apr;45(4):4396-4415, doi:10.1109/TPAMI.2022.3195549); Crossref holds only the 2022 early-access record with pages 1-20 and no volume",
+  "verified": "2026-10-11"
+ },
+ "Christodoulou2024MICCAI": {
+  "fields": {
+   "volume": "15010"
+  },
+  "source": "link.springer.com chapter page 10.1007/978-3-031-72117-5_12: 'LNCS, volume 15010' (MICCAI 2024); Crossref gives no volume",
+  "verified": "2026-10-11"
  }
 }

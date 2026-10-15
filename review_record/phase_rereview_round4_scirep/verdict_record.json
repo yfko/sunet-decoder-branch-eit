@@ -1,0 +1,169 @@
+{
+ "round_id": "sunet-core-rereview-round4-scirep-20261008",
+ "precommitment_hash": "55655305a45a71c2f99538a8d7dc7472cbfcdd05942f27b24f0555a2dea526c9",
+ "items": [
+  {
+   "item_id": "REV-R4-2",
+   "verdict": "FULLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §3.2 \"C_wide led C by at most +0.03 points (+0.034 at 20 dB, CI -0.387 to +0.452, 28 of 58 seeds; the values at 35, 30 and 25 dB are in Table S9)\"",
+    "text: §3.2 \"B_wide led B by between -0.12 and -0.01 points across the seven levels (-0.124 points at 20 dB, CI -0.510 to +0.240, 28 of 58 seeds)\"",
+    "text: §3.2 \"Supplementary S9 reports all five (Table S9, computed from the registered per-seed files by `tools/make_table_s9.py`)\"",
+    "text: §3.2 \"The evaluation-only advantage therefore belongs to the position of the split, not to decoder width; replacing B with the widened control B_wide adds between 0.01 and 0.12 points to it across the levels and removes none of it.\"",
+    "absence: §3.2 B0127 no longer contains 'the capacity control removes 0.12 points of it at most' or any wording that the widened control removes, reduces, absorbs or accounts for part of the advantage (checked every sentence of B0127 in 41_DRAFT_v5.md)",
+    "table: ../results/tables/table_s9_sweep_all_arms.md row 20 dB: B_wide − B -0.124 [-0.510, +0.240] (28/58), C_wide − C +0.034 [-0.387, +0.452] (28/58), D − B +1.973 [+1.616, +2.327] (54/58), C_wide − B_wide +0.425 [+0.005, +0.862]; B_wide − B column -0.037, -0.041, -0.032, -0.024, -0.013, -0.035, -0.124 (≤ 0 at every level; |values| 0.013–0.124); C_wide − C maximum +0.034; script --check replay 2026-10-08: 0 hard mismatches"
+   ],
+   "change_summary": "B0127 (replace_block, roadmap REV-R4-2) was rewritten: the opening sentence now cites Table S9 and tools/make_table_s9.py, C_wide − C gained its 20 dB point estimate, 95% interval and seed count plus the clause 'the values at 35, 30 and 25 dB are in Table S9', the closing clause changed from 'the capacity control removes 0.12 points of it at most' to 'replacing B with the widened control B_wide adds between 0.01 and 0.12 points to it across the levels and removes none of it', three already-present intervals (B_wide − B, D − B, C_wide − B_wide at 20 dB) were updated from the hand-emitted 2026-10-06 table to the script-regenerated Table S9 values (default_rng(0), 20,000 resamples), and the five negative numbers switched from U+2212 to ASCII hyphen-minus; Table S9 and B0083 were comparison surfaces and B0083 is byte-identical.",
+   "verified_by": "EIC",
+   "applied_criterion": "precommitted"
+  },
+  {
+   "item_id": "REV-R4-5",
+   "verdict": "FULLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §4.3 \"Three of the fifty-four references are to our own group.\"",
+    "text: Conflicts of Interest \"Three of the fifty-four cited works are from the authors' group.\"",
+    "text: References B0074 \"Alphabetical Vancouver strings from `refs/prior_works_strings.md`, 2026-10-06, 54 entries.\"",
+    "table: References list B0075 in 41_DRAFT_v5.md numbered 1 (Adler and Guardo 1996) to 54 (Zhang T et al. 2022), counted 54 numbered entries, no gaps or duplicates; 43_SUBMISSION_scirep_v5.md Nature-style list likewise 54 entries (1–54); 42_CITATION_AUDIT_v5.md registry 54 keys, self-citation 3/54",
+    "absence: no occurrence of 'fifty-three' or '53 ' as a reference count anywhere in 41_DRAFT_v5.md or 43_SUBMISSION_scirep_v5.md"
+   ],
+   "change_summary": "B0060 and B0070 (both replace_block, roadmap REV-R4-5) changed 'fifty-three' to 'fifty-four' and nothing else; the reference list block B0075 and the count note B0074 are byte-identical to v4 and hold 54 entries, so the two statements and the list agree.",
+   "verified_by": "EIC",
+   "applied_criterion": "precommitted"
+  },
+  {
+   "item_id": "REV-R4-6",
+   "verdict": "FULLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §1 \"The same statement under other reconstructors and noise models, under the weighted loss the original design used, and on measured data is not tested here (Section 4.4).\"",
+    "text: §4.4 \"First, one reconstructor and one noise model\" / \"Second, fixed loss weights\" / \"Third, one phantom and no measured data\" (B0062, byte-identical to v4; the three conditions §1 names are the first three limitations §4.4 discusses as remaining)",
+    "absence: §1 no longer contains 'The companion conditions named in Section 4.4 are not tested here' or any claim that §4.4 names the conditions (checked B0013 in 41_DRAFT_v5.md)"
+   ],
+   "change_summary": "B0013 (replace_block, roadmap REV-R4-6) replaced the one sentence 'The companion conditions named in Section 4.4 are not tested here.' with a sentence that names the three untested conditions itself and keeps a parenthetical pointer to Section 4.4; the rest of B0013 and §4.4's closing sentence B0062 ('The companion conditions remain to be tested') are unchanged, so route (a) of the committed pattern is met and no cross-reference now points at a list §4.4 does not contain.",
+   "verified_by": "EIC",
+   "applied_criterion": "precommitted"
+  },
+  {
+   "item_id": "REV-R4-7",
+   "verdict": "FULLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: Availability of data and materials \"The 406 model checkpoints (290 registered runs and 116 addendum runs, about 17 GB) are not deposited in a public archive because of their size and are available from the corresponding author on request.\""
+   ],
+   "change_summary": "B0072 (replace_block, roadmap REV-R4-7) changed 'are available on request' to 'are not deposited in a public archive because of their size and are available from the corresponding author on request', which states the deposit decision (not deposited), the reason (size) and the route (corresponding author on request) that the roadmap's verification_criteria ask for; the repository URL/tag placeholder in the same block is unchanged and outside this item.",
+   "verified_by": "EIC",
+   "applied_criterion": "not_precommitted"
+  },
+  {
+   "item_id": "REV-R4-1",
+   "verdict": "FULLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §4.1 \"What the registered addendum then showed is that the condition of this prediction is absent once training and evaluation are matched, so the prediction is not tested there.\"",
+    "text: §4.1 \"the network no longer met noise it had not seen, and the control arm no longer lost the component, its loss falling from 8.8 points to 0.8. The addendum therefore removed the mismatch and the threat together.\"",
+    "text: §4.1 \"the evaluation-only result is attributable to distribution-shift tolerance in whole or in part, and the design cannot say which.\"",
+    "text: §4.2 \"would have attributed to the branch a benefit that did not survive training at the heavier level\"",
+    "text: §4.1 \"What the addendum establishes is narrower and sufficient for practice: the benefit does not survive matched training, whichever reading of its cause is preferred.\"",
+    "absence: no sentence in §4.1 (B0050–B0053) or §4.2 (B0054–B0056) of 41_DRAFT_v5.md applies 'mostly', 'largely', 'mainly', 'predominantly', 'the larger part', 'the bulk' or 'most of' to the two readings, and none says the mechanism's prediction fails, does not hold, is refuted, contradicted or falsified in the matched condition (regex scan over all seven blocks; the only 'does not hold' is B0052's rejection of the Dice-ceiling alternative, and the only 'most of' is B0053's unchanged measured-quantity sentence about the control arm's loss, recorded as NEW-3)"
+   ],
+   "change_summary": "B0051 (replace_block) changed the clause 'this prediction does not hold once training and evaluation are matched' to 'the condition of this prediction is absent once training and evaluation are matched, so the prediction is not tested there', and B0056 (replace_block) changed the tail 'would have attributed to the branch what belongs mostly to the training condition' to 'would have attributed to the branch a benefit that did not survive training at the heavier level'; B0050, B0052, B0053, B0054 and B0055 are byte-identical to v4, and the comparison surfaces §1 B0013 ('no separate verdict') and §4.1 'the design cannot say which' are present.",
+   "verified_by": "R1",
+   "applied_criterion": "precommitted"
+  },
+  {
+   "item_id": "REV-R4-3",
+   "verdict": "FULLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §2.4 \"The onset in Section 3.2 is read from seven correlated levels; for reference, at the first level at which p falls below 0.05, 35 dB, p = 0.0011 is also below the Bonferroni threshold for seven tests, 0.05/7 = 0.0071.\"",
+    "text: §2.6 \"the contrast of D against the unwidened arm B at 40 dB (Section 3.1), the per-seed slope of the D minus B_wide difference from 40 to 20 dB\" (inside the list introduced by 'Also unregistered, and reported with unadjusted p-values or intervals as descriptive, are')",
+    "text: §3.1 \"Against the unwidened arm B, D gained +0.191 points (CI +0.027 to +0.361, p = 0.041), which is the contrast the capacity control was built to expose; it is descriptive, not a registered rule\"",
+    "text: §3.5 \"H5 is falsified. The shrinkage reported next, Δ_20|20 against Δ_20|40, compares two estimates and does not depend on the floor.\"",
+    "text: §3.5 \"The difference, Δ_20|20 minus Δ_20|40, is −1.868 points (CI −2.327 to −1.403, seeds resampled in pairs), a 9.2-fold shrinkage.\" (B0123, byte-identical; the quantity the new B0122 clause refers to)",
+    "table: ../results/tables/table2_snr_sweep.md heart 35 dB Wilcoxon p = 0.0011 (W = 433 in §3.2 B0042), 30 dB seeds 47/58; ../results/tables/table1_arms_40db.md note D − B (heart) +0.191 [+0.027, +0.361], p = 0.041; ../results/tables/table3_retrained_20db.md Δ_20|20 − Δ_20|40 = -1.868 [-2.327, -1.403], 9.2-fold; 0.05/7 = 0.00714 and 2.097/0.229 = 9.16 recomputed"
+   ],
+   "change_summary": "Four insertions, one per block: B0028 gained the Bonferroni sentence after the no-multiplicity sentence; B0034 gained 'the contrast of D against the unwidened arm B at 40 dB (Section 3.1)' and 'the per-seed slope of the D minus B_wide difference from 40 to 20 dB' in the unregistered list; B0037 gained 'it is descriptive, not a registered rule' in the D − B sentence; B0122 gained 'The shrinkage reported next, Δ_20|20 against Δ_20|40, compares two estimates and does not depend on the floor.' directly after 'H5 is falsified.' and before the floor-SE context; every number in the inserted text agrees with Tables 1–3 and recomputes.",
+   "verified_by": "R1",
+   "applied_criterion": "precommitted"
+  },
+  {
+   "item_id": "REV-R4-4",
+   "verdict": "FULLY_ADDRESSED",
+   "evidence_anchor": [
+    "text: §3.1 \"Against the unwidened arm B, D gained +0.191 points (CI +0.027 to +0.361, p = 0.041), which is the contrast the capacity control was built to expose; it is descriptive, not a registered rule, and it grows by 0.03 points, to +0.223, when the 38% larger B_wide replaces B.\"",
+    "text: §3.1 \"The paired difference was +0.223 Dice points, 95% bootstrap CI +0.020 to +0.441\" (primary result in the same block, consistent with the +0.223 endpoint)",
+    "table: ../results/tables/table1_arms_40db.md D vs B_wide +0.223 [+0.020, +0.441]; note D − B +0.191 [+0.027, +0.361]; ../results/tables/table_s9_sweep_all_arms.md 40 dB row D − B +0.191, D − B_wide +0.223; 10,743,738/7,762,498 = 1.384 (38%) recomputed",
+    "absence: 'shrinks', 'falls', 'drops', 'narrows' or any synonym no longer describes the B → B_wide substitution anywhere in §3.1 (B0037, B0038, B0039 checked in 41_DRAFT_v5.md)"
+   ],
+   "change_summary": "In B0037 (replace_block, roadmap REV-R4-3 and REV-R4-4) the clause 'and it shrinks by only 0.03 points when the 38% larger B_wide replaces B' became 'and it grows by 0.03 points, to +0.223, when the 38% larger B_wide replaces B', which agrees in direction and magnitude with D − B = +0.191 and D − B_wide = +0.223 in Table 1 and Table S9; the 38% figure was kept (1.384, correct for B_wide against B; the Table S9 header's '+39%' is D against B, 1.393), which the committed pattern notes but does not score.",
+   "verified_by": "R1",
+   "applied_criterion": "precommitted"
+  }
+ ],
+ "new_issues": [
+  {
+   "new_issue_id": "NEW-1",
+   "description": "The rewritten §3.2 width-contrast paragraph writes its five negative numbers with the ASCII hyphen-minus ('-0.12', '-0.01', '-0.124', '-0.510', '-0.387') while every other block of the manuscript writes negative values with the Unicode minus sign U+2212 (for example §3.1 'CI −0.011', §3.3 '−8.7%', §3.5 'Δ = −0.002', '−1.868', 'CI −2.327 to −1.403'); the rendered deliverable 43_SUBMISSION_scirep_v5.md line 120 carries the hyphens unchanged, so the inconsistency reaches the submission file. A D5 typographic consistency defect; no number or conclusion is affected.",
+   "location_anchor": "text: §3.2 \"B_wide led B by between -0.12 and -0.01 points across the seven levels (-0.124 points at 20 dB, CI -0.510 to +0.240, 28 of 58 seeds)\"",
+   "severity": "minor",
+   "found_by": "EIC",
+   "confidence": 5,
+   "competence_basis": "Journal-Fit Reviewer persona of the round-2 card (D5 writing_and_structure: terminology and notation that shift between sections); scripted per-block count of U+2212 against ASCII minus before a digit over 41_DRAFT_v5.md",
+   "attribution": "regression",
+   "attribution_evidence": "v4 B0127 (34_DRAFT_v4.md) used U+2212 throughout ('−0.12 and −0.01', '−0.124', 'CI −0.499 to +0.238'); the ASCII hyphens enter with the round-4 replace_block on B0127 (apply report op_index 5, roadmap_item_ids REV-R4-2); B0127 is the only block in v5 with an ASCII minus before a digit.",
+   "nearest_roadmap_item": "REV-R4-2",
+   "non_match_rationale": "REV-R4-2's committed pattern scores the content of the paragraph (the C_wide − C interval, the Table S9 pointer, the direction of the capacity control); the glyph used for the minus sign is outside all three elements."
+  },
+  {
+   "new_issue_id": "NEW-2",
+   "description": "§2.4 states that 'all bootstrap intervals use 100,000 resamples of the 58 seeds', but Table S9, which §3.2 and the Supplementary list point to and whose intervals §3.2 B0127 now quotes verbatim, is computed with 20,000 resamples (its caption and tools/make_table_s9.py N_BOOT = 20000, default_rng(0)). As a consequence the registered contrast D − B_wide at 20 dB appears with two different seed-level intervals in the paper: +1.642 to +2.543 in §3.2 B0043, §3.5 B0124, Table 2 and Table 3, and +1.639 to +2.539 in Table S9; the §3.2 intervals for B_wide − B, C_wide − C, D − B and C_wide − B_wide are likewise 20,000-resample values under a Methods sentence that promises 100,000. The differences are at the third decimal and no decision or conclusion changes, but the Methods statement is not true of every interval the paper reports and a methodologist recomputing Table S9 from §2.4's description would not reproduce its interval endpoints.",
+   "location_anchor": "text: §2.4 \"all bootstrap intervals use 100,000 resamples of the 58 seeds\"",
+   "severity": "minor",
+   "found_by": "R1",
+   "confidence": 5,
+   "competence_basis": "Statistician-engineer in ML evaluation methodology (round-2 panel seat 2; D1 reporting precision sufficient to recompute); read tools/make_table_s9.py, replayed it with --check (0 hard mismatches) and compared the S9 caption with B0028, B0043, B0124, Table 2 and Table 3",
+   "attribution": "previously_missed",
+   "attribution_evidence": "Present in both versions: B0028's '100,000 resamples' sentence is unchanged from v4 (the round-4 insertion into B0028 is the Bonferroni sentence only), the hand-emitted Table S9 of 2026-10-06 (table_s9_sweep_all_arms.pre-script-20261007.md) already stated '20,000 resamples' in its caption, and v4 B0127 already quoted that table's intervals (e.g. B_wide − B 'CI −0.499 to +0.238', D − B 'CI +1.621 to +2.328'); the round-4 patch only moved B0127 to the script-regenerated values and did not create the discrepancy.",
+   "nearest_roadmap_item": "REV-R4-2",
+   "non_match_rationale": "REV-R4-2 asks that §3.2 agree with Table S9 (it does, exactly); it does not ask that Table S9 or §3.2 agree with §2.4's resample count, and REV-R4-3's four statements do not touch the resample sentence."
+  },
+  {
+   "new_issue_id": "NEW-3",
+   "description": "The last sentence of §4.1's third paragraph, 'it shows that at that change the training level, not the architecture, decided most of what happened', sets the training condition against the architecture and applies 'most of' to the outcome of the noise change. Read as a statement about the control arm's 8.8-point loss and its 8.0-point recovery on retraining (the measured quantity the paragraph is about, parallel to §3.5 B0123's 'Most of the gap that the branch closed ... is closed by training at the operating level alone') it is licensed by the data; read as a ranking of the two readings of the 2.097-point evaluation-only benefit (mismatch tolerance against weak-component protection) it would contradict the same section's 'the design cannot say which'. The sentence does not name the benefit and was not counted as apportionment under REV-R4-1 test (a), but the ambiguity is the one the panel spent two rounds removing elsewhere and a hostile reader can take it the second way.",
+   "location_anchor": "text: §4.1 \"It concerns a change of noise level within one instrument model and one reconstructor, and it shows that at that change the training level, not the architecture, decided most of what happened.\"",
+   "severity": "minor",
+   "found_by": "R1",
+   "confidence": 3,
+   "competence_basis": "Statistician-engineer in ML evaluation methodology (round-2 panel seat 2; D3 argumentative_coherence: a claim stated in one section must not contradict the claim stated in another); exhaustive regex scan of §4.1–4.2 for the apportionment vocabulary the committed criterion lists",
+   "attribution": "previously_missed",
+   "attribution_evidence": "B0053 is byte-identical between 34_DRAFT_v4.md and 41_DRAFT_v5.md (apply report: not among the 11 touched blocks; my own block diff confirms), and the same sentence stood in v4 when the round-3 verifier scored REV-R3-1 and named only B0056 and B0051 as residuals.",
+   "nearest_roadmap_item": "REV-R4-1",
+   "non_match_rationale": "REV-R4-1's test (a) is defined on sentences that quantify or rank how much of the evaluation-only 20 dB benefit belongs to each reading; this sentence quantifies the outcome of the noise change as a whole (dominated by the control arm's loss), which the committed record itself classes as a measured quantity rather than a reading in its treatment of B0123, so it is adjacent to the item but not inside its criterion."
+  },
+  {
+   "new_issue_id": "NEW-4",
+   "description": "§2.6's list of unregistered contrasts names 'the contrast of D against the unwidened arm B at 40 dB (Section 3.1)', but §3.2 B0127 also reports D − B across the whole sweep ('tracks the registered contrast level for level, reaching +1.973 points at 20 dB (CI +1.616 to +2.327, 54 of 58 seeds)') and Table S9 carries it at all seven levels; the sweep-level D − B is therefore an unregistered contrast reported with an interval that the §2.6 list covers only at 40 dB, whereas the neighbouring B, C and C_wide contrasts are listed 'at 40 dB and across the sweep'. A one-phrase completeness gap in the unregistered-analysis disclosure.",
+   "location_anchor": "text: §2.6 \"the contrast of D against the unwidened arm B at 40 dB (Section 3.1)\"",
+   "severity": "minor",
+   "found_by": "R1",
+   "confidence": 4,
+   "competence_basis": "Statistician-engineer in ML evaluation methodology (round-2 panel seat 2; D1: unregistered analyses labelled as such); cross-read of B0034 against B0127 and Table S9",
+   "attribution": "previously_missed",
+   "attribution_evidence": "v4 B0127 already reported D − B at 20 dB with an interval ('+1.973 points at 20 dB (CI +1.621 to +2.328, 54 of 58 seeds)') while v4 B0034 listed no D − B contrast at all; the round-4 insertion into B0034 added D − B at 40 dB only, narrowing but not closing the pre-existing gap, so the remaining gap is anchored in both versions.",
+   "nearest_roadmap_item": "REV-R4-3",
+   "non_match_rationale": "REV-R4-3's element (2) requires that the 40 dB D − B contrast and the per-seed slope be named in §2.6 as unregistered, which they now are; the sweep-level D − B lies outside the two analyses the committed pattern names."
+  },
+  {
+   "new_issue_id": "NEW-5",
+   "description": "Author-supplied placeholders remain in the manuscript body and would be returned by an editorial office if submitted as they stand: '[Affiliation of Yen-Fen Ko: to supply]' and '[email]' (author block), 'accessed September 2026' and '[FUNDING: ... grant numbers to be supplied by the PI.]' (Acknowledgements), '[PI to assign; each author's roles must match what they did.]' with '[roles]' for two authors (Author Contributions), '[REPOSITORY URL AND TAG: to be frozen at submission]' (Availability), and '[Caption to be completed from the figure's printed Dice values.]' (Fig. 4 legend). These are known pre-submission fill-ins (the round-3 report listed the URL/tag and the access month among its packing blockers), not scientific defects.",
+   "location_anchor": "text: Availability of data and materials \"are available at [REPOSITORY URL AND TAG: to be frozen at submission]\"",
+   "severity": "minor",
+   "found_by": "EIC",
+   "confidence": 5,
+   "competence_basis": "Journal-Fit Reviewer persona of the round-2 card (D5: required back-matter present and complete; venue conformance an editorial office checks before review)",
+   "attribution": "previously_missed",
+   "attribution_evidence": "Every placeholder sits in a block byte-identical between v4 and v5 (B0004, B0066, B0068, B0081) or in the unchanged part of B0072 (the round-4 replace_block on B0072 touched only the checkpoint sentence); all are present in 34_DRAFT_v4.md at the same positions.",
+   "nearest_roadmap_item": "REV-R4-7",
+   "non_match_rationale": "REV-R4-7 concerns the checkpoint deposit decision in the same Availability block; the repository URL/tag placeholder and the other bracketed fields are author metadata outside that item's verification_criteria and outside every other roadmap item."
+  }
+ ],
+ "dissents": [],
+ "escalation_exceptions": []
+}

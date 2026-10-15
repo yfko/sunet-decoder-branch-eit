@@ -33,6 +33,8 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import html
+import re
 import json
 import time
 import urllib.parse
@@ -56,6 +58,14 @@ def get(url: str, tries: int = 3) -> dict | str:
                 raise
             time.sleep(2 * (k + 1))
     raise RuntimeError("unreachable")
+
+
+def clean(t: str) -> str:
+    """Crossref titles can carry HTML entities, inline tags (<i>t</i>) and
+    newlines; return the printed form. Added 2026-10-11."""
+    t = html.unescape(t or "")
+    t = re.sub(r"<[^>]+>", "", t)
+    return re.sub(r"\s+", " ", t).strip()
 
 
 def crossref(doi: str) -> dict:
@@ -216,13 +226,18 @@ def main() -> None:
         e = {
             "key": item["key"], "why": item.get("why", ""), "doi": doi,
             "authors": authors(m),
-            "title": (m.get("title") or [""])[0].strip(),
-            "journal": pm.get("iso_abbreviation")
+            # 2026-10-11: Crossref stores "&" as "&amp;" and keeps the subtitle in a
+            # separate field (Lakens 2017 "Equivalence Tests: A Practical Primer ...");
+            # unescape and re-join so the rendered string matches the printed title.
+            "title": ": ".join(
+                clean(t) for t in [(m.get("title") or [""])[0],
+                                   (m.get("subtitle") or [""])[0]] if clean(t)),
+            "journal": html.unescape(pm.get("iso_abbreviation")
                        or (m.get("short-container-title") or [""])[0]
-                       or (m.get("container-title") or [""])[0],
+                       or (m.get("container-title") or [""])[0]),
             "journal_source": "pubmed:iso_abbreviation" if pm.get("iso_abbreviation")
                               else "crossref:short-container-title",
-            "container_full": (m.get("container-title") or [""])[0],
+            "container_full": html.unescape((m.get("container-title") or [""])[0]),
             "year": year(m), "volume": m.get("volume"), "issue": m.get("issue"),
             "pages": pages(m), "pmid": pm.get("pmid"),
             "publisher": m.get("publisher"), "type": m.get("type"),

@@ -1,0 +1,77 @@
+{
+ "round_id": "sunet-core-rereview-round4-scirep-20261008",
+ "cross_model_active": false,
+ "artifacts": {
+  "original_manuscript": {
+   "present": true,
+   "path_or_passport_ref": "path:34_DRAFT_v4.md",
+   "sha256": "67570787bd55c825e8fa000a5d83a513a50480599f12a5c10d7ba895bdf484b3",
+   "version_label": "v4 (round-3 revision, pre-round-4)",
+   "origin_date": "2026-10-06T23:29"
+  },
+  "revised_manuscript": {
+   "present": true,
+   "path_or_passport_ref": "path:41_DRAFT_v5.md",
+   "sha256": "3c0451dfbfd5dce97ae9dac88a0273d9c39943752f5c6f05adfe0b6be50d6b9d",
+   "version_label": "v5 (round-4 revision)",
+   "origin_date": "2026-10-07T00:46"
+  },
+  "revision_roadmap": {
+   "present": true,
+   "path_or_passport_ref": "path:phase_rereview_round4_scirep/roadmap_legacy_v1_0.json",
+   "sha256": "53a67534023e74402963c5ef63c24c124855401e08227be72a361185381152f5",
+   "version_label": "revision-roadmap/1.0 round 4 (REV-R4-1..7), legacy priority field added",
+   "origin_date": "2026-10-08T00:32"
+  },
+  "editorial_decision_letter": {
+   "present": true,
+   "path_or_passport_ref": "path:38_REVIEWER_PANEL_rereview_round2_scirep.md",
+   "sha256": "3ed6c4e5bf5625c243f29378b629c2a04964b38929a374f04568b47c6aa1aee7",
+   "version_label": "round-3 re-review report (decision + residual issues; no Required Item Details blocks)",
+   "origin_date": "2026-10-07T00:24"
+  },
+  "response_to_reviewers": {
+   "present": true,
+   "path_or_passport_ref": "path:44_RESPONSE_TO_REREVIEW_round4.md",
+   "sha256": "969fc15bda361b34f39308e93042215a345f2df7f3306a46e644216fbc8d9510",
+   "version_label": "round-4 response",
+   "origin_date": "2026-10-07T00:51"
+  },
+  "revision_patches": {
+   "present": true,
+   "items": [
+    {
+     "path_or_passport_ref": "path:phase6_revision/revision_patch_round4.json",
+     "sha256": "7ec1ea11778ec54b7f3eaf217f4649207a6c69191c9051cf9f88b20986ab948f",
+     "version_label": "patch 1.1 round 4",
+     "origin_date": "2026-10-07T00:46"
+    }
+   ]
+  },
+  "apply_reports": {
+   "present": true,
+   "items": [
+    {
+     "path_or_passport_ref": "path:41_DRAFT_v5.md.apply-report.json",
+     "sha256": "5986b2df333c2e47a331dbf52f6fb51614d470314ae8789da47dd14c20b91609",
+     "version_label": "apply report 1.3 round 4",
+     "origin_date": "2026-10-07T00:46"
+    }
+   ]
+  },
+  "round1_findings": {
+   "present": true,
+   "path_or_passport_ref": "path:38_REVIEWER_PANEL_rereview_round2_scirep.md",
+   "sha256": "3ed6c4e5bf5625c243f29378b629c2a04964b38929a374f04568b47c6aa1aee7",
+   "version_label": "round-3 re-review (verdicts, new issues NEW-1..4, residual issues)",
+   "origin_date": "2026-10-07T00:24"
+  },
+  "round1_config_cards": {
+   "present": true,
+   "path_or_passport_ref": "path:phase_rereview_round4_scirep/round2_config_cards.md",
+   "sha256": "8ce36ccc9e8b91ccea00e90ae5ed303a1cbbe32b54193bdacf752594da557658",
+   "version_label": "round-2 Phase 1 cards, concatenated (frozen yardstick, reused)",
+   "origin_date": "2026-10-08T00:32"
+  }
+ }
+}

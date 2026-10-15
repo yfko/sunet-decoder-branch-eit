@@ -15,7 +15,9 @@ from scipy.stats import spearmanr
 
 ROOT = Path(".")
 DATE = datetime.date.today().strftime("%Y%m%d")
-STEM = sys.argv[1] if len(sys.argv) > 1 else "manuscript/43_SUBMISSION_scirep_v5"
+STEM = sys.argv[1] if len(sys.argv) > 1 else "manuscript/51_SUBMISSION_scirep_v6"
+_DRAFTS = {"manuscript/43_SUBMISSION_scirep_v5": "manuscript/41_DRAFT_v5.md (apply report 3c0451dfbfd5)", "manuscript/51_SUBMISSION_scirep_v6": "manuscript/49_DRAFT_v6.md (apply report 88e888906638)"}
+DRAFT_NOTE = _DRAFTS.get(STEM, STEM)
 OUT = ROOT / f"submission_SciRep_{DATE}"
 SOFFICE = "/Applications/LibreOffice.app/Contents/MacOS/soffice"
 def to_pdf(path):
@@ -132,7 +134,7 @@ open_fields = [f"Manuscript placeholder still to fill: `{x}`" for x in sorted(se
 (OUT / "07_OPEN_FIELDS_AND_CHECKLIST.md").write_text("# Before uploading\n\nStill to be supplied by the corresponding author (search the manuscript for `[` to find each placeholder):\n\n" + "\n".join(f"- [ ] {x}" for x in open_fields) + "\n\nSci Rep checklist: see `manuscript/39_SUBMISSION_CHECKLIST_SCIREP.md` (official checklist items 1-13, advisory limits, author-side items). Upload: 01 manuscript (.docx, single file), 02 cover letter, 03 figures, 05 Supplementary_S1-S9.pdf (single file), 08 related material (earlier manuscript, results withdrawn) as required by the submission policy. Title, abstract and author data in the submission system must match the manuscript word for word.")
 
 # ---- manifest
-lines = ["# MANIFEST", "", f"Package built {datetime.datetime.now():%Y-%m-%d %H:%M} by tools/pack_submission_scirep.py from manuscript/41_DRAFT_v5.md (apply report 3c0451dfbfd5) via tools/format_convert_scirep.py.", "", "| File | SHA-256 | bytes |", "|---|---|---|"]
+lines = ["# MANIFEST", "", f"Package built {datetime.datetime.now():%Y-%m-%d %H:%M} by tools/pack_submission_scirep.py from {DRAFT_NOTE} via tools/format_convert_scirep.py.", "", "| File | SHA-256 | bytes |", "|---|---|---|"]
 for p in sorted(OUT.rglob("*")):
     if p.is_file() and p.name != "MANIFEST.md":
         lines.append(f"| {p.relative_to(OUT)} | {hashlib.sha256(p.read_bytes()).hexdigest()[:16]}… | {p.stat().st_size:,} |")

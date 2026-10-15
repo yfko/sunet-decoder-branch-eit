@@ -1,0 +1,6 @@
+PI messages in session, 2026-10-08 (after reading the summary of manuscript/47_REVIEWER_PANEL_rereview_round4_scirep.md §Residual Issues and manuscript/48_DISCLOSURE_scirep.md §5(b), §8):
+「NEW-1、§2.9 標籤選 (i)、NEW-2 一起修，走 round-5 patch」
+「我先去睡了 明天再看你跑完的結果」
+「Cover letter 句是否擴寫 要擴寫什麼內容？」(question only; no decision on the cover letter — it is NOT changed in this round)
+Scope: REV-R5-1 (NEW-1, B0127 glyphs), REV-R5-2 (NEW-2, B0028 resample clause) and REV-R5-3 (48_ §5(b) option (i): "Fable 5.1, Opus 5 and Opus 5.5, accessed August to October 2026", B0066) are will_address; targets are the v5 block ids named there.
+Not chosen by the PI in this round: NEW-3, NEW-4 (remain previously_missed, decision-inert), the two optional §2.9 additions of 48_ §5(c)/(d), the optional cover-letter broadening of 48_ §6.

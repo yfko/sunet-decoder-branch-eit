@@ -175,3 +175,73 @@ print("citation instances:", len(cites), "| distinct numbers used:", len(used), 
 print("first five in order:", order[:5])
 subprocess.run(["pandoc", str(out_md), "-o", out_stem + ".docx", "--from", "markdown+smart", "--reference-doc", "tools/reference_pm.docx"], check=True)
 print("written:", out_md, out_stem + ".docx")
+
+# ---- table layout in the docx (2026-10-07, PI saw Table 2 caption on p34 and its rows on p35-36 in Word):
+# each table starts a new page; caption, every row and the note under the table are kept together;
+# rows never split; cell text 8 pt. Layout only: no text is changed.
+import docx
+from docx.shared import Pt
+from docx.oxml.ns import qn
+from docx.oxml import OxmlElement
+def _flag(pPr_or_trPr, tag):
+    if pPr_or_trPr.find(qn(tag)) is None:
+        pPr_or_trPr.append(OxmlElement(tag))
+d = docx.Document(out_stem + ".docx")
+for tbl in d.tables:
+    el = tbl._tbl
+    cap = el.getprevious()
+    if cap is not None and cap.tag == qn("w:p"):
+        pPr = cap.get_or_add_pPr(); _flag(pPr, "w:keepNext"); _flag(pPr, "w:pageBreakBefore")
+    for row in tbl.rows:
+        _flag(row._tr.get_or_add_trPr(), "w:cantSplit")
+        for cell in row.cells:
+            for p in cell.paragraphs:
+                _flag(p._p.get_or_add_pPr(), "w:keepNext")
+                for r in p.runs:
+                    r.font.size = Pt(8)
+    # column widths proportional to the longest data cell (pandoc gives equal widths, which split CIs at "[-")
+    from docx.shared import Inches
+    ncol = len(tbl.columns)
+    # floor: the longest unbreakable token in the column (header included), so no number is split;
+    # the remaining width goes to columns whose whole cells are longer than that, up to their length.
+    CH, PAD, TOTAL = 0.062, 0.16, 6.5   # inches per 8-pt character, cell padding, text width
+    tok = [max(len(w) for r in tbl.rows for w in (r.cells[j].text.split() or [""])) for j in range(ncol)]
+    pref = [max(len(r.cells[j].text) for r in tbl.rows[1:]) for j in range(ncol)]
+    lo = [t * CH + PAD for t in tok]; hi = [max(p, t) * CH + PAD for p, t in zip(pref, tok)]
+    spare = TOTAL - sum(lo); room = [h - l for h, l in zip(hi, lo)]
+    if spare <= 0 or sum(room) == 0:
+        w_in = [l * TOTAL / sum(lo) for l in lo]
+    elif spare <= sum(room):
+        w_in = [l + spare * r / sum(room) for l, r in zip(lo, room)]
+    else:
+        w_in = [h + (spare - sum(room)) / ncol for h in hi]
+    widths = [Inches(w) for w in w_in]
+    tblPr = el.tblPr
+    lay = tblPr.find(qn("w:tblLayout"))
+    if lay is None:
+        lay = OxmlElement("w:tblLayout"); tblPr.append(lay)
+    lay.set(qn("w:type"), "fixed")
+    grid = el.find(qn("w:tblGrid"))
+    for gc, w in zip(grid.findall(qn("w:gridCol")), widths):
+        gc.set(qn("w:w"), str(int(w.inches * 1440)))
+    for row in tbl.rows:
+        for cell, w in zip(row.cells, widths):
+            cell.width = w
+# page numbers (centred footer) and continuous line numbers (Sci Rep: recommended, not added by the editorial office)
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+for sec in d.sections:
+    sp = sec._sectPr
+    if sp.find(qn("w:lnNumType")) is None:
+        ln = OxmlElement("w:lnNumType")
+        ln.set(qn("w:countBy"), "1"); ln.set(qn("w:distance"), "360"); ln.set(qn("w:restart"), "continuous")
+        after = [qn(t) for t in ("w:footnotePr", "w:endnotePr", "w:type", "w:pgSz", "w:pgMar", "w:paperSrc", "w:pgBorders")]
+        idx = max([i for i, c in enumerate(sp) if c.tag in after], default=-1)
+        sp.insert(idx + 1, ln)
+    fp = sec.footer.paragraphs[0]
+    if "PAGE" not in fp._p.xml:
+        fp.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        fld = OxmlElement("w:fldSimple"); fld.set(qn("w:instr"), "PAGE")
+        r = OxmlElement("w:r"); t = OxmlElement("w:t"); t.text = "1"; r.append(t); fld.append(r)
+        fp._p.append(fld)
+d.save(out_stem + ".docx")
+print("table layout applied to", len(d.tables), "tables; page and line numbers added")
