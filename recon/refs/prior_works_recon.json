@@ -1,0 +1,2187 @@
+[
+  {
+    "key": "Adler1996TMI",
+    "why": "§2 雜訊指數：noise figure 與量測雜訊→影像雜訊的傳遞分析；GN 的 hp 以 NF 對齊 GREIT（§4／§10 偏離條目）",
+    "doi": "10.1109/42.491418",
+    "authors": [
+      "Adler A",
+      "Guardo R"
+    ],
+    "title": "Electrical impedance tomography: regularized imaging and contrast detection",
+    "journal": "IEEE Trans Med Imaging",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "IEEE Transactions on Medical Imaging",
+    "year": "1996",
+    "volume": "15",
+    "issue": "2",
+    "pages": "170-179",
+    "pmid": "18215899",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Adler2006EIDORS",
+    "why": "§2：EIDORS 為前向 FEM 與三個重建器的實作來源；三個重建器的設定（GREIT NF、GN hp、BP）都在它之上固定",
+    "doi": "10.1088/0967-3334/27/5/s03",
+    "authors": [
+      "Adler A",
+      "Lionheart WRB"
+    ],
+    "title": "Uses and abuses of EIDORS: an extensible software base for EIT",
+    "journal": "Physiol Meas",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Physiological Measurement",
+    "year": "2006",
+    "volume": "27",
+    "issue": "5",
+    "pages": "S25-S42",
+    "pmid": "16636416",
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Adler2009GREIT",
+    "why": "§2：GREIT 重建器的原著；本稿三個傳統重建器之一、核心論文唯一的重建器",
+    "doi": "10.1088/0967-3334/30/6/s03",
+    "authors": [
+      "Adler A",
+      "Arnold JH",
+      "Bayford R",
+      "Borsic A",
+      "Brown B",
+      "Dixon P",
+      "Faes TJC",
+      "Frerichs I",
+      "Gagnon H",
+      "Gärber Y",
+      "Grychtol B",
+      "Hahn G",
+      "Lionheart WRB",
+      "Malik A",
+      "Patterson RP",
+      "Stocks J",
+      "Tizzard A",
+      "Weiler N",
+      "Wolf GK"
+    ],
+    "title": "GREIT: a unified approach to 2D linear EIT reconstruction of lung images",
+    "journal": "Physiol Meas",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Physiological Measurement",
+    "year": "2009",
+    "volume": "30",
+    "issue": "6",
+    "pages": "S35-S55",
+    "pmid": "19491438",
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "AlBadawy2018MedPhys",
+    "why": "§1；§4 合併 vs 專用：同機構／他機構／合併三臂的經典分割研究，對應對角、非對角與合併列（區塊 2、3 都選它）",
+    "doi": "10.1002/mp.12752",
+    "authors": [
+      "AlBadawy EA",
+      "Saha A",
+      "Mazurowski MA"
+    ],
+    "title": "Deep learning for segmentation of brain tumors: Impact of cross‐institutional training and testing",
+    "journal": "Med Phys",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Medical Physics",
+    "year": "2018",
+    "volume": "45",
+    "issue": "3",
+    "pages": "1150-1158",
+    "pmid": "29356028",
+    "publisher": "Wiley",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Albert2023ApplSci",
+    "why": "§4 振幅尺度教訓：正規化方法之間差距 < 0.02 Dice，且有留一中心配置；是「本稿的失敗不是方法選錯」的反差。MDPI，PI 決定",
+    "doi": "10.3390/app13158923",
+    "authors": [
+      "Albert S",
+      "Wichtmann BD",
+      "Zhao W",
+      "Maurer A",
+      "Hesser J",
+      "Attenberger UI",
+      "Schad LR",
+      "Zöllner FG"
+    ],
+    "title": "Comparison of Image Normalization Methods for Multi-Site Deep Learning",
+    "journal": "Appl Sci (Basel)",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Applied Sciences",
+    "year": "2023",
+    "volume": "13",
+    "issue": "15",
+    "pages": "8923",
+    "pmid": null,
+    "publisher": "MDPI AG",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "journal"
+      ],
+      "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 101633495, ISSN 2076-3417; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Barber1984JPhysE",
+    "why": "§2.1 Sheffield back-projection 的原始出處（五席第 1 輪 REV-M1-25，R2 席；PI 2026-10-31 晚核准加入）；EIDORS 發行的 Sheffield 矩陣旁補原始歸屬",
+    "doi": "10.1088/0022-3735/17/9/002",
+    "authors": [
+      "Barber DC",
+      "Brown BH"
+    ],
+    "title": "Applied potential tomography",
+    "journal": "J Phys E",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Journal of Physics E: Scientific Instruments",
+    "year": "1984",
+    "volume": "17",
+    "issue": "9",
+    "pages": "723-733",
+    "pmid": null,
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "journal"
+      ],
+      "source": "NLM Catalog UID 1276760 (ISSN 0022-3735, MedlineTA 'J Phys E'; NCBI E-utilities esummary db=nlmcatalog, 2026-10-31); Crossref short-container-title 'J. Phys. E: Sci. Instrum.' is not the NLM abbreviation and rendered with a doubled full stop",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Billot2023MedIA",
+    "why": "§4 前瞻一句：醫學影像 domain randomisation 的代表作，已用到心臟 MRI 與 CT；L1 否證時「下一步是擴大隨機化」的出處",
+    "doi": "10.1016/j.media.2023.102789",
+    "authors": [
+      "Billot B",
+      "Greve DN",
+      "Puonti O",
+      "Thielscher A",
+      "Van Leemput K",
+      "Fischl B",
+      "Dalca AV",
+      "Iglesias JE"
+    ],
+    "title": "SynthSeg: Segmentation of brain MRI scans of any contrast and resolution without retraining",
+    "journal": "Med Image Anal",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Medical Image Analysis",
+    "year": "2023",
+    "volume": "86",
+    "issue": null,
+    "pages": "102789",
+    "pmid": "36857946",
+    "publisher": "Elsevier BV",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Boone2023NeuroImage",
+    "why": "§4：醫學影像分割網路在受控 SNR 偏移與干擾下的基準（ROOD-MRI）",
+    "doi": "10.1016/j.neuroimage.2023.120289",
+    "authors": [
+      "Boone L",
+      "Biparva M",
+      "Mojiri Forooshani P",
+      "Ramirez J",
+      "Masellis M",
+      "Bartha R",
+      "Symons S",
+      "Strother S",
+      "Black SE",
+      "Heyn C",
+      "Martel AL",
+      "Swartz RH",
+      "Goubran M"
+    ],
+    "title": "ROOD-MRI: Benchmarking the robustness of deep learning segmentation models to out-of-distribution and corrupted data in MRI",
+    "journal": "Neuroimage",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "NeuroImage",
+    "year": "2023",
+    "volume": "278",
+    "issue": null,
+    "pages": "120289",
+    "pmid": "37495197",
+    "publisher": "Elsevier BV",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Borji2018ImaVisComput",
+    "why": "§4：電腦視覺期刊上談負面結果價值的立場文章，領域最近",
+    "doi": "10.1016/j.imavis.2017.10.001",
+    "authors": [
+      "Borji A"
+    ],
+    "title": "Negative results in computer vision: A perspective",
+    "journal": "Image Vis Comput",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Image and Vision Computing",
+    "year": "2018",
+    "volume": "69",
+    "issue": null,
+    "pages": "1-8",
+    "pmid": null,
+    "publisher": "Elsevier BV",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "journal"
+      ],
+      "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 101151810, ISSN 0262-8856; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Boulesteix2013PLOSONE",
+    "why": "§4.6 限制：作者＝分支的提出者，依其意義不是中立比較；本稿以預註冊、事前規則與對自己架構不利的結果回應（反向寫；PI 決定 3，2026-10-17）",
+    "doi": "10.1371/journal.pone.0061562",
+    "authors": [
+      "Boulesteix AL",
+      "Lauer S",
+      "Eugster MJA"
+    ],
+    "title": "A Plea for Neutral Comparison Studies in Computational Sciences",
+    "journal": "PLoS One",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "PLoS ONE",
+    "year": "2013",
+    "volume": "8",
+    "issue": "4",
+    "pages": "e61562",
+    "pmid": "23637855",
+    "publisher": "Public Library of Science (PLoS)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Boyle2011PhysiolMeas",
+    "why": "§4 限制：電極與邊界形狀誤差產生有結構的假影；本稿只用加性高斯雜訊與三個重建器，範圍界定",
+    "doi": "10.1088/0967-3334/32/7/s02",
+    "authors": [
+      "Boyle A",
+      "Adler A"
+    ],
+    "title": "The impact of electrode area, contact impedance and boundary shape on EIT images",
+    "journal": "Physiol Meas",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Physiological Measurement",
+    "year": "2011",
+    "volume": "32",
+    "issue": "7",
+    "pages": "745-754",
+    "pmid": "21646710",
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Caruana1997MTL",
+    "why": "§2：多任務學習作為歸納偏置；D 的第二個解碼分支是什麼",
+    "doi": "10.1023/a:1007379606734",
+    "authors": [
+      "Caruana R"
+    ],
+    "title": "Multitask Learning",
+    "journal": "Mach Learn",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Machine Learning",
+    "year": "1997",
+    "volume": "28",
+    "issue": "1",
+    "pages": "41-75",
+    "pmid": null,
+    "publisher": "Springer Science and Business Media LLC",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "journal"
+      ],
+      "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 9881780, ISSN 0885-6125; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Castro2020NatCommun",
+    "why": "§1／§4：醫學影像開發資料與目標環境錯配（含擷取偏移）的因果分類；重建器更換屬擷取端偏移",
+    "doi": "10.1038/s41467-020-17478-w",
+    "authors": [
+      "Castro DC",
+      "Walker I",
+      "Glocker B"
+    ],
+    "title": "Causality matters in medical imaging",
+    "journal": "Nat Commun",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Nature Communications",
+    "year": "2020",
+    "volume": "11",
+    "issue": "1",
+    "pages": "3673",
+    "pmid": "32699250",
+    "publisher": "Springer Science and Business Media LLC",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Chambers2021NatHumBehav",
+    "why": "§1；§2 預註冊程序：RR 的制度出處；用來寫「沒有 RR 格式可走，以雜湊鎖定代替」那一句。卷期屬 2022，key 依 `issued`",
+    "doi": "10.1038/s41562-021-01193-7",
+    "authors": [
+      "Chambers CD",
+      "Tzavella L"
+    ],
+    "title": "The past, present and future of Registered Reports",
+    "journal": "Nat Hum Behav",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Nature Human Behaviour",
+    "year": "2022",
+    "volume": "6",
+    "issue": "1",
+    "pages": "29-42",
+    "pmid": "34782730",
+    "publisher": "Springer Science and Business Media LLC",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "year"
+      ],
+      "source": "PubMed PMID 34782730: pubdate 2022 Jan, vol 6(1):29-42 (epub 2021 Nov 15); issue year, as for the Vandenhende2021 and Zhou2023TPAMI overrides",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Christodoulou2024MICCAI",
+    "why": "§2 多種子 bootstrap；§2 等價邊界：分割論文只有 0.5% 報 CI、CI 寬度是名次差距的三倍；給 ±1.0 點一個領域尺度。LNCS，卷號要 override",
+    "doi": "10.1007/978-3-031-72117-5_12",
+    "authors": [
+      "Christodoulou E",
+      "Reinke A",
+      "Houhou R",
+      "Kalinowski P",
+      "Erkan S",
+      "Sudre CH",
+      "Burgos N",
+      "Boutaj S",
+      "Loizillon S",
+      "Solal M",
+      "Rieke N",
+      "Cheplygina V",
+      "Antonelli M",
+      "Mayer LD",
+      "Tizabi MD",
+      "Cardoso MJ",
+      "Simpson A",
+      "Jäger PF",
+      "Kopp-Schneider A",
+      "Varoquaux G",
+      "Colliot O",
+      "Maier-Hein L"
+    ],
+    "title": "Confidence Intervals Uncovered: Are We Ready for Real-World Medical Imaging AI?",
+    "journal": "Med Image Comput Comput Assist Interv",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Lecture Notes in Computer Science",
+    "year": "2024",
+    "volume": "15010",
+    "issue": null,
+    "pages": "124-132",
+    "pmid": null,
+    "publisher": "Springer Nature Switzerland",
+    "type": "book-chapter",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "volume",
+        "journal"
+      ],
+      "source": "link.springer.com chapter page 10.1007/978-3-031-72117-5_12: 'LNCS, volume 15010' (MICCAI 2024); Crossref gives no volume | NLM Catalog UID 101249582 (MedlineTA 'Med Image Comput Comput Assist Interv'; PubMed cites MICCAI LNCS chapters with volume = LNCS volume, e.g. PMID 31573001 2018;11073:47-54); 'Lect Notes Comput Sci'[ta] has no NLM record. PI choice vs chapter form; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Delisle2021MedIA",
+    "why": "§4 對照；§2：立場相反（跨資料集學共同正規化），用來說明為何本稿選固定的逐來源仿射",
+    "doi": "10.1016/j.media.2021.102191",
+    "authors": [
+      "Delisle PL",
+      "Anctil-Robitaille B",
+      "Desrosiers C",
+      "Lombaert H"
+    ],
+    "title": "Realistic image normalization for multi-Domain segmentation",
+    "journal": "Med Image Anal",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Medical Image Analysis",
+    "year": "2021",
+    "volume": "74",
+    "issue": null,
+    "pages": "102191",
+    "pmid": "34509168",
+    "publisher": "Elsevier BV",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Denker2025HandbNumerAnal",
+    "why": "§1 背景／§4：同一 U-Net 以 Lin-Rec 或 D-bar 當輸入（Post-UNet vs Deep D-bar）表現不同，後處理網路的表現受上游重建器限制；學習式方法在分布外與 KIT4 實測資料上退化、混合式最穩。讀的是 arXiv 2508.06281 全文（2026-10-11），Elsevier 書章正式版（pp 127–175）內容與頁碼要在 citation-check 時核對。",
+    "doi": "10.1016/bs.hna.2025.09.003",
+    "authors": [
+      "Denker A",
+      "Margotti F",
+      "Ning J",
+      "Knudsen K",
+      "Nganyu Tanyu D",
+      "Jin B",
+      "Hauptmann A",
+      "Maass P"
+    ],
+    "title": "Deep learning based reconstruction methods for electrical impedance tomography",
+    "journal": "Handbook of Numerical Analysis",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Handbook of Numerical Analysis",
+    "year": "2025",
+    "volume": null,
+    "issue": null,
+    "pages": "127-175",
+    "pmid": null,
+    "publisher": "Elsevier",
+    "type": "book-chapter",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Du2022EurRadiol",
+    "why": "§2 逐來源仿射與留一設計；§4：同構類比：location-scale 調和是基線、CNN 調和更好、85% 未見核可比；對 L1 的解讀兩面都用得上",
+    "doi": "10.1007/s00330-022-09229-w",
+    "authors": [
+      "Du D",
+      "Lv W",
+      "Lv J",
+      "Chen X",
+      "Wu H",
+      "Rahmim A",
+      "Lu L"
+    ],
+    "title": "Deep learning–based harmonization of CT reconstruction kernels towards improved clinical task performance",
+    "journal": "Eur Radiol",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "European Radiology",
+    "year": "2023",
+    "volume": "33",
+    "issue": "4",
+    "pages": "2426-2438",
+    "pmid": "36355196",
+    "publisher": "Springer Science and Business Media LLC",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "year"
+      ],
+      "source": "PubMed PMID 36355196: pubdate 2023 Apr, vol 33(4):2426-2438 (epub 2022 Nov 10); issue year",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Frerichs2017TREND",
+    "why": "§1：胸腔 EIT 臨床應用與術語共識（TREND）",
+    "doi": "10.1136/thoraxjnl-2016-208357",
+    "authors": [
+      "Frerichs I",
+      "Amato MBP",
+      "van Kaam AH",
+      "Tingay DG",
+      "Zhao Z",
+      "Grychtol B",
+      "Bodenstein M",
+      "Gagnon H",
+      "Böhm SH",
+      "Teschner E",
+      "Stenqvist O",
+      "Mauri T",
+      "Torsani V",
+      "Camporota L",
+      "Schibler A",
+      "Wolf GK",
+      "Gommers D",
+      "Leonhardt S",
+      "Adler A",
+      "TREND study group"
+    ],
+    "title": "Chest electrical impedance tomography examination, data analysis, terminology, clinical use and recommendations: consensus statement of the TRanslational EIT developmeNt stuDy group",
+    "journal": "Thorax",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Thorax",
+    "year": "2017",
+    "volume": "72",
+    "issue": "1",
+    "pages": "83-93",
+    "pmid": "27596161",
+    "publisher": "BMJ",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Gagnon2010TBME",
+    "why": "§2／§4：EIT 系統 SNR 取決於操作條件，報告效能要一併註明——本稿固定 20 dB 並寫明",
+    "doi": "10.1109/tbme.2010.2052618",
+    "authors": [
+      "Gagnon H",
+      "Cousineau M",
+      "Adler A",
+      "Hartinger AE"
+    ],
+    "title": "A Resistive Mesh Phantom for Assessing the Performance of EIT Systems",
+    "journal": "IEEE Trans Biomed Eng",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "IEEE Transactions on Biomedical Engineering",
+    "year": "2010",
+    "volume": "57",
+    "issue": "9",
+    "pages": "2257-2266",
+    "pmid": "20550982",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Graf2017PLOSONE",
+    "why": "§1：心臟相關阻抗變化振幅小且位置依賴，弱成分分離為何困難",
+    "doi": "10.1371/journal.pone.0188313",
+    "authors": [
+      "Graf M",
+      "Riedel T"
+    ],
+    "title": "Electrical impedance tomography: Amplitudes of cardiac related impedance changes in the lung are highly position dependent",
+    "journal": "PLoS One",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "PLOS ONE",
+    "year": "2017",
+    "volume": "12",
+    "issue": "11",
+    "pages": "e0188313",
+    "pmid": "29145478",
+    "publisher": "Public Library of Science (PLoS)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Grychtol2014PLOSONE",
+    "why": "§2 重建器選擇；§4：12 種重建含 BP、GREIT、一步 GN；「影像外觀差異不可忽略、臨床參數相近」是本稿論證的起點句",
+    "doi": "10.1371/journal.pone.0103045",
+    "authors": [
+      "Grychtol B",
+      "Elke G",
+      "Meybohm P",
+      "Weiler N",
+      "Frerichs I",
+      "Adler A"
+    ],
+    "title": "Functional Validation and Comparison Framework for EIT Lung Imaging",
+    "journal": "PLoS One",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "PLoS ONE",
+    "year": "2014",
+    "volume": "9",
+    "issue": "8",
+    "pages": "e103045",
+    "pmid": "25110887",
+    "publisher": "Public Library of Science (PLoS)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Grychtol2014PhysiolMeas",
+    "why": "§4 振幅尺度教訓：同一演算法只改物理量就產生大而臨床顯著的差異；重建輸出尺度不是中性的，是 160–190 倍那一段在 EIT 端的支撐",
+    "doi": "10.1088/0967-3334/35/6/1035",
+    "authors": [
+      "Grychtol B",
+      "Adler A"
+    ],
+    "title": "Choice of reconstructed tissue properties affects interpretation of lung EIT images",
+    "journal": "Physiol Meas",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Physiological Measurement",
+    "year": "2014",
+    "volume": "35",
+    "issue": "6",
+    "pages": "1035-1050",
+    "pmid": "24844670",
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Hamilton2018TMI",
+    "why": "§1：重建後 CNN 後處理（Deep D-bar）的原點；本稿「傳統重建器之後接 U-Net」屬同一典型",
+    "doi": "10.1109/tmi.2018.2828303",
+    "authors": [
+      "Hamilton SJ",
+      "Hauptmann A"
+    ],
+    "title": "Deep D-Bar: Real-Time Electrical Impedance Tomography Imaging With Deep Neural Networks",
+    "journal": "IEEE Trans Med Imaging",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "IEEE Transactions on Medical Imaging",
+    "year": "2018",
+    "volume": "37",
+    "issue": "10",
+    "pages": "2367-2377",
+    "pmid": "29994023",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Hamilton2019PhysiolMeas",
+    "why": "§2 合併訓練依據；§4：訓練分布刻意涵蓋上游變異的 EIT 前例（換的是領域形狀不是重建器，要講明）",
+    "doi": "10.1088/1361-6579/ab21b2",
+    "authors": [
+      "Hamilton SJ",
+      "Hänninen A",
+      "Hauptmann A",
+      "Kolehmainen V"
+    ],
+    "title": "Beltrami-net: domain-independent deep D-bar learning for absolute imaging with electrical impedance tomography (a-EIT)",
+    "journal": "Physiol Meas",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Physiological Measurement",
+    "year": "2019",
+    "volume": "40",
+    "issue": "7",
+    "pages": "074002",
+    "pmid": "31091516",
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Herzberg2023PhysiolMeas",
+    "why": "§1／§4：graph U-Net 對 EIT 重建做後處理、模擬訓練跨裝置泛化——擴大訓練分布的 EIT 前例，換的是領域形狀不是重建器",
+    "doi": "10.1088/1361-6579/ad0b3d",
+    "authors": [
+      "Herzberg W",
+      "Hauptmann A",
+      "Hamilton SJ"
+    ],
+    "title": "Domain independent post-processing with graph U-nets: applications to electrical impedance tomographic imaging",
+    "journal": "Physiol Meas",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Physiological Measurement",
+    "year": "2023",
+    "volume": "44",
+    "issue": "12",
+    "pages": "125008",
+    "pmid": "37944184",
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "title"
+      ],
+      "source": "The trailing '⋆' in the Crossref/IOP HTML title is the publisher's footnote marker (open-access/funding note), not part of the title; removed for rendering",
+      "verified": "2026-10-07"
+    }
+  },
+  {
+    "key": "HoangThi2021DIII",
+    "why": "§2 合併列依據；§4：同構類比：CT 兩核的訓練×評估矩陣加合併列，方向與 M2′／M3′ 一致；本輪最接近 RECON 的一篇（區塊 1、2 都選它）",
+    "doi": "10.1016/j.diii.2021.10.001",
+    "authors": [
+      "Hoang-Thi TN",
+      "Vakalopoulou M",
+      "Christodoulidis S",
+      "Paragios N",
+      "Revel MP",
+      "Chassagnon G"
+    ],
+    "title": "Deep learning for lung disease segmentation on CT: Which reconstruction kernel should be used?",
+    "journal": "Diagn Interv Imaging",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Diagnostic and Interventional Imaging",
+    "year": "2021",
+    "volume": "102",
+    "issue": "11",
+    "pages": "691-695",
+    "pmid": "34686464",
+    "publisher": "Elsevier BV",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Holzschuh2024RadiatOncol",
+    "why": "§2 留一設計；§2 等價邊界；§4：唯一摘要同時給「合併含該中心 0.76 vs 留出 0.74, p = 0.18」的分割研究；也是「以不顯著作結」的反例",
+    "doi": "10.1186/s13014-024-02491-w",
+    "authors": [
+      "Holzschuh JC",
+      "Mix M",
+      "Freitag MT",
+      "Hölscher T",
+      "Braune A",
+      "Kotzerke J",
+      "Vrachimis A",
+      "Doolan P",
+      "Ilhan H",
+      "Marinescu IM",
+      "Spohn SKB",
+      "Fechter T",
+      "Kuhn D",
+      "Gratzke C",
+      "Grosu R",
+      "Grosu AL",
+      "Zamboglou C"
+    ],
+    "title": "The impact of multicentric datasets for the automated tumor delineation in primary prostate cancer using convolutional neural networks on 18F-PSMA-1007 PET",
+    "journal": "Radiat Oncol",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Radiation Oncology",
+    "year": "2024",
+    "volume": "19",
+    "issue": "1",
+    "pages": "106",
+    "pmid": "39113123",
+    "publisher": "Springer Science and Business Media LLC",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Isensee2024nnUNetRevisited",
+    "why": "§1／§4：「新架構勝過 U-Net」常因基線不足才成立；本稿等參數基線與 null 結果的定位",
+    "doi": "10.1007/978-3-031-72114-4_47",
+    "authors": [
+      "Isensee F",
+      "Wald T",
+      "Ulrich C",
+      "Baumgartner M",
+      "Roy S",
+      "Maier-Hein K",
+      "Jäger PF"
+    ],
+    "title": "nnU-Net Revisited: A Call for Rigorous Validation in 3D Medical Image Segmentation",
+    "journal": "Med Image Comput Comput Assist Interv",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Lecture Notes in Computer Science",
+    "year": "2024",
+    "volume": "15009",
+    "issue": null,
+    "pages": "488-498",
+    "pmid": null,
+    "publisher": "Springer Nature Switzerland",
+    "type": "book-chapter",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "volume",
+        "journal"
+      ],
+      "source": "link.springer.com chapter page 10.1007/978-3-031-72114-4_47: 'LNCS, volume 15009' (MICCAI 2024); Crossref gives no volume | NLM Catalog UID 101249582 (MedlineTA 'Med Image Comput Comput Assist Interv'; PubMed cites MICCAI LNCS chapters with volume = LNCS volume, e.g. PMID 31573001 2018;11073:47-54); 'Lect Notes Comput Sci'[ta] has no NLM record. PI choice vs chapter form; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Jeschke2025Sensors",
+    "why": "§2／§4：訓練條件×測試條件交叉設計評估 EIT 網路穩健性（電極位移）；本稿訓練×評估矩陣的 EIT 同行設計",
+    "doi": "10.3390/s25216543",
+    "authors": [
+      "Jeschke J",
+      "Ivanenko M",
+      "Smolik WT",
+      "Wanta D",
+      "Midura M",
+      "Wróblewski P"
+    ],
+    "title": "Machine Learning-Based Image Reconstruction in Wearable CC-EIT of the Thorax: Robustness to Electrode Displacement",
+    "journal": "Sensors (Basel)",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Sensors",
+    "year": "2025",
+    "volume": "25",
+    "issue": "21",
+    "pages": "6543",
+    "pmid": "41228767",
+    "publisher": "MDPI AG",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Kamann2021IJCV",
+    "why": "§1／§4：分割網路對干擾的穩健性基準——架構差異在干擾下才顯現且取決於干擾類型；「容忍度隨偏移種類而異」的 CV 端出處",
+    "doi": "10.1007/s11263-020-01383-2",
+    "authors": [
+      "Kamann C",
+      "Rother C"
+    ],
+    "title": "Benchmarking the Robustness of Semantic Segmentation Models with Respect to Common Corruptions",
+    "journal": "Int J Comput Vis",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "International Journal of Computer Vision",
+    "year": "2021",
+    "volume": "129",
+    "issue": "2",
+    "pages": "462-483",
+    "pmid": null,
+    "publisher": "Springer Science and Business Media LLC",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Karani2018MICCAI",
+    "why": "§4.3 逐來源正規化的位置：共享卷積＋各掃描儀專屬 BN（特徵空間）；本稿的逐來源仿射做在輸入端、固定不學，是同一個想法的不同位置（PI 決定 3，2026-10-17）",
+    "doi": "10.1007/978-3-030-00928-1_54",
+    "authors": [
+      "Karani N",
+      "Chaitanya K",
+      "Baumgartner C",
+      "Konukoglu E"
+    ],
+    "title": "A Lifelong Learning Approach to Brain MR Segmentation Across Scanners and Protocols",
+    "journal": "Med Image Comput Comput Assist Interv",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Lecture Notes in Computer Science",
+    "year": "2018",
+    "volume": "11070",
+    "issue": null,
+    "pages": "476-484",
+    "pmid": null,
+    "publisher": "Springer International Publishing",
+    "type": "book-chapter",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "journal",
+        "volume"
+      ],
+      "source": "NLM Catalog UID 101249582 (MedlineTA 'Med Image Comput Comput Assist Interv'; PubMed cites MICCAI LNCS chapters with volume = LNCS volume, e.g. PMID 31573001 2018;11073:47-54); 'Lect Notes Comput Sci'[ta] has no NLM record. PI choice vs chapter form; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad) | link.springer.com/chapter/10.1007/978-3-030-00928-1_54: 'Lecture Notes in Computer Science (LNIP, volume 11070)', pp 476-484 (MICCAI 2018 Part I; print ISBN 9783030009274); Crossref carries no volume",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Kendall2018",
+    "why": "§1／§4：多任務損失加權文獻；本稿固定 1:1 權重，加權留給 2×2 篇",
+    "doi": "10.1109/cvpr.2018.00781",
+    "authors": [
+      "Kendall A",
+      "Gal Y",
+      "Cipolla R"
+    ],
+    "title": "Multi-task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics",
+    "journal": "Proc IEEE Comput Soc Conf Comput Vis Pattern Recognit",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+    "year": "2018",
+    "volume": "2018",
+    "issue": null,
+    "pages": "7482-7491",
+    "pmid": null,
+    "publisher": "IEEE",
+    "type": "proceedings-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "authors",
+        "journal",
+        "volume"
+      ],
+      "source": "CVF Open Access page of the paper (openaccess.thecvf.com/content_cvpr_2018/html/Kendall_Multi-Task_Learning_Using_CVPR_2018_paper.html): byline 'Alex Kendall, Yarin Gal, Roberto Cipolla'; Crossref returns the reversed order for 10.1109/cvpr.2018.00781 | NLM Catalog UID 101492446 (ISSN 1063-6919, MedlineTA 'Proc IEEE Comput Soc Conf Comput Vis Pattern Recognit'); PubMed cites CVPR papers with volume = year (e.g. PMID 31274971, 40115537). PI choice vs proceedings form; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Ko2021PLOSONE",
+    "why": "§1 前作：semi-Siamese U-Net 原著；其 Conclusions 點名「不同重建演算法下的分離效果」為未來工作並列出 GREIT／GN／BP——本稿回答原著自己提出的問題，不需要缺席主張",
+    "doi": "10.1371/journal.pone.0246071",
+    "authors": [
+      "Ko YF",
+      "Cheng KS"
+    ],
+    "title": "Semi-Siamese U-Net for separation of lung and heart bioimpedance images: A simulation study of thorax EIT",
+    "journal": "PLoS One",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "PLOS ONE",
+    "year": "2021",
+    "volume": "16",
+    "issue": "2",
+    "pages": "e0246071",
+    "pmid": "33529234",
+    "publisher": "Public Library of Science (PLoS)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Ko2021PhysiolMeas",
+    "why": "§1 前作：本研究線第一篇（U-Net 於 EIT 肺分割）；交代研究線的增量",
+    "doi": "10.1088/1361-6579/abe021",
+    "authors": [
+      "Ko YF",
+      "Cheng KS"
+    ],
+    "title": "U-Net-based approach for automatic lung segmentation in electrical impedance tomography",
+    "journal": "Physiol Meas",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Physiological Measurement",
+    "year": "2021",
+    "volume": "42",
+    "issue": "2",
+    "pages": "025002",
+    "pmid": "33498021",
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Ko2025CurrMedImaging",
+    "why": "§1 前作：第三篇（從肺 EIT 重建心臟相關影像）；心臟成分任務的脈絡",
+    "doi": "10.2174/0115734056408077250610070821",
+    "authors": [
+      "Ko YF",
+      "Lin YD",
+      "Su PL"
+    ],
+    "title": "Reconstruction of Heart-related Imaging from Lung Electrical Impedance Tomography Using Semi-Siamese U-Net",
+    "journal": "Curr Med Imaging",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Current Medical Imaging Formerly Current Medical Imaging Reviews",
+    "year": "2025",
+    "volume": "21",
+    "issue": null,
+    "pages": "e15734056408077",
+    "pmid": "40611416",
+    "publisher": "Bentham Science Publishers Ltd.",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Kurin2022Unitary",
+    "why": "§2：單純加總各任務損失可匹敵複雜多任務最佳化；1:1 權重的辯護",
+    "doi": "10.52202/068431-0884",
+    "authors": [
+      "Kurin V",
+      "De Palma A",
+      "Kostrikov I",
+      "Whiteson S",
+      "Mudigonda PK"
+    ],
+    "title": "In Defense of the Unitary Scalarization for Deep Multi-Task Learning",
+    "journal": "Adv Neural Inf Process Syst",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Advances in Neural Information Processing Systems 35",
+    "year": "2022",
+    "volume": "35",
+    "issue": null,
+    "pages": "12169-12183",
+    "pmid": null,
+    "publisher": "Neural Information Processing Systems Foundation, Inc. (NeurIPS)",
+    "type": "proceedings-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "authors",
+        "journal",
+        "volume"
+      ],
+      "source": "NeurIPS 2022 proceedings page (proceedings.neurips.cc, hash 4f301ae934f396086bfefd1139039dbd): byline 'Vitaly Kurin, Alessandro De Palma, Ilya Kostrikov, Shimon Whiteson, Pawan K Mudigonda'; Crossref splits the particle as 'Palma AD' | NLM Catalog UID 9607483 (ISSN 1049-5258, MedlineTA 'Adv Neural Inf Process Syst'); volume 35 from the Crossref container title 'Advances in Neural Information Processing Systems 35' and PubMed's convention for 2022 NeurIPS records; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Lakens2013EffectSize",
+    "why": "§2 統計：配對設計的 Cohen's dz",
+    "doi": "10.3389/fpsyg.2013.00863",
+    "authors": [
+      "Lakens D"
+    ],
+    "title": "Calculating and reporting effect sizes to facilitate cumulative science: a practical primer for t-tests and ANOVAs",
+    "journal": "Front Psychol",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Frontiers in Psychology",
+    "year": "2013",
+    "volume": "4",
+    "issue": null,
+    "pages": "863",
+    "pmid": "24324449",
+    "publisher": "Frontiers Media SA",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "pages"
+      ],
+      "source": "PubMed PMID 24324449 (Front Psychol 2013;4:863, doi:10.3389/fpsyg.2013.00863); Crossref carries no page/article number",
+      "verified": "2026-10-07"
+    }
+  },
+  {
+    "key": "Lakens2017SPPS",
+    "why": "§2 等價邊界：TOST 的標準引用；邊界依 SESOI 事前設定。cite.py 原本丟掉副標題，已修",
+    "doi": "10.1177/1948550617697177",
+    "authors": [
+      "Lakens D"
+    ],
+    "title": "Equivalence Tests: A Practical Primer for t Tests, Correlations, and Meta-Analyses",
+    "journal": "Soc Psychol Personal Sci",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Social Psychological and Personality Science",
+    "year": "2017",
+    "volume": "8",
+    "issue": "4",
+    "pages": "355-362",
+    "pmid": "28736600",
+    "publisher": "SAGE Publications",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Lakens2018AMPPS",
+    "why": "§2 等價邊界：SESOI 的設定方法分類；§12.5 的 ±1.0 理由屬哪一類要靠它",
+    "doi": "10.1177/2515245918770963",
+    "authors": [
+      "Lakens D",
+      "Scheel AM",
+      "Isager PM"
+    ],
+    "title": "Equivalence Testing for Psychological Research: A Tutorial",
+    "journal": "Adv Methods Pract Psychol Sci",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Advances in Methods and Practices in Psychological Science",
+    "year": "2018",
+    "volume": "1",
+    "issue": "2",
+    "pages": "259-269",
+    "pmid": null,
+    "publisher": "SAGE Publications",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "journal"
+      ],
+      "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 101731526, ISSN 2515-2459; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Lange2025StatMed",
+    "why": "§2；§4 限制：驗證性／探索性的詞彙，用來標示 §11、§12 兩個 addendum 的雙重身分",
+    "doi": "10.1002/sim.70303",
+    "authors": [
+      "Lange FJD",
+      "Wilcke JC",
+      "Hoffmann S",
+      "Herrmann M",
+      "Boulesteix AL"
+    ],
+    "title": "On “Confirmatory” Methodological Research in Statistics and Related Fields",
+    "journal": "Stat Med",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Statistics in Medicine",
+    "year": "2025",
+    "volume": "44",
+    "issue": "25-27",
+    "pages": "e70303",
+    "pmid": "41213159",
+    "publisher": "Wiley",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "authors"
+      ],
+      "source": "PubMed efetch PMID 41213159: ForeName 'Anne-Laure', Initials 'AL'; Crossref spells the given name with a U+2010 hyphen, which dropped the L",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Leathard1994PhysiolMeas",
+    "why": "§1：心動週期阻抗變化僅 −0.9 至 −2.6%，通氣約 9%；心臟成分振幅遠小於通氣",
+    "doi": "10.1088/0967-3334/15/2a/018",
+    "authors": [
+      "Leathard AD",
+      "Brown BH",
+      "Campbell J",
+      "Zhang F",
+      "Morice AH",
+      "Tayler D"
+    ],
+    "title": "A comparison of ventilatory and cardiac related changes in EIT images of normal human lungs and of lungs with pulmonary emboli",
+    "journal": "Physiol Meas",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Physiological Measurement",
+    "year": "1994",
+    "volume": "15",
+    "issue": "2A",
+    "pages": "A137-A146",
+    "pmid": "8087036",
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Liu2020TMI",
+    "why": "§2 逐來源仿射依據：多站異質資料直接合併有困難、各站分別估計統計量（TMI）；要註明它做在 BN，本稿做在輸入端",
+    "doi": "10.1109/tmi.2020.2974574",
+    "authors": [
+      "Liu Q",
+      "Dou Q",
+      "Yu L",
+      "Heng PA"
+    ],
+    "title": "MS-Net: Multi-Site Network for Improving Prostate Segmentation With Heterogeneous MRI Data",
+    "journal": "IEEE Trans Med Imaging",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "IEEE Transactions on Medical Imaging",
+    "year": "2020",
+    "volume": "39",
+    "issue": "9",
+    "pages": "2713-2724",
+    "pmid": "32078543",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "McGreivy2024NatMachIntell",
+    "why": "§1；§4：計算科學 ML 論文 79% 比弱 baseline、報告偏差普遍；「匹配 baseline 下分支無優勢」正是會被低報的那類結果",
+    "doi": "10.1038/s42256-024-00897-5",
+    "authors": [
+      "McGreivy N",
+      "Hakim A"
+    ],
+    "title": "Weak baselines and reporting biases lead to overoptimism in machine learning for fluid-related partial differential equations",
+    "journal": "Nat Mach Intell",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Nature Machine Intelligence",
+    "year": "2024",
+    "volume": "6",
+    "issue": "10",
+    "pages": "1256-1269",
+    "pmid": null,
+    "publisher": "Springer Science and Business Media LLC",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Myronenko2019AEReg",
+    "why": "§4：額外解碼分支＝正則化的對立解釋出處；L2／E1 負型態的替代解釋段",
+    "doi": "10.1007/978-3-030-11726-9_28",
+    "authors": [
+      "Myronenko A"
+    ],
+    "title": "3D MRI Brain Tumor Segmentation Using Autoencoder Regularization",
+    "journal": "Brainlesion",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Lecture Notes in Computer Science",
+    "year": "2019",
+    "volume": "11384",
+    "issue": null,
+    "pages": "311-320",
+    "pmid": null,
+    "publisher": "Springer International Publishing",
+    "type": "book-chapter",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "volume",
+        "journal"
+      ],
+      "source": "link.springer.com chapter page 10.1007/978-3-030-11726-9_28: 'LNIP, volume 11384' (LNCS subseries; BrainLes 2018); Crossref gives no volume | MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 101749001 (MedlineTA 'Brainlesion', the BrainLes workshop volumes of LNCS; PubMed cites e.g. PMID 31482151 as 2019;11383:239-250). PI choice vs chapter form; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Martensson2020MedIA",
+    "why": "§4 L3′：訓練來源越多樣、分布外越好；本稿兩來源的池在兩個在範圍內的格兩個方向都無證據（★，phase3 §三(d) 升）；帶四個限制含仿射政策混淆",
+    "doi": "10.1016/j.media.2020.101714",
+    "authors": [
+      "Mårtensson G",
+      "Ferreira D",
+      "Granberg T",
+      "Cavallin L",
+      "Oppedal K",
+      "Padovani A",
+      "Rektorova I",
+      "Bonanni L",
+      "Pardini M",
+      "Kramberger MG",
+      "Taylor JP",
+      "Hort J",
+      "Snædal J",
+      "Kulisevsky J",
+      "Blanc F",
+      "Antonini A",
+      "Mecocci P",
+      "Vellas B",
+      "Tsolaki M",
+      "Kłoszewska I",
+      "Soininen H",
+      "Lovestone S",
+      "Simmons A",
+      "Aarsland D",
+      "Westman E"
+    ],
+    "title": "The reliability of a deep learning model in clinical out-of-distribution MRI data: A multicohort study",
+    "journal": "Med Image Anal",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Medical Image Analysis",
+    "year": "2020",
+    "volume": "66",
+    "issue": null,
+    "pages": "101714",
+    "pmid": "33007638",
+    "publisher": "Elsevier BV",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Nosek2018Prereg",
+    "why": "§2 預註冊：預註冊的理由與 outcome switching；本稿雜湊鎖定與兩個 addendum 的程序",
+    "doi": "10.1073/pnas.1708274114",
+    "authors": [
+      "Nosek BA",
+      "Ebersole CR",
+      "DeHaven AC",
+      "Mellor DT"
+    ],
+    "title": "The preregistration revolution",
+    "journal": "Proc Natl Acad Sci U S A",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Proceedings of the National Academy of Sciences",
+    "year": "2018",
+    "volume": "115",
+    "issue": "11",
+    "pages": "2600-2606",
+    "pmid": "29531091",
+    "publisher": "National Academy of Sciences",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Pawel2023BiomJ",
+    "why": "§1；§2：預註冊的比較模擬研究，示範可疑做法能讓無增益方法勝出；與 RECON 最貼近的計算方法預註冊實例",
+    "doi": "10.1002/bimj.202200091",
+    "authors": [
+      "Pawel S",
+      "Kook L",
+      "Reeve K"
+    ],
+    "title": "Pitfalls and potentials in simulation studies: Questionable research practices in comparative simulation studies allow for spurious claims of superiority of any method",
+    "journal": "Biom J",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Biometrical Journal",
+    "year": "2024",
+    "volume": "66",
+    "issue": "1",
+    "pages": "2200091",
+    "pmid": "36890629",
+    "publisher": "Wiley",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Pulletz2006ROI",
+    "why": "§2 端點：四分之一振幅集作為 ROI 的臨床依據；本稿 DSC 以此定義（對重建器自己的心臟影像）",
+    "doi": "10.1088/0967-3334/27/5/s10",
+    "authors": [
+      "Pulletz S",
+      "van Genderingen HR",
+      "Schmitz G",
+      "Zick G",
+      "Schädler D",
+      "Scholz J",
+      "Weiler N",
+      "Frerichs I"
+    ],
+    "title": "Comparison of different methods to define regions of interest for evaluation of regional lung ventilation by EIT",
+    "journal": "Physiol Meas",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Physiological Measurement",
+    "year": "2006",
+    "volume": "27",
+    "issue": "5",
+    "pages": "S115-S127",
+    "pmid": "16636403",
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "authors"
+      ],
+      "source": "PubMed efetch PMID 16636403: LastName 'van Genderingen', Initials 'HR'; Crossref deposits the particle in the given name",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Renard2020SciRep",
+    "why": "§2 多種子：醫學影像分割 DL 的變異來源綜述；n = 30 種子與種子間 SD 判定條件的依據；刊在候選目標期刊",
+    "doi": "10.1038/s41598-020-69920-0",
+    "authors": [
+      "Renard F",
+      "Guedria S",
+      "De Palma N",
+      "Vuillerme N"
+    ],
+    "title": "Variability and reproducibility in deep learning for medical image segmentation",
+    "journal": "Sci Rep",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Scientific Reports",
+    "year": "2020",
+    "volume": "10",
+    "issue": "1",
+    "pages": "13724",
+    "pmid": "32792540",
+    "publisher": "Springer Science and Business Media LLC",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "authors"
+      ],
+      "source": "Visible byline nature.com/articles/s41598-020-69920-0 'Noel De Palma'; PubMed/Crossref split the particle into the given name ('Palma N'/'Palma ND'); same treatment as Kurin2022Unitary 'De Palma A'",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Ronneberger2015UNet",
+    "why": "§2：U-Net 骨幹（B_wide 與 D 的共同編碼器）",
+    "doi": "10.1007/978-3-319-24574-4_28",
+    "authors": [
+      "Ronneberger O",
+      "Fischer P",
+      "Brox T"
+    ],
+    "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+    "journal": "Med Image Comput Comput Assist Interv",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Lecture Notes in Computer Science",
+    "year": "2015",
+    "volume": "9351",
+    "issue": null,
+    "pages": "234-241",
+    "pmid": null,
+    "publisher": "Springer International Publishing",
+    "type": "book-chapter",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "volume",
+        "journal"
+      ],
+      "source": "link.springer.com chapter page 10.1007/978-3-319-24574-4_28: 'LNCS, volume 9351' (MICCAI 2015, pp. 234-241); Crossref gives no volume | NLM Catalog UID 101249582 (MedlineTA 'Med Image Comput Comput Assist Interv'; PubMed cites MICCAI LNCS chapters with volume = LNCS volume, e.g. PMID 31573001 2018;11073:47-54); 'Lect Notes Comput Sci'[ta] has no NLM record. PI choice vs chapter form; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Scheel2021AMPPS",
+    "why": "§4 負面結果第一段：標準文獻 96% 陽性、RR 44%：多數假設被否證是預註冊的常態",
+    "doi": "10.1177/25152459211007467",
+    "authors": [
+      "Scheel AM",
+      "Schijen MRMJ",
+      "Lakens D"
+    ],
+    "title": "An Excess of Positive Results: Comparing the Standard Psychology Literature With Registered Reports",
+    "journal": "Adv Methods Pract Psychol Sci",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Advances in Methods and Practices in Psychological Science",
+    "year": "2021",
+    "volume": "4",
+    "issue": "2",
+    "pages": "25152459211007467",
+    "pmid": null,
+    "publisher": "SAGE Publications",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "journal"
+      ],
+      "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 101731526, ISSN 2515-2459; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Schuirmann1987JPharmacokinet",
+    "why": "§2.6 等價檢定：TOST 與「1 − 2α 信賴區間落在邊界內」等價，所以 L1 的「95% CI 全在 ±1.0 內」相當於 α = 0.025 的 TOST，比慣用的 90% CI 保守（PI 決定 3，2026-10-17）",
+    "doi": "10.1007/bf01068419",
+    "authors": [
+      "Schuirmann DJ"
+    ],
+    "title": "A comparison of the Two One-Sided Tests Procedure and the Power Approach for assessing the equivalence of average bioavailability",
+    "journal": "J Pharmacokinet Biopharm",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Journal of Pharmacokinetics and Biopharmaceutics",
+    "year": "1987",
+    "volume": "15",
+    "issue": "6",
+    "pages": "657-680",
+    "pmid": "3450848",
+    "publisher": "Springer Science and Business Media LLC",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Thurk2019PhysiolMeas",
+    "why": "§2 重建器設定；§4：重建設定強烈影響結果；逼出「結果只對本稿固定的那一組設定成立」這句限定",
+    "doi": "10.1088/1361-6579/ab248e",
+    "authors": [
+      "Thürk F",
+      "Elenkov M",
+      "Waldmann AD",
+      "Böhme S",
+      "Braun C",
+      "Adler A",
+      "Kaniusas E"
+    ],
+    "title": "Influence of reconstruction settings in electrical impedance tomography on figures of merit and physiological parameters",
+    "journal": "Physiol Meas",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Physiological Measurement",
+    "year": "2019",
+    "volume": "40",
+    "issue": "9",
+    "pages": "094003",
+    "pmid": "31125984",
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Vandenhende2020Branched",
+    "why": "§2：固定參數預算下比較分支結構（BMVC 2020）；等參數對照（B_wide 加寬）的直接先例",
+    "doi": "10.5244/c.34.59",
+    "authors": [
+      "Vandenhende S",
+      "Georgoulis S",
+      "Van Gool L",
+      "De Brabandere B"
+    ],
+    "title": "Branched Multi-Task Networks: Deciding what layers to share",
+    "journal": "BMVC",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Proceedings of the British Machine Vision Conference 2020",
+    "year": "2020",
+    "volume": null,
+    "issue": null,
+    "pages": "59",
+    "pmid": null,
+    "publisher": "British Machine Vision Association",
+    "type": "proceedings-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "authors",
+        "journal"
+      ],
+      "source": "Order per the BMVC 2020 official accepted-papers list (bmva-archive.org.uk/bmvc/2020/programme/accepted-papers, paper 79: 'Simon Vandenhende, Stamatios Georgoulis, Luc Van Gool, Bert De Brabandere'), the publisher deposit (Crossref 10.5244/c.34.59) and Semantic Scholar, all 'Vandenhende, Georgoulis, Van Gool, De Brabandere'; only the Flemish particles are corrected ('Gool LV'/'Brabandere BD' -> 'Van Gool L'/'De Brabandere B'). arXiv 1904.02920 lists De Brabandere before Van Gool; the published conference record is followed. The proceedings PDF itself returns 404 on the conference site (2026-10-06 and 2026-10-07). | MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 101766207 (MedlineTA 'BMVC'); no volume, PubMed numbers BMVC volumes inconsistently; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Vandenhende2021",
+    "why": "§1／§4：多任務學習綜述（硬參數共享、任務干擾）",
+    "doi": "10.1109/tpami.2021.3054719",
+    "authors": [
+      "Vandenhende S",
+      "Georgoulis S",
+      "Van Gansbeke W",
+      "Proesmans M",
+      "Dai D",
+      "Van Gool L"
+    ],
+    "title": "Multi-Task Learning for Dense Prediction Tasks: A Survey",
+    "journal": "IEEE Trans Pattern Anal Mach Intell",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "year": "2022",
+    "volume": "44",
+    "issue": "7",
+    "pages": "3614-3633",
+    "pmid": "33497328",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "year",
+        "volume",
+        "issue",
+        "pages"
+      ],
+      "source": "PubMed PMID 33497328 (IEEE Trans Pattern Anal Mach Intell 2022;44(7):3614-3633, doi:10.1109/TPAMI.2021.3054719); Crossref holds the 2021 early-access record with pages 1-1",
+      "verified": "2026-09-26"
+    }
+  },
+  {
+    "key": "Varoquaux2022NPJDigitMed",
+    "why": "§1；§4：醫學影像 ML 方法學失誤的代表性綜述",
+    "doi": "10.1038/s41746-022-00592-y",
+    "authors": [
+      "Varoquaux G",
+      "Cheplygina V"
+    ],
+    "title": "Machine learning for medical imaging: methodological failures and recommendations for the future",
+    "journal": "NPJ Digit Med",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "npj Digital Medicine",
+    "year": "2022",
+    "volume": "5",
+    "issue": "1",
+    "pages": "48",
+    "pmid": "35413988",
+    "publisher": "Springer Science and Business Media LLC",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Venkatesh2026MedPhys",
+    "why": "§2 等價邊界；§4：深度學習分割上用 TOST 比較模型的唯一期刊先例，最窄邊界 ±0.01 DSC；只能寫「有人用過」，不能寫「慣例」",
+    "doi": "10.1002/mp.70414",
+    "authors": [
+      "Venkatesh V",
+      "Bathala L",
+      "Mathew RS",
+      "Yalavarthy PK"
+    ],
+    "title": "Performance benchmarking of deep learning models for real‐time median nerve segmentation and cross‐sectional area measurement in ultrasound imaging",
+    "journal": "Med Phys",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Medical Physics",
+    "year": "2026",
+    "volume": "53",
+    "issue": "4",
+    "pages": "e70414",
+    "pmid": "41933401",
+    "publisher": "Wiley",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Wang2024TIM",
+    "why": "§1：EIT 上的 dual-branch U-Net（DHU-Net），分支架構在 EIT 的近期同行；本稿的分支臂 D 屬同一類",
+    "doi": "10.1109/tim.2024.3369160",
+    "authors": [
+      "Wang Z",
+      "Li X",
+      "Sun Y",
+      "Wang Q"
+    ],
+    "title": "Electrical Impedance Tomography Deep Imaging With Dual-Branch U-Net Based on Deformable Convolution and Hyper-Convolution",
+    "journal": "IEEE Trans Instrum Meas",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "IEEE Transactions on Instrumentation and Measurement",
+    "year": "2024",
+    "volume": "73",
+    "issue": null,
+    "pages": "1-16",
+    "pmid": null,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "journal"
+      ],
+      "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 422676, ISSN 0018-9456 (also removes the doubled full stop of the Crossref short title); scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Wilcoxon1945",
+    "why": "§2 統計：Wilcoxon signed-rank（R1／L2 規則）",
+    "doi": "10.2307/3001968",
+    "authors": [
+      "Wilcoxon F"
+    ],
+    "title": "Individual Comparisons by Ranking Methods",
+    "journal": "Biometrics",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Biometrics Bulletin",
+    "year": "1945",
+    "volume": "1",
+    "issue": "6",
+    "pages": "80",
+    "pmid": null,
+    "publisher": "JSTOR",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "journal"
+      ],
+      "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 370625 lists 'Biometrics bulletin' as an alternate title of Biometrics; PubMed indexes the 1946 Biometrics Bulletin issue under 'Biometrics' (PMID 20287815). PI may prefer 'Biometrics Bulletin'; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Willroth2024AMPPS",
+    "why": "§2 §10 偏離；§4 限制：預註冊偏離的標準化報告架構；也可反過來檢查本稿的報告是否完整",
+    "doi": "10.1177/25152459231213802",
+    "authors": [
+      "Willroth EC",
+      "Atherton OE"
+    ],
+    "title": "Best Laid Plans: A Guide to Reporting Preregistration Deviations",
+    "journal": "Adv Methods Pract Psychol Sci",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Advances in Methods and Practices in Psychological Science",
+    "year": "2024",
+    "volume": "7",
+    "issue": "1",
+    "pages": "25152459231213802",
+    "pmid": null,
+    "publisher": "SAGE Publications",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "journal"
+      ],
+      "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 101731526, ISSN 2515-2459; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Xin2022MTOHelp",
+    "why": "§2／§4：多任務最佳化方法不勝過調好的加權平均；與 Kurin 並引",
+    "doi": "10.52202/068431-0988",
+    "authors": [
+      "Xin D",
+      "Ghorbani B",
+      "Gilmer J",
+      "Garg A",
+      "Firat O"
+    ],
+    "title": "Do Current Multi-Task Optimization Methods in Deep Learning Even Help?",
+    "journal": "Adv Neural Inf Process Syst",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Advances in Neural Information Processing Systems 35",
+    "year": "2022",
+    "volume": "35",
+    "issue": null,
+    "pages": "13597-13609",
+    "pmid": null,
+    "publisher": "Neural Information Processing Systems Foundation, Inc. (NeurIPS)",
+    "type": "proceedings-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "journal",
+        "volume"
+      ],
+      "source": "NLM Catalog UID 9607483 (ISSN 1049-5258, MedlineTA 'Adv Neural Inf Process Syst'); volume 35 from the Crossref container title 'Advances in Neural Information Processing Systems 35' and PubMed's convention for 2022 NeurIPS records; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Yan2020RadiolAI",
+    "why": "§4：心臟 LV 分割單廠牌→他廠牌 Dice 89 → 60；L1 與 E1 代價量級最接近的心臟類比（★，phase3 §三(d) 升）；帶兩個限定：標籤不隨領域變 vs 本稿目標隨重建器變；模擬 vs 病人",
+    "doi": "10.1148/ryai.2020190195",
+    "authors": [
+      "Yan W",
+      "Huang L",
+      "Xia L",
+      "Gu S",
+      "Yan F",
+      "Wang Y",
+      "Tao Q"
+    ],
+    "title": "MRI Manufacturer Shift and Adaptation: Increasing the Generalizability of Deep Learning Segmentation for MR Images Acquired with Different Scanners",
+    "journal": "Radiol Artif Intell",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Radiology: Artificial Intelligence",
+    "year": "2020",
+    "volume": "2",
+    "issue": "4",
+    "pages": "e190195",
+    "pmid": "33937833",
+    "publisher": "Radiological Society of North America (RSNA)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Yoon2024ProcIEEE",
+    "why": "§1；§4：醫學影像 DG 綜述，讓「重建器不同」能被定位成取像端偏移",
+    "doi": "10.1109/jproc.2024.3507831",
+    "authors": [
+      "Yoon JS",
+      "Oh K",
+      "Shin Y",
+      "Mazurowski MA",
+      "Suk HI"
+    ],
+    "title": "Domain Generalization for Medical Image Analysis: A Review",
+    "journal": "Proc IEEE Inst Electr Electron Eng",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "Proceedings of the IEEE",
+    "year": "2024",
+    "volume": "112",
+    "issue": "10",
+    "pages": "1583-1609",
+    "pmid": null,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "journal"
+      ],
+      "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 9879073, ISSN 0018-9219; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Yu2024CVPR",
+    "why": "§2 留一設計：DG 評估協定的洩漏點（oracle model selection、預訓練），§12.3 每一點都有對應；代替無 DOI 的 DomainBed",
+    "doi": "10.1109/cvpr52733.2024.02068",
+    "authors": [
+      "Yu H",
+      "Zhang X",
+      "Xu R",
+      "Liu J",
+      "He Y",
+      "Cui P"
+    ],
+    "title": "Rethinking the Evaluation Protocol of Domain Generalization",
+    "journal": "Proc IEEE Comput Soc Conf Comput Vis Pattern Recognit",
+    "journal_source": "crossref:short-container-title",
+    "container_full": "2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "year": "2024",
+    "volume": "2024",
+    "issue": null,
+    "pages": "21897-21908",
+    "pmid": null,
+    "publisher": "IEEE",
+    "type": "proceedings-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "journal",
+        "volume"
+      ],
+      "source": "NLM Catalog UID 101492446 (ISSN 1063-6919, MedlineTA 'Proc IEEE Comput Soc Conf Comput Vis Pattern Recognit'); PubMed cites CVPR papers with volume = year (e.g. PMID 31274971, 40115537). PI choice vs proceedings form; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+      "verified": "2026-10-31"
+    }
+  },
+  {
+    "key": "Yu2024CMPB",
+    "why": "§1：EIT 上的多分支網路（分割＋重建分支），以對量測雜訊的穩健性為目標；分支＝穩健性這條主張的 EIT 近例",
+    "doi": "10.1016/j.cmpb.2023.107861",
+    "authors": [
+      "Yu H",
+      "Liu H",
+      "Liu Z",
+      "Wang Z",
+      "Jia J"
+    ],
+    "title": "High-resolution conductivity reconstruction by electrical impedance tomography using structure-aware hybrid-fusion learning",
+    "journal": "Comput Methods Programs Biomed",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Computer Methods and Programs in Biomedicine",
+    "year": "2024",
+    "volume": "243",
+    "issue": null,
+    "pages": "107861",
+    "pmid": "37931580",
+    "publisher": "Elsevier BV",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Zech2018PLoSMed",
+    "why": "§1；§4：合併內部 AUC 高、外部低，來源可被辨識；池內（M2′）與池外（L1）分開陳述的理由（區塊 2、3 都選它）",
+    "doi": "10.1371/journal.pmed.1002683",
+    "authors": [
+      "Zech JR",
+      "Badgeley MA",
+      "Liu M",
+      "Costa AB",
+      "Titano JJ",
+      "Oermann EK"
+    ],
+    "title": "Variable generalization performance of a deep learning model to detect pneumonia in chest radiographs: A cross-sectional study",
+    "journal": "PLoS Med",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "PLOS Medicine",
+    "year": "2018",
+    "volume": "15",
+    "issue": "11",
+    "pages": "e1002683",
+    "pmid": "30399157",
+    "publisher": "Public Library of Science (PLoS)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Zeng2022MedPhys",
+    "why": "§2 留一設計；§4：同構類比：訓練集只改重建核／切片厚度／劑量一項的交叉評估，雜訊與重建核兩軸同在，「容忍度隨偏移種類而異」的同構證據",
+    "doi": "10.1002/mp.15430",
+    "authors": [
+      "Zeng R",
+      "Lin CY",
+      "Li Q",
+      "Jiang L",
+      "Skopec M",
+      "Fessler JA",
+      "Myers KJ"
+    ],
+    "title": "Performance of a deep learning‐based CT image denoising method: Generalizability over dose, reconstruction kernel, and slice thickness",
+    "journal": "Med Phys",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Medical Physics",
+    "year": "2022",
+    "volume": "49",
+    "issue": "2",
+    "pages": "836-853",
+    "pmid": "34954845",
+    "publisher": "Wiley",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Zhang2022PhysiolMeas",
+    "why": "§1：Siamese 網路做心臟相關成分分離（PM 2022），同用 Siamese 與 cardiac-related component 的近鄰",
+    "doi": "10.1088/1361-6579/ac9c44",
+    "authors": [
+      "Zhang K",
+      "Li M",
+      "Liang H",
+      "Wang J",
+      "Yang F",
+      "Xu S",
+      "Abubakar A"
+    ],
+    "title": "Deep feature-domain matching for cardiac-related component separation from a chest electrical impedance tomography image series: proof-of-concept study",
+    "journal": "Physiol Meas",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Physiological Measurement",
+    "year": "2022",
+    "volume": "43",
+    "issue": "12",
+    "pages": "125005",
+    "pmid": "36265475",
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Zhang2022FBB",
+    "why": "§1：EIT 深度學習重建綜述（單網路／結合傳統演算法／多網路混合）",
+    "doi": "10.3389/fbioe.2022.1019531",
+    "authors": [
+      "Zhang T",
+      "Tian X",
+      "Liu X",
+      "Ye J",
+      "Fu F",
+      "Shi X",
+      "Liu R",
+      "Xu C"
+    ],
+    "title": "Advances of deep learning in electrical impedance tomography image reconstruction",
+    "journal": "Front Bioeng Biotechnol",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Frontiers in Bioengineering and Biotechnology",
+    "year": "2022",
+    "volume": "10",
+    "issue": null,
+    "pages": "1019531",
+    "pmid": "36588934",
+    "publisher": "Frontiers Media SA",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Zhao2014PhysiolMeas",
+    "why": "§1；§4 重建器為干擾變項：同一批病人資料換四種重建、五項指標無差異；是「指標不敏感、網路敏感」這個對照的臨床端",
+    "doi": "10.1088/0967-3334/35/6/1083",
+    "authors": [
+      "Zhao Z",
+      "Frerichs I",
+      "Pulletz S",
+      "Müller-Lisse U",
+      "Möller K"
+    ],
+    "title": "The influence of image reconstruction algorithms on linear thorax EIT image analysis of ventilation",
+    "journal": "Physiol Meas",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "Physiological Measurement",
+    "year": "2014",
+    "volume": "35",
+    "issue": "6",
+    "pages": "1083-1093",
+    "pmid": "24845059",
+    "publisher": "IOP Publishing",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    }
+  },
+  {
+    "key": "Zhou2023TPAMI",
+    "why": "§1；§2 留一設計：DG 的正式定義即 loro 的設定；已持有文獻沒有 DG 綜述。cite.py 抓到的是 2022 early-access 紀錄，要 override（§五）",
+    "doi": "10.1109/tpami.2022.3195549",
+    "authors": [
+      "Zhou K",
+      "Liu Z",
+      "Qiao Y",
+      "Xiang T",
+      "Loy CC"
+    ],
+    "title": "Domain Generalization: A Survey",
+    "journal": "IEEE Trans Pattern Anal Mach Intell",
+    "journal_source": "pubmed:iso_abbreviation",
+    "container_full": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "year": "2023",
+    "volume": "45",
+    "issue": "4",
+    "pages": "4396-4415",
+    "pmid": "35914036",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "type": "journal-article",
+    "update_relations": {
+      "update-to": [],
+      "updated-by": []
+    },
+    "overrides": {
+      "fields": [
+        "year",
+        "volume",
+        "issue",
+        "pages"
+      ],
+      "source": "NCBI E-utilities esummary PMID 35914036 (IEEE Trans Pattern Anal Mach Intell 2023 Apr;45(4):4396-4415, doi:10.1109/TPAMI.2022.3195549); Crossref holds only the 2022 early-access record with pages 1-20 and no volume",
+      "verified": "2026-10-11"
+    }
+  }
+]

@@ -1,0 +1,17 @@
+Author event for revision round 1f of the RECON tier-3 manuscript (RECON_paper/manuscript/20_DRAFT_v6.md, ab11b87add5c), 2026-10-31 (late evening session, Fable 5.1).
+
+Source of authority: the PI's opening instruction of this session, step 3 — "format-convert（academic-paper，Opus 5 可）：cite.py 加 Vancouver 渲染、16_ §10 的 metadata 項、DOCX" — together with 16_CITATION_AUDIT_v3.md §10 items 11–12 (metadata: Karani LNCS volume via refs/overrides.json; verify 'Genderingen HRv', 'Palma ND', 'Boulesteix A'; Wang 2024 article number; F1–F11) and 21_CITATION_RECHECK_v6.md flag F1 (the B0091 bracket still dates the strings 2026-10-17). This round touches only the reference list (B0092) and the bracket above it (B0091); no sentence of the paper changes.
+
+What was done before this round (tools, not the draft):
+- tools/cite.py render_vancouver (backup cite.pre-round1f-20261031.py): F3 — no full stop after a title that ends in '?'; F6 — 'doi: 10.xxxx' with a space, the PLoS form recorded in refs/01_JOURNAL_REQUIREMENTS_PLOSONE.md (2026-10-11).
+- refs/overrides.json (backup overrides.pre-round1f-20261031.json): metadata verified against primary sources by an Opus-class lookup pass on 2026-10-31 (proposals file in the session scratchpad; raw NCBI/Crossref/Springer responses kept there):
+  F1 NLM MedlineTA for every non-PubMed container — Appl Sci (Basel) [NLM 101633495]; Image Vis Comput [101151810]; Mach Learn [9881780]; Adv Methods Pract Psychol Sci ×3 [101731526]; IEEE Trans Instrum Meas [422676, also F2]; Proc IEEE Inst Electr Electron Eng [9879073]; Biometrics [370625, alternate title 'Biometrics bulletin'; PI may prefer 'Biometrics Bulletin']; Med Image Comput Comput Assist Interv ×4 with the LNCS volume as PubMed does [101249582]; Brainlesion [101749001]; Adv Neural Inf Process Syst vol 35 ×2 [9607483]; Proc IEEE Comput Soc Conf Comput Vis Pattern Recognit vol = year ×2 [101492446]; BMVC [101766207]. Kamann and McGreivy already NLM forms. Denker 2025: no NLM form, unchanged.
+  F5 Karani2018MICCAI volume 11070 (link.springer.com chapter page).
+  F7 Chambers 2022 (PubMed 34782730, vol 6) and Du 2023 (PubMed 36355196, vol 33): issue year, as the earlier Vandenhende2021/Zhou2023TPAMI overrides.
+  F8 'van Genderingen HR' (PubMed 16636403), 'De Palma N' (nature.com byline; same treatment as Kurin 'De Palma A'), 'Boulesteix AL' (PubMed 41213159).
+  F9 Wang 2024 article number: NOT found (Crossref has none; IEEE Xplore unreachable from the session); pages 1-16 kept; left for the PI.
+- tools/apply_ref_overrides.py prior_works_recon re-rendered refs/prior_works_recon_strings.md (72 entries).
+
+Items marked 'PI choice' above (Biometrics; MICCAI/CVPR/NeurIPS/BMVC/Brainlesion serial forms vs chapter form) follow PubMed's own citation practice, which is what PLoS One's 'NCBI abbreviations' rule points at; the PI may overturn any of them by editing refs/overrides.json and re-running this round.
+
+Unchanged: every sentence of the manuscript, every table, every number, the preregistration, RESULTS, the 判讀, the core-paper package, the mini checkpoints.

@@ -1,0 +1,44 @@
+{
+ "patch_format_version": "1.1",
+ "authorization_context": "review_roadmap",
+ "revision_round": 7,
+ "base_draft_hash": "d02ec9b62ff1",
+ "roadmap_sha256": "711052936e15a65116e522308a32b6ce674453ee76a6b366a8efaa64bc6b0ab9",
+ "author_adjudication_sha256": "38e0e2d1842786a746ebf470e968abdc4551395274900dd161e1310ba0b5fcc0",
+ "author_decision_digest": "a1d0fa514fbbfe27e62dfdc8f7e53387b40c10d17a4dac7fb32d2df5db8ee885",
+ "claim_surface_manifest_sha256": "744e42a40b9b48db31dcc4df318410c48e841bf4dac379afcc13710922c72d64",
+ "emitted_by": "draft_writer_agent (academic-paper revision round 1g, patch mode, Fable 5.1, 2026-10-31)",
+ "ops": [
+  {
+   "op": "replace_block",
+   "block_id": "B0087",
+   "old_hash": "ea31f05eec0b",
+   "new_text": "The authors used Claude (Anthropic; Fable 5.1, Opus 5 and Opus 5.5, accessed August to October 2026) throughout this work. The assistant wrote the simulation, data-generation, training, analysis, scoring and figure code in the project repository that produced every reported number, figure, table and supporting file, and ran it under the authors' direction; searched for and screened literature and proposed the references, which the authors selected; drafted the preregistration, its two addenda and the written interpretation of the results for the authors' decision; drafted and revised the manuscript text; ran the simulated peer-review panels recorded in the repository; and carried out the citation verification recorded there. The authors defined the research questions, decided the hypotheses, decision rules, sample size and analysis rows, approved the preregistration and each addendum before the runs they govern were started, took or approved every design decision, and approved every interpretation and conclusion. The outputs were checked by re-deriving every reported number from the per-seed result files with a separate checking script, by the authors' inspection of plots of the network's inputs and outputs, and by the authors' reading and correction of the text. No image was produced by a generative image model; every figure was plotted from the result files by the code described above.",
+   "roadmap_item_ids": [
+    "REV-M1g-1"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "delete_block",
+   "block_id": "B0153",
+   "old_hash": "aa7da88d9ce5",
+   "roadmap_item_ids": [
+    "REV-M1g-2"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "delete_block",
+   "block_id": "B0154",
+   "old_hash": "0375d81eac79",
+   "roadmap_item_ids": [
+    "REV-M1g-2"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  }
+ ]
+}

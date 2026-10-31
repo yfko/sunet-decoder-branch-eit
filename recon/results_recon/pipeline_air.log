@@ -1,0 +1,28 @@
+[09-26 17:41:45] prereg 4b4c7a6d4a3cd08b6e7a07a3d0d1fbbf13f6dbbf0f9e0f8e59e3e0d862e24bae ok
+[09-26 17:41:45] step 2: gen_recon_full(20) start
+  done in 154.6 min
+GREIT replay self-check (rel max abs diff, 3 test frames): [2.26e-14 8.7e-15 1.94e-14]
+[09-26 20:17:27] step 3: pilot checks
+  heart QA fraction greit: 0.068
+  heart QA fraction gn: 0.130
+  heart QA fraction bp: 0.105
+  heart peak offset vs GREIT gn: 1 px
+  perturbation 40->20 dB gn: median peak 6.1%
+  heart peak offset vs GREIT bp: 2 px
+  perturbation 40->20 dB bp: median peak 13.7%
+pilot checks pass
+[09-26 20:17:31] step 3b: mixed dataset
+wrote data/v2_full_snr20_mixed/dataset.mat N = 10800 | train/val/test = [8640, 1080, 1080]
+{
+ "greit": "476c87723d9eb113214ab4d1710f0b0c8a52fe78354ea4d32f7026ae310c471b",
+ "gn": "b3380d4726e514c4d1dd096157631a21bfb8d5e2cee861589cbfd392d21e5cfe",
+ "bp": "c13d75d2f25f985fd9bfc32a398b280f0a011744bc414c33f75d042328b4901f"
+}
+[09-26 20:17:44] step 4: transfer to the mini
+b3380d4726e514c4d1dd096157631a21bfb8d5e2cee861589cbfd392d21e5cfe  /Users/yfko/work/sunet_sweep/v2_full_snr20_gn/dataset.mat
+c13d75d2f25f985fd9bfc32a398b280f0a011744bc414c33f75d042328b4901f  /Users/yfko/work/sunet_sweep/v2_full_snr20_bp/dataset.mat
+c66e5b902a3a0eb30cef986257a62ff66fcf5b6d5d4895cf40f8e0c5e2e9ec31  /Users/yfko/work/sunet_sweep/v2_full_snr20_mixed/dataset.mat
+b3380d4726e514c4d1dd096157631a21bfb8d5e2cee861589cbfd392d21e5cfe  data/v2_full_snr20_gn/dataset.mat
+c13d75d2f25f985fd9bfc32a398b280f0a011744bc414c33f75d042328b4901f  data/v2_full_snr20_bp/dataset.mat
+c66e5b902a3a0eb30cef986257a62ff66fcf5b6d5d4895cf40f8e0c5e2e9ec31  data/v2_full_snr20_mixed/dataset.mat
+launched pid 62960

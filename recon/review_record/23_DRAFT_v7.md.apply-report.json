@@ -1,0 +1,61 @@
+{
+  "report_format_version": "1.3",
+  "mode": "patch",
+  "base_path": "20_DRAFT_v6.md",
+  "output_path": "23_DRAFT_v7.md",
+  "base_draft_hash": "ab11b87add5c",
+  "output_draft_hash": "d02ec9b62ff1",
+  "patch_digest": "f7d6e36b480f21a5447e6c21ea33839e9904d3560511bc9602c96b425db0a226",
+  "revision_round": 6,
+  "authorization_context": "review_roadmap",
+  "authorization_witness": {
+    "status": "pass",
+    "roadmap_sha256": "480d429002d443dae855b7bdc88416d6d245ac503f2607b000101f1ea5636067",
+    "author_adjudication_sha256": "f98463ecbc052820bea559f5e3dff5236fea3be89d344280879c48205dc49f8b",
+    "author_decision_digest": "11a850662c2df0679eccbfdb1cca00328fce420cc52d48c8f72a1f3b08871c3a",
+    "claim_surface_manifest_sha256": "c41db1a461e77ca4540e6b4a3fbdb832eebb0cfa7850e7bf26b3842d75185c03",
+    "registered_claim_surfaces_checked": 0,
+    "unregistered_claim_drift_review_required": true
+  },
+  "ops_applied": [
+    {
+      "op_index": 0,
+      "op": "replace_block",
+      "block_id": "B0091",
+      "roadmap_item_ids": [
+        "REV-M1f-2"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 1,
+      "op": "replace_block",
+      "block_id": "B0092",
+      "roadmap_item_ids": [
+        "REV-M1f-1"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    }
+  ],
+  "fresh_block_ids": [],
+  "pure_move_pairs": [],
+  "structural_flags": {
+    "heading_op_indexes": [],
+    "section_count_delta": 0,
+    "touched_ratio": 0.0125,
+    "touched_ratio_threshold": 0.6,
+    "touched_ratio_exceeded": false,
+    "any": false,
+    "acknowledged": false
+  },
+  "counters": {
+    "blocks_total": 160,
+    "blocks_touched": 2,
+    "blocks_preserved_byte_identical": 158,
+    "preserved_ratio": 0.9875
+  }
+}

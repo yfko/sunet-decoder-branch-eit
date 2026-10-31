@@ -1,0 +1,616 @@
+{
+  "contract_version": "1.0",
+  "round_id": "sunet-recon-tier3-rereview-round1-20261031",
+  "input_manifest_hash": "4dbe9c304ef38c3ab1fca5ffdba56befff220b2f628d4f2a1634f29169800c9a",
+  "items": [
+    {
+      "item_id": "REV-M1-1",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Table 1's Standing and Verdict columns for the GREIT → GREIT row are mutually consistent with the caption's legend, and no sentence in the Abstract, Section 3.1 heading or Conclusion counts a reference cell under the registered floor; or the cell's hashed standing is stated in Section 2.5 and Table 4.",
+        "letter_text": "Table 1's Standing and Verdict columns for the GREIT → GREIT row are mutually consistent with the caption's legend, and no sentence in the Abstract, Section 3.1 heading or Conclusion counts a reference cell under the registered floor; or the cell's hashed standing is stated in Section 2.5 and Table 4.",
+        "letter_item_ref": "R1"
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Journal-Fit seat (EIC; D6 standing discipline against the manuscript's own Table 1 legend and Section 1.4). Two repairs are admissible and either satisfies the item. Repair A (reference): in Table 1 (B0105–B0107 or the regenerated table) the GREIT → GREIT row's Standing code is one the caption legend defines as 'reference, not tested' AND its Verdict cell is a dash, blank or 'not tested', not 'falsified'; the Abstract's matched-training sentence no longer says 'every reconstructor' or counts three reconstructors under the registered floor but says the two registered cells (GN, BP) were falsified and the GREIT reference, re-scored here, showed the same pattern (or omits GREIT from the floor claim); the Section 3.1 heading (B0045) no longer says 'on all three reconstructors' as a verdict statement; the Conclusion's matched-training sentence (B0085) lists only GN and BP under 'registered floor' or names GREIT as the reference. Repair B (verdict): the GREIT → GREIT row's Standing becomes a code the legend defines as tested, consistent with Verdict 'falsified'; Section 2.5 (B0036) states whose rule governs the GREIT cell, when it was fixed and when it was read; Table 4 (B0116) names that state and lists the GREIT cell under it. Check performed: legend-to-row consistency in Table 1, then every clause of the Abstract, the 3.1 heading and the Conclusion for a reference cell counted under the registered floor. The twenty-verdict count at B0077 must agree with the repair chosen.",
+        "partially_addressed": "Table 1 is repaired but the Abstract, the 3.1 heading or the Conclusion still counts GREIT under 'every reconstructor'/'all three reconstructors'; or the prose is repaired but Table 1 still pairs 'ref' with 'falsified'; or Repair B is taken but only one of Section 2.5 and Table 4 states the standing; or the heading is fixed and the Conclusion is not. A genuine but incomplete fix leaves at least one of the four surfaces (Table 1, B0006, B0045, B0085) on the old footing.",
+        "made_worse_discriminator": "The GREIT cell is promoted into the registered count (Standing 'R' or 'registered') with no governing state named in Section 2.5 or Table 4; or the legend is rewritten so that 'ref' now means tested, erasing the distinction rather than resolving it; or the twenty-verdict count becomes twenty-one without a standing; or a new sentence in the Abstract or Conclusion attributes a registered falsification to the GREIT cell while Table 1 still codes it 'ref'. Any of these widens the standing mismatch the item was raised to close."
+      },
+      "expected_change_surface": "Table 1 and its legend (B0105, B0106, B0107 via tools/recon_draft_tables.py); Abstract B0006; Section 3.1 heading B0045; Conclusion B0085; under Repair B also Section 2.5 B0036 and Table 4 B0116. Contribution one (B0020) is a linked surface through REV-M1-43, not this item's.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC",
+      "source_reviewer_labels": [
+        "EIC"
+      ]
+    },
+    {
+      "item_id": "REV-M1-2",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Every clause in B0085 and B0066 that carries a number names its standing; the Abstract's M2′ sentence carries \"reported, not tested\" or an equivalent descriptive label; the closing sentence distinguishes verdict cells from descriptive quantities.",
+        "letter_text": "Every clause in B0085 and B0066 that carries a number names its standing; the Abstract's M2′ sentence carries \"reported, not tested\" or an equivalent descriptive label; the closing sentence distinguishes verdict cells from descriptive quantities.",
+        "letter_item_ref": "R2"
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Journal-Fit seat (EIC; D6 block trigger). In the Conclusion (B0085 or its successor paragraphs in Section 5) I enumerate every clause that carries a number (the matched-training floor result; the pooled-training recovery; the leave-one-out 62/16/36 losses; the M2′ figures; the no-retraining cost) and each must carry, in the same sentence, a standing word from the set registered / first addendum / second addendum / exploratory / descriptive (or an explicit equivalent such as 'reported, not tested' or 'post-unblinding, pre-hashed addendum'). The same enumeration holds for Section 4.1's three-signs paragraph (B0066): each sign's number names its standing. The Abstract's M2′ sentence carries 'reported, not tested', 'descriptive' or an equivalent descriptive label in addition to its addendum label. The closing sentence that every verdict followed a pre-hashed rule is reworded so that 'verdict' is restricted to the verdict cells and descriptive and addendum quantities are named as carrying no verdict (or are excluded by construction), so the sentence no longer levels the standings.",
+        "partially_addressed": "Labels are added to the Conclusion but B0066 is untouched, or vice versa; or labels are present on most clauses but one number-carrying clause remains bare; or the labels are added but the closing 'Every verdict followed a rule' sentence is unchanged and still covers the addendum and descriptive sentences; or the Abstract's M2′ sentence still carries only 'addendum' without a descriptive label.",
+        "made_worse_discriminator": "A label is wrong (a second-addendum or descriptive quantity labelled 'registered'; M2′ labelled as tested); or labels already present in the Abstract are removed; or the closing sentence is rewritten so that it now explicitly grants verdict standing to the addenda or to M2′; or a new number-carrying sentence is added to the Conclusion without a label. Each of these increases the number of unlabelled or mislabelled quantities on the two surfaces a reader quotes."
+      },
+      "expected_change_surface": "Conclusion B0085 (Section 5); Section 4.1 B0066; Abstract B0006 (M2′ sentence). Roadmap cost scope: section B0085, B0066, B0006.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC",
+      "source_reviewer_labels": [
+        "EIC"
+      ]
+    },
+    {
+      "item_id": "REV-M1-3",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "The phrase \"could not be separated\" (or any equivalence-shaped phrase) no longer appears for M2′, and every number stated for M2′ is a value or bound printed in Table 1 (B0108).",
+        "letter_text": "The phrase \"could not be separated\" (or any equivalence-shaped phrase) no longer appears for M2′, and every number stated for M2′ is a value or bound printed in Table 1 (B0108).",
+        "letter_item_ref": "R3"
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Journal-Fit seat (EIC), with Table 1's M2′ block (B0108) as the only licensed source of numbers. In B0085 and B0066 (and anywhere else M2′ is summarised) the phrase 'could not be separated' and any equivalence-shaped phrase (equivalent, indistinguishable, interchangeable, 'no difference', 'the same', 'separated at N points') is absent for M2′. Every number stated for M2′ on those surfaces is one printed in Table 1's M2′ block: point estimates in the range −0.08 to +0.36 (−0.083 to +0.360), interval bounds within [−0.32, +0.50], the count 'two of six intervals' favouring pooling. The figure 0.4 is gone unless Table 1 prints it. The replacement is descriptive in form and compatible with REV-M1-12 (the first-addendum/descriptive label and the optimisation-steps confound may travel with it).",
+        "partially_addressed": "The phrase is removed from B0085 but kept in B0066, or the reverse; or it is replaced by a different equivalence-shaped phrase ('the two were indistinguishable'); or the equivalence wording is gone but a new number not printed in Table 1 appears (a rounded bound such as '0.5 points' or '0.4' retained as a 'rough bound'); or the descriptive form is used without the standing label the related item requires.",
+        "made_worse_discriminator": "The equivalence claim is strengthened ('pooling and retraining were equivalent', 'no difference was found'); or a TOST-style equivalence verdict is asserted for M2′ although no margin was registered for it; or Table 1 is altered to print 0.4 so that the text's number becomes 'printed in Table 1' by construction; or the M2′ block's negative point estimate is dropped from the table."
+      },
+      "expected_change_surface": "Conclusion sentence in B0085; Section 4.1 sentence in B0066. Table 1 M2′ block (B0108) is the comparison surface, not an expected change site.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC",
+      "source_reviewer_labels": [
+        "EIC"
+      ]
+    },
+    {
+      "item_id": "REV-M1-4",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "\"nothing measurable\" and \"no measurable effect\" no longer appear; the L2 verdict (falsified) and the described GN deficit are both stated, each with its standing.",
+        "letter_text": "\"nothing measurable\" and \"no measurable effect\" no longer appear; the L2 verdict (falsified) and the described GN deficit are both stated, each with its standing.",
+        "letter_item_ref": "R4"
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Journal-Fit seat (EIC; text-against-table reading, Table 3 B0113 and Section 3.1 B0047 as the comparison surfaces). The strings 'nothing measurable' and 'no measurable effect' are absent from the Section 3.6 heading (B0062), the Abstract (B0006), B0067 and the rest of the manuscript when applied to the branch; the replacements use the registered vocabulary ('no measurable benefit', 'below the registered floor', 'sign reversed') or an equivalent that does not assert an absence of effect. Where the held-out result is summarised, two things are both stated with their standing: the L2 verdict (falsified; second addendum) and the GN held-out deficit (−3.9 points, interval −5.3 to −2.4) marked as described, not tested. Check performed: string search for the two phrases and for other 'no effect' forms about the branch; then confirm the L2 summary carries both the verdict and the described deficit.",
+        "partially_addressed": "The heading is reworded but the Abstract or B0067 still says 'nothing measurable'/'no measurable effect'; or all three phrases are gone but the GN deficit is now omitted from the summary (an absence asserted by silence); or the deficit is stated without 'described, not tested'; or the L2 verdict is stated without its second-addendum standing.",
+        "made_worse_discriminator": "The GN deficit is promoted to a tested result (verdict language such as 'the branch significantly harmed', a p value carrying a verdict for a descriptive quantity); or the L2 verdict is softened from 'falsified' to 'no evidence' so that a falsified rule disappears; or the 'no effect' wording is removed from the three target blocks but introduced elsewhere (Discussion, captions); or the matched-training differences are now described as zero, contradicting Section 3.1's 'below the floor, not zero'."
+      },
+      "expected_change_surface": "Section 3.6 heading B0062; Abstract B0006; Section 4.1 B0067. Also B0020 and B0063 appear among the roadmap's proposed targets. Table 3 (B0113) and B0047 are comparison surfaces.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC",
+      "source_reviewer_labels": [
+        "EIC"
+      ]
+    },
+    {
+      "item_id": "REV-M1-5",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "no_effect_wording → removed (verified against the acceptance text of the roadmap row REV-M1-5; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Journal-Fit seat (EIC). The Conclusion's opening sentence (B0085) no longer says the branch's benefit 'does not appear' (or any other no-effect form: 'absent', 'vanishes', 'has no effect') under a change of reconstructor. It states the result in the registered vocabulary with its three parts: under matched training the branch's differences were below the registered floor (on the registered cells GN and BP, with GREIT treated as REV-M1-1 decides); no evidence that the difference grows under the shift (the transfer rule); and sign reversed on the held-out reconstructors (L2). The matched-training cells on GN and BP are not described as 'a change of reconstructor'; that phrase is reserved for the transfer and held-out cells."
+      },
+      "expected_change_surface": "Conclusion opening sentence, B0085.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC",
+      "source_reviewer_labels": [
+        "EIC"
+      ]
+    },
+    {
+      "item_id": "REV-M1-6",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "placeholder_unresolved → resolved at submission (verified against the acceptance text of the roadmap row REV-M1-6; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Journal-Fit seat (EIC; pre-submission completeness). Either (a) B0042, B0089 and B0097 carry resolvable identifiers in place of the placeholders (a Zenodo DOI for the minimal dataset and the four preregistration states, a repository release tag, a companion preprint DOI), with no 'to be minted', 'to be filled', 'TBD' or bracketed placeholder token remaining; or (b) the related-manuscript statement (B0089) is reworded to say that a copy of the companion manuscript accompanies the submission, and the remaining identifiers that cannot exist before submission are marked explicitly as minted at submission with the surface that will carry them named, no other placeholder text remaining. The letter itself records that this item is a submission-package gate that cannot be fully closed in a draft before minting; option (b) therefore satisfies the criterion for the draft under verification."
+      },
+      "expected_change_surface": "Section 2.7 B0042; Related-manuscript statement B0089; Supporting information entry B0097.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC",
+      "source_reviewer_labels": [
+        "EIC"
+      ]
+    },
+    {
+      "item_id": "REV-M1-7",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "required_statement_missing → added (verified against the acceptance text of the roadmap row REV-M1-7; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Journal-Fit seat (EIC; venue's required statements). Four separately headed statements are present in the front or back matter (near B0086–B0089): Data Availability (naming the repository and deposit and what each holds, written so it can stand alone), Funding, Competing Interests (naming the corresponding author's authorship of the architecture under test, consistent with B0081) and Ethics (simulation study, no human or animal data, not applicable). Each has its own heading; none is only embedded in Section 2.7, the Acknowledgments or the Limitations."
+      },
+      "expected_change_surface": "Front/back matter near B0086–B0089 (Acknowledgments, Related manuscript, Supporting information block).",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC",
+      "source_reviewer_labels": [
+        "EIC"
+      ]
+    },
+    {
+      "item_id": "REV-M1-8",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Each of the six hypotheses has a verbatim rule and two verbatim interpretation sentences in a supplementary table, and each Results subsection's fixed reading is visibly a quotation of that table.",
+        "letter_text": "Each of the six hypotheses has a verbatim rule and two verbatim interpretation sentences in a supplementary table, and each Results subsection's fixed reading is visibly a quotation of that table.",
+        "letter_item_ref": "R5"
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Methodology seat (R1; D1 'applied as written' must be verifiable from the manuscript). A supplementary table exists (a new S-table listed in Supporting information B0093–B0097, or a table inside the S1 Appendix) with exactly six rows, R1, R3, M1, M1′, L1 and L2, and for each row three quoted texts: the registered decision rule, the interpretation sentence for the outcome that occurred and the interpretation sentence for the other outcome, each set as a quotation (quotation marks or block-quote formatting, with the table caption stating that the texts are verbatim from the hashed states) and each row naming the governing hash state (prefix). In every Results subsection 3.1 to 3.6 (B0046–B0063) the fixed reading is set in quotation marks or otherwise typographically marked as a quotation, with a pointer to that table, and the quoted text in Results matches the table's text character for character. Methods 2.6 (B0039) points to the table. Check performed: count rows and cells; compare each Results quotation against the table; compare each rule's margin and direction against Section 2.6's statement of it.",
+        "partially_addressed": "The table exists but one hypothesis lacks a rule or one of its two interpretation sentences (the M1 falsified-interpretation is the gap the finding named) or the hash state column is missing; or the table is complete but one or more Results subsections still report the fixed reading in indirect speech ('the registered reading applies'); or the Results quotations differ in wording from the table; or the table is placed in a surface the Supporting information list does not name.",
+        "made_worse_discriminator": "Quotation marks are placed around text that differs between Results and the supplementary table, or between the table and Section 2.6's rule statement (a false quotation, which is a worse verification state than an honest paraphrase); or a rule's margin, direction or comparison set in the table differs from the one Section 2.6 and Table 1 apply with no deviation declared; or the paraphrase in Results is retained while the quotation marks are added, so the reader is told a paraphrase is verbatim."
+      },
+      "expected_change_surface": "New supplementary table in Supporting information (B0093–B0097, insertion after B0097); Methods 2.6 B0039; Results B0046–B0063 (quotation marking); Table 4 B0116/B0117 may carry the pointer. Roadmap proposes replace_block on B0039, B0046–B0063, B0093–B0097 and insert_after B0097.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-M1-9",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "The deviation record enumerates four items, two pre-read and two post-read, each with timing, rationale and consequence, and the registered M1 interpretation appears verbatim.",
+        "letter_text": "The deviation record enumerates four items, two pre-read and two post-read, each with timing, rationale and consequence, and the registered M1 interpretation appears verbatim.",
+        "letter_item_ref": "R6"
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Methodology seat (R1; deviation reporting as the manuscript's own standard). The deviation record in Section 2.5 (B0036–B0037) enumerates four items: the two pre-read deviations already dated there, plus (3) withholding the registered interpretation of a falsified M1 for the GN and BP cells and (4) listing but not reading the registered secondary scoring path; items 3 and 4 each carry the timing 'after reading the cell' (or an equivalent post-read timing), a rationale and a stated consequence for inference. Table 4 (B0116) and S2 Table (B0095) carry the same four items with the same timings. The registered M1 interpretation sentence appears verbatim, as a quotation, at B0053 or in Section 2.5, followed by one sentence stating why it is not applied. Check performed: count deviations on each of the three surfaces, confirm the timings agree, confirm the quoted M1 sentence is identical wherever it appears (including the REV-M1-8 table if present).",
+        "partially_addressed": "The two post-read items are added to Section 2.5 but Table 4 or S2 Table still lists two; or they are added without timing or without consequence; or only one of the two post-read decisions is recorded; or the M1 interpretation is paraphrased rather than quoted; or the sentence saying why it is not applied is missing.",
+        "made_worse_discriminator": "A post-read decision is recorded with a pre-read timing ('before any arm was trained', 'fixed before the runs'), misrepresenting when it was taken; or the existing pre-read deviations lose their dates; or the record now asserts fewer deviations than before; or the quoted M1 interpretation differs between B0053, Section 2.5 and the supplementary rule table."
+      },
+      "expected_change_surface": "Section 2.5 B0036–B0037; Section 3.3 B0053; Section 3.2 B0049 and Table 1 footnote B0111 (secondary path); Table 4 B0116–B0117; S2 Table B0095.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-M1-10",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "promised_elements_missing → reported (verified against the acceptance text of the roadmap row REV-M1-10; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Methodology seat (R1; the reporting elements Sections 2.3 and 2.6 promise for every cell). Four elements, all required: (a) the paired-difference SD per cell appears as a column in Tables 1 and 3 or in S1 Table with an explicit pointer in the Table 1/Table 3 footnote; (b) Table 2 shows MDE80 for the six E1 cells, not only for the R path; (c) the lung-channel Dice is available for every cell (Tables 1 and 3, or S1 Table with a pointer) so that the 'at most 0.03 points' and '0.985 to 0.988' statements of Sections 3.1 and 3.5 have a table surface; (d) Section 2.6 (B0040) no longer says 'exact p values' and names the normal approximation with continuity correction that Table 1 states and the receipts reproduce. Printed values must be recomputable: paired SD consistent with the printed dz and interval half-width (for R1-GN near 0.41 points), MDE80 equal to 0.53 times the printed SD."
+      },
+      "expected_change_surface": "Tables 1, 2, 3 and footnotes (B0106–B0108, B0110–B0111, B0113–B0115 via tools/recon_draft_tables.py); Section 2.6 B0040; Section 2.3 B0030; S1 Table caption B0094.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-M1-11",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "strength_mismatch → qualified (verified against the acceptance text of the roadmap row REV-M1-11; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Methodology seat (R1). Section 4.5 (B0077) states beside 'twenty verdict cells, twenty were falsified' that twelve cells were informative and eight (four R3, two M1, two L2) were falsified in cells the design did not succeed in posing, with the reason for each group (unreadable input; a 9.49-point floor that could hardly be met). The contribution list (B0020) carries the twelve/eight count or an equivalent qualification; the Abstract carries it too if it keeps the 'mostly falsified' or 'twenty of twenty' framing, and needs no change if that framing is dropped there."
+      },
+      "expected_change_surface": "Section 4.5 B0077; contribution list B0020; Abstract B0006 only if the framing is kept.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-M1-12",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "No unqualified \"never worse\" remains; every M2′ statement gives the bound or the range as printed in Table 1 and its standing.",
+        "letter_text": "No unqualified \"never worse\" remains; every M2′ statement gives the bound or the range as printed in Table 1 and its standing.",
+        "letter_item_ref": "R7"
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Methodology seat (R1; descriptive-statistics wording against Table 1's M2′ block, B0108, which prints one negative point estimate, −0.083, and four intervals spanning zero). In B0006, B0020, B0055 (heading), B0056 and B0085 no occurrence of 'never worse' remains without a bound qualifier. Every M2′ statement on those surfaces gives either the interval bound (no interval below −0.32 points; 'never worse by more than 0.3 points in any cell') or the point-estimate range (−0.08 to +0.36) exactly as printed in Table 1, and carries the first-addendum/descriptive standing ('reported, not tested' or equivalent); the 'two of six intervals favour pooling' count and the threefold optimisation-steps confound, where stated, agree with Table 1 and Section 3.4. The heading B0055 is either bounded or number-free. Check performed: string search for 'never worse'; for each hit confirm a bound or range from Table 1 and a standing label in the same sentence.",
+        "partially_addressed": "The Abstract is bounded but the heading B0055, the contribution B0020 or the Conclusion still carries the universal form; or a bound is stated that Table 1 does not support ('0.2 points', '0.5 points'); or the bound is given without the standing label; or the range is given as '0 to +0.36', dropping the negative estimate.",
+        "made_worse_discriminator": "A verdict-like statement is made for M2′ ('pooling was significantly better', 'pooling was equivalent to retraining'); or the negative point estimate is removed from Table 1's M2′ block; or the confound sentence in Section 3.4 is deleted while the bounded claim is kept; or a new universal ('always at least as good') replaces 'never worse'."
+      },
+      "expected_change_surface": "Abstract B0006; contribution list B0020; Section 3.4 heading B0055 and B0056; Conclusion B0085. Table 1 M2′ block (B0108) and Section 3.4 B0057 are comparison surfaces.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-M1-13",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "confound_unstated → stated (verified against the acceptance text of the roadmap row REV-M1-13; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Methodology seat (R1; two training campaigns confounded with the row effect). At minimum Section 3.4's qualifications (B0057) add the two-campaign confound in a sentence that names the GREIT M2′ cells and the GREIT-trained R3 cells as comparisons between networks trained in the companion campaign and networks trained in this one, so that environment or library drift is listed beside the optimisation-steps confound. The fuller forms also satisfy the item: B0028 states the training dates, library versions and code tag of the companion GREIT campaign next to this campaign's, or the GREIT row is retrained in this campaign and the tables say so."
+      },
+      "expected_change_surface": "Section 3.4 B0057; Section 2.2 B0028.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-M1-14",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "reproducibility_statement_missing → added (verified against the acceptance text of the roadmap row REV-M1-14; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Methodology seat (R1; run-to-run determinism). One sentence in Section 2.2 (B0027/B0028) or Section 2.7 (B0042) states whether deterministic algorithms or kernels were enforced on the Apple-silicon PyTorch 2.8.0 backend; if they were not, it states how far one repeated seed moved (a Dice difference from one re-run of one seed, or an equivalent quantitative statement) or says plainly that per-seed values are draws from the seed's distribution and not exactly reproducible. A bare 'seeds were fixed' does not satisfy it."
+      },
+      "expected_change_surface": "Section 2.2 B0027–B0028 or Section 2.7 B0042.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-M1-15",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "assumption_unstated → stated (verified against the acceptance text of the roadmap row REV-M1-15; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Methodology seat (R1). Section 2.3 (B0031) states once, next to the existing sentence that the attribution to reference style was not measured, the assumption under which every held-out loss is an upper bound on the input-side generalisation loss: that a change of reference style can only lower Dice relative to the held-out reconstructor's own cardiac image (the reference-style component is non-negative). It is stated as an assumption, not as a shown fact, and the upper-bound qualification elsewhere is left in place (the panel did not adopt relabelling)."
+      },
+      "expected_change_surface": "Section 2.3 B0031.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-M1-16",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "definition_unstated → stated and recomputable (verified against the acceptance text of the roadmap row REV-M1-16; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Methodology seat (R1). The Table 2 caption (B0109) and Section 3.4 (B0057) state which no-retraining path M3′ is computed against (the registered path X→Y, as the printed values reproduce, not the E1 path) and whether M3′ is in Dice points or a fraction; the registered-path absolute Dice of the six no-retraining cells is printed in Table 2 or in S1 Table with an explicit pointer from the caption, so that each printed M3′ value can be recomputed from printed quantities. I recompute at least two cells."
+      },
+      "expected_change_surface": "Table 2 caption B0109 and table B0110 (via tools/recon_draft_tables.py); Section 3.4 B0057; S1 Table if used.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-M1-17",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "transcription_unverified → verified or corrected (verified against the acceptance text of the roadmap row REV-M1-17; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Methodology seat (R1; a pattern check). Either (a) Table 3 still prints 0.0949 as B_wide's held-out SD on both the GREIT and BP cells and the manuscript gives a surface from which the identity can be confirmed, such as the per-seed values in S1 Table (from which I recompute the two SDs) or a footnote stating the two values were checked against the per-seed file and coincide; or (b) one value is corrected and every quantity that depends on it (the 9.49-point floor in B0063 and Table 3, and any 'fifteen times' remark) is corrected consistently. An unchanged table with no confirming surface anywhere in the manuscript or supporting information leaves the criterion's 'verified' branch without manuscript evidence; see new standard NS-1."
+      },
+      "expected_change_surface": "Table 3 B0113 (via tools/recon_draft_tables.py) and footnote B0114; Section 3.6 B0063; S1 Table per-seed values if printed.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-M1-18",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "standing_unqualified → qualified (verified against the acceptance text of the roadmap row REV-M1-18; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Methodology seat (R1; standing of the three signs). The Abstract (B0006) and the Section 4.1 heading or first sentence (B0065/B0066) state that the three signs of 'the reconstructor behaves as a domain' are of three different standings: the first (loss without retraining) exploratory (E1), the second (no loss when pooled) descriptive (M2′, reported not tested), the third (failure outside the pool) tested (L1, second addendum). The qualification is attached where 'behaves as a domain' or 'all three signs appeared' is asserted, not only in the body paragraphs that already label each sign."
+      },
+      "expected_change_surface": "Abstract B0006; Section 4.1 heading B0065 and first sentence B0066.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-M1-19",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Each of the ten items named in R2 W1's absence anchor is stated in the manuscript or its supporting information without recourse to the code.",
+        "letter_text": "Each of the ten items named in R2 W1's absence anchor is stated in the manuscript or its supporting information without recourse to the code.",
+        "letter_item_ref": "R8"
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Domain seat (R2; EIDORS thoracic EIT reconstruction, D2 self-containment). Section 2.1 (B0023–B0024) or S2 Table (B0095) states each of the ten items of the absence anchor as a value or a named choice, not as a pointer to the deposited code: (1) the stimulation and measurement pattern (for example 16-electrode adjacent drive and adjacent measurement); (2) the electrode model and contact impedance; (3) the forward mesh's dimensionality (2D, 2.5D or 3D) and density, and whether a coarser inverse mesh was used; (4) the cylinder radius and the inclusion radius and centre ranges behind 'randomised'; (5) what 'heterogeneous conductivity' means; (6) GREIT's training-target settings (target radius, distribution, desired-image width); (7) how one-step GN was parametrised 'on GREIT's grid' (pixel-grid coarse-to-fine or FEM solve rasterised); (8) the interpolation used to upsample BP's 32 × 32 raster; (9) whether 20 dB is an amplitude or a power ratio; (10) which frame noise was added to. Check performed: a ten-row checklist ticked only where the manuscript or its supporting information gives the item without recourse to the code; the stated values must be consistent with what the manuscript already prints (Sheffield matrix presupposes 16-electrode adjacent; GREIT noise figure 0.5 nominal, 0.602 realised; 20 dB).",
+        "partially_addressed": "Some but not all ten items are stated; or an item is 'stated' by reference to the repository or a script ('as in the deposited configuration'); or an item is given in a form that does not let a domain reader rebuild the reconstruction matrix (for example 'a fine mesh' without density, 'standard GREIT targets' without radius); or the items appear only in a figure caption that does not cover the inverse mesh or the SNR definition.",
+        "made_worse_discriminator": "A newly stated setting contradicts a quantity the manuscript already prints (a pattern incompatible with the Sheffield back-projection matrix; a GREIT noise figure other than the 0.5/0.602 reported; an SNR definition under which the stated 20 dB does not correspond to the noise described elsewhere); or a setting that was present in the original Methods is removed; or a reconstructor is now described with settings that would change its output relative to the one scored in Tables 1 to 3 without a statement that the runs are unchanged."
+      },
+      "expected_change_surface": "Section 2.1 B0023–B0024; or S2 Table B0095; Table 4 B0116 is listed among the roadmap's proposed targets. Fig 1–3 captions (B0099–B0101) are comparison surfaces.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2",
+      "source_reviewer_labels": [
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-M1-20",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "The reader can tell from the manuscript whether any trained arm existed when the registered state was hashed, and the deviation record is consistent with that fact.",
+        "letter_text": "The reader can tell from the manuscript whether any trained arm existed when the registered state was hashed, and the deviation record is consistent with that fact.",
+        "letter_item_ref": "R9"
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Domain seat (R2; the tension between Table 4's 'no arm trained, no contrast computed' and Section 2.2's reuse of companion-study GREIT networks). B0028 states when the reused GREIT networks (seeds 0 to 29) were trained relative to the hashed registered state 4b4c7a6d (a date, or an explicit before/after with the date of the registration), and Table 4's 'Written after reading' cell for the registered state (B0116) is consistent with that fact. If they predate the registration: the cell no longer reads 'Nothing: no arm trained, no contrast computed' but says that the GREIT row existed and whether its diagonal Dice was known, and the deviation record (Section 2.5 B0036, S2 Table B0095) carries a declared deviation with timing and consequence. If they postdate it: B0028 and B0116 say so with the date and the cell may stand. Check performed: read B0028 and B0116 side by side; the reader must be able to tell from the manuscript alone whether any trained arm existed when the registered state was hashed, and no sentence in Section 2.5 ('before any arm was trained') may contradict the answer.",
+        "partially_addressed": "A date or ordering is given in B0028 but Table 4's cell is unchanged although the networks predate the registration; or 'before registration' is stated without a date and without a deviation; or a deviation is recorded while 'no arm trained, no contrast computed' is retained; or Section 2.5's 'before any arm was trained' is left contradicting the new statement.",
+        "made_worse_discriminator": "B0028 and B0116 now give incompatible answers (one says trained before, the other says none existed); or the reuse sentence is deleted so that the dependency on the companion networks disappears from Methods while the related-manuscript statement (B0089) still declares it; or the GREIT row is now described as trained in this campaign without the training actually being described as such elsewhere, contradicting B0089."
+      },
+      "expected_change_surface": "Section 2.2 B0028; Table 4 'Written after reading' cell B0116; if a deviation is declared, Section 2.5 B0036 and S2 Table B0095. Related-manuscript statement B0089 is a comparison surface.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2",
+      "source_reviewer_labels": [
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-M1-21",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "The Abstract's collapse sentence names the registered row, and the addendum clause names only the per-source result.",
+        "letter_text": "The Abstract's collapse sentence names the registered row, and the addendum clause names only the per-source result.",
+        "letter_item_ref": "R10"
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Domain seat (R2; standing of each row as given in Table 1 and Table 4). The Abstract's sentence about the global-affine collapse attributes the collapse of two reconstructors under a single global normalisation to the registered pooled row (M1, standing R), naming it as registered; the clause about the post-unblinding, pre-hashed addendum names only the per-source affine result (M1′/M2′). No Abstract sentence assigns the collapse to the addendum. Check performed: read every Abstract sentence that mentions normalisation, collapse or the addendum and confirm the registered/addendum attribution matches Table 1's standing codes.",
+        "partially_addressed": "The collapse is re-attributed to the registered row but the addendum clause still mentions the collapse or a global normalisation, leaving the attribution ambiguous; or 'registered' is implied by position rather than named; or the Abstract is fixed while a mirrored sentence elsewhere (Section 4.2 or the Conclusion) still assigns the collapse to the addendum.",
+        "made_worse_discriminator": "Both the collapse and the per-source re-run are now labelled registered; or the collapse sentence is removed from the Abstract so that the registered M1 falsification no longer appears there (a falsified primary result dropped from the Abstract); or Table 1's standing code for the M1 row is changed to make the old sentence true."
+      },
+      "expected_change_surface": "Abstract B0006 (the collapse sentence). Table 1 (B0106/B0108) and Table 4 (B0116) standing codes are comparison surfaces.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2",
+      "source_reviewer_labels": [
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-M1-22",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "rounding_inconsistent → corrected (verified against the acceptance text of the roadmap row REV-M1-22; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Domain seat (R2; arithmetic from Tables 1 and 2: the D arm on GN → BP under E1 loses 0.9672 − 0.629 = 33.8 points; the margin distances are 13.9 and 57.5). In B0006, B0051, B0066 and B0070 the no-retraining range is 'about 19 to 34' (or the range is explicitly stated as the control arm's and the D arm's 33.8 is given); in B0040 and B0070 the 'points outside the margin' range is rounded by the same convention as every other range in the manuscript (nearest integer from 13.9 and 57.5, or one decimal throughout). I check the stated values against Tables 1 to 3 as printed."
+      },
+      "expected_change_surface": "Abstract B0006; Section 3.2 B0051; Section 4.1 B0066; Section 4.2 B0070; Section 2.6 B0040.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2",
+      "source_reviewer_labels": [
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-M1-23",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "framing_unsupported_locally → supported (verified against the acceptance text of the roadmap row REV-M1-23; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Domain seat (R2). One sentence at B0023 or B0013 gives, per reconstructor (GREIT, GN, BP), a numeric ratio of heart-only to lung-only amplitude in the difference frame or in the reconstructed image, computed from the deposited data, so that 'weak cardiac component' is shown to hold for this simulation (heart +1.0 contrast against lungs −0.5) rather than only motivated from measured human data; if the ratio does not show weakness on some reconstructor, the sentence says so."
+      },
+      "expected_change_surface": "Section 2.1 B0023 or Section 1.2 B0013; Table 4 B0116 is listed among the proposed targets.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2",
+      "source_reviewer_labels": [
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-M1-24",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "adjacent_field_inaccuracy → corrected (verified against the acceptance text of the roadmap row REV-M1-24; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Domain seat (R2; adjacent-field accuracy). B0072 no longer says multi-centre MRI sources are 'already on comparable scales'. The replacement states that MRI intensities are unitless and differ across scanners and protocols, which is why intensity normalisation is studied there, and that the surviving contrast is one of magnitude: MRI site differences are far smaller than the two orders of magnitude between the reconstructors here. Albert et al. (2023) is attributed only to what it supports (the choice among normalisation methods matters little), not to sources being on one scale."
+      },
+      "expected_change_surface": "Section 4.3 B0072.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2",
+      "source_reviewer_labels": [
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-M1-26",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "attribution_unverified → verified or amended (verified against the acceptance text of the roadmap row REV-M1-26; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Domain seat (R2; attribution of the quarter-amplitude threshold). B0030 either (a) keeps the attribution to Pulletz et al. (2006) and the sentence states the threshold that paper used, with 25% retained only if that paper used 25%; or (b) if that paper used 20%, says 'a threshold of the kind clinical region-of-interest methods apply' and either gives a reason for 25% as the registered choice or cites a source for 25%. In either form the sentence no longer attributes the 25% value to Pulletz et al. unless the paper supports it. If the sentence is unchanged, the manuscript must carry a surface (footnote or clause) showing the attribution was checked; see new standard NS-1."
+      },
+      "expected_change_surface": "Section 2.3 B0030.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2",
+      "source_reviewer_labels": [
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-M1-27",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "attribution_unverified → verified or amended (verified against the acceptance text of the roadmap row REV-M1-27; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Domain seat (R2; attribution to Zhao et al. (2014)). B0011 either keeps 'no significant difference' only if the five ventilation indices all showed none across the four algorithms, or is amended to state what that study found (which indices showed no significant difference, and which if any differed). The sentence's attribution must match that paper's result; the argument of Section 1.1 may stand either way. If the sentence is unchanged, the manuscript must carry a surface showing the attribution was checked; see new standard NS-1."
+      },
+      "expected_change_surface": "Section 1.1 B0011.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2",
+      "source_reviewer_labels": [
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-M1-28",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "internal_inconsistency → reconciled (verified against the acceptance text of the roadmap row REV-M1-28; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Perspective seat (R3; domain generalisation / multi-source training). B0067 no longer asserts 'the benefit of pooling is one of inclusion, not of diversity' as a finding against diversity. It states that two-source pooling showed no evidence of helping on a third source, that the benefit demonstrated here is therefore one of inclusion, and that whether diversity adds anything was not resolved, with a pointer to Section 4.4 (B0075); B0067 and B0075 then say the same thing about the diversity question."
+      },
+      "expected_change_surface": "Section 4.1 B0067; Section 4.4 B0075 is the comparison surface.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R3",
+      "source_reviewer_labels": [
+        "R3"
+      ]
+    },
+    {
+      "item_id": "REV-M1-29",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "qualification_missing → added (verified against the acceptance text of the roadmap row REV-M1-29; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Perspective seat (R3; the manuscript's own rule that every held-out loss carries its upper-bound qualification). The Section 3.5 heading (B0058) either carries the qualification beside 62, 16 and 36 points ('upper bounds' or '(upper bound)') or drops the numbers; the Table 3 caption (B0112) contains a clause saying the held-out losses are upper bounds on the input-side generalisation loss because the reference moves with the reconstructor. A reader skimming headings and tables then meets the qualification."
+      },
+      "expected_change_surface": "Section 3.5 heading B0058; Table 3 caption B0112 (via tools/recon_draft_tables.py if generated).",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R3",
+      "source_reviewer_labels": [
+        "R3"
+      ]
+    },
+    {
+      "item_id": "REV-M1-31",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "term_undefined → defined (verified against the acceptance text of the roadmap row REV-M1-31; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Perspective seat (R3; terminology accessibility). At the first use of 'affine' in Section 2.2 (B0028) the term is defined as a fixed per-dataset location–scale standardisation (subtract the training-split mean, divide by its standard deviation), with a phrase such as 'referred to below as that dataset's affine', and the definition precedes every later use (2.4, 3.2, 3.3, 4.4)."
+      },
+      "expected_change_surface": "Section 2.2 B0028.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R3",
+      "source_reviewer_labels": [
+        "R3"
+      ]
+    },
+    {
+      "item_id": "REV-M1-32",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "term_defined_by_citation_only → self-contained (verified against the acceptance text of the roadmap row REV-M1-32; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Perspective seat (R3; a term defined only by citation). B0024 contains one clause stating what ratio the noise figure is (the ratio that relates measurement noise to image noise in the Adler and Guardo (1996) sense, stated explicitly) and why matching it makes two regularised linear reconstructors comparable (same noise amplification at the chosen regularisation), so a reader from CT or MRI harmonisation needs no recourse to the citation. The domain seat has already judged the setting defensible; only self-containment is checked here."
+      },
+      "expected_change_surface": "Section 2.1 B0024.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R3",
+      "source_reviewer_labels": [
+        "R3"
+      ]
+    },
+    {
+      "item_id": "REV-M1-34",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "implication_unstated → stated (verified against the acceptance text of the roadmap row REV-M1-34; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Read as the Perspective seat (R3; test-time domain label). Section 4.7 (B0083) contains a sentence (or two) stating that the per-source affine requires the reconstructor identity at deployment, which is a domain label at test time (Karani et al., 2018 as the already-cited anchor); whether that identity is available in the clinical EIT systems the planned hardware study targets; and that for the label to be reliable 'the same reconstructor' must be defined as algorithm, implementation and hyperparameters, as Section 4.2 already says."
+      },
+      "expected_change_surface": "Section 4.7 B0083.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R3",
+      "source_reviewer_labels": [
+        "R3"
+      ]
+    },
+    {
+      "item_id": "REV-M1-36",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "asymmetric_application_unexplained → explained or removed (verified against the acceptance text of the roadmap row REV-M1-36; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Routed to the Journal-Fit seat (EIC) because the raising seat is the DA; read against the manuscript's own standing rules. Either (a) one sentence in Section 3.3 (B0053) or Section 2.5 (B0036) states why the fixed reading is applied to the four unreadable R3 cells, which the Abstract counts as falsified, but withheld for the two unreadable M1 cells; or (b) the two cases are treated alike: both apply the fixed reading (the registered M1 interpretation is then quoted and applied to GN and BP) or both withhold it (the Abstract's 'falsified in all six cells' for R3 and the twenty-verdict count at B0077 are then adjusted consistently). The panel presumes no direction. Whatever is chosen must agree with B0049, the Abstract, B0077 and the deviation record."
+      },
+      "expected_change_surface": "Section 3.3 B0053; Section 3.2 B0049; Section 2.5 B0036.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "DA",
+      "source_reviewer_labels": [
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-M1-42",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "mechanism_stated_as_fact → conditional (verified against the acceptance text of the roadmap row REV-M1-42; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Routed to the Journal-Fit seat (EIC) because the raising seat is the DA. In B0059 the explanation of the order of the held-out losses as the two-source pool's coverage of the held-out reconstructor is in the conditional or hedged mood ('may reflect', 'would be consistent with', 'if … then') and marked as untested, consistent with the same section's later statement that mechanisms are untested; the indicative 'is the two-source pool's coverage' no longer appears."
+      },
+      "expected_change_surface": "Section 3.5 B0059.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "DA",
+      "source_reviewer_labels": [
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-M1-38",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "argument_overreach → corrected (verified against the acceptance text of the roadmap row REV-M1-38; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Routed to the Journal-Fit seat (EIC) because the raising seat is the DA; read against Table 4's expectation hit rates (3 of 3 verdict hits on each addendum). B0078 no longer says 'both addenda went against the authors' own recipe' in a form that implies the results went against the authors' expectations. Either it states exactly that the results went against the authors' recipe (the branch, or the pooled recipe) while the addenda's stated expectations were met, or the claim is dropped. The phrase 'turned the pooled recipe from generalises into in-pool only' is gone unless a prior generalisation claim is cited where it was made."
+      },
+      "expected_change_surface": "Section 4.5 B0078.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "DA",
+      "source_reviewer_labels": [
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-M1-43",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "presupposition_unsupported → removed (verified against the acceptance text of the roadmap row REV-M1-43; checker: block ids above re-read against the revised draft)."
+      },
+      "operationalization": {
+        "fully_addressed": "Routed to the Journal-Fit seat (EIC) because the raising seat is the DA; read together with REV-M1-1's choice. Contribution one (B0020) no longer says the matched-training null 'extends' to the two other conventional reconstructors, or otherwise presupposes a prior null, unless the prior null is named and is one the manuscript may rely on. If the GREIT cell is a reference, the sentence states that the branch stayed below the registered floor on GN and BP and that the GREIT reference showed the same pattern; if the GREIT cell carries a verdict, the sentence may say all three reconstructors with that standing. The wording must agree with the Abstract and Table 1."
+      },
+      "expected_change_surface": "Contribution list B0020.",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "DA",
+      "source_reviewer_labels": [
+        "DA"
+      ]
+    }
+  ],
+  "new_standards": [
+    {
+      "new_standard_id": "NS-1",
+      "item_id": "global",
+      "standard_text": "For the three should_fix items whose criterion reads '<X>_unverified → verified or corrected/amended' (REV-M1-17 transcription of the 0.0949 SD; REV-M1-26 Pulletz threshold; REV-M1-27 Zhao indices), the 'verified' branch has no manuscript-visible evidence pattern when the check confirms the existing text: an unchanged sentence or table cell is indistinguishable, in a revision-blind reading of the manuscript alone, from an unchecked one. Advisory operational note: the verifier will accept as evidence of verification a manuscript or supporting-information surface that lets the value be recomputed (per-seed values in S1 Table) or that states the check (a footnote or clause), and otherwise will have to rely on the author-side surfaces that only Phase 2B may read. This does not add an acceptance requirement and cannot change any verdict.",
+      "why_not_in_round1": "Round 1 wrote these criteria as outcome pairs ('verified or corrected') without specifying what in the manuscript shows the 'verified' outcome; the gap only appears when the criterion is operationalized as a manuscript evidence pattern under revision-blind reading.",
+      "classification": "advisory"
+    }
+  ]
+}

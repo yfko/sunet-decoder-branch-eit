@@ -1,0 +1,305 @@
+{
+  "round_id": "sunet-recon-tier3-rereview-round1-20261031",
+  "scope": "round-1e blocks",
+  "scope_long": "scoped seat-verifier call (Phase 2B' shape), fresh context, 2026-10-31: verification of roadmap items REV-M1e-1..11 only (the 23 blocks B0013, B0016, B0024, B0027, B0028, B0030, B0033, B0036, B0042, B0049, B0057, B0059, B0069, B0072, B0075, B0077, B0078, B0092, B0112, B0114, B0116, B0150, B0158); regression attribution confined to these 23 blocks; trim audit of every changed block; previously-missed issues outside these blocks out of scope by instruction",
+  "revision_round": 5,
+  "judged_original_path": "19_DRAFT_v5.md",
+  "base_sha256": "bf252f799a3a489d8dc1a7531ab51cfcd43e28820c4af15ade33daf6a441c732",
+  "judged_revised_path": "20_DRAFT_v6.md",
+  "revised_manuscript_sha256": "ab11b87add5c6f9f83d42db8583e5f1544adaf163259f4285a2393c6d8be29b1",
+  "patch_path": "revision-authority-round1e/revision_patch_round1e.json",
+  "patch_sha256": "7c8ef0e6e643be9196beb470f34162adab0bfa94e0ded10bab2a38a824cc5989",
+  "apply_report_path": "20_DRAFT_v6.md.apply-report.json",
+  "apply_report_sha256": "e472ae9d6f57809a5982a64d2af880a09994baf68a7cecd9fa8ac1acd4f30a24",
+  "roadmap_path": "revision-authority-round1e/roadmap.json",
+  "roadmap_sha256": "b1df59ee2a2da521802242f015adad25f360ced3c9ef5ccfe2ca5e72a2d0a97f",
+  "context_sha256": {
+    "19_DRAFT_v5.md.block-manifest.json": "600823a6303b58fea6157a8825ca8edeff1379bfde41224f5fc8fb9b9d40ac1e",
+    "20_DRAFT_v6.md.block-manifest.json": "60bcb8f82e0cca7f9d8175fa9b54408f07b15b1995873907d3dc0deeca2b5073",
+    "revision-authority-round1e/claim-surface-manifest.json": "fb814dd27e6961331be57a5cda69a1cffd695cde3617d0478d20ba155a6b488e",
+    "revision-authority-round1e/author-adjudication.json (hashed, not read)": "cb712ad529fd06f88066dc48e8517947b311278b0ffbbab191fa7f84a589e47a",
+    "18_REVIEWER_PANEL_rereview_round1.md (with both Addenda)": "d9e8ba6816ca25afab5f87a7c1aa035c5a672d0dc4a3e0ecea9a1e398aa35d85",
+    "16_CITATION_AUDIT_v3.md": "2cdd7a916e7a1f45699a0b245081ab739a6fc8ee24b6d726e9f70aff6a4ae0fe",
+    "phase_rereview_round1_20261031/DISPATCH_scoped_v6.md": "1cc89027706b10817c63933bffebbc272af36019cd4a18ff3a3902b5d8e4603a",
+    "../../tools/train_arms.py": "623104fa20bc70c2fff2cec16610d82ca2cfac0b80334739e0acc1d08dae1513",
+    "../../tools/recon_draft_tables.py": "7c97c3c9c1a42cfd80fcf445db2842ac1954900a8eba1e3bb9d2f9d9f3b04f3c"
+  },
+  "chain_ok": true,
+  "chain_check": {
+    "base_draft_hash_matches": true,
+    "output_draft_hash_matches": true,
+    "patch_digest_matches_patch_file_sha256": true,
+    "roadmap_sha256_matches_patch_and_report": true,
+    "roadmap_base_draft_sha256_matches_v5": true,
+    "block_manifest_sha256_matches_roadmap": true,
+    "claim_surface_manifest_sha256_matches": true,
+    "author_adjudication_sha256_matches": true,
+    "ops_count": 23,
+    "all_ops_replace_block": true,
+    "claim_strength_changes_all_empty": true,
+    "blocks_total": 160,
+    "block_order_identical": true,
+    "preamble_identical": true,
+    "blocks_changed": ["B0013", "B0016", "B0024", "B0027", "B0028", "B0030", "B0033", "B0036", "B0042", "B0049", "B0057", "B0059", "B0069", "B0072", "B0075", "B0077", "B0078", "B0092", "B0112", "B0114", "B0116", "B0150", "B0158"],
+    "blocks_changed_equal_patch_blocks": true,
+    "blocks_byte_identical": 137,
+    "patch_old_hash_equals_v5_manifest": "23 / 23",
+    "patch_old_hash_equals_recomputed_sha256_12_of_v5_block": "23 / 23",
+    "patch_new_text_equals_v6_block": "23 / 23",
+    "v6_manifest_hash_equals_sha256_12_of_new_text": "23 / 23",
+    "hash_convention": "sha256 of the block body (text after the <!--block:BNNNN--> marker, outer whitespace stripped), first 12 hex; reproduced for all 160 blocks of both manifests (160/160 each)",
+    "structural_flags": "none (section_count_delta 0; touched_ratio 0.1437 < 0.6; no heading op; no fresh block; no pure move)",
+    "citation_markers": "ref/anchor marker lists v5 vs v6 identical in 21 of the 23 blocks; B0013 adds only Zhang2022PhysiolMeas + its anchor, B0024 adds only Barber1984JPhysE + its anchor; no marker removed anywhere"
+  },
+  "checker_totals": {
+    "tool": "tools/check_recon_draft.py and tools/check_recon_draft_numbers.py run from the SunetBeta project root on RECON_paper/manuscript/20_DRAFT_v6.md",
+    "main_text_words": 7998,
+    "main_text_ceiling": 8000,
+    "abstract_words": 296,
+    "abstract_ceiling": 300,
+    "ascii_minus_before_digit_in_prose": 0,
+    "numbers_in_prose": 375,
+    "numbers_not_derivable": 0,
+    "citations": "84 instances, 72 distinct, slugs outside corpus []; orphans 0; reference-list entries 72; cited-but-unlisted []; listed-but-uncited []",
+    "material_gap_markers": 6,
+    "r10b_leak_scan": "clean"
+  },
+  "items": [
+    {
+      "item_id": "REV-M1e-1",
+      "obligation_class": "should_fix",
+      "verified_by": "R2",
+      "criterion": "B0024 cites Barber and Brown 1984 for the Sheffield back-projection matrix with a verified anchor; B0092 lists it with the Crossref-generated Vancouver string; numbering remains order of first citation.",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        {"anchor_type": "text", "locator": "§2.1 B0024 (v6)", "quote": "Back-projection (BP) used the Sheffield back-projection matrix (Barber and Brown, 1984) <!--ref:Barber1984JPhysE--><!--anchor:quote:Applied%20potential%20tomography--> distributed with EIDORS (Adler and Lionheart, 2006)"},
+        {"anchor_type": "text", "locator": "References B0092 (v6), entry 32", "quote": "Barber DC, Brown BH. Applied potential tomography. J Phys E. 1984;17:723-733. doi:10.1088/0022-3735/17/9/002"},
+        {"anchor_type": "api", "locator": "https://api.crossref.org/works/10.1088/0022-3735/17/9/002 (called in this call)", "quote": "title ['Applied potential tomography']; authors Barber D C, Brown B H; container 'Journal of Physics E: Scientific Instruments'; volume 17; issue 9; page 723-733; issued 1984-09; ISSN 0022-3735"},
+        {"anchor_type": "api", "locator": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=nlmcatalog&id=1276760 (called in this call)", "quote": "medlineta 'J Phys E'; title 'Journal of physics E: Scientific instruments.'; ISSN 0022-3735 (Print); v. 3-22, Jan. 1970-Dec. 1989"},
+        {"anchor_type": "computation", "locator": "B0092 v5 vs v6", "quote": "72 entries; order of first citation preserved: Adler2009GREIT 30, Adler1996TMI 31, Barber1984JPhysE 32, Thurk2019PhysiolMeas 33 (B0024 cites them in that order; Adler2006EIDORS is 28 from B0023); entries 33-72 are the v5 entries 31-70 renumbered, text unchanged"}
+      ],
+      "note": "The anchor 'Applied potential tomography' is the whole Crossref title. Every field of the B0092 string matches Crossref (authors, title, volume, pages, year, DOI); the journal abbreviation is the NLM MedlineTA 'J Phys E', as the dispatch specifies; the 1984 volume 17 falls inside the catalogue's publication span. The surrounding B0024 trims (see trim audit) removed no fact."
+    },
+    {
+      "item_id": "REV-M1e-2",
+      "obligation_class": "should_fix",
+      "verified_by": "R3",
+      "criterion": "B0049 carries the design-fact clause after the fixed sentence; the quoted fixed sentence is byte-identical to v5.",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        {"anchor_type": "text", "locator": "§3.2 B0049 (v6), last sentence", "quote": "The shift tested here is a change of reconstructor; other kinds, such as noise level, were not tested."},
+        {"anchor_type": "text", "locator": "§3.2 B0049 (v6) and S3 Table B0160 (v6, unchanged)", "quote": "\"the tolerance seen in the noise sweep is specific to that kind of shift\""},
+        {"anchor_type": "computation", "locator": "B0049 v5 vs v6", "quote": "difflib: exactly 1 op, the appended sentence; everything before it, including the quoted fixed sentence and the '(S3 Table)' pointer, byte-identical to v5; the S3 Table quotation in B0160 is unchanged and identical to the B0049 quotation"}
+      ],
+      "note": "The clause is neutral (a design fact, no claim about the companion study's result) and sits outside the quotation."
+    },
+    {
+      "item_id": "REV-M1e-3",
+      "obligation_class": "should_fix",
+      "verified_by": "R3",
+      "criterion": "No block of the manuscript calls the loro in-pool cells 'reference cells' or 'in-pool references'; B0059, B0112, B0114 and B0116 say 'in-pool comparison cells'; the GREIT reference row and the reference image keep 'reference'.",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        {"anchor_type": "computation", "locator": "20_DRAFT_v6.md, all 160 blocks", "quote": "case-insensitive regex 'reference cells', 'in-pool reference', 'in-pool references': 0 hits; 'in-pool comparison' hits in B0059, B0094 (S1 caption, unchanged), B0112, B0114, B0116"},
+        {"anchor_type": "text", "locator": "§3.5 B0059 (v6)", "quote": "The six in-pool comparison cells of the same rows scored 0.957 to 0.967"},
+        {"anchor_type": "text", "locator": "Table 3 caption B0112 (v6); footnote B0114 (v6); Table 4 B0116 (v6), Second addendum row", "quote": "In-pool comparison cells: the same rows evaluated on their two pool members (no hypothesis tested). | In-pool comparison cells (B_wide / D Dice): loro-GREIT → GN 0.9653 / 0.9660; … | L3′ and in-pool comparison cells (reported)"},
+        {"anchor_type": "text", "locator": "§2.3 B0030 (v6); Table 1 B0105-B0107 and §3.1 B0046 (v6, unchanged); Table 4 B0116 Registered row", "quote": "The reference for each reconstructor is that reconstructor's own single-organ heart reconstruction | ref = reference cell re-scored from the companion study's networks | The GREIT → GREIT row is the registered reference | declared in the registered text as the reused reference row"}
+      ],
+      "note": "Manuscript criterion met in full. Observation (not a manuscript defect): tools/recon_draft_tables.py line 125, which emits the Table 3 footnote, still reads 'In-pool reference cells (B_wide / D Dice)'; lines 111 (caption) and 144 (Table 4 row) were updated. A regeneration from the generator would revert B0114 to the old name; one-line generator fix recommended before the next regeneration."
+    },
+    {
+      "item_id": "REV-M1e-4",
+      "obligation_class": "should_fix",
+      "verified_by": "R3",
+      "criterion": "B0078 carries '(Acknowledgments)' beside 'a simulated review round'.",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        {"anchor_type": "text", "locator": "§4.5 B0078 (v6), last sentence", "quote": "the second addendum's rows were those a simulated review round (Acknowledgments), recorded in the repository before the addendum was written, had asked for"},
+        {"anchor_type": "text", "locator": "Acknowledgments B0087 (v6, unchanged)", "quote": "ran the simulated peer-review panels recorded in the repository"},
+        {"anchor_type": "computation", "locator": "B0078 v5 vs v6", "quote": "difflib: the inserted '(Acknowledgments)' plus two sentence-level trims ('. Three facts answer it' → '; three facts answer it'; 'met the authors' stated expectations rather than surprising them' → 'met rather than surprised the authors' stated expectations'); 177 → 177 words; the hit-rate numbers (3 of 3, 1 of 3, 0 of 3) unchanged"}
+      ],
+      "note": "The pointer lands on a block that describes the panels."
+    },
+    {
+      "item_id": "REV-M1e-5",
+      "obligation_class": "should_fix",
+      "verified_by": "DA",
+      "criterion": "B0036 carries the timing parenthesis beside the matching-rule deviation.",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        {"anchor_type": "text", "locator": "§2.5 B0036 (v6)", "quote": "the pilot's acceptance band for GN's noise figure predated the change of matching rule from GREIT's nominal to its realised value (the rule changed before hashing; the band did not), and BP's single-organ peaks were offset"},
+        {"anchor_type": "text", "locator": "S2 Table B0158 (v6), Deviations row (unchanged)", "quote": "a rule changed before hashing but not carried into §6"},
+        {"anchor_type": "computation", "locator": "B0036 v5 vs v6", "quote": "difflib: the inserted parenthesis plus three trims ('Two further decisions were taken after cells had been read and are recorded' → 'Two further decisions, taken after cells had been read, are recorded'; 'with their timing' → 'with timing'); 234 → 240 words; dates, hash count and '2 pixels … one pixel' unchanged"}
+      ],
+      "note": "The parenthesis is consistent with the S2 Table deviation row and resolves the timing ambiguity the DA seat named."
+    },
+    {
+      "item_id": "REV-M1e-6",
+      "obligation_class": "should_fix",
+      "verified_by": "DA",
+      "criterion": "B0069 names the first addendum as the source of the term.",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        {"anchor_type": "text", "locator": "§4.2 B0069 (v6)", "quote": "Within this study's scope the term \"reconstructor-agnostic\", the authors' own first-addendum wording, is falsified"},
+        {"anchor_type": "computation", "locator": "B0069 v5 vs v6", "quote": "difflib: the inserted appositive plus four trims ('the test came out falsified' → 'the test was falsified'; 'and that restriction is a tested result' → 'a tested restriction'; '; this is a post-hoc sensitivity statement' → ', a post-hoc sensitivity statement'; 'it is not a convention' → 'it is no convention'); 176 → 173 words; 0.76, 0.74, p = 0.18, 14 to 58, ±5, ±10 unchanged; the quoted source-aware statement byte-identical"}
+      ],
+      "note": "Attribution supplied; the checker's 'reconstructor-agnostic: 1' count is unchanged (the single allowed, falsified use)."
+    },
+    {
+      "item_id": "REV-M1e-7",
+      "obligation_class": "should_fix",
+      "verified_by": "EIC",
+      "criterion": "Every MATERIAL GAP marker states when it is filled or where it is explained: B0042/B0150 'repository tag, set at submission'; B0013 points at the Related manuscript statement.",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        {"anchor_type": "computation", "locator": "check_recon_draft.py on v6, MATERIAL GAP markers (6)", "quote": "[MATERIAL GAP: preprint DOI, see Related manuscript] (B0013); [MATERIAL GAP: Zenodo DOI, minted at submission; the deposit is prepared] (B0042); [MATERIAL GAP: repository tag, set at submission] (B0042); [MATERIAL GAP: preprint DOI, to be inserted when the companion study is posted as a preprint; …] (B0089); [MATERIAL GAP: Zenodo DOI, minted at submission] (B0150); [MATERIAL GAP: repository tag, set at submission] (B0150)"},
+        {"anchor_type": "text", "locator": "B0088 heading (v6, unchanged)", "quote": "## Related manuscript"},
+        {"anchor_type": "computation", "locator": "B0042, B0150 v5 vs v6", "quote": "B0042: marker reworded; 'Checkpoints are available from the corresponding author. The use of artificial-intelligence tools is disclosed in the Acknowledgments.' → 'Checkpoints are available from the corresponding author; artificial-intelligence use is disclosed in the Acknowledgments.' (81 → 78 words). B0150: only the marker changed (68 → 68 words)"}
+      ],
+      "note": "All six markers now carry a time or a pointer; the B0013 pointer names the section whose heading exists (B0088) and whose text (B0089) explains the gap."
+    },
+    {
+      "item_id": "REV-M1e-8",
+      "obligation_class": "should_fix",
+      "verified_by": "R1",
+      "criterion": "B0057 names GREIT → GN and GREIT → BP as the R3 cells evaluated on the companion-trained networks.",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        {"anchor_type": "text", "locator": "§3.4 B0057 (v6)", "quote": "the GREIT networks come from the companion study's campaign (Section 2.2), so a between-campaign difference is confounded with the contrast; those networks also score the R3 cells GREIT → GN and GREIT → BP (Table 2)."},
+        {"anchor_type": "text", "locator": "Table 2 B0109/B0110 (v6, unchanged)", "quote": "Cell X → Y … | GREIT → GN | degenerate (near-constant) | … | falsified | … ; | GREIT → BP¹ | degenerate (near-constant) | … | falsified | — the training row X is GREIT in exactly these two of the six R3 cells, so the networks scored there are the GREIT-trained (companion) networks; B0028 and B0116 state that the GREIT row reuses the companion study's seeds 0-29"},
+        {"anchor_type": "computation", "locator": "B0057 v5 vs v6", "quote": "difflib: the inserted clause plus two trims ('as the preregistration stated in advance' → 'as the preregistration stated'; 'and this design cannot separate the benefit of three renderings per geometry from that of three times the steps' → 'which this design cannot separate from the benefit of three renderings per geometry'); 175 → 183 words; medians 57, 74.5, 56 to 72.5 and M3′ values +34.7/+44.8, +15.1/+11.7 unchanged"}
+      ],
+      "note": "The two named cells are the only R3 cells whose trained row is GREIT; the Table 2 pointer is correct."
+    },
+    {
+      "item_id": "REV-M1e-9",
+      "obligation_class": "should_fix",
+      "verified_by": "EIC",
+      "criterion": "B0013 cites Zhang2022PhysiolMeas with a verified anchor and a claim matching its abstract; tools/check_recon_draft.py reports 0 orphans and 72 reference-list entries equal to the distinct cited keys.",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        {"anchor_type": "text", "locator": "§1.2 B0013 (v6)", "quote": "Elsewhere, a Siamese network supplied the feature-matching constraint of an unsupervised cardiac-signal separation from chest EIT image series (Zhang et al., 2022a) <!--ref:Zhang2022PhysiolMeas--><!--anchor:quote:Deep%20feature-domain%20matching%20for%20cardiac-related%20component%20separation-->"},
+        {"anchor_type": "api", "locator": "https://api.crossref.org/works/10.1088/1361-6579/ac9c44 (called in this call)", "quote": "title 'Deep feature-domain matching for cardiac-related component separation from a chest electrical impedance tomography image series: proof-of-concept study'; Zhang K, Li M, Liang H, Wang J, Yang F, Xu S, Abubakar A; Physiological Measurement 43:125005, issued 2022-12-28. Abstract (Approach): 'We propose an unsupervised deep-learning method called deep feature-domain matching (DFDM) … a novel Siamese network is designed and trained to learn common features of breath-holding signals; in the second step, the Siamese network is used as a feature-matching constraint between the separated signals and the breath-holding signals.'"},
+        {"anchor_type": "text", "locator": "References B0092 (v6), entry 11", "quote": "Zhang K, Li M, Liang H, Wang J, Yang F, Xu S, et al. Deep feature-domain matching for cardiac-related component separation from a chest electrical impedance tomography image series: proof-of-concept study. Physiol Meas. 2022;43:125005. doi:10.1088/1361-6579/ac9c44"},
+        {"anchor_type": "computation", "locator": "20_DRAFT_v6.md; check_recon_draft.py; refs/refs_in_recon.json", "quote": "'Zhang et al., 2022a' occurs only in B0013 and 'Zhang et al., 2022b' only in B0014 (Zhang2022FBB); list order 11 (2022a) before 17 (2022b) follows first citation. Checker: 84 instances / 72 distinct / orphans 0 / 72 list entries / cited-but-unlisted [] / listed-but-uncited []. Registry: 72 entries; Zhang2022PhysiolMeas and Barber1984JPhysE present; Rusak2020ECCV and Zhang2020TMI absent."}
+      ],
+      "note": "The clause states only what the abstract supports (unsupervised; Siamese network as the feature-matching constraint; cardiac-related separation from a chest EIT image series). The anchor is a substring of the title. The a/b pair is consistent."
+    },
+    {
+      "item_id": "REV-M1e-10",
+      "obligation_class": "should_fix",
+      "verified_by": "EIC",
+      "criterion": "Each of the nine sentences reads as the audit's suggestion (16_ §5 table); citation anchors unchanged; no number changes.",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        {"anchor_type": "text", "locator": "m1 — §2.3 B0030 (v6)", "quote": "the registered 25% lies inside the 20–35% band recommended for region-of-interest definition on functional EIT images, a band defined on per-pixel statistics rather than on a reconstructed amplitude (Pulletz et al., 2006) — PubMed 16636403: 'The definition of the ROI contour as 20-35% of the maximum standard deviation or regression coefficient is recommended' (ten patients); the 'methods recommend' plural is gone, the per-pixel caveat kept"},
+        {"anchor_type": "text", "locator": "m2 — §4.3 B0072 (v6)", "quote": "scanners, whose unitless intensities we take to differ by far less than two orders of magnitude, the choice among normalisation methods changes Dice by less than 0.02 (Albert et al., 2023) — Crossref abstract: 'a difference in Dice of less than 0.02 between the best and worst performing networks'; the intensity premise is now marked as the authors'"},
+        {"anchor_type": "text", "locator": "m3 — §2.2 B0027 (v6)", "quote": "an adequately configured baseline at comparable compute is the control whose absence lets a new architecture appear to beat a U-Net (Isensee et al., 2024) — arXiv 2404.09556 abstract: 'inadequate baselines, insufficient datasets, and neglected computational resources'"},
+        {"anchor_type": "text", "locator": "m5 — §4.5 B0077 (v6)", "quote": "a null against a matched baseline is a kind of result exposed to under-reporting in computational fields (McGreivy and Hakim, 2024; Borji, 2018; Varoquaux and Cheplygina, 2022) — McGreivy abstract (Semantic Scholar): 'reporting biases lead to under-reporting of negative results'; superlative removed"},
+        {"anchor_type": "text", "locator": "m6 — §1.3 B0016 (v6)", "quote": "multi-site segmentation used site-specific normalisation (Liu et al., 2020) — PubMed 32078543: 'we develop Domain-Specific Batch Normalization layers'"},
+        {"anchor_type": "text", "locator": "m7 — §2.2 B0028 (v6)", "quote": "Sharing one encoder between two decoders is hard parameter sharing (Caruana, 1997) — title-only source; the audit's wording ('between the two decoders') minus one article"},
+        {"anchor_type": "text", "locator": "m8 — §2.2 B0028 (v6)", "quote": "seed-to-seed variability can be large (Renard et al., 2020), and here it is of the order of the effects at stake — PubMed 32792540: 'can have a high range of variability'; the magnitude inference is now this study's"},
+        {"anchor_type": "text", "locator": "m10 — §4.4 B0075 (v6)", "quote": "learned harmonisation, which outperformed the location-scale baseline this fixed affine amounts to for CT radiomics (Du et al., 2022) — PubMed 36355196 Key points: CNN harmonisation 'performed better than location-scale (ComBat and centering-scaling)' methods, for radiomics models"},
+        {"anchor_type": "text", "locator": "m12 — §2.4 B0033 (v6)", "quote": "The training-by-evaluation crossing follows an EIT cross-condition design (Jeschke et al., 2025) — PubMed 41228767: 'Four training and four testing datasets … four different levels of electrode displacement' (one study)"},
+        {"anchor_type": "computation", "locator": "B0016, B0027, B0028, B0030, B0033, B0072, B0075, B0077 v5 vs v6", "quote": "ref/anchor marker lists identical in all eight blocks; number-token sets identical in all eight (B0027's '392' vs '392,' is tokenisation of the added comma); checker numbers-in-prose 375, 0 non-derivable"}
+      ],
+      "note": "All nine sentences read as the audit's suggestion or its stated alternative (m2 option 1, m8 optional form). Each abstract named in the dispatch was retrieved in this call; each v6 wording is supported by it. m10's 'amounts to for CT radiomics' is a slightly awkward attachment (the phrase modifies 'outperformed', not 'amounts to'); decision-inert."
+    },
+    {
+      "item_id": "REV-M1e-11",
+      "obligation_class": "should_fix",
+      "verified_by": "R2",
+      "criterion": "S2 Table (B0158): the contact-impedance cell names the default and that EIDORS gives no unit; the GREIT cell says 'radius 0.02 of the model radius'; the Training cell says per-run durations were logged and completion timestamps were not written to the run files; every statement traceable to the named script lines.",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        {"anchor_type": "text", "locator": "S2 Table B0158 (v6), Forward model row", "quote": "electrode contact impedance 0.01 (the `ng_mk_fwd_model` default; EIDORS assigns the value no unit)"},
+        {"anchor_type": "file", "locator": "eidors-v3.8/eidors/meshing/netgen/ng_mk_fwd_model.m L16, L37-L38", "quote": "'%  z_contact:         vector or scalar electrode contact impedance' (no unit named; grep -i 'ohm|unit' over the file: no hit) — 'if nargin<5 / z_contact=0.01; % singular if z_contact=0'"},
+        {"anchor_type": "text", "locator": "S2 Table B0158 (v6), GREIT row", "quote": "noise figure 0.5 (nominal) calibrated on one central target of radius 0.02 of the model radius (`target_size`)"},
+        {"anchor_type": "file", "locator": "eidors-v3.8/eidors/models/mk_GREIT_model.m L28-L29, L378-L384; EIT_noise_geometry/src/p2_config.m L21-L22", "quote": "'%     target_size - size of simulated targets as proportion of mesh radius / (default: 0.02)' — 'if ~isfield(opt,'noise_figure_targets'); R = max(max(fmdl.nodes(:,1:2)) - min(fmdl.nodes(:,1:2))); xyzr = mean(fmdl.nodes); xyzr(3) = opt.target_plane; xyzr(4) = mean(opt.target_size)*0.5*R;' — R is the xy node extent (the diameter, 4 for the radius-2 cylinder), so xyzr(4) = 0.02 × 0.5 × 4 = 0.04 = 0.02 × model radius; P.greit sets 'target_size', 0.02"},
+        {"anchor_type": "text", "locator": "S2 Table B0158 (v6), Training row", "quote": "two parallel processes; per-run durations were logged, completion timestamps were not written to the run files"},
+        {"anchor_type": "file", "locator": "tools/train_arms.py L139, L174-L184, L229-L240", "quote": "t0 = time.time() … meta = {'arm', 'seed', 'width_mult', 'params', 'best_val', 'best_epoch', 'epochs_run', 'minutes': (time.time() - t0) / 60, 'protocol', 'history'} written to <tag>.json; run_meta = {'data', 'data_sha256', 'prereg_sha256', 'norm', 'fov_px', 'device'} written to run_meta.json — 'minutes' is an elapsed duration; neither record has a timestamp field (grep -i 'timestamp|datetime|strftime|isoformat': no hit)"},
+        {"anchor_type": "computation", "locator": "B0158 v5 vs v6; tools/recon_draft_tables.py L157, L160, L167", "quote": "difflib: changes confined to the three cells named by the criterion; the Forward model, GREIT and Training rows of v6 are byte-identical to the generator's literal rows at L157, L160, L167; all 20 table rows keep every number (number-token sets identical v5 vs v6)"}
+      ],
+      "note": "All three qualifiers now trace to source lines. Residual caveats, decision-inert: (i) the Training-cell statement describes tools/train_arms.py as it stands today (sha256 623104fa…); B0028 asserts the companion campaign used the same code, and the raw runs_20db/ files are not on this machine, so the statement is traced to the code, not to the run files themselves; (ii) mk_GREIT_model.m's parse_options default for target_size is 0.05 (L331-L332) although the header comment says 0.02 — irrelevant here because p2_config.m passes 0.02 explicitly; (iii) 'EIDORS assigns the value no unit' is an absence statement resting on the header comment and a grep of the file."
+    }
+  ],
+  "trim_audit": {
+    "method": "character-level difflib on each of the 23 changed blocks, v5 → v6; ref/anchor marker lists compared; number-token sets compared; standing labels, fixed verbatim sentences (S3 Table quotations) and section pointers checked by eye",
+    "fixed_sentences": "the only fixed sentence inside a changed block is the R3 reading in B0049; byte-identical to v5 and to S3 Table B0160. The L1 reading in B0059 ('the recipe stays in-pool only for that reconstructor, and the loss is reported as the cost of deploying on an unseen reconstructor') is also byte-identical to v5 and to B0160",
+    "content_lost": "none: no fact, number, standing label, citation or fixed sentence was removed from the manuscript",
+    "per_block": [
+      {"block": "B0013", "words": "204 → 229", "removed": "'Three studies of ours' → 'Three of our studies'; 'currently in review' → 'in review'", "lost": "none"},
+      {"block": "B0016", "words": "88 → 88", "removed": "'needed' → 'used' (m6)", "lost": "none"},
+      {"block": "B0024", "words": "200 → 198", "removed": "'; the settings are listed in S2 Table' → ' listed in S2 Table'; 'set by bisection so that its noise figure matched GREIT's realised value' → 'set by bisection to match GREIT's realised noise figure'; 'strongly influence what a reconstructor produces' → 'strongly influence a reconstructor's output'", "lost": "none (hp 0.0016, 0.607, 0.602, 0.831, 64 × 64, 32 × 32 all kept)"},
+      {"block": "B0027", "words": "243 → 234", "removed": "'the original width being 32 channels at the finest level' → '32 channels wide at the finest level'; 'and is the architecture under test' → ': the architecture under test'; 'from fine to coarse' → 'fine to coarse'; 'to within one percent' → 'within one percent'; 'so that the remaining difference is whether' → 'leaving only whether'; 'adequately configured, capacity-matched baseline' → 'adequately configured baseline at comparable compute' (m3)", "lost": "none (all channel counts and both parameter counts kept)"},
+      {"block": "B0028", "words": "316 → 302", "removed": "'The second decoder is hard parameter sharing' → 'Sharing one encoder between two decoders is hard parameter sharing' (m7); 'together with a multi-weighted loss and attributed its improvement to their interaction' → 'with a multi-weighted loss and credited their interaction'; 'a defensible default' → 'defensible'; 'with early stopping' → ', early stopping'; the parenthesis '(subtract the training-split mean, divide by its SD)' deleted; 'referred to below as' → 'called below'; 'Apple MPS backend' → 'MPS backend'; 'a seed defines a replicate rather than an exactly reproducible run' → 'a seed is a replicate, not an exactly reproducible run'; Renard sentence restructured (m8); 'names that row as the reference against which the two R1 cells are read' → 'names that row as the reference for the two R1 cells'; ', so a between-campaign difference' → '; a between-campaign difference'", "lost": "none at manuscript level: the deleted mean/SD parenthesis survives verbatim in substance in S2 Table B0158 Normalisation row ('subtract the mean, divide by the SD of all pixels of the mixed images'), and 'Apple MPS backend' survives in the S2 Training row; the main text now defines the affine only as 'a fixed location–scale standardisation estimated on that dataset's training split'. All training settings, dates, times and seeds kept"},
+      {"block": "B0030", "words": "178 → 175", "removed": "Pulletz clause reworded (m1); 'the network separates … and the correct answer' → 'for a network separating …, the correct answer'; two sentences merged with ', and'; 'reported in every cell and not tested' → 'reported in every cell, not tested'", "lost": "none (25%, 20–35%, 0.01 kept; per-pixel caveat kept)"},
+      {"block": "B0033", "words": "128 → 128", "removed": "'the third, which the network never saw' → 'the third, never seen in training'; 'EIT cross-condition designs' → 'an EIT cross-condition design' (m12)", "lost": "none (frame counts kept)"},
+      {"block": "B0036", "words": "234 → 240", "removed": "'Two further decisions were taken after cells had been read and are recorded' → 'Two further decisions, taken after cells had been read, are recorded'; 'with their timing' → 'with timing'", "lost": "none"},
+      {"block": "B0042", "words": "81 → 78", "removed": "'The use of artificial-intelligence tools is disclosed' → '; artificial-intelligence use is disclosed'", "lost": "none"},
+      {"block": "B0049", "words": "97 → 115", "removed": "nothing; one sentence appended", "lost": "none; fixed sentence byte-identical"},
+      {"block": "B0057", "words": "175 → 183", "removed": "'as the preregistration stated in advance' → 'as the preregistration stated'; 'and this design cannot separate the benefit of three renderings per geometry from that of three times the steps' → 'which this design cannot separate from the benefit of three renderings per geometry'", "lost": "none (both sides of the inseparable pair still named)"},
+      {"block": "B0059", "words": "231 → 223", "removed": "'(D beside, untested, in Table 3)' → '(D beside, untested; Table 3)'; 'margin, and L1 is' → 'margin; L1 is'; 'in-pool reference cells' → 'in-pool comparison cells'; 'the source they had not seen' → 'the unseen source'; 'how well the two-source pool covers' → 'how well the pool covers'; 'the order is not a ranking of reconstructors' → 'the order does not rank reconstructors'", "lost": "none ('two-source pools' still named earlier in the block; all CIs and Dice levels kept; L1 fixed sentence byte-identical)"},
+      {"block": "B0069", "words": "176 → 173", "removed": "'the test came out falsified' → 'the test was falsified'; 'and that restriction is a tested result' → 'a tested restriction'; '; this is a post-hoc sensitivity statement' → ', a post-hoc sensitivity statement'; 'it is not a convention' → 'it is no convention'", "lost": "none"},
+      {"block": "B0072", "words": "171 → 165", "removed": "'for a reason the preregistration did not anticipate and the pilot did not check, and the failure was found only when' → 'for a reason neither the preregistration nor the pilot anticipated, found only when'; 'whose unitless intensities differ by' → ', whose unitless intensities we take to differ by' (m2); 'so that the network's response' → 'so the network's response'", "lost": "none of substance; 'the pilot did not check' is now 'the pilot [did not] anticipate' — a slight shift of verb (checking vs anticipating), decision-inert"},
+      {"block": "B0075", "words": "194 → 195", "removed": "'where a network's tolerance differs' → 'where tolerance differs'; 'outperforms the location-scale baseline this fixed affine amounts to' → 'outperformed the location-scale baseline this fixed affine amounts to for CT radiomics' (m10)", "lost": "none"},
+      {"block": "B0077", "words": "155 → 149", "removed": "'four R3 cells with unreadable input, two M1 cells with unreadable input' → 'four R3 and two M1 cells with unreadable input'; 'the design did not succeed in posing' → 'the design failed to pose'; 'the kind of result most exposed' → 'a kind of result exposed' (m5)", "lost": "none (twenty, twelve, eight, 9.5, 44%, 96% kept)"},
+      {"block": "B0078", "words": "177 → 177", "removed": "'. Three facts answer it.' → '; three facts answer it.'; 'met the authors' stated expectations rather than surprising them' → 'met rather than surprised the authors' stated expectations'", "lost": "none (hit rates kept)"},
+      {"block": "B0092", "words": "1943 → 1994", "removed": "nothing; two entries inserted (11 Zhang 2022, 32 Barber and Brown 1984) and the following entries renumbered; all 70 prior strings byte-identical apart from their numbers", "lost": "none"},
+      {"block": "B0112", "words": "148 → 148", "removed": "'In-pool reference cells' → 'In-pool comparison cells'", "lost": "none"},
+      {"block": "B0114", "words": "167 → 167", "removed": "'In-pool reference cells' → 'In-pool comparison cells'", "lost": "none (all 24 Dice values and 10 CIs kept)"},
+      {"block": "B0116", "words": "374 → 375", "removed": "'in-pool references (reported)' → 'in-pool comparison cells (reported)'", "lost": "none"},
+      {"block": "B0150", "words": "68 → 68", "removed": "'repository tag for this paper' → 'repository tag, set at submission'", "lost": "none"},
+      {"block": "B0158", "words": "1068 → 1082", "removed": "'0.01 in model units (the `ng_mk_fwd_model` default)' → '0.01 (the `ng_mk_fwd_model` default; EIDORS assigns the value no unit)'; 'radius 0.02 (`target_size`)' → 'radius 0.02 of the model radius (`target_size`)'; 'no per-seed completion times were logged' → 'per-run durations were logged, completion timestamps were not written to the run files'", "lost": "none (the 'in model units' qualifier was the untraceable one the scoped v5 addendum named; its removal is the fix)"}
+    ]
+  },
+  "fact_checks": [
+    {"statement": "Barber and Brown 1984: title 'Applied potential tomography', authors D C Barber and B H Brown, J. Phys. E: Sci. Instrum. 17(9):723-733, 1984, ISSN 0022-3735", "source": "Crossref API works/10.1088/0022-3735/17/9/002 (this call)", "status": "traced; B0092 entry 32 matches every field"},
+    {"statement": "journal abbreviation 'J Phys E' is the NLM MedlineTA", "source": "NCBI esummary db=nlmcatalog id=1276760 (this call): medlineta 'J Phys E', ISSN 0022-3735, published v. 3-22 1970-1989", "status": "traced"},
+    {"statement": "anchor 'Applied potential tomography' is a substring of the title", "source": "Crossref title (exactly the title)", "status": "traced"},
+    {"statement": "Zhang 2022a: Siamese network as feature-matching constraint of an unsupervised cardiac-related separation from a chest EIT image series; Physiol Meas 43:125005, 2022", "source": "Crossref API works/10.1088/1361-6579/ac9c44 abstract and metadata (this call)", "status": "traced; B0013 clause within the abstract; anchor is a title substring; B0092 entry 11 matches"},
+    {"statement": "m1 Pulletz: 20-35% band is one study's recommendation (10 patients)", "source": "PubMed efetch PMID 16636403 (this call)", "status": "traced; v6 wording no longer attributes it to 'methods'"},
+    {"statement": "m2 Albert: Dice difference < 0.02 between normalisation methods; nothing about intensity ranges", "source": "Crossref abstract 10.3390/app13158923 (this call)", "status": "traced; premise marked 'we take to'"},
+    {"statement": "m3 Isensee: inadequate baselines, insufficient datasets, neglected computational resources", "source": "arXiv 2404.09556 abstract (export.arxiv.org API and arxiv.org/abs meta, this call)", "status": "traced"},
+    {"statement": "m5 McGreivy: reporting biases lead to under-reporting of negative results (no superlative)", "source": "Semantic Scholar abstract for 10.1038/s42256-024-00897-5 (Crossref carries no abstract) (this call)", "status": "traced"},
+    {"statement": "m6 Liu: MS-Net develops domain-specific batch normalisation", "source": "PubMed efetch PMID 32078543 (this call)", "status": "traced"},
+    {"statement": "m7 Caruana: hard parameter sharing", "source": "title-only source (as the audit records); wording change only", "status": "not an abstract check; wording matches the audit's suggestion"},
+    {"statement": "m8 Renard: deep-learning segmentation 'can have a high range of variability'", "source": "PubMed efetch PMID 32792540 (this call)", "status": "traced; magnitude inference now this study's"},
+    {"statement": "m10 Du: CNN harmonisation outperformed location-scale (ComBat, centering-scaling) methods for radiomics models", "source": "PubMed efetch PMID 36355196 (this call), Results and Key points", "status": "traced"},
+    {"statement": "m12 Jeschke: one study, four training × four testing displacement levels", "source": "PubMed efetch PMID 41228767 (this call)", "status": "traced"},
+    {"statement": "contact impedance 0.01 is the ng_mk_fwd_model default", "source": "eidors/meshing/netgen/ng_mk_fwd_model.m:37-38", "status": "traced"},
+    {"statement": "EIDORS assigns the contact impedance value no unit", "source": "ng_mk_fwd_model.m:16 ('vector or scalar electrode contact impedance'); grep -i 'ohm|unit' over the file: no hit", "status": "traced (absence)"},
+    {"statement": "noise-figure calibration target radius = 0.02 of the model radius", "source": "mk_GREIT_model.m:28-29 (comment: proportion of mesh radius; default 0.02), :378-384 (R = xy extent = diameter; xyzr(4) = mean(target_size)·0.5·R = target_size × radius); p2_config.m:21-22 (target_size 0.02)", "status": "traced; for a radius-2 cylinder xyzr(4) = 0.04 = 0.02 × 2"},
+    {"statement": "parse_options default target_size", "source": "mk_GREIT_model.m:331-332 (opt.target_size = 0.05 when absent)", "status": "noted: code default 0.05 differs from the header comment's 0.02; not relevant, the project passes 0.02"},
+    {"statement": "per-run durations logged; no completion timestamps in the run files", "source": "tools/train_arms.py:139 (t0 = time.time()), :174-184 (per-seed JSON with 'minutes': (time.time() - t0)/60 and no timestamp field), :229-240 (run_meta.json with data/hash/norm/fov/device fields only); grep -i 'timestamp|datetime|strftime|isoformat': no hit", "status": "traced to the current script (sha256 623104fa…); the companion campaign's own run files (runs_20db/) are not on this machine"},
+    {"statement": "GREIT → GN and GREIT → BP are the R3 cells whose trained row is GREIT", "source": "Table 2 B0110 rows 1-2 (X → Y with X = GREIT); B0028 and B0116 (GREIT row = companion study's seeds 0-29)", "status": "traced"},
+    {"statement": "'(Acknowledgments)' pointer lands where the panels are described", "source": "B0087: 'ran the simulated peer-review panels recorded in the repository'", "status": "traced"},
+    {"statement": "B0013's marker points at an existing statement", "source": "B0088 '## Related manuscript'; B0089 text with its own marker", "status": "traced"},
+    {"statement": "no 'reference cells' / 'in-pool reference(s)' remain; 'reference' kept for the target image and the GREIT reference row", "source": "regex over all 160 blocks of v6; B0030, B0046, B0105-B0107, B0116", "status": "traced"},
+    {"statement": "S2 Forward model, GREIT, Training rows; Table 3 caption; Table 4 Second addendum row are the generator's literal output", "source": "tools/recon_draft_tables.py L157, L160, L167 (B0158 rows), L111 (B0112 caption), L144 (B0116 row)", "status": "traced (byte-identical)"},
+    {"statement": "Table 3 footnote generator wording", "source": "tools/recon_draft_tables.py L125 still emits 'In-pool reference cells (B_wide / D Dice)'", "status": "generator not updated for B0114; the manuscript block is correct; regeneration would revert it"}
+  ],
+  "new_issues": [],
+  "observations": [
+    {"kind": "generator drift (not a manuscript defect)", "locator": "tools/recon_draft_tables.py L125 vs B0114", "text": "The Table 3 footnote generator still reads 'In-pool reference cells'; B0114 in v6 reads 'In-pool comparison cells'. The other three renamed surfaces (L111, L144 and B0059's prose) are consistent. A later regeneration would reintroduce the old name into B0114. One-line fix recommended before the next regeneration; decision-inert for v6."},
+    {"kind": "trim moved a definition", "locator": "§2.2 B0028", "text": "The parenthesis '(subtract the training-split mean, divide by its SD)' was removed; the main text now defines the affine only as 'a fixed location–scale standardisation estimated on that dataset's training split', and the operational definition survives in S2 Table's Normalisation row. 'SD' in B0023 ('training-split SD ratio') remains unexpanded anywhere (pre-existing, noted in the v5 addendum). Decision-inert."},
+    {"kind": "wording", "locator": "§4.3 B0072", "text": "'the pilot did not check' became 'neither the preregistration nor the pilot anticipated'; checking and anticipating are not the same verb. Decision-inert."},
+    {"kind": "style", "locator": "§4.4 B0075", "text": "'the location-scale baseline this fixed affine amounts to for CT radiomics' attaches the qualifier awkwardly; the intended reading (outperformed … for CT radiomics) is recoverable. Decision-inert."},
+    {"kind": "source caveat", "locator": "S2 Table B0158, Training row", "text": "'per-run durations were logged, completion timestamps were not written to the run files' is traced to tools/train_arms.py as it stands today; the companion campaign's run files are not on this machine, so the statement rests on B0028's 'same machine and code'. Decision-inert."},
+    {"kind": "source note", "locator": "mk_GREIT_model.m", "text": "parse_options defaults target_size to 0.05 (L331-L332) while the header comment says 0.02; the project passes 0.02 explicitly, so S2 Table is unaffected."}
+  ],
+  "candidate_decision": "Accept (scoped)",
+  "rule_fired": "All eleven round-1e items FULLY_ADDRESSED; no regression-attributed new issue in the 23 changed blocks; no trim removed a fact, number, standing label, citation or fixed sentence; chain bound; checkers within every limit (7,998 ≤ 8,000 words; abstract 296; 84/72/0/72 citations; 0 non-derivable numbers). The round-1d scoped Accept stands and the 1e items it left open are closed.",
+  "verdict_counts": {"FULLY_ADDRESSED": 11, "PARTIALLY_ADDRESSED": 0, "NOT_ADDRESSED": 0, "MADE_WORSE": 0, "CANNOT_VERIFY": 0},
+  "judge": "Claude Fable 5.1, scoped seat-verifier call, fresh context, 2026-10-31",
+  "disclosure": "same model family as the revision; not an independent error process",
+  "disclosure_long": "This verification round ran on the same model family that drove the revisions; over-optimization to this judge's latent biases is possible (Ren et al. 2026, arXiv:2607.13104 §8.1.2).",
+  "files_not_read": [
+    "14_RESPONSE_TO_PANEL_round1.md",
+    "revision-authority-round1e/author_event_20261031e.txt",
+    "revision-authority-round1e/author-choices.json",
+    "revision-authority-round1e/author-adjudication.json (sha256 computed only)",
+    "NOTES_*",
+    "03_PAPER_OUTLINE.md"
+  ]
+}

@@ -1,0 +1,43 @@
+prereg hash 0060eedf558574d1b6df92735ccd9d41a998ae42e6d71c1544240948c0808e12 = addendum state; dataset hash matches section 11.4
+Tue Oct  6 09:15:53 CST 2026
+training done
+Thu Oct  8 19:13:33 CST 2026
+runs_recon_mixed_ps:       60 checkpoints (expect 60)
+=== M1': mixed-ps -> greit ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/mixedps__greit/per_image.csv, per_seed.csv, summary.json
+=== M1': mixed-ps -> gn ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/mixedps__gn/per_image.csv, per_seed.csv, summary.json
+=== M1': mixed-ps -> bp ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/mixedps__bp/per_image.csv, per_seed.csv, summary.json
+=== E1 (exploratory): train greit -> eval gn ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/greit__gn_e1/per_image.csv, per_seed.csv, summary.json
+=== E1 (exploratory): train greit -> eval bp ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/greit__bp_e1/per_image.csv, per_seed.csv, summary.json
+=== E1 (exploratory): train gn -> eval greit ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/gn__greit_e1/per_image.csv, per_seed.csv, summary.json
+=== E1 (exploratory): train gn -> eval bp ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/gn__bp_e1/per_image.csv, per_seed.csv, summary.json
+=== E1 (exploratory): train bp -> eval greit ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/bp__greit_e1/per_image.csv, per_seed.csv, summary.json
+=== E1 (exploratory): train bp -> eval gn ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/bp__gn_e1/per_image.csv, per_seed.csv, summary.json
+mixed-ps row and E1 scored
+Thu Oct  8 19:21:58 CST 2026

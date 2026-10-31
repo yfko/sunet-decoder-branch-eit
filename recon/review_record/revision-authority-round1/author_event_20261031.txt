@@ -1,0 +1,10 @@
+Author event for revision round 1 of the RECON tier-3 manuscript (RECON_paper/manuscript/06_DRAFT_v1.md), 2026-10-31.
+
+Source: the PI's session-opening instruction of 2026-10-31 (pasted runbook NEXT_SESSION_PROMPT_20261021_起草接手.md), which set the steps for this session:
+「… → 五席審查（academic-paper-reviewer full，契約 reviewer_full/v2）→ 修訂走 patch 鏈。RESULTS §0–§11、預註冊、判讀三部分、核心論文投稿包、mini 的 checkpoint 都不動。每一步做完記 NOTES。」
+
+Triage applied under that mandate (the PI was not present at triage time; the default follows the PI's triage of the two previous panels of this project, 2026-10-10 and 2026-10-17, which accepted every must_fix and should_fix item and decided the consider items one by one):
+- every must_fix and should_fix roadmap item: will_address;
+- every consider item: declined for this round, listed for the PI's decision;
+- no change to any registered verdict, number, hash, fixed interpretation sentence or scope rule; roadmap targets are manuscript blocks only.
+The PI may overturn any of these choices; the roadmap and this sidecar record exactly what was applied.

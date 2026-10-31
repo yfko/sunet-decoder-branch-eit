@@ -1,0 +1,58 @@
+{
+ "pooled_affine": {
+  "mu": 1.1066456551134252e-07,
+  "sd": 0.9999998211860657
+ },
+ "splits": {
+  "train": 8640,
+  "val": 1080,
+  "test": 1080
+ },
+ "fov_masks_identical": true,
+ "per_source": {
+  "greit": {
+   "own_affine": {
+    "mu": -4.265506267547607,
+    "sd": 8.903258323669434
+   },
+   "max_abs_input_difference_vs_own_row": 1.430511474609375e-06,
+   "input_frame_sd_median": 0.8169726133346558,
+   "input_min_median": -2.6790969371795654,
+   "input_max_median": 1.0318999290466309,
+   "heart_target_frame_range_median": 0.666596531867981,
+   "heart_target_sd_train": 0.14438778162002563,
+   "heart_qa_cover_original": 0.0862866584056175,
+   "heart_qa_cover_after_round_trip": 0.0862866584056175
+  },
+  "gn": {
+   "own_affine": {
+    "mu": -0.02130146324634552,
+    "sd": 0.05556914582848549
+   },
+   "max_abs_input_difference_vs_own_row": 1.9073486328125e-06,
+   "input_frame_sd_median": 0.8473144769668579,
+   "input_min_median": -2.9170243740081787,
+   "input_max_median": 1.4692310094833374,
+   "heart_target_frame_range_median": 0.3079082667827606,
+   "heart_target_sd_train": 0.08428912609815598,
+   "heart_qa_cover_original": 0.16485956216439487,
+   "heart_qa_cover_after_round_trip": 0.16485956216439487
+  },
+  "bp": {
+   "own_affine": {
+    "mu": -0.024770749732851982,
+    "sd": 0.04728993773460388
+   },
+   "max_abs_input_difference_vs_own_row": 1.430511474609375e-06,
+   "input_frame_sd_median": 0.8127541542053223,
+   "input_min_median": -3.2773799896240234,
+   "input_max_median": 1.0757207870483398,
+   "heart_target_frame_range_median": 0.3901338279247284,
+   "heart_target_sd_train": 0.0987803116440773,
+   "heart_qa_cover_original": 0.13304419661296985,
+   "heart_qa_cover_after_round_trip": 0.13304419661296985
+  }
+ },
+ "input_frame_sd_max_over_min": 1.0425224806083302,
+ "heart_target_sd_max_over_min": 1.7130060341577615
+}

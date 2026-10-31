@@ -1,0 +1,74 @@
+{
+  "report_format_version": "1.3",
+  "mode": "patch",
+  "base_path": "23_DRAFT_v7.md",
+  "output_path": "30_DRAFT_v8.md",
+  "base_draft_hash": "d02ec9b62ff1",
+  "output_draft_hash": "9085e617e453",
+  "patch_digest": "195689c958f55289e3b004322dfc23f7d70e36318c2593c573616523eb54feb6",
+  "revision_round": 7,
+  "authorization_context": "review_roadmap",
+  "authorization_witness": {
+    "status": "pass",
+    "roadmap_sha256": "711052936e15a65116e522308a32b6ce674453ee76a6b366a8efaa64bc6b0ab9",
+    "author_adjudication_sha256": "38e0e2d1842786a746ebf470e968abdc4551395274900dd161e1310ba0b5fcc0",
+    "author_decision_digest": "a1d0fa514fbbfe27e62dfdc8f7e53387b40c10d17a4dac7fb32d2df5db8ee885",
+    "claim_surface_manifest_sha256": "744e42a40b9b48db31dcc4df318410c48e841bf4dac379afcc13710922c72d64",
+    "registered_claim_surfaces_checked": 0,
+    "unregistered_claim_drift_review_required": true
+  },
+  "ops_applied": [
+    {
+      "op_index": 0,
+      "op": "replace_block",
+      "block_id": "B0087",
+      "roadmap_item_ids": [
+        "REV-M1g-1"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 1,
+      "op": "delete_block",
+      "block_id": "B0153",
+      "roadmap_item_ids": [
+        "REV-M1g-2"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 2,
+      "op": "delete_block",
+      "block_id": "B0154",
+      "roadmap_item_ids": [
+        "REV-M1g-2"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    }
+  ],
+  "fresh_block_ids": [],
+  "pure_move_pairs": [],
+  "structural_flags": {
+    "heading_op_indexes": [
+      1
+    ],
+    "section_count_delta": -1,
+    "touched_ratio": 0.0187,
+    "touched_ratio_threshold": 0.6,
+    "touched_ratio_exceeded": false,
+    "any": true,
+    "acknowledged": true
+  },
+  "counters": {
+    "blocks_total": 160,
+    "blocks_touched": 3,
+    "blocks_preserved_byte_identical": 157,
+    "preserved_ratio": 0.9812
+  }
+}

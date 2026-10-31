@@ -1,0 +1,68 @@
+{
+ "D|loro-greit->greit|own": {
+  "mu": -4.265506267547607,
+  "sd": 8.903258323669434,
+  "input_min": -2.679096221923828,
+  "input_max": 1.0318999290466309,
+  "input_frame_sd": 0.8169723749160767,
+  "pred_qa_cover": 0.5023810753132314,
+  "target_qa_cover": 0.0862866584056175,
+  "pred_background_over_target_peak": 0.0587204284965992,
+  "pred_peak_over_target_peak": 0.3919946849346161
+ },
+ "B_wide|loro-greit->greit|own": {
+  "mu": -4.265506267547607,
+  "sd": 8.903258323669434,
+  "input_min": -2.679096221923828,
+  "input_max": 1.0318999290466309,
+  "input_frame_sd": 0.8169723749160767,
+  "pred_qa_cover": 0.40777227041167563,
+  "target_qa_cover": 0.0862866584056175,
+  "pred_background_over_target_peak": 0.04528704658150673,
+  "pred_peak_over_target_peak": 0.37126296758651733
+ },
+ "D|loro-gn->gn|own": {
+  "mu": -0.02130146324634552,
+  "sd": 0.05556914582848549,
+  "input_min": -2.9170236587524414,
+  "input_max": 1.4692308902740479,
+  "input_frame_sd": 0.8473143577575684,
+  "pred_qa_cover": 0.10985302216714855,
+  "target_qa_cover": 0.16485956216439487,
+  "pred_background_over_target_peak": 0.3386715054512024,
+  "pred_peak_over_target_peak": 4.596678256988525
+ },
+ "B_wide|loro-gn->gn|own": {
+  "mu": -0.02130146324634552,
+  "sd": 0.05556914582848549,
+  "input_min": -2.9170236587524414,
+  "input_max": 1.4692308902740479,
+  "input_frame_sd": 0.8473143577575684,
+  "pred_qa_cover": 0.11444737023268622,
+  "target_qa_cover": 0.16485956216439487,
+  "pred_background_over_target_peak": 0.34440723061561584,
+  "pred_peak_over_target_peak": 5.197507858276367
+ },
+ "D|loro-bp->bp|own": {
+  "mu": -0.024770749732851982,
+  "sd": 0.04728993773460388,
+  "input_min": -3.2773795127868652,
+  "input_max": 1.0757207870483398,
+  "input_frame_sd": 0.8127539753913879,
+  "pred_qa_cover": 0.0913723667905824,
+  "target_qa_cover": 0.13304419661296985,
+  "pred_background_over_target_peak": -0.15000560879707336,
+  "pred_peak_over_target_peak": 1.7315080165863037
+ },
+ "B_wide|loro-bp->bp|own": {
+  "mu": -0.024770749732851982,
+  "sd": 0.04728993773460388,
+  "input_min": -3.2773795127868652,
+  "input_max": 1.0757207870483398,
+  "input_frame_sd": 0.8127539753913879,
+  "pred_qa_cover": 0.14739174583505438,
+  "target_qa_cover": 0.13304419661296985,
+  "pred_background_over_target_peak": -0.1284683644771576,
+  "pred_peak_over_target_peak": 1.158726692199707
+ }
+}

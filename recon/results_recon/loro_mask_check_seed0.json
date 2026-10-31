@@ -1,0 +1,50 @@
+{
+ "D|loro-greit->greit|own": {
+  "pred_qa_cover": 0.5023810753132314,
+  "pred_qa_cover_after_median_offset_removal": 0.21834125017210518,
+  "mask_share_from_negative_pixels": 0.10141314038781692,
+  "dsc_as_scored": 0.4163124199461746,
+  "dsc_after_median_offset_removal": 0.6054412987255526,
+  "dsc_positive_part_only": 0.45079972942911534
+ },
+ "B_wide|loro-greit->greit|own": {
+  "pred_qa_cover": 0.40777227041167563,
+  "pred_qa_cover_after_median_offset_removal": 0.2451896599201432,
+  "mask_share_from_negative_pixels": 0.14208728616773453,
+  "dsc_as_scored": 0.4713927775611084,
+  "dsc_after_median_offset_removal": 0.5672236025905786,
+  "dsc_positive_part_only": 0.5232416642937624
+ },
+ "D|loro-gn->gn|own": {
+  "pred_qa_cover": 0.10985302216714855,
+  "pred_qa_cover_after_median_offset_removal": 0.08841818119234476,
+  "mask_share_from_negative_pixels": 0.0,
+  "dsc_as_scored": 0.79796577734613,
+  "dsc_after_median_offset_removal": 0.698000019761312,
+  "dsc_positive_part_only": 0.79796577734613
+ },
+ "B_wide|loro-gn->gn|own": {
+  "pred_qa_cover": 0.11444737023268622,
+  "pred_qa_cover_after_median_offset_removal": 0.09388510257469365,
+  "mask_share_from_negative_pixels": 7.694675284702986e-06,
+  "dsc_as_scored": 0.8085708495361215,
+  "dsc_after_median_offset_removal": 0.7238803627340016,
+  "dsc_positive_part_only": 0.8085733547281321
+ },
+ "D|loro-bp->bp|own": {
+  "pred_qa_cover": 0.0913723667905824,
+  "pred_qa_cover_after_median_offset_removal": 0.10901056725870852,
+  "mask_share_from_negative_pixels": 0.3225836689624874,
+  "dsc_as_scored": 0.5459211018883116,
+  "dsc_after_median_offset_removal": 0.7032929897538156,
+  "dsc_positive_part_only": 0.7494814712211365
+ },
+ "B_wide|loro-bp->bp|own": {
+  "pred_qa_cover": 0.14739174583505438,
+  "pred_qa_cover_after_median_offset_removal": 0.12498192895497727,
+  "mask_share_from_negative_pixels": 0.3930074587047377,
+  "dsc_as_scored": 0.5061379708082615,
+  "dsc_after_median_offset_removal": 0.651235508615986,
+  "dsc_positive_part_only": 0.6543503020535291
+ }
+}

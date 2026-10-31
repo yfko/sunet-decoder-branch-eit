@@ -1,0 +1,180 @@
+{
+  "round_id": "sunet-recon-tier3-rereview-round1-20261031",
+  "scope": "round-1d blocks",
+  "scope_long": "scoped seat-verifier call (Phase 2B' shape), fresh context, 2026-10-31: verification of roadmap items REV-M1d-1..5 only (blocks B0023, B0028, B0066, B0074, B0116, B0158); regression attribution confined to these six blocks; previously-missed issues out of scope by instruction",
+  "revision_round": 4,
+  "judged_original_path": "17_DRAFT_v4.md",
+  "base_sha256": "6379490727ef0fe5a2452a1d10f8e5693c091a0839a333e32f1b57e90aeaeb66",
+  "judged_revised_path": "19_DRAFT_v5.md",
+  "revised_manuscript_sha256": "bf252f799a3a489d8dc1a7531ab51cfcd43e28820c4af15ade33daf6a441c732",
+  "patch_path": "revision-authority-round1d/revision_patch_round1d.json",
+  "patch_sha256": "1ecf52149abd233583f6acfe7731c4a8f788173bbc10914d384a100d3d4f2cb2",
+  "apply_report_path": "19_DRAFT_v5.md.apply-report.json",
+  "apply_report_sha256": "37f0075cc59c916b0e337df0d62f2f80a0f47032331417554dc386a897266853",
+  "roadmap_path": "revision-authority-round1d/roadmap.json",
+  "roadmap_sha256": "e2b2144d46f3fc8539843662f7975620c9a6bd8e054449b2055ea1359a184a87",
+  "context_sha256": {
+    "17_DRAFT_v4.md.block-manifest.json": "a820e6e56fb6d3477e68baa6abddde3101c97b95e51555314d0dffed6f6f60da",
+    "19_DRAFT_v5.md.block-manifest.json": "600823a6303b58fea6157a8825ca8edeff1379bfde41224f5fc8fb9b9d40ac1e",
+    "revision-authority-round1d/claim-surface-manifest.json": "6e4d0ed12189e570717ef387944e1e4d3b0d251907f8f3cfa5bd5d7e3cda07c0",
+    "revision-authority-round1d/author-adjudication.json (hashed, not read)": "bbd5c83b351fd2f04c8307381aea591b0b39b60da90c540c00a1df67f9ae260b",
+    "18_REVIEWER_PANEL_rereview_round1.md": "e2307b8f5fb24afb349fab4a30fb4935f77181d079e4c8ff940878624e3b4cbe",
+    "16b_CITATION_RECHECK_v4.md": "dda43d4323e7f568d0ed75c7f3987eae6f540463182879901ba5204ee1622554",
+    "phase_rereview_round1_20261031/DISPATCH_scoped_v5.md": "e32909c57f4f4e09772ffad91e820e852075a78e67a16326e3567d134612d7f9",
+    "../../RESULTS_STUDY2.md": "3e1f48d9b20d6a2993905ae10eb48c37144344e93c0a06bc6feb472fafce59d7",
+    "../../PREREGISTRATION_RECON.sha256": "de3e548e60deb691cdcb9b1815af1a3ccf0eabb2fda371a937b983259ca3e78f",
+    "../../tools/recon_draft_tables.py": "9c7a38ad7e6378bc7019652944b5477beee08a030b9e8915b559f7559416b5c0"
+  },
+  "chain_ok": true,
+  "chain_check": {
+    "base_draft_hash_matches": true,
+    "output_draft_hash_matches": true,
+    "patch_digest_matches_patch_file_sha256": true,
+    "roadmap_sha256_matches": true,
+    "block_manifest_sha256_matches_roadmap": true,
+    "claim_surface_manifest_sha256_matches": true,
+    "author_adjudication_sha256_matches": true,
+    "ops_count": 6,
+    "blocks_total": 160,
+    "block_order_identical": true,
+    "preamble_identical": true,
+    "blocks_changed": ["B0023", "B0028", "B0066", "B0074", "B0116", "B0158"],
+    "blocks_byte_identical": 154,
+    "patch_old_hash_equals_v4_manifest": {"B0023": true, "B0028": true, "B0066": true, "B0074": true, "B0116": true, "B0158": true},
+    "patch_old_hash_equals_recomputed_sha256_12_of_v4_block": {"B0023": true, "B0028": true, "B0066": true, "B0074": true, "B0116": true, "B0158": true},
+    "patch_new_text_equals_v5_block": {"B0023": true, "B0028": true, "B0066": true, "B0074": true, "B0116": true, "B0158": true},
+    "v5_manifest_hash_equals_sha256_12_of_new_text": {"B0023": true, "B0028": true, "B0066": true, "B0074": true, "B0116": true, "B0158": true},
+    "hash_convention": "sha256 of the block body (text after the <!--block:BNNNN--> marker, outer whitespace stripped), first 12 hex; reproduced for all 160 blocks of both manifests",
+    "structural_flags": "none (section_count_delta 0; touched_ratio 0.0375; no heading op; no fresh block; no pure move)"
+  },
+  "checker_totals": {
+    "tool": "tools/check_recon_draft.py and tools/check_recon_draft_numbers.py run from the SunetBeta project root on RECON_paper/manuscript/19_DRAFT_v5.md",
+    "main_text_words": 7995,
+    "main_text_ceiling": 8000,
+    "abstract_words": 296,
+    "abstract_ceiling": 300,
+    "ascii_minus_before_digit_in_prose": 0,
+    "numbers_in_prose": 375,
+    "numbers_not_derivable": 0,
+    "citations": "82 instances, 70 distinct, slugs outside corpus []; cited-but-unlisted []; listed-but-uncited []",
+    "r10b_leak_scan": "clean"
+  },
+  "items": [
+    {
+      "item_id": "REV-M1d-1",
+      "obligation_class": "must_fix",
+      "verified_by": "EIC",
+      "criterion": "B0023 names the reconstructors in full or after their definition; no abbreviation is used before it is defined.",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        {"anchor_type": "text", "locator": "§2.1 B0023 (v5)", "quote": "(training-split SD ratio; GREIT, Gauss–Newton, back-projection)"},
+        {"anchor_type": "text", "locator": "§2.1 B0024 (v5, unchanged)", "quote": "One-step Gauss–Newton (GN) with a Laplace prior … Back-projection (BP) used the Sheffield back-projection matrix"},
+        {"anchor_type": "computation", "locator": "19_DRAFT_v5.md, all 160 blocks", "quote": "regex \\bGN\\b and \\bBP\\b: first occurrences B0024, B0025, B0031; none in B0001–B0023. GREIT appears from the Abstract (B0006) onward as the algorithm's name, as in v4. difflib v4→v5 on B0023: 5 ops, confined to the parenthesis ('GN, BP' → 'Gauss–Newton, back-projection') and the clause 'which is what makes the cardiac component weak for this simulation' → 'which makes the cardiac component weak in this simulation'; the three ratios 0.14, 0.085, 0.099 and every citation anchor unchanged."}
+      ],
+      "note": "GN and BP are written out in B0023 and first abbreviated in B0024 where each is defined. Decision-inert observation, not attributed to round 1d: 'SD' (training-split SD ratio) is used in B0023 and never expanded anywhere in the manuscript; it was already in v4's B0023 and the re-review did not flag it."
+    },
+    {
+      "item_id": "REV-M1d-2",
+      "obligation_class": "must_fix",
+      "verified_by": "R2",
+      "criterion": "B0074 no longer ranks this study's losses against the analogue range; it calls them losses of the same kind and keeps the two differences that forbid a comparison of magnitudes.",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        {"anchor_type": "text", "locator": "§4.4 B0074 (v5)", "quote": "the 16 to 62 points lost here and the exploratory 19 to 34 points are losses of the same kind, but two differences forbid a comparison of magnitudes: in those studies the label is anatomy and only the input changes with the domain; here the reference is the held-out reconstructor's own cardiac image and changes with it"},
+        {"anchor_type": "text", "locator": "§4.4 B0074 (v5)", "quote": "Those studies used patients and manufacturers; this one simulation, three conventional algorithms and thirty seeds."},
+        {"anchor_type": "computation", "locator": "B0074 v4 vs v5", "quote": "'start where that range ends' absent from v5; difflib: 3 ops ('start where that range ends' → 'are losses of the same kind'; 'And t' → 'T'; ' used' deleted). The four ref/anchor markers (Yan2020RadiolAI, AlBadawy2018MedPhys, each with its quote anchor) are byte-identical to v4. Number sequence identical in v4 and v5: 21, 31, 0.89, 0.91, 0.60, 0.69, 2020, 4, 17, 0.72, 0.76, 0.68, 0.59, 2018, 16, 62, 19, 34. Word count 138 → 137 (16b N1 asked that the fix not lengthen the sentence)."},
+        {"anchor_type": "file", "locator": "16b_CITATION_RECHECK_v4.md L177–L190 (N1)", "quote": "Drop the ranking: \"…are losses of the same kind, but two differences forbid a comparison of magnitudes: …\""}
+      ],
+      "note": "The replacement is 16b's second suggested form. Both differences are kept (label-vs-reference; patients-and-manufacturers vs simulation). The last sentence is now elliptical ('this one simulation, …' with 'used' carried from the first clause); grammatical, decision-inert."
+    },
+    {
+      "item_id": "REV-M1d-3",
+      "obligation_class": "must_fix",
+      "verified_by": "R2",
+      "criterion": "B0028 and the Table 4 registered-state cell give the campaign window as the record gives it (2026-09-24 16:26 to 2026-09-26 00:44) and the hashing time (17:41 on 2026-09-26); S2 Table's training row carries the same window.",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        {"anchor_type": "text", "locator": "§2.2 B0028 (v5)", "quote": "trained between 2026-09-24 16:26 and 2026-09-26 00:44 and scored on 2026-09-26, before the registered state was hashed (17:41)"},
+        {"anchor_type": "text", "locator": "Table 4 B0116 (v5), Registered row", "quote": "seeds 0–29, trained in the campaign of 2026-09-24 16:26 to 2026-09-26 00:44 and scored 2026-09-26, before hashing at 17:41"},
+        {"anchor_type": "text", "locator": "S2 Table B0158 (v5), Training row", "quote": "the reused GREIT row comes from the companion study's 58-seed campaign of 2026-09-24 16:26 to 2026-09-26 00:44 (two parallel processes; no per-seed completion times were logged)"},
+        {"anchor_type": "file", "locator": "../../RESULTS_STUDY2.md L231–L232 (§十之二)", "quote": "訓練 2026-09-24 16:26 開始、09-26 00:44 完成，32 小時 18 分，兩個並行 process。D 與 B_wide × 58 種子 = 116 次全齊（無缺號），`runs_20db/`。"},
+        {"anchor_type": "file", "locator": "../../PREREGISTRATION_RECON.sha256 L1–L2", "quote": "4b4c7a6d… PREREGISTRATION_RECON.md / registered 2026-09-26 17:41 CST after PI confirmation"},
+        {"anchor_type": "file", "locator": "../../results_20db_fix/{per_image,per_seed}.csv, summary.json (mtime)", "quote": "Sep 26 00:45:51 2026 — scoring output of the campaign, consistent with 'scored on 2026-09-26' and before 17:41"},
+        {"anchor_type": "computation", "locator": "B0028, B0116, B0158 (v5)", "quote": "the window string '2026-09-24 16:26' / '2026-09-26 00:44' is present in all three blocks; '17:41' in B0028 and B0116 (the criterion asks the S2 row for the window only). Table 4 row and S2 Training row are byte-identical to the literal rows in tools/recon_draft_tables.py L141 and L167."}
+      ],
+      "note": "The two dates were replaced by the recorded window in all three surfaces and the hashing time added to the two the criterion names; the before-hashing ordering (00:44 scoring < 17:41 hashing) holds. 'No per-seed completion times were logged' is an absence claim: §十之二 records none, results_20db_fix/per_seed.csv has no time column, and the runs_20db directory itself is not present on this machine, so the claim is traceable only to the silence of the surviving records."
+    },
+    {
+      "item_id": "REV-M1d-4",
+      "obligation_class": "must_fix",
+      "verified_by": "EIC",
+      "criterion": "The last sentence of B0066 carries '(first addendum; descriptive)' beside the M2′ quantities.",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        {"anchor_type": "text", "locator": "§4.1 B0066 (v5), last sentence", "quote": "the two ways of doing so differed by −0.08 to +0.36 points with two of six intervals favouring pooling (first addendum; descriptive), a difference this design cannot separate from threefold optimisation steps."},
+        {"anchor_type": "computation", "locator": "B0066 v4 vs v5", "quote": "difflib: exactly 1 op, insert ' (first addendum; descriptive)'; nothing else in the block changed"}
+      ],
+      "note": "The parenthesis sits directly beside the M2′ quantities in the same sentence, matching the standing labels of the other number-carrying clauses of B0066."
+    },
+    {
+      "item_id": "REV-M1d-5",
+      "obligation_class": "must_fix",
+      "verified_by": "R2",
+      "criterion": "S2 Table states the contact impedance value and its source, the GREIT training-target distribution (spiral, radii, plane), the desired-image function and radius, the noise-figure calibration target, and the normalised-difference setting, every value traceable to a named script line.",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        {"anchor_type": "text", "locator": "S2 Table B0158 (v5), Forward model row", "quote": "electrode contact impedance 0.01 in model units (the `ng_mk_fwd_model` default); normalised difference data for all three reconstructors (`mdl_normalize`)"},
+        {"anchor_type": "text", "locator": "S2 Table B0158 (v5), GREIT row", "quote": "1,000 simulated training targets on the GREITv1 spiral (`distr` 0: radial position 0 to 0.9 of the mesh half-width in equal steps, angle 4321 × that fraction in radians, in the electrode plane, each of radius 0.05 of the mean half-width); desired image the EIDORS default sigmoid of radius 0.2 of the model radius (`GREIT_desired_img_sigmoid`, steepness 10/radius); noise figure 0.5 (nominal) calibrated on one central target of radius 0.02 (`target_size`)"},
+        {"anchor_type": "file", "locator": "eidors/meshing/netgen/ng_mk_fwd_model.m L37–L38; eidors/meshing/netgen/ng_mk_cyl_models.m L120", "quote": "if nargin<5 / z_contact=0.01; % singular if z_contact=0 — and ng_mk_cyl_models calls ng_mk_fwd_model( meshfn, centres, 'ng', []) with four arguments; no project script (gen_dataset.m, gen_recon_full.m, p2_build_env.m) sets z_contact"},
+        {"anchor_type": "file", "locator": "EIT_noise_geometry/src/p2_config.m L12, L21–L22; EIT_noise_geometry/src/p2_build_env.m L36–L39", "quote": "P.maxsz = 0.2; P.greit = struct('imgsz',[64 64], 'distr',0, 'Nsim',1000, 'target_size',0.02, 'noise_figure',0.5); fmdlG = ng_mk_cyl_models([2,2,P.maxsz],[P.n_elecs,1],[0.1]); fmdlG = mdl_normalize(fmdlG,1); E.imdl = mk_GREIT_model(mk_image(fmdlG,1), 0.2, [], P.greit)"},
+        {"anchor_type": "file", "locator": "eidors/models/mk_GREIT_model.m L181–L187 (stim_targets, case 0), L24, L349–L350", "quote": "r = linspace(0,0.9, Nsim); th = r*4321; xyzr = [maxx*r.*cos(th); maxy*r.*sin(th); opt.target_plane*ones(1,Nsim); 0.05*mean([maxx,maxy])*ones(1,Nsim)] — maxx/maxy are the half-widths (max |node − centre|); '0 -> original (as per GREITv1, default)'; target_plane default = mean electrode height"},
+        {"anchor_type": "file", "locator": "eidors/models/mk_GREIT_model.m L378–L383; L28–L29", "quote": "noise_figure_targets default: xyzr = mean(fmdl.nodes); xyzr(3) = opt.target_plane; xyzr(4) = mean(opt.target_size)*0.5*R with R = max xy extent (the diameter), i.e. target_size × model radius = 0.02 × 2 — one central target; 'target_size - size of simulated targets as proportion of mesh radius'"},
+        {"anchor_type": "file", "locator": "eidors/eidors_startup.m L37; eidors/solvers/inverse/calc_GREIT_RM.m L42–L48; eidors/solvers/inverse/GREIT_desired_img_sigmoid.m L8–L9, L184–L185, L215–L216", "quote": "eidors_default('set','GREIT_desired_img','GREIT_desired_img_sigmoid'); D = feval(f, xyc, radius, opt) with radius the 0.2 passed to mk_GREIT_model; 'radius … as a fraction of the model radius (half the larger dimension in xy)'; if ~isfield(opt,'steepness') opt.steepness = 10./radius"},
+        {"anchor_type": "file", "locator": "eidors/models/mk_GREIT_model.m L389; eidors/solvers/inverse/calc_GREIT_RM.m L37–L38; tools/gen_recon_full.m L47; eidors/solvers/inverse/inv_solve_diff_GN_one_step.m L41 + eidors/solvers/calc_difference_data.m L41; eidors/models/mk_common_gridmdl.m L100", "quote": "GREIT: opt.normalize = fmdl.normalize_measurements → Y = vi./(vh*ones(1,size(vi,2))) - 1; GN: fmdlG = mdl_normalize(fmdlG,1) and calc_difference_data honours mdl_normalize(fwd_model); BP: inv_mdl.fwd_model = mdl_normalize(inv_mdl.fwd_model, 1) on the backproj path"},
+        {"anchor_type": "computation", "locator": "B0158 v5 vs tools/recon_draft_tables.py L157, L160, L167", "quote": "the Forward model, GREIT and Training rows of v5 are byte-identical to the generator's literal rows; difflib v4→v5 on B0158: 5 ops, all inside those three rows; every number of the other rows unchanged"}
+      ],
+      "note": "Every value named by the criterion is stated and traced to a source line read in this call. Two qualifiers carry no source line of their own and are decision-inert: 'in model units' for the 0.01 contact impedance (EIDORS states no unit; the phrase is the authors' description), and 'radius 0.02' for the calibration target, which is a fraction of the model radius under mk_GREIT_model's default (0.02 × 0.5 × diameter = 0.02 × radius) but the row does not say so explicitly as it does for the 0.2 desired-image radius. The inexact v4 phrase 'training targets of radius parameter 0.02' is gone."
+    }
+  ],
+  "fact_checks": [
+    {"statement": "contact impedance 0.01 is the ng_mk_fwd_model default and applies to ng_mk_cyl_models output", "source": "eidors/meshing/netgen/ng_mk_fwd_model.m:37-38; eidors/meshing/netgen/ng_mk_cyl_models.m:120", "status": "traced"},
+    {"statement": "no project script overrides z_contact", "source": "grep z_contact over tools/gen_dataset.m, tools/gen_recon_full.m, EIT_noise_geometry/src/p2_build_env.m: no hits", "status": "traced (absence)"},
+    {"statement": "'in model units' (contact impedance)", "source": "none — EIDORS gives no unit for z_contact (ng_mk_fwd_model.m:16 'vector or scalar electrode contact impedance')", "status": "qualifier without source line; decision-inert"},
+    {"statement": "normalised difference for GREIT", "source": "p2_build_env.m:38; mk_GREIT_model.m:389; calc_GREIT_RM.m:37-38", "status": "traced"},
+    {"statement": "normalised difference for GN", "source": "tools/gen_recon_full.m:47; inv_solve_diff_GN_one_step.m:41; calc_difference_data.m:36,41", "status": "traced"},
+    {"statement": "normalised difference for BP", "source": "eidors/models/mk_common_gridmdl.m:100 (after the 'backproj' branch at :43-45, :80)", "status": "traced"},
+    {"statement": "coarse cylinder maxsz 0.20; 64 × 64; Nsim 1,000; noise figure 0.5; distr 0; target_size 0.02", "source": "EIT_noise_geometry/src/p2_config.m:12,21-22; p2_build_env.m:36,39", "status": "traced"},
+    {"statement": "GREITv1 spiral: r from 0 to 0.9 of the half-width in equal steps, angle 4321 r, electrode plane, radius 0.05 of mean half-width", "source": "mk_GREIT_model.m:24 (doc), :173-175 (maxx, maxy as half-widths), :181-187 (case 0), :349-350 (target_plane default = mean electrode height; P.greit sets none)", "status": "traced"},
+    {"statement": "desired image = EIDORS default sigmoid", "source": "eidors_startup.m:37; calc_GREIT_RM.m:42-48", "status": "traced"},
+    {"statement": "desired-image radius 0.2 of the model radius", "source": "p2_build_env.m:39 (second argument 0.2); mk_GREIT_model.m:15,131,144; GREIT_desired_img_sigmoid.m:8-9,167-172,215-216 (radius not empty → used directly in coordinates rescaled to [−1,1])", "status": "traced"},
+    {"statement": "steepness 10/radius", "source": "GREIT_desired_img_sigmoid.m:23,184-185", "status": "traced"},
+    {"statement": "noise figure calibrated on one central target of radius 0.02 (target_size)", "source": "mk_GREIT_model.m:378-383 (default noise_figure_targets: centre, target_plane, radius mean(target_size)*0.5*R), :114-127 (vi_NF simulated from it); p2_config.m:22 (target_size 0.02)", "status": "traced; the row leaves implicit that 0.02 is a fraction of the model radius"},
+    {"statement": "cylinder radius 2, height 2; 16 electrodes of radius 0.1 at height 1; forward maxsz 0.10; stim pattern; 208 measurements", "source": "tools/gen_dataset.m:107,131; p2_build_env.m:24; ng_mk_cyl_models.m:7,14,19 (argument meanings); 16 × 13 = 208", "status": "traced (unchanged from v4)"},
+    {"statement": "campaign 2026-09-24 16:26 to 2026-09-26 00:44; 58 seeds; two parallel processes", "source": "../../RESULTS_STUDY2.md:231-232", "status": "traced"},
+    {"statement": "hashed 17:41 on 2026-09-26", "source": "../../PREREGISTRATION_RECON.sha256:2", "status": "traced"},
+    {"statement": "scored on 2026-09-26", "source": "../../results_20db_fix/*.csv, summary.json mtime Sep 26 00:45:51 2026; RESULTS_STUDY2.md:235 (scoring command)", "status": "traced (file timestamps)"},
+    {"statement": "no per-seed completion times were logged", "source": "RESULTS_STUDY2.md §十之二 records none; results_20db_fix/per_seed.csv columns arm,seed,channel,params,width_mult,mae,dsc,iou,sens,spec,assd,hd95; runs_20db/ not present locally", "status": "absence claim; traceable only to the silence of the surviving records"},
+    {"statement": "B0074 analogue numbers (21–31, 0.89–0.91, 0.60–0.69, 4 and 17, 0.72/0.76, 0.68/0.59, 16–62, 19–34) and four anchors unchanged", "source": "scripted comparison of B0074 v4 vs v5", "status": "traced"}
+  ],
+  "new_issues": [],
+  "observations": [
+    {"kind": "pre-existing, not 1d", "locator": "§2.1 B0023", "text": "'SD' (training-split SD ratio) is never expanded in the manuscript; present in v4's B0023 already; outside NEW-1's scope. Decision-inert."},
+    {"kind": "wording", "locator": "S2 Table B0158", "text": "'in model units' for the contact impedance and 'radius 0.02' for the calibration target are the authors' qualifiers; the values and sources are traced, the unit of 0.02 (fraction of the model radius) is left implicit. Decision-inert."},
+    {"kind": "absence claim", "locator": "S2 Table B0158, Training row", "text": "'no per-seed completion times were logged' rests on the silence of RESULTS_STUDY2 §十之二 and of results_20db_fix/per_seed.csv; the runs_20db directory is not on this machine. Decision-inert."},
+    {"kind": "style", "locator": "§4.4 B0074", "text": "'this one simulation, three conventional algorithms and thirty seeds' is an elliptical clause ('used' carried from the preceding clause). Decision-inert."}
+  ],
+  "candidate_decision": "Accept (scoped)",
+  "rule_fired": "All five round-1d items FULLY_ADDRESSED and no regression-attributed new issue in the six changed blocks; the B5 operand set of 18_ (REV-M1-2 and REV-M1-19 residuals, NEW-1, NEW-2, NEW-3) is closed; Minor Revision (B5) no longer fires",
+  "verdict_counts": {"FULLY_ADDRESSED": 5, "PARTIALLY_ADDRESSED": 0, "NOT_ADDRESSED": 0, "MADE_WORSE": 0, "CANNOT_VERIFY": 0},
+  "judge": "Claude Fable 5.1, scoped seat-verifier call, fresh context, 2026-10-31",
+  "disclosure": "same model family as the revision; not an independent error process",
+  "disclosure_long": "This verification round ran on the same model family that drove the revisions; over-optimization to this judge's latent biases is possible (Ren et al. 2026, arXiv:2607.13104 §8.1.2).",
+  "files_not_read": [
+    "14_RESPONSE_TO_PANEL_round1.md",
+    "revision-authority-round1d/author_event_20261031d.txt",
+    "revision-authority-round1d/author-choices.json",
+    "revision-authority-round1d/author-adjudication.json (sha256 computed only)",
+    "NOTES_*",
+    "03_PAPER_OUTLINE.md"
+  ]
+}

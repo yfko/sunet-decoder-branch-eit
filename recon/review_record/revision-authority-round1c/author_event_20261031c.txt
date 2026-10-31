@@ -1,0 +1,9 @@
+Author event for revision round 1c of the RECON tier-3 manuscript (RECON_paper/manuscript/15_DRAFT_v3.md, aed5252125fd), 2026-10-31 (evening session, Fable 5.1).
+
+Source of authority: the PI's session-opening runbook of 2026-10-31 (NEXT_SESSION_PROMPT_20261021_起草接手.md) ordered "citation-check（strict）" as a pipeline step, and MANUSCRIPT_RULES R12/R16 and ~/.claude/CLAUDE.md「流程優先」require that a citation-check follow every major change and that its findings be acted on through a revision round, not by hand.
+
+Finding source: 16_CITATION_AUDIT_v3.md (academic-paper citation-check, strict, Opus 5.5 subagent, 2026-10-31): verdict PASS WITH FLAGS — strings 70/70, anchors 82/82, retractions 0; six claim–source context flags E1–E6 (judgment-class). The session model (Fable 5.1) re-read each flagged sentence against the source abstract or full text (PubMed records PMID 37931580 Yu 2024a; 33937833 Yan 2020; 29356028 AlBadawy 2018; 25110887 Grychtol 2014a; PMC7853495 Ko and Cheng 2021b full text) and confirmed all six. A seventh item is a consistency slip the audit noticed in passing: B0074 still reads "19 to 33" where the Abstract, 3.2, 4.1 and 4.2 read "19 to 34" (REV-M1-22 missed this block).
+
+Triage: all seven will_address; wording only; no number of this study, no verdict, hash, fixed sentence or scope rule changes; literature numbers are copied from the source abstracts. The 1.1 heading changes (structural flag, to be acknowledged). Minor wording items m1–m13 of the audit are left to the PI's discretion and not implemented.
+
+Unchanged from round 1b: the eight consider items, REV-M1-14's one-seed re-run, the three uncited corpus entries.

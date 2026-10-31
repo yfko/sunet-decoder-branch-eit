@@ -1,0 +1,11 @@
+{
+  "data": "/Users/yfko/work/sunet_sweep/v2_full_snr20_mixed_ps/dataset.mat",
+  "data_sha256": "ba879fd13b3d920baff6f7ae5fd9953625e434b4465676f5d15bdcc0014c2ebf",
+  "prereg_sha256": "0060eedf558574d1b6df92735ccd9d41a998ae42e6d71c1544240948c0808e12",
+  "norm": {
+    "mu": 1.1066456551134252e-07,
+    "sd": 0.9999998211860657
+  },
+  "fov_px": 3228,
+  "device": "mps"
+}

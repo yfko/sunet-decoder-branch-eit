@@ -197,7 +197,18 @@ def main():
                          "R3) this is the dataset the runs were trained on, so "
                          "the network sees exactly what deployment would see. "
                          "Absent (default) the behaviour is unchanged.")
+    ap.add_argument("--input-own-affine", action="store_true",
+                    help="only with --affine-from-data: normalise the INPUT with "
+                         "--data's own training-split affine, while targets and "
+                         "the undoing of the output keep the affine of "
+                         "--affine-from-data. Scale-matches the input without "
+                         "moving the output's zero level, which the plain "
+                         "own-affine path does (PREREGISTRATION_RECON.md 11.2; "
+                         "exploratory E1). Absent (default) the behaviour is "
+                         "unchanged.")
     args = ap.parse_args()
+    if args.input_own_affine and not args.affine_from_data:
+        ap.error("--input-own-affine needs --affine-from-data")
 
     runs, out = Path(args.runs), Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -209,7 +220,13 @@ def main():
     if args.affine_from_data:
         tr_mixed, _, _, tr_idx, tr_mask = load_dataset(Path(args.affine_from_data))
         mu, sd, _ = normalise(tr_mixed[tr_idx["train"]], tr_mask, tr_mixed[:1])
-        mixed, lung, heart = ((a - mu) / sd * mask for a in (mixed, lung, heart))
+        if args.input_own_affine:
+            mu_in, sd_in, _ = normalise(mixed[idx["train"]], mask, mixed[:1])
+            print(f"input normalised with --data's own affine: mu={mu_in:.4f} sd={sd_in:.4f}")
+        else:
+            mu_in, sd_in = mu, sd
+        mixed = (mixed - mu_in) / sd_in * mask
+        lung, heart = ((a - mu) / sd * mask for a in (lung, heart))
         print(f"normalisation affine taken from {args.affine_from_data} training split: mu={mu:.4f} sd={sd:.4f}")
     else:
         mu, sd, (mixed, lung, heart) = normalise(

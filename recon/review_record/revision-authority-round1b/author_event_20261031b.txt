@@ -1,0 +1,16 @@
+Author event for revision round 1b of the RECON tier-3 manuscript (RECON_paper/manuscript/13_DRAFT_v2.md, 159791522c60), 2026-10-31 (evening session, Fable 5.1).
+
+Source: the PI's three messages in this session after the round-1 hand-back.
+
+1. The assistant's round-1 wrap-up put one question to the PI: 「v2 多出的約 900 字要放寬 PCR 上限，還是指定砍處？」(buttons: 放寬到 8,000 / 照建議砍), and listed four open decisions (length; eight consider items; REV-M1-26/-27 source checks and REV-M1-14 one-seed re-run; three uncited corpus entries).
+2. PI: 「期刊規定的字數呢」
+   Assistant: PLoS One sets no main-text limit ("Manuscripts can be any length… no restrictions on word count", refs/01_JOURNAL_REQUIREMENTS_PLOSONE.md, verified 2026-10-11) but asks authors to "present and discuss your findings concisely"; the only hard overrun is the Abstract (331 words against ≤300); the 7,000-word ceiling is PI decision 5 of 2026-10-17, not the journal's.
+3. PI: 「ok」
+
+Interpretation applied in this round (recorded so the PI can overturn it):
+- Length: the PI's "ok" after that explanation is read as 放寬到 8,000 — the main text is not cut; the PCR Word Ceiling becomes 8,000 (00_PAPER_CONFIGURATION_RECORD.md, snapshot .pre-round1b); the panel's round-1 additions stay.
+- Abstract: brought back to ≤300 words with every number and standing label of round 1 kept (REV-M1-1, -2, -4, -12, -18, -21, -22 all preserved).
+- REV-M1-26 / REV-M1-27: the source checks the response letter left to the PI were done by the assistant against the PubMed records of the two papers (2026-10-31; PMID 16636403, doi:10.1088/0967-3334/27/5/S10; PMID 24845059, doi:10.1088/0967-3334/35/6/1083):
+  Pulletz 2006 recommends an ROI contour at "20-35% of the maximum standard deviation or regression coefficient" — a band, not a single 25%, and defined on pixel statistics; the registered 25% lies inside that band. Zhao 2014: "No significant differences were found in all examined indices among the four reconstruction algorithms (p > 0.2, Kruskal-Wallis test)" — the per-index statement holds for all five indices. Both hedged sentences of v2 are therefore made exact.
+- Unchanged (no PI decision yet): the eight consider items stay declined for this round with their round-1 responses; REV-M1-14's one-seed re-run is not performed; the three uncited corpus entries (Rusak2020ECCV, Zhang2020TMI, Zhang2022PhysiolMeas) stay registered and uncited.
+- No change to any registered verdict, number, hash, fixed interpretation sentence or scope rule; roadmap targets are manuscript blocks only (B0006, B0011, B0030 of 13_DRAFT_v2.md).

@@ -1,0 +1,46 @@
+{
+ "patch_format_version": "1.1",
+ "authorization_context": "review_roadmap",
+ "revision_round": 2,
+ "base_draft_hash": "159791522c60",
+ "roadmap_sha256": "fdce8145fa10dc5d3f5ddf5b8a97fdd027d67c1494ca135135881e83066ad0df",
+ "author_adjudication_sha256": "aeaf8f12324799798ebcdf1021ce42d26c8b1476f0758fa23e9dd026624fe44e",
+ "author_decision_digest": "ca58388a89e1d43a2b64e6522e787461b99c7d96e665d31b4e018f222cd4e697",
+ "claim_surface_manifest_sha256": "906b159bc087c9a628a96c920c3461bbb934b447d79b3cdc95b663f6f33aa6db",
+ "emitted_by": "draft_writer_agent (academic-paper revision round 1b, patch mode, Fable 5.1, 2026-10-31)",
+ "ops": [
+  {
+   "op": "replace_block",
+   "block_id": "B0006",
+   "old_hash": "22bef9231fec",
+   "new_text": "**Abstract** — Post-reconstruction networks for lung electrical impedance tomography (EIT) inherit their training reconstructor; whether a decoder branch for the weak cardiac component still helps under another conventional reconstructor was left open by the proposing study. We preregistered a parameter-matched comparison of a two-decoder network with a widened single-decoder control on simulated 16-electrode lung EIT at 20 dB under GREIT, one-step Gauss–Newton and back-projection, scored by heart-channel Dice against each reconstructor's own heart image. Under matched training the branch stayed below the registered floor on Gauss–Newton and back-projection (+0.32 and +0.63 Dice points against floors of 0.45 and 0.66; registered); the re-scored GREIT reference showed the same pattern. The registered transfer hypothesis (reconstructor change, no retraining) was falsified in all six cells, and in the two in-range cells the branch's advantage showed no evidence of growing; exploratory re-scoring put the cost of not retraining at 19 to 34 points. The registered pooled row, under one global normalisation, collapsed on the two reconstructors two orders of magnitude weaker in amplitude. In a post-unblinding, pre-hashed addendum with per-source affines, pooled training was, descriptively, never worse than retraining on the deployed reconstructor by over 0.3 points (−0.08 to +0.36; two of six intervals favoured pooling, confounded with threefold optimisation steps). In a second addendum, leaving one reconstructor out of the pool cost it 62, 16 and 36 points against a pre-fixed ±1.0-point margin (an upper bound: the reference moves with the reconstructor), falsified in all three cells; the branch's difference there reversed sign. On exploratory, descriptive and tested evidence respectively, the reconstructor behaves as a domain: the remedy is in the training data, not this branch, and pooling's benefit stops at the pool boundary for the three reconstructors tested. Every tested verdict followed a rule fixed before its data were read.",
+   "roadmap_item_ids": [
+    "REV-M1b-1"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0011",
+   "old_hash": "24a816e9e65f",
+   "new_text": "Chest EIT reconstructs conductivity change from boundary voltages; its clinical use rests on regional ventilation indices computed from the images (Frerichs et al., 2017) <!--ref:Frerichs2017TREND--><!--anchor:quote:consensus%20statement%20of%20the%20TRanslational%20EIT%20developmeNt%20stuDy%20group-->. Those indices are insensitive to which linear reconstructor produced the image: four algorithms applied to the same recordings gave five ventilation indices none of which differed significantly between algorithms (p > 0.2, Kruskal–Wallis) (Zhao et al., 2014) <!--ref:Zhao2014PhysiolMeas--><!--anchor:quote:No%20significant%20differences%20were%20found%20in%20all%20examined%20indices%20among%20the%20four%20reconstruction%20algorithms-->, and twelve reconstructions differed in appearance by amounts that were not negligible while the clinical parameters derived from them were close (Grychtol et al., 2014a) <!--ref:Grychtol2014PLOSONE--><!--anchor:quote:Functional%20Validation%20and%20Comparison%20Framework%20for%20EIT%20Lung%20Imaging-->. A network that reads pixels sees the appearance, not the index. This paper uses *domain* for the reconstructor in a narrow, operational sense: we call the reconstructor a domain if, for a pixel-level post-reconstruction network, a change of reconstructor shows the three signs that multi-site segmentation studies associate with a domain shift: a loss of performance without retraining, no loss when the new reconstructor's images are pooled into training, and a failure when the new reconstructor is outside the training pool. The paper does not claim domain generalisation; that literature is cited only where compared (Zhou et al., 2023; Yoon et al., 2024) <!--ref:Zhou2023TPAMI--><!--anchor:quote:Domain%20Generalization%3A%20A%20Survey--> <!--ref:Yoon2024ProcIEEE--><!--anchor:quote:Domain%20Generalization%20for%20Medical%20Image%20Analysis%3A%20A%20Review-->. One difference from it governs every held-out number below: there the label is anatomy and does not change with the site, whereas here the reference is the reconstructor's own single-organ reconstruction and moves with it, so a held-out loss is an upper bound on the input-side generalisation loss (Section 2.3).",
+   "roadmap_item_ids": [
+    "REV-M1b-3"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0030",
+   "old_hash": "6ab51e9cf050",
+   "new_text": "The primary endpoint is heart-channel Dice on the quarter-amplitude set, the region above one quarter of the image's peak; the registered 25% lies inside the 20–35% band that clinical region-of-interest methods recommend for functional EIT images, where the band is defined on per-pixel statistics rather than on a reconstructed amplitude (Pulletz et al., 2006) <!--ref:Pulletz2006ROI--><!--anchor:quote:20-35%25%20of%20the%20maximum%20standard%20deviation%20or%20regression%20coefficient-->. The endpoint is computed in image units on the test split and averaged over seeds; one Dice point is 0.01. The reference for each reconstructor is that reconstructor's own single-organ heart reconstruction, not the anatomical heart. This is registered and follows from the task: the network separates the cardiac component of a reconstructed image, and the correct answer is by definition what that reconstructor produces when only the heart is present. Scoring against an anatomical mask would fold each reconstructor's blur and bias into the endpoint; comparing reconstructors by image quality is outside this paper's claims. Dice against an anatomical reference was not computed. The lung channel is reported in every cell and not tested, with the registered expectation of no arm difference.",
+   "roadmap_item_ids": [
+    "REV-M1b-2"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  }
+ ]
+}

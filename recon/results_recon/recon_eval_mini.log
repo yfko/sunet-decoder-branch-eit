@@ -1,0 +1,80 @@
+scoring start
+Sat Oct  3 12:36:24 CST 2026
+=== train greit -> eval greit ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/greit__greit/per_image.csv, per_seed.csv, summary.json
+=== train greit -> eval gn ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/greit__gn/per_image.csv, per_seed.csv, summary.json
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/greit__gn_ownaffine/per_image.csv, per_seed.csv, summary.json
+=== train greit -> eval bp ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/greit__bp/per_image.csv, per_seed.csv, summary.json
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/greit__bp_ownaffine/per_image.csv, per_seed.csv, summary.json
+=== train gn -> eval greit ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/gn__greit/per_image.csv, per_seed.csv, summary.json
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/gn__greit_ownaffine/per_image.csv, per_seed.csv, summary.json
+=== train gn -> eval gn ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/gn__gn/per_image.csv, per_seed.csv, summary.json
+=== train gn -> eval bp ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/gn__bp/per_image.csv, per_seed.csv, summary.json
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/gn__bp_ownaffine/per_image.csv, per_seed.csv, summary.json
+=== train bp -> eval greit ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/bp__greit/per_image.csv, per_seed.csv, summary.json
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/bp__greit_ownaffine/per_image.csv, per_seed.csv, summary.json
+=== train bp -> eval gn ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/bp__gn/per_image.csv, per_seed.csv, summary.json
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/bp__gn_ownaffine/per_image.csv, per_seed.csv, summary.json
+=== train bp -> eval bp ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/bp__bp/per_image.csv, per_seed.csv, summary.json
+=== train mixed -> eval greit ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/mixed__greit/per_image.csv, per_seed.csv, summary.json
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/mixed__greit_ownaffine/per_image.csv, per_seed.csv, summary.json
+=== train mixed -> eval gn ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/mixed__gn/per_image.csv, per_seed.csv, summary.json
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/mixed__gn_ownaffine/per_image.csv, per_seed.csv, summary.json
+=== train mixed -> eval bp ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/mixed__bp/per_image.csv, per_seed.csv, summary.json
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/mixed__bp_ownaffine/per_image.csv, per_seed.csv, summary.json
+matrix scored
+Sat Oct  3 12:56:21 CST 2026
+exit 0

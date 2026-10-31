@@ -134,8 +134,10 @@ def render_vancouver(e: dict, n: int) -> str:
     who = ", ".join(a[:6]) + (", et al" if len(a) > 6 else "")
     v = e.get("volume") or ""
     p = e.get("pages") or ""
-    return (f"{n}. {who}. {e['title'].replace(chr(160), ' ')}. {e['journal']}. {e['year']}"
-            f"{';' + v if v else ''}{':' + p if p else ''}. doi:{e['doi']}")
+    title = e['title'].replace(chr(160), ' ')
+    tend = "" if title.endswith("?") else "."          # 2026-10-31 (F3): no full stop after a question-mark title
+    return (f"{n}. {who}. {title}{tend} {e['journal']}. {e['year']}"
+            f"{';' + v if v else ''}{':' + p if p else ''}. doi: {e['doi']}")   # 2026-10-31 (F6): PLoS 'doi: 10.xxxx' form
 
 
 # ---- Nature style (Scientific Reports), added 2026-10-06 ----------------

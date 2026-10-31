@@ -1,0 +1,265 @@
+{
+ "Kendall2018": {
+  "fields": {
+   "authors": [
+    "Kendall A",
+    "Gal Y",
+    "Cipolla R"
+   ],
+   "journal": "Proc IEEE Comput Soc Conf Comput Vis Pattern Recognit",
+   "volume": "2018"
+  },
+  "source": "CVF Open Access page of the paper (openaccess.thecvf.com/content_cvpr_2018/html/Kendall_Multi-Task_Learning_Using_CVPR_2018_paper.html): byline 'Alex Kendall, Yarin Gal, Roberto Cipolla'; Crossref returns the reversed order for 10.1109/cvpr.2018.00781 | NLM Catalog UID 101492446 (ISSN 1063-6919, MedlineTA 'Proc IEEE Comput Soc Conf Comput Vis Pattern Recognit'); PubMed cites CVPR papers with volume = year (e.g. PMID 31274971, 40115537). PI choice vs proceedings form; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Vandenhende2021": {
+  "fields": {
+   "year": "2022",
+   "volume": "44",
+   "issue": "7",
+   "pages": "3614-3633"
+  },
+  "source": "PubMed PMID 33497328 (IEEE Trans Pattern Anal Mach Intell 2022;44(7):3614-3633, doi:10.1109/TPAMI.2021.3054719); Crossref holds the 2021 early-access record with pages 1-1",
+  "verified": "2026-09-26"
+ },
+ "Kurin2022Unitary": {
+  "fields": {
+   "authors": [
+    "Kurin V",
+    "De Palma A",
+    "Kostrikov I",
+    "Whiteson S",
+    "Mudigonda PK"
+   ],
+   "journal": "Adv Neural Inf Process Syst",
+   "volume": "35"
+  },
+  "source": "NeurIPS 2022 proceedings page (proceedings.neurips.cc, hash 4f301ae934f396086bfefd1139039dbd): byline 'Vitaly Kurin, Alessandro De Palma, Ilya Kostrikov, Shimon Whiteson, Pawan K Mudigonda'; Crossref splits the particle as 'Palma AD' | NLM Catalog UID 9607483 (ISSN 1049-5258, MedlineTA 'Adv Neural Inf Process Syst'); volume 35 from the Crossref container title 'Advances in Neural Information Processing Systems 35' and PubMed's convention for 2022 NeurIPS records; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Isensee2024nnUNetRevisited": {
+  "fields": {
+   "volume": "15009",
+   "journal": "Med Image Comput Comput Assist Interv"
+  },
+  "source": "link.springer.com chapter page 10.1007/978-3-031-72114-4_47: 'LNCS, volume 15009' (MICCAI 2024); Crossref gives no volume | NLM Catalog UID 101249582 (MedlineTA 'Med Image Comput Comput Assist Interv'; PubMed cites MICCAI LNCS chapters with volume = LNCS volume, e.g. PMID 31573001 2018;11073:47-54); 'Lect Notes Comput Sci'[ta] has no NLM record. PI choice vs chapter form; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Myronenko2019AEReg": {
+  "fields": {
+   "volume": "11384",
+   "journal": "Brainlesion"
+  },
+  "source": "link.springer.com chapter page 10.1007/978-3-030-11726-9_28: 'LNIP, volume 11384' (LNCS subseries; BrainLes 2018); Crossref gives no volume | MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 101749001 (MedlineTA 'Brainlesion', the BrainLes workshop volumes of LNCS; PubMed cites e.g. PMID 31482151 as 2019;11383:239-250). PI choice vs chapter form; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Rusak2020ECCV": {
+  "fields": {
+   "volume": "12348"
+  },
+  "source": "link.springer.com chapter page 10.1007/978-3-030-58580-8_4: 'LNIP, volume 12348' (LNCS subseries; ECCV 2020); Crossref gives no volume",
+  "verified": "2026-10-06"
+ },
+ "Vandenhende2020Branched": {
+  "fields": {
+   "authors": [
+    "Vandenhende S",
+    "Georgoulis S",
+    "Van Gool L",
+    "De Brabandere B"
+   ],
+   "journal": "BMVC"
+  },
+  "source": "Order per the BMVC 2020 official accepted-papers list (bmva-archive.org.uk/bmvc/2020/programme/accepted-papers, paper 79: 'Simon Vandenhende, Stamatios Georgoulis, Luc Van Gool, Bert De Brabandere'), the publisher deposit (Crossref 10.5244/c.34.59) and Semantic Scholar, all 'Vandenhende, Georgoulis, Van Gool, De Brabandere'; only the Flemish particles are corrected ('Gool LV'/'Brabandere BD' -> 'Van Gool L'/'De Brabandere B'). arXiv 1904.02920 lists De Brabandere before Van Gool; the published conference record is followed. The proceedings PDF itself returns 404 on the conference site (2026-10-06 and 2026-10-07). | MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 101766207 (MedlineTA 'BMVC'); no volume, PubMed numbers BMVC volumes inconsistently; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Lakens2013EffectSize": {
+  "fields": {
+   "pages": "863"
+  },
+  "source": "PubMed PMID 24324449 (Front Psychol 2013;4:863, doi:10.3389/fpsyg.2013.00863); Crossref carries no page/article number",
+  "verified": "2026-10-07"
+ },
+ "Ronneberger2015UNet": {
+  "fields": {
+   "volume": "9351",
+   "journal": "Med Image Comput Comput Assist Interv"
+  },
+  "source": "link.springer.com chapter page 10.1007/978-3-319-24574-4_28: 'LNCS, volume 9351' (MICCAI 2015, pp. 234-241); Crossref gives no volume | NLM Catalog UID 101249582 (MedlineTA 'Med Image Comput Comput Assist Interv'; PubMed cites MICCAI LNCS chapters with volume = LNCS volume, e.g. PMID 31573001 2018;11073:47-54); 'Lect Notes Comput Sci'[ta] has no NLM record. PI choice vs chapter form; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Herzberg2023PhysiolMeas": {
+  "fields": {
+   "title": "Domain independent post-processing with graph U-nets: applications to electrical impedance tomographic imaging"
+  },
+  "source": "The trailing '⋆' in the Crossref/IOP HTML title is the publisher's footnote marker (open-access/funding note), not part of the title; removed for rendering",
+  "verified": "2026-10-07"
+ },
+ "Zhou2023TPAMI": {
+  "fields": {
+   "year": "2023",
+   "volume": "45",
+   "issue": "4",
+   "pages": "4396-4415"
+  },
+  "source": "NCBI E-utilities esummary PMID 35914036 (IEEE Trans Pattern Anal Mach Intell 2023 Apr;45(4):4396-4415, doi:10.1109/TPAMI.2022.3195549); Crossref holds only the 2022 early-access record with pages 1-20 and no volume",
+  "verified": "2026-10-11"
+ },
+ "Christodoulou2024MICCAI": {
+  "fields": {
+   "volume": "15010",
+   "journal": "Med Image Comput Comput Assist Interv"
+  },
+  "source": "link.springer.com chapter page 10.1007/978-3-031-72117-5_12: 'LNCS, volume 15010' (MICCAI 2024); Crossref gives no volume | NLM Catalog UID 101249582 (MedlineTA 'Med Image Comput Comput Assist Interv'; PubMed cites MICCAI LNCS chapters with volume = LNCS volume, e.g. PMID 31573001 2018;11073:47-54); 'Lect Notes Comput Sci'[ta] has no NLM record. PI choice vs chapter form; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Barber1984JPhysE": {
+  "fields": {
+   "journal": "J Phys E"
+  },
+  "source": "NLM Catalog UID 1276760 (ISSN 0022-3735, MedlineTA 'J Phys E'; NCBI E-utilities esummary db=nlmcatalog, 2026-10-31); Crossref short-container-title 'J. Phys. E: Sci. Instrum.' is not the NLM abbreviation and rendered with a doubled full stop",
+  "verified": "2026-10-31"
+ },
+ "Albert2023ApplSci": {
+  "fields": {
+   "journal": "Appl Sci (Basel)"
+  },
+  "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 101633495, ISSN 2076-3417; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Borji2018ImaVisComput": {
+  "fields": {
+   "journal": "Image Vis Comput"
+  },
+  "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 101151810, ISSN 0262-8856; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Caruana1997MTL": {
+  "fields": {
+   "journal": "Mach Learn"
+  },
+  "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 9881780, ISSN 0885-6125; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Lakens2018AMPPS": {
+  "fields": {
+   "journal": "Adv Methods Pract Psychol Sci"
+  },
+  "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 101731526, ISSN 2515-2459; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Scheel2021AMPPS": {
+  "fields": {
+   "journal": "Adv Methods Pract Psychol Sci"
+  },
+  "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 101731526, ISSN 2515-2459; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Willroth2024AMPPS": {
+  "fields": {
+   "journal": "Adv Methods Pract Psychol Sci"
+  },
+  "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 101731526, ISSN 2515-2459; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Wang2024TIM": {
+  "fields": {
+   "journal": "IEEE Trans Instrum Meas"
+  },
+  "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 422676, ISSN 0018-9456 (also removes the doubled full stop of the Crossref short title); scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Yoon2024ProcIEEE": {
+  "fields": {
+   "journal": "Proc IEEE Inst Electr Electron Eng"
+  },
+  "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 9879073, ISSN 0018-9219; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Wilcoxon1945": {
+  "fields": {
+   "journal": "Biometrics"
+  },
+  "source": "MedlineTA per NCBI E-utilities esummary db=nlmcatalog: NLM Catalog UID 370625 lists 'Biometrics bulletin' as an alternate title of Biometrics; PubMed indexes the 1946 Biometrics Bulletin issue under 'Biometrics' (PMID 20287815). PI may prefer 'Biometrics Bulletin'; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Karani2018MICCAI": {
+  "fields": {
+   "journal": "Med Image Comput Comput Assist Interv",
+   "volume": "11070"
+  },
+  "source": "NLM Catalog UID 101249582 (MedlineTA 'Med Image Comput Comput Assist Interv'; PubMed cites MICCAI LNCS chapters with volume = LNCS volume, e.g. PMID 31573001 2018;11073:47-54); 'Lect Notes Comput Sci'[ta] has no NLM record. PI choice vs chapter form; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad) | link.springer.com/chapter/10.1007/978-3-030-00928-1_54: 'Lecture Notes in Computer Science (LNIP, volume 11070)', pp 476-484 (MICCAI 2018 Part I; print ISBN 9783030009274); Crossref carries no volume",
+  "verified": "2026-10-31"
+ },
+ "Xin2022MTOHelp": {
+  "fields": {
+   "journal": "Adv Neural Inf Process Syst",
+   "volume": "35"
+  },
+  "source": "NLM Catalog UID 9607483 (ISSN 1049-5258, MedlineTA 'Adv Neural Inf Process Syst'); volume 35 from the Crossref container title 'Advances in Neural Information Processing Systems 35' and PubMed's convention for 2022 NeurIPS records; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Yu2024CVPR": {
+  "fields": {
+   "journal": "Proc IEEE Comput Soc Conf Comput Vis Pattern Recognit",
+   "volume": "2024"
+  },
+  "source": "NLM Catalog UID 101492446 (ISSN 1063-6919, MedlineTA 'Proc IEEE Comput Soc Conf Comput Vis Pattern Recognit'); PubMed cites CVPR papers with volume = year (e.g. PMID 31274971, 40115537). PI choice vs proceedings form; scratchpad metadata_proposals_round1e.json (Opus lookups 2026-10-31; raw API responses kept in the session scratchpad)",
+  "verified": "2026-10-31"
+ },
+ "Chambers2021NatHumBehav": {
+  "fields": {
+   "year": "2022"
+  },
+  "source": "PubMed PMID 34782730: pubdate 2022 Jan, vol 6(1):29-42 (epub 2021 Nov 15); issue year, as for the Vandenhende2021 and Zhou2023TPAMI overrides",
+  "verified": "2026-10-31"
+ },
+ "Du2022EurRadiol": {
+  "fields": {
+   "year": "2023"
+  },
+  "source": "PubMed PMID 36355196: pubdate 2023 Apr, vol 33(4):2426-2438 (epub 2022 Nov 10); issue year",
+  "verified": "2026-10-31"
+ },
+ "Pulletz2006ROI": {
+  "fields": {
+   "authors": [
+    "Pulletz S",
+    "van Genderingen HR",
+    "Schmitz G",
+    "Zick G",
+    "Schädler D",
+    "Scholz J",
+    "Weiler N",
+    "Frerichs I"
+   ]
+  },
+  "source": "PubMed efetch PMID 16636403: LastName 'van Genderingen', Initials 'HR'; Crossref deposits the particle in the given name",
+  "verified": "2026-10-31"
+ },
+ "Renard2020SciRep": {
+  "fields": {
+   "authors": [
+    "Renard F",
+    "Guedria S",
+    "De Palma N",
+    "Vuillerme N"
+   ]
+  },
+  "source": "Visible byline nature.com/articles/s41598-020-69920-0 'Noel De Palma'; PubMed/Crossref split the particle into the given name ('Palma N'/'Palma ND'); same treatment as Kurin2022Unitary 'De Palma A'",
+  "verified": "2026-10-31"
+ },
+ "Lange2025StatMed": {
+  "fields": {
+   "authors": [
+    "Lange FJD",
+    "Wilcke JC",
+    "Hoffmann S",
+    "Herrmann M",
+    "Boulesteix AL"
+   ]
+  },
+  "source": "PubMed efetch PMID 41213159: ForeName 'Anne-Laure', Initials 'AL'; Crossref spells the given name with a U+2010 hyphen, which dropped the L",
+  "verified": "2026-10-31"
+ }
+}

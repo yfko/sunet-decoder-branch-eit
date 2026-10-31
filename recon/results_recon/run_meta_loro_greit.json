@@ -1,0 +1,11 @@
+{
+  "data": "/Users/yfko/work/sunet_sweep/v2_full_snr20_loro_greit/dataset.mat",
+  "data_sha256": "08e1b7021717e790be473407c213253570947f410998beca61ca966f10b6dae1",
+  "prereg_sha256": "9589b298bdcc6e413bb9104ebf3c16d78f16be6ce961b98033d9f4a52633ac93",
+  "norm": {
+    "mu": -3.417891036860965e-08,
+    "sd": 1.0
+  },
+  "fov_px": 3228,
+  "device": "mps"
+}

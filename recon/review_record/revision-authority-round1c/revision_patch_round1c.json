@@ -1,0 +1,80 @@
+{
+ "patch_format_version": "1.1",
+ "authorization_context": "review_roadmap",
+ "revision_round": 3,
+ "base_draft_hash": "aed5252125fd",
+ "roadmap_sha256": "6b735e32b1f8b4d73be89749fc9acad5d39c10af66ec6886b165ff445feb7ff4",
+ "author_adjudication_sha256": "d264159eacb35701e6a4d73f1a9629e0befd8de4af9698b8c6e1900dfb8c7b8d",
+ "author_decision_digest": "5f05dc875448ba80af809e20d17930c3d333a659cfa0f7d8794e276cc77c3e41",
+ "claim_surface_manifest_sha256": "30f6bde9d46e343ec5867a912b1d24187b00aff02e75ceecd100d7e5c9b71c9a",
+ "emitted_by": "draft_writer_agent (academic-paper revision round 1c, patch mode, Fable 5.1, 2026-10-31)",
+ "ops": [
+  {
+   "op": "replace_block",
+   "block_id": "B0010",
+   "old_hash": "18857a47af63",
+   "new_text": "### 1.1 Clinical indices have not been found to depend on the reconstructor; a pixel-level network does",
+   "roadmap_item_ids": [
+    "REV-M1c-5"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0011",
+   "old_hash": "6bb67fb75201",
+   "new_text": "Chest EIT reconstructs conductivity change from boundary voltages; its clinical use rests on regional ventilation indices computed from the images (Frerichs et al., 2017) <!--ref:Frerichs2017TREND--><!--anchor:quote:consensus%20statement%20of%20the%20TRanslational%20EIT%20developmeNt%20stuDy%20group-->. Where reconstructors were compared, those indices did not depend detectably on which linear reconstructor produced the image: four algorithms applied to the same recordings gave five ventilation indices none of which differed significantly between algorithms (p > 0.2, Kruskal–Wallis) (Zhao et al., 2014) <!--ref:Zhao2014PhysiolMeas--><!--anchor:quote:No%20significant%20differences%20were%20found%20in%20all%20examined%20indices%20among%20the%20four%20reconstruction%20algorithms-->, and twelve reconstructions differed in appearance by amounts that were not negligible while the clinical parameters derived from them did not vary considerably among the advanced algorithms (Grychtol et al., 2014a) <!--ref:Grychtol2014PLOSONE--><!--anchor:quote:clinically%20relevant%20parameters%20do%20not%20vary%20considerably%20among%20the%20advanced%20algorithms-->. A network that reads pixels sees the appearance, not the index. This paper uses *domain* for the reconstructor in a narrow, operational sense: we call the reconstructor a domain if, for a pixel-level post-reconstruction network, a change of reconstructor shows the three signs that multi-site segmentation studies associate with a domain shift: a loss of performance without retraining, no loss when the new reconstructor's images are pooled into training, and a failure when the new reconstructor is outside the training pool. The paper does not claim domain generalisation; that literature is cited only where compared (Zhou et al., 2023; Yoon et al., 2024) <!--ref:Zhou2023TPAMI--><!--anchor:quote:Domain%20Generalization%3A%20A%20Survey--> <!--ref:Yoon2024ProcIEEE--><!--anchor:quote:Domain%20Generalization%20for%20Medical%20Image%20Analysis%3A%20A%20Review-->. One difference from it governs every held-out number below: there the label is anatomy and does not change with the site, whereas here the reference is the reconstructor's own single-organ reconstruction and moves with it, so a held-out loss is an upper bound on the input-side generalisation loss (Section 2.3).",
+   "roadmap_item_ids": [
+    "REV-M1c-4",
+    "REV-M1c-5"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0013",
+   "old_hash": "04aa0bae064c",
+   "new_text": "The cardiac-related impedance change in lung EIT frames is several times smaller than the ventilation change (Leathard et al., 1994) <!--ref:Leathard1994PhysiolMeas--><!--anchor:quote:ventilatory%20and%20cardiac%20related%20changes%20in%20EIT%20images--> and highly position dependent (Graf and Riedel, 2017) <!--ref:Graf2017PLOSONE--><!--anchor:quote:highly%20position%20dependent-->. Three studies of ours precede it: a U-Net for lung segmentation in EIT (Ko and Cheng, 2021a) <!--ref:Ko2021PhysiolMeas--><!--anchor:quote:U-Net-based%20approach%20for%20automatic%20lung%20segmentation-->, the semi-Siamese U-Net that separates lung and heart images with one encoder and two parallel decoders (Ko and Cheng, 2021b) <!--ref:Ko2021PLOSONE--><!--anchor:quote:Semi-Siamese%20U-Net%20for%20separation%20of%20lung%20and%20heart%20bioimpedance%20images-->, and heart-related image reconstruction from GREIT frames with optimised loss weights (Ko et al., 2025) <!--ref:Ko2025CurrMedImaging--><!--anchor:quote:Reconstruction%20of%20Heart-related%20Imaging%20from%20Lung%20Electrical%20Impedance%20Tomography-->. Throughout, *segmentation* names the task of producing a Dice-scored mask, and *separation*, *weak component* and *dominant component* name the mechanism. The semi-Siamese study's discussion states that \"the separation effect of the EIT image obtained by the different reconstruction algorithms will be investigated\" (Ko and Cheng, 2021b) <!--ref:Ko2021PLOSONE--><!--anchor:quote:the%20separation%20effect%20of%20the%20EIT%20image%20obtained%20by%20the%20different%20reconstruction%20algorithms%20will%20be%20investigated-->, naming the Sheffield back-projection algorithm, a finite-element linearised Newton–Raphson algorithm and GREIT; this paper answers it, with one-step Gauss–Newton as its linearised Newton–Raphson member. A companion simulation study from our group, currently in review, evaluates the same two arms under GREIT across noise levels; this paper relies on none of its reported findings, re-uses its GREIT-trained networks re-scored here (Section 2.2), and the two are declared related submissions [MATERIAL GAP: preprint DOI].",
+   "roadmap_item_ids": [
+    "REV-M1c-2"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0014",
+   "old_hash": "8fff098c1740",
+   "new_text": "We test, for a change of reconstructor, whether a decoder branch dedicated to a weak component yields a measurable benefit when that component is under threat. The branch is a decoder-side branch serving one target each, of the branched multi-task family (Vandenhende et al., 2022) <!--ref:Vandenhende2021--><!--anchor:quote:Multi-Task%20Learning%20for%20Dense%20Prediction%20Tasks%3A%20A%20Survey-->, with EIT relatives among reconstructors: a dual-branch reconstructor (Wang et al., 2024) <!--ref:Wang2024TIM--><!--anchor:quote:Dual-Branch%20U-Net%20Based%20on%20Deformable%20Convolution%20and%20Hyper-Convolution--> and a multi-branch network that reconstructs conductivity from the measured voltages, its branches fused to resist measurement noise and modelling errors (Yu et al., 2024a) <!--ref:Yu2024CMPB--><!--anchor:quote:enhance%20the%20robustness%20against%20the%20measurement%20noise%20and%20modeling%20errors-->. The branch tested here sits downstream of a reconstruction operator, as do the post-processing networks for EIT (Hamilton and Hauptmann, 2018; Herzberg et al., 2023; Zhang et al., 2022b) <!--ref:Hamilton2018TMI--><!--anchor:quote:Deep%20D-Bar%3A%20Real-Time%20Electrical%20Impedance%20Tomography%20Imaging--> <!--ref:Herzberg2023PhysiolMeas--><!--anchor:quote:Domain%20independent%20post-processing%20with%20graph%20U-nets--> <!--ref:Zhang2022FBB--><!--anchor:quote:Advances%20of%20deep%20learning%20in%20electrical%20impedance%20tomography%20image%20reconstruction-->, and the operator is not neutral: the same U-Net placed after a linearised reconstruction or after D-bar performs differently (Denker et al., 2025) <!--ref:Denker2025HandbNumerAnal--><!--anchor:quote:Deep%20learning%20based%20reconstruction%20methods%20for%20electrical%20impedance%20tomography-->.",
+   "roadmap_item_ids": [
+    "REV-M1c-1"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0024",
+   "old_hash": "228ad15bffe3",
+   "new_text": "The three reconstructors are those the original study named (Section 1.2; Gauss–Newton stands for its linearised Newton–Raphson), each at one fixed setting; the settings are listed in S2 Table. GREIT, the Graz consensus reconstruction algorithm for EIT (Adler et al., 2009) <!--ref:Adler2009GREIT--><!--anchor:quote:GREIT%3A%20a%20unified%20approach%20to%202D%20linear%20EIT%20reconstruction%20of%20lung%20images-->, was built as registered on a 64 × 64 grid (nominal noise figure 0.5, realised 0.602 on a common reference frame). The noise figure (Adler and Guardo, 1996) <!--ref:Adler1996TMI--><!--anchor:quote:regularized%20imaging%20and%20contrast%20detection--> is the ratio of relative noise in the image to relative noise in the measurements, so matching it compares two regularised linear reconstructors at equal noise amplification on the same data. One-step Gauss–Newton (GN) with a Laplace prior was parametrised on GREIT's 64 × 64 grid, its hyperparameter set by bisection so that its noise figure matched GREIT's realised value (hp 0.0016, noise figure 0.607). Back-projection (BP) used the Sheffield back-projection matrix distributed with EIDORS (Adler and Lionheart, 2006) <!--ref:Adler2006EIDORS--><!--anchor:quote:an%20extensible%20software%20base%20for%20EIT-->, with no free parameter (noise figure 0.831); its 32 × 32 raster was upsampled two-fold by pixel replication and masked to GREIT's field of view. Because reconstruction settings strongly influence what a reconstructor produces (Thürk et al., 2019) <!--ref:Thurk2019PhysiolMeas--><!--anchor:quote:Influence%20of%20reconstruction%20settings-->, every result holds for these three operators at these settings.",
+   "roadmap_item_ids": [
+    "REV-M1c-2"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0074",
+   "old_hash": "9a2a1bf11515",
+   "new_text": "The nearest clinical analogues are a left-ventricle segmentation network that fell by 21 to 31 Dice points, from 0.89–0.91 to 0.60–0.69, when the MRI manufacturer changed (Yan et al., 2020) <!--ref:Yan2020RadiolAI--><!--anchor:quote:Dice%20reduced%20from%2089.7%25--> and cross-institutional tumour segmentation that lost 4 and 17 points, from 0.72 and 0.76 to 0.68 and 0.59 (AlBadawy et al., 2018) <!--ref:AlBadawy2018MedPhys--><!--anchor:quote:dice%20coefficients%3A%200.68%20%C2%B1%200.19%20and%200.59%20%C2%B1%200.19-->; the 16 to 62 points lost here and the exploratory 19 to 34 points start where that range ends, but two differences forbid a comparison of magnitudes: in those studies the label is anatomy and only the input changes with the domain; here the reference is the held-out reconstructor's own cardiac image and changes with it, so this study's losses are upper bounds on the input-side generalisation loss. And those studies used patients and manufacturers; this one used simulation, three conventional algorithms and thirty seeds.",
+   "roadmap_item_ids": [
+    "REV-M1c-3"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  }
+ ]
+}

@@ -1,0 +1,4 @@
+ADVISORY: regression NEW-1 names nearest_roadmap_item REV-M1-23 — review for roadmap-item overlap (§8)
+ADVISORY: regression NEW-2 names nearest_roadmap_item REV-M1-24 — review for roadmap-item overlap (§8)
+ADVISORY: regression NEW-3 names nearest_roadmap_item REV-M1-20 — review for roadmap-item overlap (§8)
+re-review synthesis ok: round 'sunet-recon-tier3-rereview-round1-20261031', revision 2, decision_state 'Minor Revision', apply_chain_witness 'pass'

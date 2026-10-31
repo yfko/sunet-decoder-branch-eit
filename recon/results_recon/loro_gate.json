@@ -1,0 +1,80 @@
+{
+ "loro_greit": {
+  "pool": [
+   "gn",
+   "bp"
+  ],
+  "pooled_affine": {
+   "mu": -3.417891036860965e-08,
+   "sd": 1.0
+  },
+  "splits": {
+   "train": 5760,
+   "val": 720,
+   "test": 720
+  },
+  "fov_masks_identical": true,
+  "max_abs_input_difference_vs_own_row_gn": 9.5367431640625e-07,
+  "input_frame_sd_median_gn": 0.8473144173622131,
+  "max_abs_input_difference_vs_own_row_bp": 9.5367431640625e-07,
+  "input_frame_sd_median_bp": 0.8127539753913879,
+  "heldout_greit_input_frame_sd_median": 0.8169723749160767,
+  "heldout_greit_input_range_median": [
+   -2.679096221923828,
+   1.0318999290466309
+  ],
+  "input_frame_sd_max_over_min_incl_heldout": 1.0425226366369753
+ },
+ "loro_gn": {
+  "pool": [
+   "greit",
+   "bp"
+  ],
+  "pooled_affine": {
+   "mu": -2.835418229096831e-07,
+   "sd": 0.9999991059303284
+  },
+  "splits": {
+   "train": 5760,
+   "val": 720,
+   "test": 720
+  },
+  "fov_masks_identical": true,
+  "max_abs_input_difference_vs_own_row_greit": 5.7220458984375e-06,
+  "input_frame_sd_median_greit": 0.8169732093811035,
+  "max_abs_input_difference_vs_own_row_bp": 5.7220458984375e-06,
+  "input_frame_sd_median_bp": 0.8127549886703491,
+  "heldout_gn_input_frame_sd_median": 0.8473143577575684,
+  "heldout_gn_input_range_median": [
+   -2.9170236587524414,
+   1.4692308902740479
+  ],
+  "input_frame_sd_max_over_min_incl_heldout": 1.0425212635652445
+ },
+ "loro_bp": {
+  "pool": [
+   "greit",
+   "gn"
+  ],
+  "pooled_affine": {
+   "mu": -4.904273254169311e-08,
+   "sd": 0.999999463558197
+  },
+  "splits": {
+   "train": 5760,
+   "val": 720,
+   "test": 720
+  },
+  "fov_masks_identical": true,
+  "max_abs_input_difference_vs_own_row_greit": 3.814697265625e-06,
+  "input_frame_sd_median_greit": 0.8169728517532349,
+  "max_abs_input_difference_vs_own_row_gn": 4.291534423828125e-06,
+  "input_frame_sd_median_gn": 0.8473148345947266,
+  "heldout_bp_input_frame_sd_median": 0.8127539753913879,
+  "heldout_bp_input_range_median": [
+   -3.2773795127868652,
+   1.0757207870483398
+  ],
+  "input_frame_sd_max_over_min_incl_heldout": 1.0425231499934473
+ }
+}

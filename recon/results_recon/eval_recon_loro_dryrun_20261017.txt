@@ -1,0 +1,20 @@
+=== L1/L2: loro_greit -> greit (held out) ===
+python3 tools/evaluate.py --data /Users/yfko/work/sunet_sweep/v2_full_snr20/dataset.mat --runs runs_recon_loro_greit --out results_recon/loro_greit__greit --primary D B_wide --channel heart
+=== reported: loro_greit -> gn (in pool) ===
+python3 tools/evaluate.py --data /Users/yfko/work/sunet_sweep/v2_full_snr20_gn/dataset.mat --runs runs_recon_loro_greit --out results_recon/loro_greit__gn --primary D B_wide --channel heart
+=== reported: loro_greit -> bp (in pool) ===
+python3 tools/evaluate.py --data /Users/yfko/work/sunet_sweep/v2_full_snr20_bp/dataset.mat --runs runs_recon_loro_greit --out results_recon/loro_greit__bp --primary D B_wide --channel heart
+=== reported: loro_gn -> greit (in pool) ===
+python3 tools/evaluate.py --data /Users/yfko/work/sunet_sweep/v2_full_snr20/dataset.mat --runs runs_recon_loro_gn --out results_recon/loro_gn__greit --primary D B_wide --channel heart
+=== L1/L2: loro_gn -> gn (held out) ===
+python3 tools/evaluate.py --data /Users/yfko/work/sunet_sweep/v2_full_snr20_gn/dataset.mat --runs runs_recon_loro_gn --out results_recon/loro_gn__gn --primary D B_wide --channel heart
+=== reported: loro_gn -> bp (in pool) ===
+python3 tools/evaluate.py --data /Users/yfko/work/sunet_sweep/v2_full_snr20_bp/dataset.mat --runs runs_recon_loro_gn --out results_recon/loro_gn__bp --primary D B_wide --channel heart
+=== reported: loro_bp -> greit (in pool) ===
+python3 tools/evaluate.py --data /Users/yfko/work/sunet_sweep/v2_full_snr20/dataset.mat --runs runs_recon_loro_bp --out results_recon/loro_bp__greit --primary D B_wide --channel heart
+=== reported: loro_bp -> gn (in pool) ===
+python3 tools/evaluate.py --data /Users/yfko/work/sunet_sweep/v2_full_snr20_gn/dataset.mat --runs runs_recon_loro_bp --out results_recon/loro_bp__gn --primary D B_wide --channel heart
+=== L1/L2: loro_bp -> bp (held out) ===
+python3 tools/evaluate.py --data /Users/yfko/work/sunet_sweep/v2_full_snr20_bp/dataset.mat --runs runs_recon_loro_bp --out results_recon/loro_bp__bp --primary D B_wide --channel heart
+leave-one-out rows scored
+Sat Oct 17 13:03:06 CST 2026

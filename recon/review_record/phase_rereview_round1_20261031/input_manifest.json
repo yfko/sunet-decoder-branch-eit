@@ -1,0 +1,101 @@
+{
+ "round_id": "sunet-recon-tier3-rereview-round1-20261031",
+ "cross_model_active": false,
+ "artifacts": {
+  "original_manuscript": {
+   "present": true,
+   "path_or_passport_ref": "path:06_DRAFT_v1.md",
+   "sha256": "751dacb8560c8f748c0b128d1dfdd4333854b20547b851faf93874ba7021254c",
+   "version_label": "v1 (Phase 4b draft after the in-pair 6b revision, anchorized; the round-1 roadmap's base, 751dacb8560c, 148 blocks)",
+   "origin_date": "2026-10-31T11:46"
+  },
+  "revised_manuscript": {
+   "present": true,
+   "path_or_passport_ref": "path:17_DRAFT_v4.md",
+   "sha256": "6379490727ef0fe5a2452a1d10f8e5693c091a0839a333e32f1b57e90aeaeb66",
+   "version_label": "v4 (round-1 panel revision 13_DRAFT_v2 159791522c60, author-side round-1b 15_DRAFT_v3 aed5252125fd, author-side round-1c after the strict citation-check; 6379490727ef, 160 blocks)",
+   "origin_date": "2026-10-31T14:51"
+  },
+  "revision_roadmap": {
+   "present": true,
+   "path_or_passport_ref": "path:phase_rereview_round1_20261031/roadmap_legacy_v1_0.json",
+   "sha256": "2ca624f4d914e8f825e9c942e06c777a3bee26a8a46277bbee4fc5e44503daad",
+   "version_label": "revision-roadmap/1.0 round 1 (REV-M1-1..43: 10 must_fix, 25 should_fix, 8 consider), legacy priority field added",
+   "origin_date": "2026-10-31T14:35"
+  },
+  "editorial_decision_letter": {
+   "present": true,
+   "path_or_passport_ref": "path:12_REVIEWER_PANEL_round1.md",
+   "sha256": "f2ba26ae728336a453e372e85ac00b91b38f326f3fd1af0b7fae42e77b27a3cd",
+   "version_label": "round-1 five-seat synthesis: decision letter with Required Item Details R1-R10 + roadmap",
+   "origin_date": "2026-10-31T11:57"
+  },
+  "response_to_reviewers": {
+   "present": true,
+   "path_or_passport_ref": "path:14_RESPONSE_TO_PANEL_round1.md",
+   "sha256": "5bdc98440411e85bfe60f4dc44c221ef25b582f1e7e7664860feafdee605c327",
+   "version_label": "round-1 response (43 rows, 14 question answers) with the round-1b and round-1c addendum paragraphs and the closed REV-M1-26/-27 rows",
+   "origin_date": "2026-10-31T14:53"
+  },
+  "revision_patches": {
+   "present": true,
+   "items": [
+    {
+     "path_or_passport_ref": "path:revision-authority-round1/revision_patch_round1.json",
+     "sha256": "0a75dceba0bffad23c9690fdf4bc5dbad10172703beebbdf76c125c766e801d7",
+     "version_label": "patch 1.1 round 1 (48 ops)",
+     "origin_date": "2026-10-31T12:14"
+    },
+    {
+     "path_or_passport_ref": "path:revision-authority-round1b/revision_patch_round1b.json",
+     "sha256": "a45939e938924860b782d3c8af5653784a5c9f31f8fec937ca2c418cd8187b99",
+     "version_label": "patch 1.1 round 1b (3 ops: REV-M1b-1..3; author-side interim round, roadmap revision-authority-round1b/roadmap.json)",
+     "origin_date": "2026-10-31T14:30"
+    },
+    {
+     "path_or_passport_ref": "path:revision-authority-round1c/revision_patch_round1c.json",
+     "sha256": "52a30db14b4038f230aeedb70439db1827e74c00caa2917429ca45e1a4c35157",
+     "version_label": "patch 1.1 round 1c (6 ops: REV-M1c-1..5; the six claim–source flags of 16_CITATION_AUDIT_v3.md + one '19 to 33' slip; roadmap revision-authority-round1c/roadmap.json)",
+     "origin_date": "2026-10-31T14:51"
+    }
+   ]
+  },
+  "apply_reports": {
+   "present": true,
+   "items": [
+    {
+     "path_or_passport_ref": "path:13_DRAFT_v2.md.apply-report.json",
+     "sha256": "2ccc5b6700dc8d302ecbb94fc10950a9e097dc941bf0159f4164bab10f6bf014",
+     "version_label": "apply report 1.3 round 1 (06 → 13)",
+     "origin_date": "2026-10-31T12:14"
+    },
+    {
+     "path_or_passport_ref": "path:15_DRAFT_v3.md.apply-report.json",
+     "sha256": "4d8ce65802593a9fdfd543d34d4d2dda61689b7e7ae9f6bd28528c099e5ad147",
+     "version_label": "apply report 1.3 round 1b (13 → 15)",
+     "origin_date": "2026-10-31T14:30"
+    },
+    {
+     "path_or_passport_ref": "path:17_DRAFT_v4.md.apply-report.json",
+     "sha256": "177db208b4316d2061f869f091b2139b52df6e2c7ee43087d6feb8add03bb4ab",
+     "version_label": "apply report 1.3 round 1c (15 → 17; heading op acknowledged structural)",
+     "origin_date": "2026-10-31T14:51"
+    }
+   ]
+  },
+  "round1_findings": {
+   "present": true,
+   "path_or_passport_ref": "path:phase_rereview_round1_20261031/round1_findings_cards.md",
+   "sha256": "da6a045b2fa064d2bf1082511420242a1911e68fdf5e876aadd46d970eda8139",
+   "version_label": "round-1 Phase 2 cards of the five seats, concatenated verbatim (findings with their W/MAJOR/minor ids)",
+   "origin_date": "2026-10-31T14:36"
+  },
+  "round1_config_cards": {
+   "present": true,
+   "path_or_passport_ref": "path:phase_review_round1_20261031/round1_config_cards.md",
+   "sha256": "bbeb92e27bd999a512536f2045a7f0f31a0e5b5e2559c9ed21ce032800120085",
+   "version_label": "round-1 Phase 1 cards of the five seats, concatenated verbatim (frozen yardstick, reused)",
+   "origin_date": "2026-10-31T14:34"
+  }
+ }
+}

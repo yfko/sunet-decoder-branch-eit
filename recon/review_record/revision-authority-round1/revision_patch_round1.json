@@ -1,0 +1,601 @@
+{
+ "patch_format_version": "1.1",
+ "authorization_context": "review_roadmap",
+ "revision_round": 1,
+ "base_draft_hash": "751dacb8560c",
+ "roadmap_sha256": "054026067c09275c7f0519200d3d55a8d14d78ebdd224e3014cd343db3a51643",
+ "author_adjudication_sha256": "e4bd526a57fae5a20561d36b96ff635de06791025eedaade5e7a8a97fedabfc7",
+ "author_decision_digest": "faee6c6a987c1a55072a732f488b9a9561ce863e1bc3d83eb4778c582940d5cd",
+ "claim_surface_manifest_sha256": "ade8ec505dfdf356785668badd99a5f82c048e8ece239402ed1dbf614c766bc7",
+ "ops": [
+  {
+   "op": "replace_block",
+   "block_id": "B0006",
+   "old_hash": "9e26bdcce220",
+   "new_text": "**Abstract** — Post-reconstruction networks for lung electrical impedance tomography (EIT) inherit the reconstructor they were trained on; whether a decoder branch for the weak cardiac component still helps under another conventional reconstructor was left open by the study that proposed it. We preregistered and hashed a parameter-matched comparison of a two-decoder network (D) against a widened single-decoder control (B_wide) on simulated 16-electrode lung EIT at 20 dB, reconstructed by GREIT, one-step Gauss–Newton and back-projection, scored by heart-channel Dice against each reconstructor's own heart image. Under matched training the branch stayed below the registered floor on Gauss–Newton and back-projection (+0.32 and +0.63 Dice points against floors of 0.45 and 0.66; registered), and the re-scored GREIT reference showed the same pattern. The registered transfer hypothesis for a reconstructor change without retraining was falsified in all six cells, with no evidence in the two in-range cells that the branch's advantage grew under the shift; exploratory re-scoring put the cost of not retraining at 19 to 34 points. The registered pooled row, trained under one global normalisation, collapsed on the two reconstructors whose amplitudes lie two orders of magnitude below the third's. In a post-unblinding, pre-hashed addendum with a per-source affine, pooled training was, descriptively, never worse than retraining on the deployed reconstructor by more than 0.3 points (−0.08 to +0.36; two of six intervals favoured pooling, confounded with threefold optimisation steps). In a second addendum, leaving one reconstructor out of the pool cost 62, 16 and 36 points on it against a pre-fixed margin of ±1.0 point (an upper bound, since the reference moves with the reconstructor), falsified in all three cells, and the branch's difference there reversed sign. The reconstructor behaves as a domain, on exploratory, descriptive and tested evidence respectively: the remedy for a reconstructor change lies in the training data, not in this branch, and the benefit of pooled training stops at the pool boundary for the three conventional reconstructors tested. Every tested verdict followed a rule fixed before its data were read.",
+   "roadmap_item_ids": [
+    "REV-M1-1",
+    "REV-M1-2",
+    "REV-M1-4",
+    "REV-M1-12",
+    "REV-M1-18",
+    "REV-M1-21",
+    "REV-M1-22"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0011",
+   "old_hash": "00bffc9de33c",
+   "new_text": "Chest EIT reconstructs conductivity change from boundary voltages; its clinical use rests on regional ventilation indices computed from the images (Frerichs et al., 2017) <!--ref:Frerichs2017TREND--><!--anchor:quote:consensus%20statement%20of%20the%20TRanslational%20EIT%20developmeNt%20stuDy%20group-->. Those indices are insensitive to which linear reconstructor produced the image: four algorithms applied to the same recordings gave five ventilation indices with no statistically significant difference between algorithms, as that study reports it (Zhao et al., 2014) <!--ref:Zhao2014PhysiolMeas--><!--anchor:quote:influence%20of%20image%20reconstruction%20algorithms%20on%20linear%20thorax%20EIT%20image%20analysis%20of%20ventilation-->, and twelve reconstructions differed in appearance by amounts that were not negligible while the clinical parameters derived from them were close (Grychtol et al., 2014a) <!--ref:Grychtol2014PLOSONE--><!--anchor:quote:Functional%20Validation%20and%20Comparison%20Framework%20for%20EIT%20Lung%20Imaging-->. A network that reads pixels sees the appearance, not the index. This paper uses *domain* for the reconstructor in a narrow, operational sense: we call the reconstructor a domain if, for a pixel-level post-reconstruction network, a change of reconstructor shows the three signs that multi-site segmentation studies associate with a domain shift: a loss of performance without retraining, no loss when the new reconstructor's images are pooled into training, and a failure when the new reconstructor is outside the training pool. The paper does not claim domain generalisation; that literature is cited only where compared (Zhou et al., 2023; Yoon et al., 2024) <!--ref:Zhou2023TPAMI--><!--anchor:quote:Domain%20Generalization%3A%20A%20Survey--> <!--ref:Yoon2024ProcIEEE--><!--anchor:quote:Domain%20Generalization%20for%20Medical%20Image%20Analysis%3A%20A%20Review-->. One difference from it governs every held-out number below: there the label is anatomy and does not change with the site, whereas here the reference is the reconstructor's own single-organ reconstruction and moves with it, so a held-out loss is an upper bound on the input-side generalisation loss (Section 2.3).",
+   "roadmap_item_ids": [
+    "REV-M1-27"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0020",
+   "old_hash": "f00adff97db1",
+   "new_text": "The paper contributes four things: registered, the branch stays below the registered floor under matched training on Gauss–Newton and back-projection, with the re-scored GREIT reference showing the same pattern and no evidence that the branch's advantage grows under a reconstructor change; from the first addendum, pooled training with a per-source affine was, descriptively, never worse than retraining on the deployed reconstructor by more than 0.3 points, and a global affine is a failure mode worth reporting; from the second, the pooled recipe does not generalise to a reconstructor outside the pool, tested and falsified at a pre-fixed margin, and the branch shows no measurable benefit there; and, methodologically, a preregistered study in which every one of twenty verdicts was a falsification, twelve of them in cells that posed their question, reported with its deviations and expectation hit rates.",
+   "roadmap_item_ids": [
+    "REV-M1-4",
+    "REV-M1-11",
+    "REV-M1-12",
+    "REV-M1-43"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0023",
+   "old_hash": "0973e7ef5dd4",
+   "new_text": "All images were generated with the EIDORS toolbox, v3.8 (Adler and Lionheart, 2006) <!--ref:Adler2006EIDORS--><!--anchor:quote:Uses%20and%20abuses%20of%20EIDORS--> on the registered 16-electrode cylinder (adjacent drive and adjacent measurement, 208 voltages per frame; mesh, electrode and geometry parameters in S2 Table) with 3,600 geometries: background 1.0 S/m, two lung inclusions at 0.5 S/m and one heart inclusion at 2.0 S/m, with randomised radii, centres and heterogeneous conductivity. For each geometry three forward and three inverse solves were run (mixed, lung only, heart only): the network's input is the mixed reconstruction and its targets the single-organ reconstructions. Gaussian measurement noise was added to the inhomogeneous voltage frame only, before reconstruction, at a signal-to-noise ratio (SNR) of 20 dB in the EIDORS convention: the norm of the difference frame divided by the norm of the added noise equals 10, an amplitude ratio. In the single-organ reconstructions the heart image's amplitude is 0.14, 0.085 and 0.099 of the lung image's (training-split SD ratio; GREIT, GN, BP), which is what makes the cardiac component weak for this simulation (S2 Table). The level is fixed and stated because an EIT system's SNR depends on its operating conditions (Gagnon et al., 2010) <!--ref:Gagnon2010TBME--><!--anchor:quote:A%20Resistive%20Mesh%20Phantom%20for%20Assessing%20the%20Performance%20of%20EIT%20Systems-->. Geometries and noise seeds were split 2,880/360/360 into training, validation and test frames, bit-identical across the three reconstructors, so that the datasets differ only in the reconstruction operator.",
+   "roadmap_item_ids": [
+    "REV-M1-19",
+    "REV-M1-23"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0024",
+   "old_hash": "d9159becaf78",
+   "new_text": "The three reconstructors are those the original study named, each at one fixed setting; the settings are listed in S2 Table. GREIT, the Graz consensus reconstruction algorithm for EIT (Adler et al., 2009) <!--ref:Adler2009GREIT--><!--anchor:quote:GREIT%3A%20a%20unified%20approach%20to%202D%20linear%20EIT%20reconstruction%20of%20lung%20images-->, was built as registered on a 64 × 64 grid (nominal noise figure 0.5, realised 0.602 on a common reference frame). The noise figure (Adler and Guardo, 1996) <!--ref:Adler1996TMI--><!--anchor:quote:regularized%20imaging%20and%20contrast%20detection--> is the ratio of relative noise in the image to relative noise in the measurements, so matching it compares two regularised linear reconstructors at equal noise amplification on the same data. One-step Gauss–Newton (GN) with a Laplace prior was parametrised on GREIT's 64 × 64 grid, its hyperparameter set by bisection so that its noise figure matched GREIT's realised value (hp 0.0016, noise figure 0.607). Back-projection (BP) used the Sheffield back-projection matrix distributed with EIDORS (Adler and Lionheart, 2006) <!--ref:Adler2006EIDORS--><!--anchor:quote:an%20extensible%20software%20base%20for%20EIT-->, with no free parameter (noise figure 0.831); its 32 × 32 raster was upsampled two-fold by pixel replication and masked to GREIT's field of view. Because reconstruction settings strongly influence what a reconstructor produces (Thürk et al., 2019) <!--ref:Thurk2019PhysiolMeas--><!--anchor:quote:Influence%20of%20reconstruction%20settings-->, every result holds for these three operators at these settings.",
+   "roadmap_item_ids": [
+    "REV-M1-19",
+    "REV-M1-32"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": [
+    "COLLATERAL-AUTH-round1-B0024-REV-M1-25"
+   ]
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0028",
+   "old_hash": "080c1af420a5",
+   "new_text": "The second decoder is hard parameter sharing (Caruana, 1997) <!--ref:Caruana1997MTL--><!--anchor:quote:Multitask%20Learning-->. The two L1 losses were summed with fixed weights of 1.0 each, a scope decision: the original study proposed the branch together with a multi-weighted loss and attributed its improvement to their interaction, and this study evaluates the branch alone. Fixed weights are a defensible default, since unit or tuned fixed weights have matched specialised multi-task optimisers in controlled comparisons (Kurin et al., 2022; Xin et al., 2022) <!--ref:Kurin2022Unitary--><!--anchor:quote:In%20Defense%20of%20the%20Unitary%20Scalarization%20for%20Deep%20Multi-Task%20Learning--> <!--ref:Xin2022MTOHelp--><!--anchor:quote:Do%20Current%20Multi-Task%20Optimization%20Methods%20in%20Deep%20Learning%20Even%20Help%3F-->; learned weighting (Kendall et al., 2018) <!--ref:Kendall2018--><!--anchor:quote:Multi-task%20Learning%20Using%20Uncertainty%20to%20Weigh%20Losses--> was not tested. Training settings, fixed before registration: Adam at 1 × 10⁻³ with cosine decay to 1 × 10⁻⁵, batch 16, at most 200 epochs with early stopping on validation loss (patience 20, best weights restored), L1 loss on the float target, no output activation, no augmentation, and one dataset-wide normalisation affine, a fixed location–scale standardisation (subtract the training-split mean, divide by its SD) estimated on that dataset's training split and applied to inputs and targets, referred to below as that dataset's affine. Thirty seeds (0 to 29) per arm and training row were trained on one machine (Mac mini M4, Apple MPS backend; a seed fixes data order and initialisation, but the backend does not guarantee bit-identical re-execution, so a seed defines a replicate rather than an exactly reproducible run); seed-to-seed variability is of the order of the effects at stake (Renard et al., 2020) <!--ref:Renard2020SciRep--><!--anchor:quote:Variability%20and%20reproducibility%20in%20deep%20learning%20for%20medical%20image%20segmentation-->. The GREIT row reuses seeds 0 to 29 of the companion study's 20 dB training (same machine and code; PyTorch 2.8.0), trained on 2026-09-24 and 25 and scored on 2026-09-26, before the registered state was hashed; the registered text declares this reuse and names that row as the reference against which the two R1 cells are read (Section 2.5), and a between-campaign difference is therefore confounded with every contrast that pairs a GREIT-trained network with one trained in this study (Section 3.4).",
+   "roadmap_item_ids": [
+    "REV-M1-31",
+    "REV-M1-14",
+    "REV-M1-20",
+    "REV-M1-13"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0030",
+   "old_hash": "c54efecb2df3",
+   "new_text": "The primary endpoint is heart-channel Dice on the quarter-amplitude set, the region above one quarter of the image's peak, a threshold of the kind clinical region-of-interest methods apply to EIT images (Pulletz et al., 2006) <!--ref:Pulletz2006ROI--><!--anchor:quote:define%20regions%20of%20interest%20for%20evaluation%20of%20regional%20lung%20ventilation-->, computed in image units on the test split and averaged over seeds; one Dice point is 0.01. The reference for each reconstructor is that reconstructor's own single-organ heart reconstruction, not the anatomical heart. This is registered and follows from the task: the network separates the cardiac component of a reconstructed image, and the correct answer is by definition what that reconstructor produces when only the heart is present. Scoring against an anatomical mask would fold each reconstructor's blur and bias into the endpoint; comparing reconstructors by image quality is outside this paper's claims. Dice against an anatomical reference was not computed. The lung channel is reported in every cell and not tested, with the registered expectation of no arm difference.",
+   "roadmap_item_ids": [
+    "REV-M1-26"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0031",
+   "old_hash": "2c5ebf7dd6df",
+   "new_text": "Two consequences matter for the held-out cells. The quarter-amplitude set is a threshold relative to the image's own peak, so a uniform over-amplitude leaves the set unchanged while a raised background or a changed shape alters it. And when the network is evaluated on a reconstructor it did not see, the reference changes with the reconstructor: a network trained on GN and BP heart images is scored against GREIT heart images it never saw. A held-out loss therefore combines a change of input distribution with a change of reference style, and is reported as an upper bound on the input-side generalisation loss, because the reference moves with the reconstructor. The bound rests on an assumption this study did not test: that scoring a network's output against a reference style it was not trained towards can only lower Dice relative to the held-out reconstructor's own heart image. How much of a given loss is attributable to the reference style was not measured.",
+   "roadmap_item_ids": [
+    "REV-M1-15"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": [
+    "COLLATERAL-AUTH-round1-B0031-REV-M1-37"
+   ]
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0036",
+   "old_hash": "b192b2898d28",
+   "new_text": "Table 4 gives the four SHA-256 states of the preregistration file, what each governs, and what had been read when each was written; S3 Table quotes every decision rule and fixed interpretation sentence verbatim. The registered state (2026-09-26) fixed R1, R3 and M1 with their rules, interpretations in both outcomes, n = 30 and the pilot before any arm of this study was trained; the companion study's GREIT networks, whose reuse the registered text declares, already existed (Section 2.2). Two deviations were recorded on 2026-10-03 before any cell was read: the pilot's acceptance band for GN's noise figure predated the change of matching rule from GREIT's nominal to its realised value, and BP's single-organ peaks were offset from GREIT's by up to 2 pixels against a registered tolerance of one pixel (2 pixels is one pixel of BP's native grid). No hypothesis, endpoint, arm, setting, sample size or rule changed; BP was analysed as registered, with the offset noted beside every BP cell. Two further decisions were taken after cells had been read and are recorded in Table 4 and S2 Table with their timing and consequence: the registered secondary scoring path is listed but not read, because it moves the output's background off zero (Section 3.2), and the registered interpretation of a falsified M1 is quoted but not applied to the two cells whose input was unreadable (Section 3.3). Neither changes a verdict.",
+   "roadmap_item_ids": [
+    "REV-M1-20",
+    "REV-M1-9",
+    "REV-M1-36"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": [
+    "COLLATERAL-AUTH-round1-B0036-REV-M1-40"
+   ]
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0039",
+   "old_hash": "ec415621971e",
+   "new_text": "Seeds are the unit of replication and every contrast is paired within seed. The branch rule (R1, M1, M1′, L2) has two conditions: the mean paired difference D minus B_wide on heart Dice must exceed B_wide's seed-to-seed standard deviation in that cell, the registered floor, and the two-sided Wilcoxon signed-rank test over the 30 paired seeds (Wilcoxon, 1945) <!--ref:Wilcoxon1945--><!--anchor:quote:Individual%20Comparisons%20by%20Ranking%20Methods--> must give p < 0.05; otherwise, or if the sign is reversed, the hypothesis is falsified. The floor is the registered smallest effect of interest; n = 30 gives 0.89 power for a floor-sized effect at diagonal-cell variability (dz 0.60, paired, α 0.05; S2 Table) and deliberately does not power a below-floor effect. The rules and both fixed interpretation sentences of every hypothesis are quoted verbatim in S3 Table and are applied as written. The transfer rule (R3) requires the difference of differences, Δ(X→Y) minus Δ(X→X), to be positive with a 95% percentile bootstrap interval over paired seeds (100,000 resamples, seed 20260904) that excludes zero. The equivalence rule (L1) requires the 95% percentile bootstrap interval of the control arm's paired difference between the held-out row and the in-pool pooled row to lie entirely within ±1.0 point; a two-sided 95% interval inside the margin corresponds to two one-sided tests at α = 0.025 (Schuirmann, 1987) <!--ref:Schuirmann1987JPharmacokinet--><!--anchor:quote:Two%20One-Sided%20Tests%20Procedure-->, more conservative than the 90% interval usual in equivalence testing (Lakens, 2017; Lakens et al., 2018) <!--ref:Lakens2017SPPS--><!--anchor:quote:Equivalence%20Tests%3A%20A%20Practical%20Primer--> <!--ref:Lakens2018AMPPS--><!--anchor:quote:Equivalence%20Testing%20for%20Psychological%20Research%3A%20A%20Tutorial-->. Pairing by seed follows the registered rule (S2 Table).",
+   "roadmap_item_ids": [
+    "REV-M1-8"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0040",
+   "old_hash": "bb8bbed24262",
+   "new_text": "Every cell is reported with n, the paired difference, its 95% bootstrap interval, the control arm's seed SD, the paired-difference SD, Cohen's dz (Lakens, 2013) <!--ref:Lakens2013EffectSize--><!--anchor:quote:Calculating%20and%20reporting%20effect%20sizes-->, the Wilcoxon statistic W, and p values from the normal approximation with continuity correction to two significant figures (intervals are rarely reported in segmentation studies; Christodoulou et al., 2024) <!--ref:Christodoulou2024MICCAI--><!--anchor:quote:Confidence%20Intervals%20Uncovered-->. For the R3 and E1 cells the achieved sensitivity (the difference of differences detectable with 80% power at n = 30 from that cell's observed seed SD) is reported in Table 2, because the registered power table assumed diagonal-cell variability; the paired-difference SD of every tested cell is in Tables 1 and 3 and the lung channel of every cell in S1 Table. No multiple-comparison correction was applied over the twenty verdicts: every verdict is of the form \"not confirmed\", and multiplicity inflates false confirmations, not false falsifications; the one interval excluding zero in the negative direction (L2 on GN) is described, not tested. Analyses used Python 3.9, PyTorch 2.8.0, NumPy 2.0.2 and SciPy 1.13.1.",
+   "roadmap_item_ids": [
+    "REV-M1-10"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0042",
+   "old_hash": "18c950bd599c",
+   "new_text": "The minimal dataset (per-seed Dice for every cell, the aggregated results file, gate and seed-0 diagnostic files) and the four preregistration states with their hash file are deposited on Zenodo [MATERIAL GAP: Zenodo DOI, minted at submission; the deposit is prepared]; the data-generation, training, scoring and figure code is in the project repository under a tagged release [MATERIAL GAP: repository tag for this paper]. Checkpoints are available from the corresponding author. The use of artificial-intelligence tools is disclosed in the Acknowledgments.",
+   "roadmap_item_ids": [
+    "REV-M1-6"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0045",
+   "old_hash": "f39ca45566cb",
+   "new_text": "### 3.1 Under matched training, the branch stays below the registered floor on Gauss–Newton and back-projection, and the GREIT reference shows the same pattern",
+   "roadmap_item_ids": [
+    "REV-M1-1"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0046",
+   "old_hash": "1fefba186fb9",
+   "new_text": "Table 1 gives the matched cells. On GN the paired difference D minus B_wide was +0.323 points (95% CI +0.183 to +0.470; p 0.00015) against a floor of 0.449; on BP it was +0.631 (CI +0.399 to +0.885; p 3 × 10⁻⁵) against a floor of 0.664. Both p values pass and neither difference exceeds its floor, so R1-GN and R1-BP are falsified, and the registered reading applies as written: \"the null extends across the three reconstructors the original study named\" (S3 Table). The GREIT → GREIT cell is the registered reference, re-scored from the companion study's networks and tested by no hypothesis; it shows the same pattern (+0.271 against a floor of 0.343; Table 1). In the first addendum the mixed-ps row gave −0.015 (floor 0.173, p 0.64) on GREIT, +0.201 (floor 0.248, p 0.00086) on GN and +0.404 (floor 0.531, p 0.0048) on BP: M1′ falsified in all three, by sign reversal on GREIT and by the floor on GN and BP (expectation met on 3 of 3 verdicts and 1 of 3 magnitudes). Its fixed reading, verbatim: \"under pooled, source-aware-normalised training the branch does not clear the floor on that reconstructor; the matched-training null extends to a training distribution that spans the three reconstructors\" (S3 Table).",
+   "roadmap_item_ids": [
+    "REV-M1-8"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": [
+    "COLLATERAL-AUTH-round1-B0046-REV-M1-33"
+   ]
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0049",
+   "old_hash": "82bd7087f06f",
+   "new_text": "Table 2 and Fig 2 give the six registered off-diagonal cells, scored with the training set's affine. The difference of differences, Δ(X→Y) − Δ(X→X), was negative in five cells (−1.07 to −10.05 points) and positive with an interval containing zero in the sixth (BP→GN, +2.97, CI −0.12 to +5.84), so all six R3 cells are falsified. The fixed reading for a falsified cell is, verbatim, \"the tolerance seen in the noise sweep is specific to that kind of shift\" (S3 Table); the noise sweep it names is the companion study's, whose result this paper does not use.",
+   "roadmap_item_ids": [
+    "REV-M1-8"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": [
+    "COLLATERAL-AUTH-round1-B0049-REV-M1-30"
+   ]
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0051",
+   "old_hash": "c6592cd7ccac",
+   "new_text": "The exploratory E1 re-scoring (first addendum; no verdict) kept the input in range and the background at zero. Under it both arms lost 19 to 34 points relative to their diagonals in every cell (Table 2), and in the two in-range cells the difference of differences changed sign in one when only the input affine changed. E1 confirms R3 in no cell and is not evidence of any tolerance of the branch; it supports one sentence: a reconstructor change without retraining costs 19 to 34 heart-Dice points even after scale correction, a figure that depends on the affine used.",
+   "roadmap_item_ids": [
+    "REV-M1-22"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0053",
+   "old_hash": "77cfa87a44b3",
+   "new_text": "The registered pooled row used one affine over the 8,640 pooled frames. Because GREIT's amplitude is 161 and 188 times GN's and BP's, that affine left GN and BP inputs varying by 1/132 and 1/156 of a GREIT input and their heart targets by 1/346 and 1/318 (Fig 3). The networks scored 0.45 ± 0.30 and 0.41 ± 0.30 (B_wide; D similar) on GN and BP, and 0.946 on GREIT. M1 is falsified in all three cells under its rule (sign reversed on GN and BP; +0.094 below a floor of 0.954 on GREIT), and the verdicts stand. Whether the registered row posed its intended question is a design matter: on GN and BP the networks were shown an input they could not read, so those two cells are not evidence about pooled training. The registered interpretation of a falsified M1, \"extending the matched-training null to a pooled training distribution\" (S3 Table), is therefore quoted but not applied to them, a decision taken after the cells were read and recorded in Section 2.5. The asymmetry with Section 3.2 is deliberate: the registered R3 reading describes what was observed in a cell and is applied to all six, with the input-state note beside it, whereas the registered M1 reading asserts an extension to pooled training that these two cells could not test.",
+   "roadmap_item_ids": [
+    "REV-M1-8",
+    "REV-M1-9",
+    "REV-M1-36"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0055",
+   "old_hash": "29f604bba31a",
+   "new_text": "### 3.4 Pooled training with a per-source affine was never worse than retraining on the deployed reconstructor by more than 0.3 points (reported, not tested)",
+   "roadmap_item_ids": [
+    "REV-M1-12"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0056",
+   "old_hash": "c09b2c63790a",
+   "new_text": "M2′ (first addendum; reported, not tested; descriptive) is the paired difference between the mixed-ps row and the matched row on the same reconstructor (Table 1). The six point estimates run from −0.083 to +0.360 points and no interval extends below −0.32 points: pooled training was never worse than retraining by more than 0.3 points in any cell, and two of the six intervals, both for the control arm on GREIT and GN, lie above zero.",
+   "roadmap_item_ids": [
+    "REV-M1-12"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0057",
+   "old_hash": "f3bbca5fb503",
+   "new_text": "Three qualifications belong to the result. Pooling is expected to help and is not claimed as a finding, as the preregistration stated in advance. It is not free: the mixed-ps row reached a similar best epoch to the single-source rows (median 57 and 74.5 epochs against 56 to 72.5) on three times as many frames per epoch, so each run took about three times the optimisation steps and wall time, and this design cannot separate the benefit of three renderings per geometry from that of three times the steps. And the normalisation is source-aware. For the GREIT cell of M2′ and for every contrast that pairs a GREIT-trained network with one trained in this study, the GREIT networks come from the companion study's campaign (Section 2.2), so a between-campaign difference is confounded with the contrast. M3′, the share of the registered-path no-retraining loss that pooling removed, is in Table 2 in points (+34.7/+44.8 for GN→BP and +15.1/+11.7 for BP→GN in the two in-range cells; the four cells crossing GREIT carry the degenerate or over-range note).",
+   "roadmap_item_ids": [
+    "REV-M1-13",
+    "REV-M1-16"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0058",
+   "old_hash": "95872181ef14",
+   "new_text": "### 3.5 Pooled training does not generalise to a reconstructor outside the pool: losses of 62, 16 and 36 points, upper bounds on the input-side loss",
+   "roadmap_item_ids": [
+    "REV-M1-29"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0059",
+   "old_hash": "03189f69b5f8",
+   "new_text": "Table 3 and Fig 2 give the held-out rows. L1 compares the control arm on the held-out reconstructor with the same arm on the in-pool mixed-ps row, against a margin of ±1.0 point fixed before training. The differences were −61.8 points (CI −65.1 to −58.5) on GREIT, −15.8 (−16.7 to −14.9) on GN and −35.8 (−39.4 to −32.7) on BP (D beside, untested, in Table 3). No interval approaches the margin, and L1 is falsified in all three cells. The fixed reading applies to each reconstructor in turn, verbatim: \"the recipe stays in-pool only for that reconstructor, and the loss is reported as the cost of deploying on an unseen reconstructor\" (S3 Table). The addendum expected three falsifications with losses of 5 to 30 points: met on 3 of 3 verdicts and 1 of 3 magnitudes (GN). The six in-pool reference cells of the same rows scored 0.957 to 0.967, the level of the diagonals, so the two-source pools were not deficient: the networks failed only on the source they had not seen. The loss order, GN smallest and GREIT largest, would follow if the loss reflects how well the two-source pool covers the held-out reconstructor; that mechanism was not tested, and the order is not a ranking of reconstructors. Because the reference image moves with the reconstructor (Section 2.3), each loss is an upper bound on the input-side generalisation loss.",
+   "roadmap_item_ids": [
+    "REV-M1-8",
+    "REV-M1-42"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": [
+    "COLLATERAL-AUTH-round1-B0059-REV-M1-33"
+   ]
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0062",
+   "old_hash": "6af966ed38be",
+   "new_text": "### 3.6 On an unseen reconstructor the branch shows no measurable benefit: its difference reverses sign",
+   "roadmap_item_ids": [
+    "REV-M1-4"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0063",
+   "old_hash": "4e65233dcbeb",
+   "new_text": "L2 applies the branch rule in the three held-out cells (Table 3). D minus B_wide was −3.2, −3.9 and −2.5 points on GREIT, GN and BP: falsified in all three by sign reversal, and the fixed reading applies verbatim: \"the matched-training null extends to a reconstructor the network never saw\" (S3 Table). The addendum expected three falsifications in the matched range (−0.02 to +0.63): verdicts met (3 of 3), magnitudes and directions not (0 of 3). The three cells do not carry equal weight: on GREIT and BP the floor is 9.49 points, fifteen times the largest matched difference in this study, so the rule could hardly have been met there whatever the branch did, and the information lies in the sign, consistent across the three cells, and in the GN cell, whose negative difference (−3.9 points, CI −5.3 to −2.4; p 0.00012; D above B_wide on 4 of 30 seeds) is described, not tested. Beside E1's six exploratory cells, the branch's difference is negative in eight of nine out-of-distribution cells, a description and not a verdict, taken up in Section 4.6.",
+   "roadmap_item_ids": [
+    "REV-M1-4",
+    "REV-M1-8"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0066",
+   "old_hash": "b73e197107a3",
+   "new_text": "All three signs named in Section 1.1 appeared, on evidence of three standings. Without retraining, a change of reconstructor cost both arms 19 to 34 heart-Dice points even after scale correction (exploratory), and the registered transfer hypothesis was falsified in every cell (registered). With the deployed reconstructor's images in the training pool, pooled training with a per-source affine was never worse than retraining on that reconstructor by more than 0.3 points (first addendum; descriptive). With the deployed reconstructor outside the pool, the same recipe lost 16 to 62 points (an upper bound, Section 2.3), falsified against a margin fixed in advance (second addendum; tested). Fig 5 arranges the remedies tested. Only putting the target reconstructor's images into training recovered the loss; the two ways of doing so differed by −0.08 to +0.36 points with two of six intervals favouring pooling, a difference this design cannot separate from threefold optimisation steps.",
+   "roadmap_item_ids": [
+    "REV-M1-2",
+    "REV-M1-3",
+    "REV-M1-18",
+    "REV-M1-22"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0067",
+   "old_hash": "5111e44ea86f",
+   "new_text": "\"The remedy lives in the training data\" is not a tautology, because four of its parts could have failed and did not. In-pool pooling could have cost accuracy; it did not. A single global affine did destroy pooling, so the recipe depends on a normalisation step the preregistration had not foreseen. Two sources pooled gave no evidence of helping on a third, so the benefit demonstrated here is one of inclusion; whether source diversity adds anything was not resolved (Section 4.4). And the one architectural remedy tested, the branch, showed no measurable benefit at any of the three layers: below the registered floor in-pool, sign reversed out of pool. That last statement is bounded: the branch's null is consistent across the three training conditions tested (matched, in-pool pooled, unseen), but these are three conditions of one design, not independent replications, and other architectural remedies, such as source-specific normalisation layers (Karani et al., 2018; Liu et al., 2020) <!--ref:Karani2018MICCAI--><!--anchor:quote:A%20Lifelong%20Learning%20Approach%20to%20Brain%20MR%20Segmentation--> <!--ref:Liu2020TMI--><!--anchor:quote:Multi-Site%20Network-->, were not tested; nothing here says the remedy cannot lie on the architecture side. The reading of a second decoder as a regulariser rather than a specialist (Myronenko, 2019) <!--ref:Myronenko2019AEReg--><!--anchor:quote:Autoencoder%20Regularization--> predicts no advantage on a matched in-distribution task and is consistent with every in-pool cell. The lung channel's fall on the held-out reconstructor shows that the failure is of the whole input side, beyond what a branch dedicated to the cardiac output could repair.",
+   "roadmap_item_ids": [
+    "REV-M1-4",
+    "REV-M1-28"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0070",
+   "old_hash": "bc5d2262b76e",
+   "new_text": "Four qualifications attach to the recipe: it is in-pool only; it holds for these three conventional reconstructors at one setting each, on the registered cylinder, at 20 dB, in simulation; its 0.96 is an addendum value and its no-retraining cost of 19 to 34 points is exploratory; and it is scored against each reconstructor's own cardiac image. A fifth concerns \"unseen\": pool membership was binary, and implementation variants of one algorithm, whose settings alone change the output substantially (Thürk et al., 2019) <!--ref:Thurk2019PhysiolMeas--><!--anchor:quote:reconstruction%20settings-->, were not tested, so the 16 to 62 points (an upper bound, Section 2.3) are the cost of a different algorithm, not of a variant.",
+   "roadmap_item_ids": [
+    "REV-M1-22"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0072",
+   "old_hash": "b6dd49f73711",
+   "new_text": "The registered pooled row failed for a reason the preregistration did not anticipate and the pilot did not check, and the failure was found only when the network's normalised inputs were plotted after scoring. Reconstructed EIT amplitude is not a shared currency: within one algorithm it changes with the reconstructed quantity (Grychtol and Adler, 2014b) <!--ref:Grychtol2014PhysiolMeas--><!--anchor:quote:Choice%20of%20reconstructed%20tissue%20properties-->, and across algorithms it differed here by two orders of magnitude. Where source differences are modest, as among multi-centre magnetic resonance imaging (MRI) scanners whose unitless intensities differ by far less than two orders of magnitude, the choice among normalisation methods changes Dice by less than 0.02 (Albert et al., 2023) <!--ref:Albert2023ApplSci--><!--anchor:quote:Comparison%20of%20Image%20Normalization%20Methods%20for%20Multi-Site%20Deep%20Learning-->; the failure here was not a wrong choice among such methods but the absence of any per-source step. That step can also live in batch-normalisation layers (Karani et al., 2018) <!--ref:Karani2018MICCAI--><!--anchor:quote:Across%20Scanners%20and%20Protocols--> or be learned across datasets (Delisle et al., 2021) <!--ref:Delisle2021MedIA--><!--anchor:quote:Realistic%20image%20normalization%20for%20multi-Domain%20segmentation-->; this study kept it at the input and fixed, so that the network's response to the source difference could be measured alone.",
+   "roadmap_item_ids": [
+    "REV-M1-24"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0077",
+   "old_hash": "62a403b57df6",
+   "new_text": "Of twenty verdict cells, twenty were falsified; twelve posed the question they were designed for, and eight (four R3 cells with unreadable input, two M1 cells with unreadable input, and the two held-out L2 cells whose floors were 9.5 points) were falsified in cells the design did not succeed in posing or could hardly have confirmed (Sections 3.2, 3.3 and 3.6). Registered Reports return positive results far less often than the standard literature, 44% against 96% in one comparison (Scheel et al., 2021) <!--ref:Scheel2021AMPPS--><!--anchor:quote:Comparing%20the%20Standard%20Psychology%20Literature%20With%20Registered%20Reports-->, and a null against a matched baseline is the kind of result most exposed to under-reporting in computational fields (McGreivy and Hakim, 2024; Borji, 2018; Varoquaux and Cheplygina, 2022) <!--ref:McGreivy2024NatMachIntell--><!--anchor:quote:Weak%20baselines%20and%20reporting%20biases--> <!--ref:Borji2018ImaVisComput--><!--anchor:quote:Negative%20results%20in%20computer%20vision--> <!--ref:Varoquaux2022NPJDigitMed--><!--anchor:quote:methodological%20failures%20and%20recommendations-->. Preregistration exists to make such results reportable (Nosek et al., 2018; Chambers and Tzavella, 2021) <!--ref:Nosek2018Prereg--><!--anchor:quote:The%20preregistration%20revolution--> <!--ref:Chambers2021NatHumBehav--><!--anchor:quote:Registered%20Reports-->, and simulation comparisons can be made to favour any method unless their rules are fixed in advance (Pawel et al., 2024) <!--ref:Pawel2023BiomJ--><!--anchor:quote:Questionable%20research%20practices%20in%20comparative%20simulation%20studies-->.",
+   "roadmap_item_ids": [
+    "REV-M1-11"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0078",
+   "old_hash": "87ed30caa1ee",
+   "new_text": "The obvious objection is that the registered part governed the least informative cells and every number a reader will quote came from the addenda. Three facts answer it. The addenda were hashed before their runs, with rules, margins and expectations written down, and the hit rates are reported as they fell (M1′ 3 of 3 verdicts, 1 of 3 magnitudes; L1 3 of 3, 1 of 3; L2 3 of 3, 0 of 3); no registered verdict was revised. Both addenda were written to test outcomes unfavourable to the authors' own recipe, and found them: the first left the branch below the floor, and the second denied the pooled recipe any generalisation beyond the pool at the pre-fixed margin. The expectations written before those runs anticipated the falsifications, so the results met the authors' stated expectations rather than surprising them, and in two of the three L1 cells the loss exceeded the expected range. And the second addendum's rows were those a simulated review round, recorded in the repository before the addendum was written, had asked for.",
+   "roadmap_item_ids": [
+    "REV-M1-38"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": [
+    "COLLATERAL-AUTH-round1-B0078-REV-M1-35"
+   ]
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0083",
+   "old_hash": "7750f31b4e0a",
+   "new_text": "For a planned measurement study with the same reconstructors, these results are design variables, not findings. The per-source affine of each reconstructor and the pooled training row should be registered as design variables; amplitude scales should be compared and the network's inputs drawn before any pooling; and \"the same reconstructor\" should be defined as algorithm, implementation and hyperparameters together. The per-source affine requires the reconstructor's identity at deployment, a domain label at test time (Karani et al., 2018) <!--ref:Karani2018MICCAI--><!--anchor:quote:Across%20Scanners%20and%20Protocols-->; in the EIT systems such a study targets the reconstructor is a configured setting and therefore known, but whether that setting is exposed to downstream software must be confirmed for each system. The primary contrast of such a study is simulation against measurement, with the branch a secondary arm.",
+   "roadmap_item_ids": [
+    "REV-M1-34"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0085",
+   "old_hash": "18e108fb6acb",
+   "new_text": "The question the original study left open has an answer for the three conventional reconstructors it named, in simulation at 20 dB. Under matched training the branch stayed below the registered floor on Gauss–Newton and back-projection (registered), and the re-scored GREIT reference showed the same pattern; without retraining, its advantage showed no evidence of growing under the shift (registered); in pooled training it stayed below the floor (first addendum); and on a reconstructor the network had never seen its difference reversed sign (second addendum). The cost of a reconstructor change was recovered by putting that reconstructor's images into training, by retraining or by pooling with a per-source affine; the two differed by −0.08 to +0.36 points, with two of six intervals favouring pooling (first addendum; reported, not tested), and nothing else that was tested recovered it. The benefit of pooling stops at the pool boundary: leaving one reconstructor out cost 62, 16 and 36 points on GREIT, Gauss–Newton and back-projection against a margin of ±1.0 point fixed before the runs (second addendum; tested), an upper bound on the input-side loss because the reference moves with the reconstructor, so the in-pool restriction of the recipe is a tested and falsified generalisation claim, not an assumption. Every tested verdict followed a rule written and hashed before the data it judged were read; the descriptive quantities carry no verdict. Learned harmonisation, wider randomisation and measured data lie outside this study and are where the next tests belong.",
+   "roadmap_item_ids": [
+    "REV-M1-1",
+    "REV-M1-2",
+    "REV-M1-3",
+    "REV-M1-5",
+    "REV-M1-12"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0089",
+   "old_hash": "f1656be533d8",
+   "new_text": "A companion simulation study by the same group, evaluating the same two arms under GREIT across measurement-noise levels, is under review elsewhere and is declared as a related submission; a copy accompanies this submission. The present manuscript relies on none of its reported findings; its GREIT training row re-uses that study's trained networks, re-scored here (Section 2.2). [MATERIAL GAP: preprint DOI, to be inserted when the companion study is posted as a preprint; until then it is not cited and the accompanying copy is the reference.]\n\n## Data availability\n\nThe minimal dataset (per-seed Dice for every cell, the aggregated results file, gate and seed-0 diagnostic files) and the four preregistration states with their hash file are deposited on Zenodo [MATERIAL GAP: Zenodo DOI, minted at submission]; the data-generation, training, scoring and figure code is in the project repository under a tagged release [MATERIAL GAP: repository tag for this paper]. Model checkpoints are available from the corresponding author.\n\n## Ethics statement\n\nThe study used simulated data only; no human participants, animals or patient data were involved, and no ethics approval was required.\n\n## Funding and competing interests\n\nThe journal collects funding and competing-interest statements in its submission system rather than in the manuscript file; the corresponding author's authorship of the semi-Siamese architecture evaluated here (Section 4.6) is declared there.",
+   "roadmap_item_ids": [
+    "REV-M1-6",
+    "REV-M1-7"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0094",
+   "old_hash": "2c56e17bb83d",
+   "new_text": "**S1 Table.** Per-seed heart- and lung-channel Dice for every cell of the design (three matched, six no-retraining, two pooled, three held-out rows with their in-pool comparison cells), the registered-path absolute Dice of the six no-retraining cells, the lung-channel Dice of every cell, and the registered secondary-path values, E1, M3′ and L3′ in full.",
+   "roadmap_item_ids": [
+    "REV-M1-10"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0095",
+   "old_hash": "22df90cdb87d",
+   "new_text": "**S2 Table.** Forward model, reconstructor settings, normalisation, network and training constants, power, pairing, pilot checks, the two pre-read deviations and the two post-read reading decisions, the four preregistration hashes and the training records (body after Table 4).",
+   "roadmap_item_ids": [
+    "REV-M1-19",
+    "REV-M1-9"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "insert_after",
+   "block_id": "B0097",
+   "old_hash": "3f6f161b5a1d",
+   "new_text": "**S3 Table.** The registered decision rule and both fixed interpretation sentences of every tested hypothesis (R1, R3, M1, M1′, L1, L2), quoted verbatim from the hashed preregistration file with the governing hash state (body after Table 4).",
+   "roadmap_item_ids": [
+    "REV-M1-8"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0105",
+   "old_hash": "fd70606c2150",
+   "new_text": "**Table 1. Matched-training cells and the pooled rows.** Heart-channel Dice, test split, seeds 0–29 (n = 30). Δ = D − B_wide in Dice points (0.01); 95% CI by percentile bootstrap over paired seeds (100,000 resamples); SD(Δ) = seed SD of the paired difference; floor = B_wide's seed-to-seed SD; W = Wilcoxon signed-rank statistic; p two-sided, normal approximation with continuity correction. Standing: R = registered (hash 4b4c7a6d…), A1 = first addendum (0060eedf…), ref = reference cell re-scored from the companion study's networks, no hypothesis tested, no verdict.",
+   "roadmap_item_ids": [
+    "REV-M1-1"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": [
+    "COLLATERAL-AUTH-round1-B0105-REV-M1-33"
+   ]
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0106",
+   "old_hash": "67552795b673",
+   "new_text": "| Cell (train → evaluate) | Standing | B_wide Dice (mean ± SD) | D Dice (mean ± SD) | Δ (points) | 95% CI | SD(Δ) | Floor | dz | W | p | D > B_wide | Verdict |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| R1-GN (GN → GN) | R | 0.9639 ± 0.0045 | 0.9672 ± 0.0029 | +0.323 | [+0.18, +0.47] | 0.407 | 0.449 | +0.79 | 48 | 1.5e−04 | 27/30 | falsified |\n| R1-BP (BP → BP)¹ | R | 0.9565 ± 0.0066 | 0.9628 ± 0.0031 | +0.631 | [+0.40, +0.88] | 0.692 | 0.664 | +0.91 | 29 | 3.0e−05 | 26/30 | falsified |\n| GREIT → GREIT | ref | 0.9575 ± 0.0034 | 0.9602 ± 0.0036 | +0.271 | [+0.11, +0.43] | 0.465 | 0.343 | +0.58 | 104 | 0.0085 | 23/30 | — (reference; same pattern, below the floor) |\n| M1 (mixed → GREIT) | R | 0.9463 ± 0.0095 | 0.9472 ± 0.0125 | +0.094 | [−0.53, +0.70] | 1.750 | 0.954 | +0.05 | 211 | 0.67 | 16/30 | falsified |\n| M1 (mixed → GN)² | R | 0.4514 ± 0.2991 | 0.4489 ± 0.2450 | −0.245 | [−14.32, +13.97] | 40.147 | 29.909 | -0.01 | 221 | 0.82 | 12/30 | falsified |\n| M1 (mixed → BP)¹ ² | R | 0.4065 ± 0.2956 | 0.4008 ± 0.2469 | −0.562 | [−14.54, +13.38] | 39.697 | 29.560 | -0.01 | 230 | 0.97 | 16/30 | falsified |\n| M1′ (mixed-ps → GREIT) | A1 | 0.9611 ± 0.0017 | 0.9610 ± 0.0051 | −0.015 | [−0.23, +0.17] | 0.556 | 0.173 | -0.03 | 209 | 0.64 | 16/30 | falsified |\n| M1′ (mixed-ps → GN) | A1 | 0.9662 ± 0.0025 | 0.9682 ± 0.0026 | +0.201 | [+0.07, +0.32] | 0.348 | 0.248 | +0.58 | 70 | 8.6e−04 | 24/30 | falsified |\n| M1′ (mixed-ps → BP)¹ | A1 | 0.9579 ± 0.0053 | 0.9619 ± 0.0053 | +0.404 | [+0.11, +0.69] | 0.831 | 0.531 | +0.49 | 95 | 0.0048 | 24/30 | falsified |",
+   "roadmap_item_ids": [
+    "REV-M1-1",
+    "REV-M1-10"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": [
+    "COLLATERAL-AUTH-round1-B0106-REV-M1-33"
+   ]
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0107",
+   "old_hash": "11881575031d",
+   "new_text": "¹ BP single-organ peaks are offset from GREIT's by up to 2 px on the 64 × 64 raster (one pixel of BP's native grid; preregistration §10). ² Under the single pooled affine the GN and BP inputs vary by 1/132 and 1/156 of a GREIT input (Section 3.3); the registered verdict stands, and the cell is not read as evidence about pooled training. The GREIT → GREIT row is the registered reference (the companion study's networks, seeds 0–29, re-scored here); R1 names GN and BP only, so this row carries no verdict.",
+   "roadmap_item_ids": [
+    "REV-M1-1",
+    "REV-M1-10"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0108",
+   "old_hash": "6fd9d36cdfb8",
+   "new_text": "M2′ (A1; reported, not tested; descriptive): mixed-ps → Y minus Y → Y, paired by seed, points [95% CI]: B_wide: mixed-ps→GREIT − GREIT→GREIT +0.360 [+0.23, +0.50]; D: mixed-ps→GREIT − GREIT→GREIT +0.074 [−0.17, +0.30]; B_wide: mixed-ps→GN − GN→GN +0.229 [+0.08, +0.38]; D: mixed-ps→GN − GN→GN +0.107 [−0.01, +0.22]; B_wide: mixed-ps→BP − BP→BP +0.143 [−0.14, +0.43]; D: mixed-ps→BP − BP→BP −0.083 [−0.32, +0.13]. Registered M2 (R; mixed → Y minus Y → Y): B_wide: mixed→GREIT − GREIT→GREIT −1.1 [−1.5, −0.8]; D: mixed→GREIT − GREIT→GREIT −1.3 [−1.8, −0.9]; B_wide: mixed→GN − GN→GN −51.3 [−61.5, −40.5]; D: mixed→GN − GN→GN −51.8 [−60.2, −43.0]; B_wide: mixed→BP − BP→BP −55.0 [−65.2, −44.3]; D: mixed→BP − BP→BP −56.2 [−64.5, −47.2].",
+   "roadmap_item_ids": [
+    "REV-M1-2",
+    "REV-M1-10"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0109",
+   "old_hash": "d0a9476f41aa",
+   "new_text": "**Table 2. Reconstructor change without retraining: the six registered R3 cells, the exploratory E1 re-scoring and M3′.** Difference of differences (DoD) = Δ(X→Y) − Δ(X→X) in points, 95% percentile bootstrap CI over paired seeds; SD = seed SD of the DoD; MDE80 = DoD detectable with 80% power at n = 30 (paired-t approximation, dz 0.53), given for the registered and the E1 path; input state from the seed-0 diagnosis (within-frame SD of the network's input under the training set's affine; diagonal ≈ 0.82). Dice columns give the absolute heart Dice of B_wide / D under the registered path (training set's affine for input and output) and under E1 (evaluation set's affine for the input, training set's for the output). M3′ = Dice(mixed-ps → Y) − Dice(X → Y) in points, the latter being the registered-path cell. Standing: R = registered; E = exploratory, no verdict (A1); A1 = first addendum, reported, not tested.",
+   "roadmap_item_ids": [
+    "REV-M1-16"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0110",
+   "old_hash": "8bfe2193c70b",
+   "new_text": "| Cell X → Y | Input state (R path) | B_wide / D Dice, R path | Δ(X→Y) R | DoD R (points) | 95% CI | SD | MDE80 R | Verdict (R) | B_wide / D Dice, E1 | Δ(X→Y) E1 | DoD E1 (points) | 95% CI | MDE80 E1 | M3′ B_wide / D (A1) |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| GREIT → GN | degenerate (near-constant) | 0.739 / 0.663 | −7.66 | −7.93 | [−12.94, −3.47] | 13.5 | 7.2 | falsified | 0.737 / 0.686 | −5.00 | −5.27 | [−6.10, −4.45] | 1.2 | +22.7 / +30.6 |\n| GREIT → BP¹ | degenerate (near-constant) | 0.732 / 0.724 | −0.80 | −1.07 | [−7.29, +4.39] | 16.6 | 8.8 | falsified | 0.710 / 0.635 | −7.50 | −7.77 | [−12.03, −3.38] | 6.5 | +22.6 / +23.8 |\n| GN → GREIT | over-range | 0.674 / 0.659 | −1.53 | −1.85 | [−8.32, +4.24] | 17.9 | 9.5 | falsified | 0.713 / 0.656 | −5.77 | −6.09 | [−9.06, −3.44] | 4.2 | +28.7 / +30.2 |\n| GN → BP¹ | in range | 0.611 / 0.514 | −9.73 | −10.05 | [−20.34, +0.50] | 29.8 | 15.8 | falsified | 0.647 / 0.629 | −1.87 | −2.20 | [−10.80, +6.54] | 13.1 | +34.7 / +44.8 |\n| BP → GREIT¹ | over-range | 0.623 / 0.568 | −5.50 | −6.13 | [−12.18, −0.06] | 17.3 | 9.2 | falsified | 0.739 / 0.758 | +1.91 | +1.28 | [−3.06, +4.61] | 5.8 | +33.8 / +39.3 |\n| BP → GN¹ | in range | 0.815 / 0.851 | +3.60 | +2.97 | [−0.12, +5.84] | 8.5 | 4.5 | falsified | 0.767 / 0.715 | −5.19 | −5.82 | [−13.13, +1.28] | 10.9 | +15.1 / +11.7 |",
+   "roadmap_item_ids": [
+    "REV-M1-10",
+    "REV-M1-16"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0111",
+   "old_hash": "d2427dbd4e27",
+   "new_text": "¹ BP raster offset, see Table 1. The registered secondary path (evaluation set's affine for input and output) is listed and not read, because it moves the output's background off zero (Section 3.2; a post-read decision, Section 2.5): DoD GREIT → GN −5.20 [−6.11, −4.25]; GREIT → BP −5.08 [−9.35, −0.73]; GN → GREIT −2.10 [−3.33, −0.94]; GN → BP −2.38 [−4.47, −0.24]; BP → GREIT +0.13 [−1.99, +2.17]; BP → GN +3.14 [+0.63, +5.48].",
+   "roadmap_item_ids": [
+    "REV-M1-10"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0112",
+   "old_hash": "892f97f227c4",
+   "new_text": "**Table 3. Leave-one-reconstructor-out rows (second addendum, hash 9589b298…).** Held-out cell loro-Y → Y: the network never saw Y. Every held-out loss in this table is an upper bound on the input-side generalisation loss, because the reference image moves with the reconstructor (Section 2.3). L1: B_wide on loro-Y → Y minus B_wide on mixed-ps → Y, paired by seed, 95% percentile bootstrap CI, margin ±1.0 point fixed before the runs (D beside, not tested). L2: Δ = D − B_wide on loro-Y → Y under the R1 rule; SD(Δ) = seed SD of the paired difference. L3′ (reported, not tested): loro-Y → Y minus Y → Y, and minus the two registered no-retraining cells X → Y (in-range cells only; the four cells crossing GREIT carry the degenerate/over-range note and are in S1 Table). In-pool reference cells: the same rows evaluated on their two pool members (no hypothesis tested).",
+   "roadmap_item_ids": [
+    "REV-M1-29"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0113",
+   "old_hash": "5bd0c20dc12c",
+   "new_text": "| Held-out Y | B_wide Dice (mean ± SD) | D Dice (mean ± SD) | B_wide per-seed min–max | L1: B_wide loss vs mixed-ps (points) [95% CI] | L1 verdict | D loss (not tested) | L2: Δ (points) [95% CI] | SD(Δ) | Floor | dz | W | p | D > B_wide | L2 verdict | Lung Dice B_wide / D |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| GREIT | 0.3431 ± 0.0949 | 0.3115 ± 0.0824 | 0.187–0.504 | −61.8 [−65.1, −58.5] | falsified | −64.9 [−67.9, −62.0] | −3.2 [−7.5, +1.3] | 12.51 | 9.49 | −0.25 | 153 | 0.10 | 10/30 | falsified | 0.914 / 0.922 |\n| GN | 0.8082 ± 0.0254 | 0.7691 ± 0.0279 | 0.729–0.858 | −15.8 [−16.7, −14.9] | falsified | −19.9 [−20.9, −18.9] | −3.9 [−5.3, −2.4] | 4.10 | 2.54 | −0.95 | 45 | 1.2e−04 | 4/30 | falsified | 0.927 / 0.931 |\n| BP¹ | 0.5995 ± 0.0949 | 0.5748 ± 0.1387 | 0.323–0.709 | −35.8 [−39.4, −32.7] | falsified | −38.7 [−43.8, −33.9] | −2.5 [−8.1, +3.2] | 16.13 | 9.49 | −0.15 | 197 | 0.47 | 16/30 | falsified | 0.789 / 0.788 |",
+   "roadmap_item_ids": [
+    "REV-M1-10"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0114",
+   "old_hash": "440ad768386f",
+   "new_text": "¹ BP raster offset, see Table 1. The B_wide seed SD of the GREIT and BP held-out cells coincides at four decimals by chance (0.09489 and 0.09490 in the per-seed file). In-pool reference cells (B_wide / D Dice): loro-GREIT → GN 0.9653 / 0.9660; loro-GREIT → BP 0.9585 / 0.9619; loro-GN → GREIT 0.9605 / 0.9622; loro-GN → BP 0.9568 / 0.9619; loro-BP → GREIT 0.9605 / 0.9620; loro-BP → GN 0.9653 / 0.9673. L3′ relative to specialised training (loro-Y → Y minus Y → Y), points [95% CI]: B_wide: loro-GREIT→GREIT − GREIT→GREIT −61.4 [−64.8, −58.1]; D: loro-GREIT→GREIT − GREIT→GREIT −64.9 [−67.8, −62.0]; B_wide: loro-GN→GN − GN→GN −15.6 [−16.5, −14.7]; D: loro-GN→GN − GN→GN −19.8 [−20.8, −18.8]; B_wide: loro-BP→BP − BP→BP −35.7 [−39.3, −32.6]; D: loro-BP→BP − BP→BP −38.8 [−43.9, −34.1]. L3′ relative to the two in-range no-retraining cells: B_wide: loro-GN→GN − BP→GN −0.7 [−2.2, +0.8]; D: loro-GN→GN − BP→GN −8.2 [−10.4, −5.5]; B_wide: loro-BP→BP − GN→BP −1.2 [−7.4, +5.2]; D: loro-BP→BP − GN→BP +6.1 [−1.1, +13.0].",
+   "roadmap_item_ids": [
+    "REV-M1-10",
+    "REV-M1-17"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": [
+    "COLLATERAL-AUTH-round1-B0114-REV-M1-33"
+   ]
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0115",
+   "old_hash": "676f5171a562",
+   "new_text": "**Table 4. The four SHA-256 states of the preregistration file, what each governs and what had been read when each was written; and the two post-read reading decisions, which changed no hashed text and no verdict.** The hash of each state is written into the metadata of every training run it governs; the four full texts and the hash file are deposited with the minimal dataset (S1 Appendix). S3 Table quotes the rules and interpretation sentences verbatim.",
+   "roadmap_item_ids": [
+    "REV-M1-10"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0116",
+   "old_hash": "8a6325293ecb",
+   "new_text": "| State (date) | SHA-256 (prefix) | Governs | Written after reading | Fixed before the runs |\n|---|---|---|---|---|\n| Registered (2026-09-26) | 4b4c7a6d… | R1 (2 cells), R3 (6 cells), M1 (3 cells); rules, interpretations in both outcomes, n = 30, pilot | No cell of this study: no GN, BP or pooled arm existed and no contrast of this study had been computed. The companion study's GREIT networks (seeds 0–29, trained 2026-09-24 to 25 and scored 2026-09-26, before hashing) and their GREIT → GREIT result were known and are declared in the registered text as the reused reference row | All of the above |\n| Deviation record (2026-10-03) | 3fdc703d… | Two §10 entries (GN noise-figure band superseded by the realised-value matching rule; BP 2-px raster offset) | Pilot files only; no cell of the matrix | No hypothesis, endpoint, arm, setting, n or rule changed |\n| First addendum (2026-10-03) | 0060eedf… | mixed-ps row: M1′ (3 cells, R1 rule), M2′, M3′ (reported), E1 (exploratory, no verdict) | All 12 registered cells and the 9 secondary-path cells | Row, scoring path, data gate, rule, expectation (3 falsifications, +0.27 to +0.63), readings of both outcomes |\n| Second addendum (2026-10-11) | 9589b298… | loro-GREIT, loro-GN, loro-BP: L1 (equivalence, ±1.0 point), L2 (R1 rule), L3′ and in-pool references (reported) | The first addendum's results (M1′, M2′, M3′, E1) and the first simulated review round | Rows, scoring path, data gate, margin and its reasons, rules, expectations (L1: 3 falsifications, 5–30 points; L2: 3 falsifications, −0.02 to +0.63), readings of both outcomes |\n| Post-read reading decisions (2026-10-03 and 2026-10-10; not hashed) | — | (a) the registered secondary scoring path (evaluation set's affine for input and output) is listed, not read, because it moves the output's background off zero; (b) the registered interpretation of a falsified M1 is quoted but not applied to the GN and BP cells, whose input was unreadable under the single pooled affine | The registered matrix (a); the registered matrix and the seed-0 input diagnosis (b) | Nothing: these are reading decisions on registered analyses, recorded in Section 2.5 and S2 Table; no verdict, rule or number changed |\n\n## Supporting information tables\n\n**S2 Table. Forward model, reconstructor settings, pilot checks, deviations and post-read decisions, hashes, power and training records.** Every value is read from the generation scripts (`gen_dataset.m`, `gen_recon_full.m`, `p2_add_noise.m`), the preregistration file and the result files; none is typed from memory.\n\n| Item | Value |\n|---|---|\n| Forward model | EIDORS v3.8 with Netgen; cylinder of radius 2 and height 2 (model units), 16 electrodes of radius 0.1 in one ring at height 1 (`ng_mk_cyl_models([2,2,maxh],[16,1],[0.1])`), EIDORS default contact impedance; tetrahedral forward mesh with maximum element size 0.10; adjacent drive and adjacent measurement with current-carrying electrodes excluded (`mk_stim_patterns(16,1,[0,1],[0,1],{'no_meas_current'},1)`), 208 measurements per frame |\n| Geometry | 3,600 geometries: background 1.0 S/m; two lung inclusions at 0.5 S/m with radius drawn from U(0.30, 0.60); one heart inclusion at 2.0 S/m with radius drawn independently from U(0.15, 0.30); inclusion centres jittered by ±0.05 around fixed positions; within-organ heterogeneity σ(x) = σ₀(1 + 0.25 f(x)), f the sum of 8 random sinusoids with correlation length 0.60; split 2,880 / 360 / 360 by geometry index, identical for all three reconstructors |\n| Noise | Additive white Gaussian noise on the 208 inhomogeneous-frame voltages only (homogeneous reference frame noise-free), scaled so that ‖vᵢ − vₕ‖ / ‖noise‖ = 10^(20/20) = 10 (an amplitude ratio; 20 dB), seed `noise_seed0 + i`, identical across reconstructors |\n| GREIT | `mk_GREIT_model` on a coarse cylinder (maximum element size 0.20): 64 × 64 image, 1,000 simulated training targets of radius parameter 0.02, noise figure 0.5 (nominal); realised noise figure on the common reference frame 0.602 |\n| One-step Gauss–Newton | `inv_solve_diff_GN_one_step` with `prior_laplace`, parametrised on GREIT's 64 × 64 reconstruction grid through `mk_coarse_fine_mapping` from the same coarse cylinder (no resampling onto the GREIT raster); hyperparameter 0.0016 set by bisection in log₁₀ so that the noise figure (0.607) matches GREIT's realised 0.602 on the common reference frame |\n| Back-projection | Sheffield MKI back-projection matrix (`mk_common_gridmdl('backproj')`), 32 × 32 raster, upsampled 2 × 2 by pixel replication (`kron(·, ones(2))`) and masked to GREIT's field of view; no free parameter; noise figure 0.831 on the common reference frame |\n| Heart-image amplitude relative to lung-image amplitude (training-split SD ratio of the single-organ reconstructions) | GREIT 0.143; GN 0.085; BP 0.099 |\n| Mixed-image amplitude (training-split SD) | GREIT 8.92; GN 0.0555; BP 0.0474 (ratios 161 and 188) |\n| Normalisation (\"affine\") | For each training row one location–scale standardisation estimated on that row's training split (subtract the mean, divide by the SD of all pixels of the mixed images), applied to inputs and targets; fixed, not learned; the pooled rows standardise each source with its own single-source affine before concatenation (per-source affine) |\n| Network | U-Net encoder 32-64-128-256 channels, 512-channel bottleneck, two 3 × 3 convolutions with batch normalisation and ReLU per level, 2 × 2 max-pooling; decoders with 2 × 2 transposed convolutions and skip concatenation; D: two decoders of the original width; B_wide: one decoder widened by 1.5312 (48, 96, 192, 392 channels fine to coarse) with two 1 × 1 output heads; parameters D 10,811,298, B_wide 10,743,738 |\n| Training | Adam 1 × 10⁻³ with cosine decay to 1 × 10⁻⁵, batch 16, ≤ 200 epochs, early stopping on validation loss (patience 20, best weights restored), L1 loss, unit loss weights, no augmentation, no output activation; seeds 0–29 per arm and row; Mac mini M4, Apple MPS backend, PyTorch 2.8.0 (seeds fix data order and initialisation; the backend does not guarantee bit-identical re-execution, so a seed defines a replicate, not an exactly reproducible run) |\n| Power of the branch rule at n = 30 | Paired power at α 0.05 for dz 0.60 / 0.80 (the floor as a standardised effect in the diagonal cells) 0.89 / 0.99; for dz 0.40 (below the floor) 0.56; not intended to power a below-floor effect (preregistration §5) |\n| Pairing | Seed s against seed s in every contrast; for the held-out rows the two sides are separate trainings sharing initialisation and data order; with L1 effects 14 to 58 points outside the margin, paired or unpaired resampling changes no verdict |\n| Pilot checks (registered §6) | Heart quarter-amplitude coverage of the single-organ targets (mean) GREIT 0.068, GN 0.130, BP 0.105; noise figures GREIT 0.602, GN 0.607, BP 0.831; single-organ peak offset to GREIT: GN 1 px, BP 2 px (ten frames); GREIT replay of a 20 dB test frame reproduced to 2 × 10⁻¹⁴ |\n| Deviations (pre-read, 2026-10-03) | (1) §6(iii)'s acceptance band for GN's noise figure (0.5 ± 0.05) was superseded by §4's rule of matching GREIT's realised noise figure, a rule changed before hashing but not carried into §6; (2) BP's single-organ peak offset of 2 px exceeded §6(v)'s one-pixel tolerance; the automatic gate used 3 px and passed. Neither changed a hypothesis, endpoint, arm, setting, sample size or rule |\n| Post-read reading decisions (2026-10-03; 2026-10-10) | (3) the registered secondary scoring path (evaluation set's affine for input and output) is listed but not read: it moves the output's background off zero in image units and the quarter-amplitude mask fills the field; (4) the registered interpretation of a falsified M1, \"extending the matched-training null to a pooled training distribution\", is not applied to the GN and BP cells, whose input under the single pooled affine was near-constant; the verdicts stand. Consequence of both: no verdict changed; one registered secondary quantity is unused; the registered M1 reading is replaced for those two cells by the design fact |\n| Preregistration states (SHA-256 prefixes) | registered 4b4c7a6d… (2026-09-26); deviation record 3fdc703d… (2026-10-03); first addendum 0060eedf… (2026-10-03); second addendum 9589b298… (2026-10-11) |\n| Training records (epochs run, median [min–max]; minutes per run, median) | runs_20db D: 56 [37–88], 31 min; runs_20db B_wide: 63 [33–152], 32 min; runs_recon_gn D: 57 [36–130], 32 min; runs_recon_gn B_wide: 72.5 [40–190], 38 min; runs_recon_bp D: 66 [31–126], 37 min; runs_recon_bp B_wide: 67 [28–126], 35 min; runs_recon_mixed D: 40.5 [25–79], 67 min; runs_recon_mixed B_wide: 47 [26–74], 73 min; runs_recon_mixed_ps D: 57 [38–163], 92 min; runs_recon_mixed_ps B_wide: 74.5 [44–164], 114 min |\n\n**S3 Table. The registered decision rule and both fixed interpretation sentences for every tested hypothesis, quoted verbatim from the hashed preregistration file (governing state in the first column).** Quotation marks in the Results sections refer to this table.\n\n| Hypothesis (state) | Decision rule (verbatim) | Fixed interpretation if confirmed (verbatim) | Fixed interpretation if falsified (verbatim) |\n|---|---|---|---|\n| R1-GN, R1-BP (registered 4b4c7a6d…) | \"mean DSC_heart(D) − DSC_heart(B_wide) exceeds B_wide's seed-to-seed SD under that condition and Wilcoxon signed-rank (two-sided, normal approximation with continuity correction) over paired seeds gives p < 0.05\"; falsified if \"either condition fails, or the sign is reversed\" | \"the matched-training null of the core paper is GREIT-bounded; the branch pays off under matched training when the reconstructor passes enough of the measurement perturbation into the image\" | \"the null extends across the three reconstructors the original study named\" |\n| R3 (six cells; registered) | \"Δ(X→Y) − Δ(X→X) > 0 with a 95% percentile bootstrap CI over paired seeds (100,000 resamples) that excludes zero, where Δ is the paired D − B_wide heart-DSC difference\"; falsified if \"the CI contains zero, or the difference is negative\" | \"the branch's shift tolerance is not specific to noise amplitude; it transfers to a reconstructor change\" | \"the tolerance seen in the noise sweep is specific to that kind of shift\"; \"Cells are reported individually and never pooled; a mixed pattern is reported as mixed\" |\n| M1 (three cells; registered) | \"the R1 rule applied to D − B_wide trained on the pooled split and evaluated on reconstructor Y. Confirmed if the difference exceeds B_wide's seed SD under that cell and p < 0.05; falsified otherwise\" | \"confirmed in a cell means the branch pays off when the training distribution spans reconstructors, i.e. the branch adds something on top of domain randomisation\" | \"falsified means it does not, extending the matched-training null to a pooled training distribution\" |\n| M1′ (three cells; first addendum 0060eedf…) | \"The R1 rule, unchanged: confirmed if mean DSC_heart(D) − DSC_heart(B_wide) exceeds B_wide's seed-to-seed SD in that cell and Wilcoxon signed-rank (two-sided, normal approximation with continuity correction) over the thirty paired seeds gives p < 0.05; falsified if either fails or the sign is reversed\" | \"the branch adds something on top of pooled training on that reconstructor. This would be a result from a post-unblinding addendum and is reported as such; it changes neither M1's record nor R1's, and the imaging paper may not lead with it\" | \"under pooled, source-aware-normalised training the branch does not clear the floor on that reconstructor; the matched-training null extends to a training distribution that spans the three reconstructors\" |\n| L1 (three cells; second addendum 9589b298…) | \"Quantity: DSC_heart(B_wide, loro-Y→Y) − DSC_heart(B_wide, mixed-ps→Y), paired by seed index (seed s against seed s, as M2 and M2′ were paired), 95% percentile bootstrap CI over the thirty pairs (100,000 resamples, seed 20260904). Confirmed if the whole CI lies within [−1.0, +1.0] Dice points; falsified otherwise.\" | \"pooled training with a per-source affine generalises, at the 1-point level and in this simulation, to that conventional reconstructor without ever seeing it\" | \"the recipe stays in-pool only for that reconstructor, and the loss is reported as the cost of deploying on an unseen reconstructor\" |\n| L2 (three cells; second addendum) | \"confirmed if mean DSC_heart(D) − DSC_heart(B_wide) on loro-Y→Y exceeds B_wide's seed-to-seed SD in that cell and Wilcoxon signed-rank (two-sided, normal approximation with continuity correction) over the thirty paired seeds gives p < 0.05; falsified if either fails or the sign is reversed\" | \"the branch adds something on an unseen reconstructor; a result from a second post-unblinding addendum, reported as such, changing neither R1, M1 nor M1′, and the imaging paper may not lead with it\" | \"the matched-training null extends to a reconstructor the network never saw\" |",
+   "roadmap_item_ids": [
+    "REV-M1-9",
+    "REV-M1-20",
+    "REV-M1-8",
+    "REV-M1-19",
+    "REV-M1-23"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  }
+ ],
+ "emitted_by": "draft_writer_agent (academic-paper revision round 1, patch mode, Fable 5.1, 2026-10-31)"
+}

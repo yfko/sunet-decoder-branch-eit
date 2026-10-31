@@ -1,0 +1,16 @@
+4b4c7a6d4a3cd08b6e7a07a3d0d1fbbf13f6dbbf0f9e0f8e59e3e0d862e24bae  PREREGISTRATION_RECON.md
+registered 2026-09-26 17:41 CST after PI confirmation (NF matched to GREIT, n = 30, mixed row); pre-hash compatibility and 60-geometry smoke test only, no network trained
+# Deviation state, 2026-10-03: the hash of PREREGISTRATION_RECON.md after two §10 entries (§6(iii) NF band superseded by §4; BP alignment 2 px vs §6(v) 1 px)
+# and a not-a-deviation note (bash 3.2 fix) were appended, BEFORE any cell of the matrix was read. The body above §10 is byte-identical to the
+# registered state (backup PREREGISTRATION_RECON.pre-dev20261003.md hashes to 4b4c7a6d…, which still governs every hypothesis and rule; run_meta.json carries it).
+3fdc703d5c6cdca40afbabf236dd3df3b1808e8d8085cbe95d392f87142446ff  PREREGISTRATION_RECON.md  (deviations appended 2026-10-03)
+# Addendum state, 2026-10-03: the hash of PREREGISTRATION_RECON.md after section 11 (mixed-ps row: M1', M2', M3'; exploratory E1) was appended.
+# Section 11 was drafted AFTER the registered matrix had been read and says so; it was PI-confirmed and hashed BEFORE any run it names was started.
+# Sections 1-10 are byte-identical to the deviation state (backup PREREGISTRATION_RECON.pre-add11_20261003.md hashes to 3fdc703d…); 4b4c7a6d… still governs sections 1-9.
+# train_arms.py records this value in runs_recon_mixed_ps/run_meta.json.
+0060eedf558574d1b6df92735ccd9d41a998ae42e6d71c1544240948c0808e12  PREREGISTRATION_RECON.md  (addendum section 11 registered 2026-10-03)
+# Addendum state, 2026-10-11: the hash of PREREGISTRATION_RECON.md after section 12 (three leave-one-reconstructor-out rows: L1 equivalence at +/-1.0 point, L2 R1 rule, L3' reported) was appended.
+# Section 12 was drafted AFTER the section-11 results had been read and says so; PI confirmed the draft 2026-10-11 and it was hashed BEFORE any run it names was started.
+# Sections 1-11 are byte-identical to the section-11 addendum state (backup PREREGISTRATION_RECON.pre-add12_20261011.md hashes to 0060eedf…); 4b4c7a6d… still governs sections 1-9, 0060eedf… section 11.
+# train_arms.py records this value in runs_recon_loro_{greit,gn,bp}/run_meta.json.
+9589b298bdcc6e413bb9104ebf3c16d78f16be6ce961b98033d9f4a52633ac93  PREREGISTRATION_RECON.md  # addendum section 12 (leave-one-reconstructor-out rows) appended 2026-10-11 after the section-11 results were read; PI confirmed the draft 2026-10-11; sections 1-9 still governed by 4b4c7a6d..., section 11 by 0060eedf...

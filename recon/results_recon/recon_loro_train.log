@@ -1,0 +1,54 @@
+prereg hash 9589b298bdcc6e413bb9104ebf3c16d78f16be6ce961b98033d9f4a52633ac93 = section-12 addendum state; three dataset hashes match section 12.4
+Sun Oct 11 14:05:29 CST 2026
+=== row loro_greit (pool = the other two; held out: greit) ===
+Sun Oct 11 14:05:29 CST 2026
+row loro_greit done:       60 checkpoints (expect 60)
+Tue Oct 13 03:50:18 CST 2026
+=== row loro_gn (pool = the other two; held out: gn) ===
+Tue Oct 13 03:50:18 CST 2026
+row loro_gn done:       60 checkpoints (expect 60)
+Wed Oct 14 16:44:59 CST 2026
+=== row loro_bp (pool = the other two; held out: bp) ===
+Wed Oct 14 16:44:59 CST 2026
+row loro_bp done:       60 checkpoints (expect 60)
+Fri Oct 16 04:14:44 CST 2026
+training done
+Fri Oct 16 04:14:44 CST 2026
+=== L1/L2: loro_greit -> greit (held out) ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/loro_greit__greit/per_image.csv, per_seed.csv, summary.json
+=== reported: loro_greit -> gn (in pool) ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/loro_greit__gn/per_image.csv, per_seed.csv, summary.json
+=== reported: loro_greit -> bp (in pool) ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/loro_greit__bp/per_image.csv, per_seed.csv, summary.json
+=== reported: loro_gn -> greit (in pool) ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/loro_gn__greit/per_image.csv, per_seed.csv, summary.json
+=== L1/L2: loro_gn -> gn (held out) ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/loro_gn__gn/per_image.csv, per_seed.csv, summary.json
+=== reported: loro_gn -> bp (in pool) ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/loro_gn__bp/per_image.csv, per_seed.csv, summary.json
+=== reported: loro_bp -> greit (in pool) ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/loro_bp__greit/per_image.csv, per_seed.csv, summary.json
+=== reported: loro_bp -> gn (in pool) ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/loro_bp__gn/per_image.csv, per_seed.csv, summary.json
+=== L1/L2: loro_bp -> bp (held out) ===
+Whichever way this falls, it is the finding. Report it as it is.
+
+wrote results_recon/loro_bp__bp/per_image.csv, per_seed.csv, summary.json
+leave-one-out rows scored
+Fri Oct 16 04:21:40 CST 2026
