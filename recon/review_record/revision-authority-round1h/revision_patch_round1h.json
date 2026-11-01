@@ -1,0 +1,79 @@
+{
+ "patch_format_version": "1.1",
+ "authorization_context": "review_roadmap",
+ "revision_round": 8,
+ "base_draft_hash": "9085e617e453",
+ "roadmap_sha256": "c5e7515788fd6e7498030ba50cea4a28b8543a34181b83e1f166e924fb82f14f",
+ "author_adjudication_sha256": "6cabf7892e8dec1f6061fbee3d6790c92103030d9d385503efdb8c2dd5c7f6f9",
+ "author_decision_digest": "101e04b70ead0a32f3b90b05adaf29675d469a177448748e3733461c028e2d32",
+ "claim_surface_manifest_sha256": "0c36b86175aa907b94ad262f8a83f70991043cf78ff1a3d6a47b383fd54d3bcf",
+ "emitted_by": "draft_writer_agent (academic-paper revision round 1h, patch mode, Fable 5.1, 2026-10-31)",
+ "ops": [
+  {
+   "op": "replace_block",
+   "block_id": "B0042",
+   "old_hash": "c9ec1e73e972",
+   "new_text": "The minimal dataset (per-seed Dice for every cell, the aggregated results file, gate and seed-0 diagnostic files) is supplied as S1 Data, and the four preregistration states with their hash file as S1 Appendix; the same data and the data-generation, training, scoring and figure code are in the project repository (github.com/yfko/sunet-decoder-branch-eit) under the tagged release v1.2-recon-submission. Checkpoints are available from the corresponding author; artificial-intelligence use is disclosed in the Acknowledgments.",
+   "roadmap_item_ids": [
+    "REV-M1h-1"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0150",
+   "old_hash": "773dd6ddfbd7",
+   "new_text": "The minimal dataset (per-seed Dice for every cell, the aggregated results file, gate and seed-0 diagnostic files) is supplied as S1 Data, and the four preregistration states with their hash file as S1 Appendix; the same data and the data-generation, training, scoring and figure code are in the project repository (github.com/yfko/sunet-decoder-branch-eit) under the tagged release v1.2-recon-submission. Model checkpoints are available from the corresponding author.",
+   "roadmap_item_ids": [
+    "REV-M1h-1"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0013",
+   "old_hash": "fb927846e959",
+   "new_text": "The cardiac-related impedance change in lung EIT frames is several times smaller than the ventilation change (Leathard et al., 1994) <!--ref:Leathard1994PhysiolMeas--><!--anchor:quote:ventilatory%20and%20cardiac%20related%20changes%20in%20EIT%20images--> and highly position dependent (Graf and Riedel, 2017) <!--ref:Graf2017PLOSONE--><!--anchor:quote:highly%20position%20dependent-->. Three of our studies precede it: a U-Net for lung segmentation in EIT (Ko and Cheng, 2021a) <!--ref:Ko2021PhysiolMeas--><!--anchor:quote:U-Net-based%20approach%20for%20automatic%20lung%20segmentation-->, the semi-Siamese U-Net that separates lung and heart images with one encoder and two parallel decoders (Ko and Cheng, 2021b) <!--ref:Ko2021PLOSONE--><!--anchor:quote:Semi-Siamese%20U-Net%20for%20separation%20of%20lung%20and%20heart%20bioimpedance%20images-->, and heart-related image reconstruction from GREIT frames with optimised loss weights (Ko et al., 2025) <!--ref:Ko2025CurrMedImaging--><!--anchor:quote:Reconstruction%20of%20Heart-related%20Imaging%20from%20Lung%20Electrical%20Impedance%20Tomography-->. Elsewhere, a Siamese network supplied the feature-matching constraint of an unsupervised cardiac-signal separation from chest EIT image series (Zhang et al., 2022a) <!--ref:Zhang2022PhysiolMeas--><!--anchor:quote:Deep%20feature-domain%20matching%20for%20cardiac-related%20component%20separation-->. Throughout, *segmentation* names the task of producing a Dice-scored mask, and *separation*, *weak component* and *dominant component* name the mechanism. The semi-Siamese study's discussion states that \"the separation effect of the EIT image obtained by the different reconstruction algorithms will be investigated\" (Ko and Cheng, 2021b) <!--ref:Ko2021PLOSONE--><!--anchor:quote:the%20separation%20effect%20of%20the%20EIT%20image%20obtained%20by%20the%20different%20reconstruction%20algorithms%20will%20be%20investigated-->, naming the Sheffield back-projection algorithm, a finite-element linearised Newton–Raphson algorithm and GREIT; this paper answers it, with one-step Gauss–Newton as its linearised Newton–Raphson member. A companion simulation study from our group, in review, evaluates the same two arms under GREIT across noise levels; this paper relies on none of its reported findings, re-uses its GREIT-trained networks re-scored here (Section 2.2), and the two are declared related submissions.",
+   "roadmap_item_ids": [
+    "REV-M1h-2"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0089",
+   "old_hash": "3530b8f5db5c",
+   "new_text": "A companion simulation study by the same group, evaluating the same two arms under GREIT across measurement-noise levels, is under review elsewhere and is declared as a related submission; a copy accompanies this submission. The present manuscript relies on none of its reported findings; its GREIT training row re-uses that study's trained networks, re-scored here (Section 2.2).",
+   "roadmap_item_ids": [
+    "REV-M1h-2"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "replace_block",
+   "block_id": "B0087",
+   "old_hash": "f519d7ce08a1",
+   "new_text": "The authors used Claude (Anthropic; Fable 5.1, Opus 5 and Opus 5.5, accessed August to October 2026) throughout this work. The assistant wrote the simulation, data-generation, training, analysis, scoring and figure code in the project repository that produced every reported number, figure, table and supporting file, and ran it under the authors' direction; searched for and screened literature and proposed the references, which the authors selected; drafted the preregistration, its two addenda and the written interpretation of the results for the authors' decision; drafted and revised the manuscript text; ran the simulated peer-review panels recorded in the repository; and carried out the citation verification recorded there. The authors defined the research questions, decided the hypotheses, decision rules, sample size and analysis rows, approved the preregistration and each addendum before the runs they govern were started, took or approved every design decision, and approved every interpretation and conclusion. The outputs were checked by re-deriving every reported number from the per-seed result files with a separate checking script, by the authors' inspection of plots of the network's inputs and outputs, and by the authors' reading and correction of the text. No image was produced by a generative image model; every figure was plotted by the code described above from the data, checkpoint and result files.",
+   "roadmap_item_ids": [
+    "REV-M1h-4"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  },
+  {
+   "op": "insert_after",
+   "block_id": "B0097",
+   "old_hash": "3f6f161b5a1d",
+   "new_text": "**S1 Data.** The minimal data set: per-seed heart- and lung-channel metrics for every cell of the design, the aggregated results and bootstrap files, the pre-read gates, the seed-0 diagnostics and the run records, with a README listing the SHA-256 of every file (zip archive).",
+   "roadmap_item_ids": [
+    "REV-M1h-3"
+   ],
+   "claim_strength_changes": [],
+   "collateral_authorization_ids": []
+  }
+ ]
+}

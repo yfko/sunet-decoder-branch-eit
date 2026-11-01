@@ -18,9 +18,9 @@ def blocks(p):
     t = Path(p).read_text(encoding="utf-8"); parts = re.split(r"(<!--block:(B\d{4})-->\n)", t); B = {}; i = 1
     while i < len(parts): B[parts[i + 1]] = parts[i + 2].rstrip("\n"); i += 3
     return B
-V5, V6, V7, V8 = M / "19_DRAFT_v5.md", M / "20_DRAFT_v6.md", M / "23_DRAFT_v7.md", M / "30_DRAFT_v8.md"
-DELIV7, DELIV = M / "24_SUBMISSION_plos_v7.md", M / "31_SUBMISSION_plos_v8.md"  # round 1g (2026-10-31 night): v8 = disclosure paragraph + deleted funding/COI section
-dl = DELIV.read_text(encoding="utf-8"); d7 = V8.read_text(encoding="utf-8")
+V5, V6, V7, V8, V9 = M / "19_DRAFT_v5.md", M / "20_DRAFT_v6.md", M / "23_DRAFT_v7.md", M / "30_DRAFT_v8.md", M / "33_DRAFT_v9.md"
+DELIV7, DELIV8, DELIV = M / "24_SUBMISSION_plos_v7.md", M / "31_SUBMISSION_plos_v8.md", M / "34_SUBMISSION_plos_v9.md"  # round 1h (2026-10-31 night): v9 = placeholders filled, S1 Data, figure sentence
+dl = DELIV.read_text(encoding="utf-8"); d7 = V9.read_text(encoding="utf-8")
 
 # 1 review chain on file
 r1 = M / "12_REVIEWER_PANEL_round1.md"; item("five-seat round-1 review on file", "PASS" if r1.exists() else "FAIL", f"{r1.name} ({mtime(r1) if r1.exists() else 'absent'})")
@@ -39,22 +39,30 @@ if a8p.exists():
     ok8 = a8["revised_manuscript_sha256"] == sha(V8) and a8["base_sha256"] == sha(V7) and a8["candidate_decision"].startswith("Accept") and all(v == "FULLY_ADDRESSED" for v in v8v)
     item("scoped re-verification of round 1g judged the v8 bytes: Accept (scoped), all FULLY", "PASS" if ok8 else "FAIL", f"judged {a8['revised_manuscript_sha256'][:12]} == v8 {sha(V8)[:12]}; {a8['candidate_decision']}; {len(v8v)} items")
 else: item("scoped re-verification of round 1g (addendum_v8.json)", "PENDING", "absent")
+b9 = blocks(V9); diff89 = sorted(k for k in b8 if k in b9 and b8[k] != b9[k]); gone89 = sorted(set(b8) - set(b9)); new89 = sorted(set(b9) - set(b8))
+item("v8 -> v9 changed only the placeholder/data-availability blocks, the disclosure paragraph and added the S1 Data caption (round 1h)", "PASS" if diff89 == ["B0013", "B0042", "B0087", "B0089", "B0150"] and not gone89 and new89 == ["B0161"] else "FAIL", f"changed {diff89}; removed {gone89}; added {new89}")
+a9p = M / "phase_rereview_round1_20261031/addendum_v9.json"
+if a9p.exists():
+    a9 = json.loads(a9p.read_text()); v9v = [i["verdict"] for i in a9["items"]]
+    ok9 = a9["revised_manuscript_sha256"] == sha(V9) and a9["base_sha256"] == sha(V8) and a9["candidate_decision"].startswith("Accept") and all(v == "FULLY_ADDRESSED" for v in v9v)
+    item("scoped re-verification of round 1h judged the v9 bytes: Accept (scoped), all FULLY", "PASS" if ok9 else "FAIL", f"judged {a9['revised_manuscript_sha256'][:12]} == v9 {sha(V9)[:12]}; {a9['candidate_decision']}; {len(v9v)} items")
+else: item("scoped re-verification of round 1h (addendum_v9.json)", "PENDING", "absent")
 # 2 citation checks
 for name, f, tag in (("citation-check v3 (strict) on file", "16_CITATION_AUDIT_v3.md", "PASS"), ("scoped citation re-check v6 on file", "21_CITATION_RECHECK_v6.md", "PASS"), ("scoped citation re-check v7 (reference metadata + deliverable list + retraction refresh) on file", "25_CITATION_RECHECK_v7.md", "PASS")):
     p = M / f; txt = p.read_text(encoding="utf-8") if p.exists() else ""; m = re.search(r"citation_check=(PASS[^`*\n]*|FAIL)", txt)
     item(name, "PASS" if m and m.group(1).startswith("PASS") else ("PENDING" if not p.exists() else "FAIL"), f"{f} ({mtime(p) if p.exists() else 'absent'}); {m.group(1) if m else 'no verdict line'}")
 # 3 apply chain
-for base, out, rep in ((V5, V6, M / "20_DRAFT_v6.md.apply-report.json"), (V6, V7, M / "23_DRAFT_v7.md.apply-report.json"), (V7, V8, M / "30_DRAFT_v8.md.apply-report.json")):
+for base, out, rep in ((V5, V6, M / "20_DRAFT_v6.md.apply-report.json"), (V6, V7, M / "23_DRAFT_v7.md.apply-report.json"), (V7, V8, M / "30_DRAFT_v8.md.apply-report.json"), (V8, V9, M / "33_DRAFT_v9.md.apply-report.json")):
     r = json.loads(rep.read_text()); ok = sha(base).startswith(r["base_draft_hash"]) and sha(out).startswith(r["output_draft_hash"]) and r["authorization_witness"]["status"] == "pass"
     item(f"apply chain {base.name} -> {out.name}", "PASS" if ok else "FAIL", f"base {r['base_draft_hash']} out {r['output_draft_hash']} witness {r['authorization_witness']['status']}")
 # 4 draft checkers
-chk = subprocess.run([sys.executable, "-X", "utf8", "tools/check_recon_draft.py", str(V8)], capture_output=True, text=True).stdout
+chk = subprocess.run([sys.executable, "-X", "utf8", "tools/check_recon_draft.py", str(V9)], capture_output=True, text=True).stdout
 tot = int(re.search(r"total\s*:\s*(\d+)", chk).group(1)); ab = int(re.search(r"abstract : (\d+)", chk).group(1)); orph = int(re.search(r"orphans, (\d+)", chk).group(1))
 item("main text <= 8,000 (PCR), abstract <= 300, 0 orphans, R10b clean", "PASS" if tot <= 8000 and ab <= 300 and orph == 0 and "R10b leak scan on manuscript part == clean" in chk else "FAIL", f"{tot} words; abstract {ab}; orphans {orph}")
-num = subprocess.run([sys.executable, "-X", "utf8", "tools/check_recon_draft_numbers.py", str(V8)], capture_output=True, text=True).stdout.strip().splitlines()[-1]
+num = subprocess.run([sys.executable, "-X", "utf8", "tools/check_recon_draft_numbers.py", str(V9)], capture_output=True, text=True).stdout.strip().splitlines()[-1]
 item("R10c: every number in the draft derivable from the result/registration files", "PASS" if "not derivable from the result/registration files: 0" in num else "FAIL", num)
 # 5 deliverable == package; docx properties
-item("package Manuscript.md == 31_ record copy (v8)", "PASS" if sha(PKG / "Manuscript.md") == sha(DELIV) else "FAIL", f"{sha(DELIV)[:12]}")
+item("package Manuscript.md == 34_ record copy (v9)", "PASS" if sha(PKG / "Manuscript.md") == sha(DELIV) else "FAIL", f"{sha(DELIV)[:12]}")
 x = docx_xml(PKG / "Manuscript.docx")
 with zipfile.ZipFile(PKG / "Manuscript.docx") as _z: foot = "".join(_z.read(n).decode("utf-8") for n in _z.namelist() if "footer" in n)
 has_ln, has_pg, has_ds = "w:lnNumType" in x, foot.count("PAGE") >= 1, 'w:line="480"' in x
@@ -98,18 +106,18 @@ except Exception as e: item("figure TIFFs readable", "FAIL", str(e))
 s1d = PKG / "S1_Data.zip"; s1d_ok = s1d.exists() and s1d.stat().st_size < 20 * 1024 * 1024
 item("S1 Data zip present and under the PLoS 20 MB SI limit; manuscript Data availability names S1 Data", "PASS" if s1d_ok and "S1 Data" in dl else ("FAIL" if not s1d_ok else "PENDING"), f"{s1d.stat().st_size // 1024 if s1d.exists() else 0} KB; 'S1 Data' in deliverable: {'S1 Data' in dl} (round 1h)")
 # 9 disclosure
-dp = M / "32_DISCLOSURE_plos_v8.md"  # 26_ (CHANGE REQUIRED) is bound to the v7 bytes and superseded by round 1g
+dp = M / "35_DISCLOSURE_plos_v9.md"  # 32_ (COMPLIANT) is bound to the v8 bytes and superseded by round 1h
 if dp.exists():
     dt = dp.read_text(encoding="utf-8"); fv = re.search(r"FINAL VERDICT[^\n]*", dt); bound = sha(PKG / "Manuscript.md")[:12] in dt or sha(DELIV)[:12] in dt
     item("disclosure check (PLoS AI policy) FINAL VERDICT COMPLIANT and bound to the deliverable bytes", "PASS" if fv and "COMPLIANT" in fv.group(0) and "CHANGE REQUIRED" not in fv.group(0) and bound else "FAIL", f"{dp.name} ({mtime(dp)}); {fv.group(0)[:90] if fv else 'no verdict line'}; bound {bound}")
-else: item("disclosure check on file (re-run on the v8 deliverable)", "PENDING", "32_DISCLOSURE_plos_v8.md absent")
+else: item("disclosure check on file (re-run on the v9 deliverable)", "PENDING", "35_DISCLOSURE_plos_v9.md absent")
 # 10 human items
 item("cover letter: Academic Editors chosen by the PI (no 【】 left)", "PASS" if "【" not in cl else "PENDING", f"{cl.count('【')} 【 marks")
 item("CRediT roles for this paper confirmed by the PI", "PASS" if "PENDING PI" not in sf.split("## CRediT")[1].split("##")[0] else "PENDING", "system fields CRediT block")
 so = M / "29_PI_SIGNOFF_plos.json"
 if so.exists():
     s = json.loads(so.read_text())
-    for k, hint in (("docx_viewed", "PI opened Manuscript.docx (tables, line numbers, captions after first citation)"), ("github_tag", "repository tag pushed"), ("system_fields_entered", "submission-system fields entered from 00_SYSTEM_FIELDS.md")):
+    for k, hint in (("docx_viewed", "PI opened Manuscript.docx (tables, line numbers, captions after first citation)"), ("github_tag", "repository tag pushed (must equal the tag named in the manuscript)"), ("system_fields_entered", "submission-system fields entered from 00_SYSTEM_FIELDS.md")):
         v = s.get(k); item(hint, "PASS" if v else "PENDING", json.dumps(v, ensure_ascii=False)[:120] if v else "not recorded")
 else:
     for hint in ("PI opened Manuscript.docx", "repository tag pushed", "submission-system fields entered"): item(hint, "PENDING", "29_PI_SIGNOFF_plos.json absent")

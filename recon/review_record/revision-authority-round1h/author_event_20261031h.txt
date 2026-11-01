@@ -1,0 +1,6 @@
+Author event for revision round 1h of the RECON tier-3 manuscript (RECON_paper/manuscript/30_DRAFT_v8.md, 9085e617e453), 2026-10-31 (Fable 5.1).
+
+Source of authority: the PI's session messages of 2026-10-31 night — 「Zenodo 不使用 commit to github」 and 「S1 Data 加 GitHub」 (the minimal data set is supplied as Supporting Information S1 Data and, with the code, in the GitHub repository under a tagged release; no Zenodo deposit) — and the PI's answers recorded in revision-authority-round1h/answers.json: {"tag": "v1.2-recon-submission", "preprint_doi": null, "fig_sentence": "revise", "month": "October", "pi_words": "2026-10-31 night session: 「Zenodo 不使用 commit to github」; 「S1 Data 加 GitHub」; 「同步三個」; 「推好了 檢查」(push verified: origin/main 02c720e, tag v1.2-recon-submission); 「無 preprint，圖句改」"}.
+
+Decisions applied: (1) B0042 and B0150: Data availability reworded from a Zenodo deposit to S1 Data + S1 Appendix + repository release v1.2-recon-submission; (2) B0013 and B0089: the companion-study preprint placeholders removed (no preprint; the companion remains a declared related submission with a copy attached); (3) a caption for S1 Data inserted after the S1 Appendix caption (B0097); (4) B0087: period 'August to October 2026'; figure sentence revised per NEW-1g-1 (addendum_v8).
+Unchanged: every other block; every number, table, verdict, fixed sentence and reference.

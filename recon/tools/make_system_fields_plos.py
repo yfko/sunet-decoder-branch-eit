@@ -45,7 +45,7 @@ Research Article
 3. Tang-Chuan Wang — ORCID 0000-0002-5236-7117
    {aff[2]}
 
-## CRediT（**PENDING PI**：登記檔的慣例是核心論文的；本篇「依實際分工另定」。下面是沿用核心論文慣例的草案）
+## CRediT（PI 2026-11-01 確認：本篇沿用核心論文慣例，「照草案」）
 - Yen-Fen Ko: Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Data curation, Writing – original draft, Writing – review & editing, Visualization, Supervision, Project administration, Funding acquisition
 - Chang-Wen Chen: Conceptualization, Writing – review & editing
 - Tang-Chuan Wang: Conceptualization, Writing – review & editing
@@ -79,8 +79,11 @@ Copy to upload: the companion manuscript as submitted to Scientific Reports on 2
 ## Author-supplied placeholders still in the manuscript（{len(gaps)}；投稿當天填）
 """ + "\n".join(f"- {g}" for g in gaps) + """
 
-## Suggested Academic Editors（**PENDING PI**；PLoS 規定不可是近期合作者或同機構）
-【PI 選；從 journals.plos.org/plosone/s/editorial-board 搜尋 electrical impedance tomography / medical image segmentation / reproducibility；不可：成大 Kuo-Sheng Cheng、2025 共同作者 Yen-Da Lin、Po-Lan Su；不可同機構 China Medical University】
+## Suggested Academic Editors（PI 2026-11-01 選定，見 36_ACADEMIC_EDITOR_candidates.md；三位皆現任 PLOS ONE 委員、非合作者、非同機構）
+1. Kumaradevan Punithakumar — University of Alberta, Canada — ORCID 0000-0003-3835-1079
+2. Eugene Demidenko — Dartmouth Geisel School of Medicine, United States — ORCID 0000-0002-6584-1148
+3. Hadeel K. Aljobouri — Al-Nahrain University, Iraq — ORCID 0000-0003-1792-9230
+（系統若要 email，PI 從各人機構頁查填）
 
 ## Opposed reviewers
 None.

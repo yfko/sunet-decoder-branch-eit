@@ -231,6 +231,7 @@ def _flag(pr, tag):
 d = docx.Document(out / "Manuscript.docx")
 for p in d.paragraphs:
     p.paragraph_format.line_spacing = 2.0       # PLoS: double-spaced
+WIDE_ELS = []
 for tbl in d.tables:
     el = tbl._tbl; cap = el.getprevious()
     if cap is not None and cap.tag == qn("w:p"): _flag(cap.get_or_add_pPr(), "w:keepNext")
@@ -240,20 +241,32 @@ for tbl in d.tables:
             for p in cell.paragraphs:
                 _flag(p._p.get_or_add_pPr(), "w:keepNext"); p.paragraph_format.line_spacing = 1.0
                 for r in p.runs: r.font.size = Pt(8)
-    ncol = len(tbl.columns); CH, PAD, TOTAL = 0.062, 0.16, 6.5
+    # ---- column widths (2026-11-01): no token may wrap; wide tables (>= 10 columns) go on landscape pages (PLoS: "very wide
+    # tables may be printed sideways"; tables have no strict width requirement); font 8 pt, lowered to 7 / 6.5 pt only if needed
+    ncol = len(tbl.columns); PAD = 0.14; TOTAL = 9.0 if ncol >= 10 else 6.5
+    CHW = {8: 0.060, 7: 0.053, 6.5: 0.049}            # average Times New Roman glyph width (inches) per point size, digits/caps-heavy
     tok = [max(len(w) for r in tbl.rows for w in (r.cells[j].text.split() or [""])) for j in range(ncol)]
     pref = [max(len(r.cells[j].text) for r in tbl.rows[1:]) for j in range(ncol)]
-    lo = [t * CH + PAD for t in tok]; hi = [max(p_, t) * CH + PAD for p_, t in zip(pref, tok)]
+    for fs in (8, 7, 6.5):
+        lo = [t * CHW[fs] + PAD for t in tok]
+        if sum(lo) <= TOTAL: break
+    for row in tbl.rows:
+        for cell in row.cells:
+            for p in cell.paragraphs:
+                for r in p.runs: r.font.size = Pt(fs)
+    hi = [max(p_, t) * CHW[fs] + PAD for p_, t in zip(pref, tok)]
     spare = TOTAL - sum(lo); room = [h - l for h, l in zip(hi, lo)]
-    if spare <= 0 or sum(room) == 0: w_in = [l * TOTAL / sum(lo) for l in lo]
+    if spare <= 0: w_in = [l * TOTAL / sum(lo) for l in lo]                       # last resort: still too wide at 6.5 pt
     elif spare <= sum(room): w_in = [l + spare * r / sum(room) for l, r in zip(lo, room)]
     else: w_in = [h + (spare - sum(room)) / ncol for h in hi]
+    print(f"table {''.join(el.getprevious().itertext())[:9] if el.getprevious() is not None else '?'}: {ncol} columns, {'landscape' if ncol >= 10 else 'portrait'}, {fs} pt, width {sum(w_in):.2f} in" + (" (TOKENS MAY WRAP)" if spare <= 0 else ""))
     widths = [Inches(w) for w in w_in]; tblPr = el.tblPr; lay = tblPr.find(qn("w:tblLayout"))
     if lay is None: lay = OxmlElement("w:tblLayout"); tblPr.append(lay)
     lay.set(qn("w:type"), "fixed"); grid = el.find(qn("w:tblGrid"))
     for gc, w in zip(grid.findall(qn("w:gridCol")), widths): gc.set(qn("w:w"), str(int(w.inches * 1440)))
     for row in tbl.rows:
         for cell, w in zip(row.cells, widths): cell.width = w
+    if ncol >= 10: WIDE_ELS.append(el)
 for sec in d.sections:
     sp = sec._sectPr
     if sp.find(qn("w:lnNumType")) is None:
@@ -264,5 +277,28 @@ for sec in d.sections:
     if "PAGE" not in sec.footer._element.xml:
         fp.alignment = WD_ALIGN_PARAGRAPH.CENTER; fld = OxmlElement("w:fldSimple"); fld.set(qn("w:instr"), "PAGE")
         r = OxmlElement("w:r"); t = OxmlElement("w:t"); t.text = "1"; r.append(t); fld.append(r); fp._p.append(fld)
+# ---- landscape sections for the wide tables (caption + table + its footnote paragraphs); line numbering and footer carried over
+import copy
+body = d.element.body; body_sect = body.find(qn("w:sectPr"))
+def _sect_para(landscape):
+    sp = copy.deepcopy(body_sect)
+    for tag in ("w:pgSz", "w:pgMar"):
+        e = sp.find(qn(tag))
+        if e is not None: sp.remove(e)
+    pg = OxmlElement("w:pgSz"); mar = OxmlElement("w:pgMar")
+    if landscape: pg.set(qn("w:w"), str(11 * 1440)); pg.set(qn("w:h"), str(int(8.5 * 1440))); pg.set(qn("w:orient"), "landscape")
+    else: pg.set(qn("w:w"), str(int(8.5 * 1440))); pg.set(qn("w:h"), str(11 * 1440))
+    for k, v in (("top", 1440), ("right", 1440), ("bottom", 1440), ("left", 1440), ("header", 720), ("footer", 720), ("gutter", 0)): mar.set(qn(f"w:{k}"), str(v))
+    first = sp.find(qn("w:footerReference")); idx = list(sp).index(first) + 1 if first is not None else 0
+    sp.insert(idx, pg); sp.insert(idx + 1, mar)
+    para = OxmlElement("w:p"); ppr = OxmlElement("w:pPr"); ppr.append(sp); para.append(ppr); return para
+for el in WIDE_ELS:
+    cap = el.getprevious(); assert cap is not None and cap.tag == qn("w:p")
+    last = el; nxt = el.getnext()
+    while nxt is not None and nxt.tag == qn("w:p") and "".join(nxt.itertext()).lstrip()[:1] in ("¹", "²", "³") or (nxt is not None and nxt.tag == qn("w:p") and "".join(nxt.itertext()).startswith("M2′")):
+        last = nxt; nxt = nxt.getnext()
+    cap.addprevious(_sect_para(False))      # ends the portrait section before the caption
+    last.addnext(_sect_para(True))          # ends the landscape section after the table (+ footnotes)
+print("landscape sections:", len(WIDE_ELS))
 d.save(out / "Manuscript.docx")
 print("written:", out / "Manuscript.md", out / "Manuscript.docx", rec, "| tables in docx:", len(d.tables))

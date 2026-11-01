@@ -42,11 +42,11 @@ for f in ("refs_in_recon.json", "prior_works_recon.json", "prior_works_recon_tab
     shutil.copy(SRC / "refs" / f, DST / "refs" / f)
 M = SRC / "RECON_paper/manuscript"; RR = DST / "review_record"; RR.mkdir()
 for f in ("12_REVIEWER_PANEL_round1.md", "14_RESPONSE_TO_PANEL_round1.md", "16_CITATION_AUDIT_v3.md", "16b_CITATION_RECHECK_v4.md", "18_REVIEWER_PANEL_rereview_round1.md",
-          "21_CITATION_RECHECK_v6.md", "25_CITATION_RECHECK_v7.md", "26_DISCLOSURE_plos.md", "32_DISCLOSURE_plos_v8.md", "28_READY_GATE_plos_20261031.md", "23_DRAFT_v7.md.apply-report.json", "20_DRAFT_v6.md.apply-report.json", "30_DRAFT_v8.md.apply-report.json"):
+          "21_CITATION_RECHECK_v6.md", "25_CITATION_RECHECK_v7.md", "26_DISCLOSURE_plos.md", "32_DISCLOSURE_plos_v8.md", "35_DISCLOSURE_plos_v9.md", "28_READY_GATE_plos_20261031.md", "28_READY_GATE_plos_20261101.md", "23_DRAFT_v7.md.apply-report.json", "20_DRAFT_v6.md.apply-report.json", "30_DRAFT_v8.md.apply-report.json", "33_DRAFT_v9.md.apply-report.json"):
     if (M / f).exists(): shutil.copy(M / f, RR / f)
 for d in ("phase_review_round1_20261031", "phase_rereview_round1_20261031"):
     shutil.copytree(M / d, RR / d, ignore=shutil.ignore_patterns("*.pre-*"))
-for d in ("revision-authority-round1", "revision-authority-round1b", "revision-authority-round1c", "revision-authority-round1d", "revision-authority-round1e", "revision-authority-round1f", "revision-authority-round1g"):
+for d in ("revision-authority-round1", "revision-authority-round1b", "revision-authority-round1c", "revision-authority-round1d", "revision-authority-round1e", "revision-authority-round1f", "revision-authority-round1g", "revision-authority-round1h"):
     shutil.copytree(M / d, RR / d)
 # recon README
 readme = f"""# recon/ — the companion study on reconstructor change
@@ -61,17 +61,17 @@ Code, preregistration states and per-seed results for the tier-3 study *Does a d
 | `tools/` | Reconstructor datasets (`gen_recon_full.m`, `build_*_dataset*.py`), the training/scoring drivers, the registered statistics (`recon_results.py`, `recon_delta_ci.py`), tables and figures (`recon_draft_tables.py`, `recon_s1_table.py`, `make_recon_fig*.py`), the PLOS ONE deliverable and package tooling |
 | `figures/` | Fig 1, 2 and 5 (PDF, PNG, TIFF) |
 | `refs/` | The citation registry of this paper (`refs_in_recon.json`, 72 entries) with the generated strings and the documented overrides |
-| `review_record/` | Simulated five-seat review (2026-10-31), its three-gate re-review and scoped re-verifications, the revision-authority chains of rounds 1–1g, the citation audits and the AI-disclosure checks |
+| `review_record/` | Simulated five-seat review (2026-10-31), its three-gate re-review and scoped re-verifications, the revision-authority chains of rounds 1–1h, the citation audits and the AI-disclosure checks |
 
 Datasets (`*.mat`) and checkpoints are excluded as in the root `.gitignore`; the Gauss–Newton and back-projection datasets regenerate from `tools/gen_recon_full.m` with the seeds recorded in `results_recon/run_meta_*.json`.
 """
 (DST / "README.md").write_text(readme, encoding="utf-8")
 # commit message draft (the PI commits)
 n_files = sum(1 for p in DST.rglob("*") if p.is_file())
-msg = f"""RECON tier-3 study: code, preregistration states, per-seed results, figures and review record (PLOS ONE submission package state 2026-10-31)
+msg = f"""RECON review record update after rounds 1h (placeholders, S1 Data, figure sentence): v9 chain, disclosure and re-verification reports
 
 Adds recon/ with the reconstructor-change study (GREIT / one-step Gauss-Newton / back-projection; pooled and leave-one-reconstructor-out rows): {n_files} files.
-Manuscript draft 30_DRAFT_v8 (9085e617e453); deliverable 31_SUBMISSION_plos_v8; re-review Minor Revision -> rounds 1d/1e/1g scoped Accept; citation re-checks and AI-disclosure check on file.
+Manuscript draft 33_DRAFT_v9 (32cf6b27f35b); deliverable 34_SUBMISSION_plos_v9; re-review Minor Revision -> rounds 1d/1e/1g/1h scoped Accept; citation re-checks and AI-disclosure check on file.
 Shared tools vs repo root: {', '.join(f'{k} {v}' for k, v in shared.items())}.
 
 Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>

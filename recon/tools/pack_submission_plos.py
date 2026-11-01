@@ -66,8 +66,8 @@ md = (PKG / "Manuscript.md").read_text(encoding="utf-8"); gaps = sorted(set(re.f
 chk = ["# Author-supplied fields still open (fill on submission day)", ""] + [f"- [ ] {g}" for g in gaps] + [
        "- [ ] Suggested Academic Editors in the cover letter and the system (PI)", "- [ ] CRediT roles confirmed for this paper (PI)",
        "- [ ] Upload S1_Data.zip as Supporting Information file S1 Data (the minimal data set; no Zenodo deposit, PI decision 2026-10-31)",
-       "- [ ] GitHub: tag the release named in the manuscript after copying the RECON tools/results (see NOTES) and paste the tag",
-       "- [ ] Companion preprint DOI if posted before submission (then cite it and revise the Related manuscript statement)",
+       "- [x] GitHub: release v1.2-recon-submission pushed 2026-10-31 (commit 02c720e), named in the manuscript (round 1h)",
+       "- [x] Companion preprint: none posted; placeholders removed (round 1h); the companion stays a declared related submission with its copy in 08_Related_material",
        "- [ ] Wang 2024 (IEEE Trans Instrum Meas 73) article number, if the PI can read it from IEEE Xplore (pages 1-16 kept otherwise)"]
 (PKG / "CHECKLIST_author_fields.md").write_text("\n".join(chk) + "\n", encoding="utf-8")
 # ---- manifest
